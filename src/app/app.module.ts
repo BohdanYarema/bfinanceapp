@@ -4,6 +4,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { CategoriesPage } from '../pages/categories/categories';
+import { ListPage } from '../pages/list/list';
+import { FormPage } from '../pages/form/form';
 import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
@@ -12,6 +14,7 @@ import { RegisterPage } from '../pages/register/register';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { HttpModule } from '@angular/http';
 
@@ -22,7 +25,9 @@ import { HttpModule } from '@angular/http';
     ProfilePage,
     TabsPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ListPage,
+    FormPage
   ],
   imports: [
     BrowserModule,
@@ -36,13 +41,16 @@ import { HttpModule } from '@angular/http';
     ProfilePage,
     TabsPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    ListPage,
+    FormPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider
+    AuthServiceProvider,
+    Geolocation,
   ]
 })
 export class AppModule {}

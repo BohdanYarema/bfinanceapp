@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{item.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="main_content" padding>
+  <ion-content>
+    <div ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+        <ion-item-group>
+          <ion-item-divider color="light">{{ item[0] }}</ion-item-divider>
+          <div ion-item *ngFor="let data of item[1]" (click)="itemSelected(data)">
+            <ion-item >
+              <p item-start>{{ data.name }}</p>
+              <p item-end>{{ data.price }} uah</p>
+            </ion-item>
+          </div>
+        </ion-item-group>
+    </div>
+  </ion-content>
+
+  <button class="btn_float_right" (click)="goForm(item)" ion-button color="secondary" round>
+    <ion-icon name="add"></ion-icon>
+  </button>
+</ion-content>

@@ -14,7 +14,14 @@ export class LoginPage {
   loginData = { username:'', password:'' };
   data: any;
 
-  constructor(public navCtrl: NavController, public authService: AuthServiceProvider, public loadingCtrl: LoadingController, private toastCtrl: ToastController) {}
+  constructor(
+    public navCtrl: NavController, 
+    public authService: AuthServiceProvider, 
+    public loadingCtrl: LoadingController, 
+    private toastCtrl: ToastController
+  ) {
+    
+  }
 
   doLogin() {
     this.showLoader();

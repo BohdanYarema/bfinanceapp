@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<h2>Add</h2>
+<form (submit)="doAddAcccounting()">
+    <ion-item>
+        <ion-label stacked>Name</ion-label>
+        <ion-input [(ngModel)]="addData.name" name="name" type="text" placeholder="Your Name" ></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label stacked>Price</ion-label>
+        <ion-input [(ngModel)]="addData.price" name="price" type="text" placeholder="Your price" ></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MMM/DD/YYYY" [(ngModel)]="addData.dates" name="dates"></ion-datetime>
+    </ion-item>
+    <button ion-button block type="submit">
+        Add
+    </button>
+</form>
+</ion-content>

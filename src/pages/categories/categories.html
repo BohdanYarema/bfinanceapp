@@ -14,5 +14,10 @@
 
 
 <ion-content padding>
-
+    <div class="card-background-page" ion-item *ngFor="let item of data" (click)="itemSelected(item)">
+      <ion-card>
+        <img src="{{ item.thumbnail }}"/>
+        <div class="card-title">{{ item.name }}</div>
+      </ion-card>
+    </div>
 </ion-content>

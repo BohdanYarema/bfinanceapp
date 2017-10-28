@@ -25511,3 +25511,63 @@ ion-navbar.toolbar {
   height: calc(46px + constant(safe-area-inset-top));
   min-height: calc(46px + constant(safe-area-inset-top));
 }
+
+page-categories .card-background-page ion-card {
+  position: relative;
+  text-align: center;
+}
+
+page-categories .card-background-page .card-title {
+  position: absolute;
+  top: 36%;
+  font-size: 2.0em;
+  width: 100%;
+  font-weight: bold;
+  color: #fff;
+}
+
+page-categories .card-background-page .card-subtitle {
+  font-size: 1.0em;
+  position: absolute;
+  top: 52%;
+  width: 100%;
+  color: #fff;
+}
+
+page-categories .item-md {
+  padding: 0 !important;
+}
+
+page-categories .label-md {
+  margin: 0 !important;
+}
+
+page-categories .item-md.item-block .item-inner {
+  padding: 0 !important;
+}
+
+page-form .btn_add_accounting {
+  margin: 0 auto;
+  width: 13em;
+}
+
+page-list .button-round-md {
+  padding: 0 1em;
+}
+
+page-list .main_content {
+  position: relative;
+}
+
+page-list .btn_float_right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+page-list .button-md {
+  height: 3em;
+  width: 3em;
+  margin: 1em;
+  z-index: 1;
+}
