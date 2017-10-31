@@ -25512,6 +25512,10 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-top));
 }
 
+page-accounting .accounting--card {
+  margin-top: 56px;
+}
+
 page-categories .card-background-page ion-card {
   position: relative;
   text-align: center;
@@ -25546,6 +25550,10 @@ page-categories .item-md.item-block .item-inner {
   padding: 0 !important;
 }
 
+page-categories .scroll-content {
+  margin-top: 56px;
+}
+
 page-form .btn_add_accounting {
   margin: 0 auto;
   width: 13em;
@@ -25561,8 +25569,8 @@ page-list .main_content {
 
 page-list .btn_float_right {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 65px;
+  right: 15px;
 }
 
 page-list .button-md {
@@ -25570,8 +25578,4 @@ page-list .button-md {
   width: 4em;
   margin: 1em;
   z-index: 1;
-}
-
-page-list .scroll-content {
-  margin-bottom: 0;
 }

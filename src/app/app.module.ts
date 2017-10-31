@@ -10,6 +10,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { AccountingPage } from '../pages/accounting/accounting';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,6 +18,15 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { Geolocation } from '@ionic-native/geolocation';
 
 import { HttpModule } from '@angular/http';
+import {
+  GoogleMaps,
+  GoogleMap,
+  GoogleMapsEvent,
+  GoogleMapOptions,
+  CameraPosition,
+  MarkerOptions,
+  Marker
+ } from '@ionic-native/google-maps';
 
 @NgModule({
   declarations: [
@@ -27,7 +37,8 @@ import { HttpModule } from '@angular/http';
     LoginPage,
     RegisterPage,
     ListPage,
-    FormPage
+    FormPage,
+    AccountingPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +54,8 @@ import { HttpModule } from '@angular/http';
     LoginPage,
     RegisterPage,
     ListPage,
-    FormPage
+    FormPage,
+    AccountingPage
   ],
   providers: [
     StatusBar,
@@ -51,6 +63,7 @@ import { HttpModule } from '@angular/http';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     Geolocation,
+    GoogleMaps
   ]
 })
 export class AppModule {}

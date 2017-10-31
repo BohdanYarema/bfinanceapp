@@ -6,6 +6,7 @@ import { IonicPage } from 'ionic-angular';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { TabsPage } from '../tabs/tabs';
+import { AccountingPage } from '../accounting/accounting';
 
 @Component({
   selector: 'page-list',
@@ -85,6 +86,8 @@ export class ListPage {
   }
 
   itemSelected(item: string) {
-    //
+    this.navCtrl.push(AccountingPage, {
+      item : item
+    });
   }
 }

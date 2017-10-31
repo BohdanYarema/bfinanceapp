@@ -8,8 +8,8 @@ page-list {
 
     .btn_float_right {
         position: absolute;
-        bottom: 0;
-        right: 0;
+        bottom: 65px;
+        right: 15px;
     }
 
     .button-md {
@@ -17,9 +17,5 @@ page-list {
         width: 4em;
         margin: 1em;
         z-index: 1;
-    }
-
-    .scroll-content {
-        margin-bottom: 0;
     }
 }
