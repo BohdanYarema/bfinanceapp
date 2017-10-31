@@ -43,7 +43,7 @@ export class CategoriesPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Authenticating...'
+        content: 'Serching...'
     });
 
     this.loading.present();

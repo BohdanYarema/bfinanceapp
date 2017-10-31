@@ -57,7 +57,7 @@ export class ListPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Authenticating...'
+        content: 'Serching...'
     });
 
     this.loading.present();

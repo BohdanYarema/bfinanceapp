@@ -30,7 +30,7 @@ export class RegisterPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Authenticating...'
+        content: 'Sending data...'
     });
 
     this.loading.present();

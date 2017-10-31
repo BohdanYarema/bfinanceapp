@@ -13,9 +13,13 @@ page-list {
     }
 
     .button-md {
-        height: 3em;
-        width: 3em;
+        height: 4em;
+        width: 4em;
         margin: 1em;
         z-index: 1;
+    }
+
+    .scroll-content {
+        margin-bottom: 0;
     }
 }
