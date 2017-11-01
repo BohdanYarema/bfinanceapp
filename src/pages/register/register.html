@@ -1,20 +1,22 @@
 <ion-content padding>
   <h2>Register Here</h2>
-  <form (submit)="doSignup()">
-    <ion-item>
-      <ion-label stacked>Username</ion-label>
-      <ion-input [(ngModel)]="regData.username" name="username" type="text" placeholder="Your username" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>Email</ion-label>
-      <ion-input [(ngModel)]="regData.email" name="email" type="text" placeholder="Your email" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label stacked>Password</ion-label>
-      <ion-input [(ngModel)]="regData.password" name="password" type="password" placeholder="Your password"></ion-input>
-    </ion-item>
-    <button ion-button block type="submit">
-      SignUp
-    </button>
+  <form [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">
+
+      <ion-item>
+        <ion-label stacked>Username</ion-label>
+        <ion-input formControlName="username" name="username" type="text" placeholder="Your username" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input formControlName="email" name="email" type="text" placeholder="Your email" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input formControlName="password" name="password" type="password" placeholder="Your password"></ion-input>
+      </ion-item>
+      
+      <button ion-button block type="submit" [disabled]="!singupGroup.valid">
+          Register
+      </button>
   </form>
 </ion-content>

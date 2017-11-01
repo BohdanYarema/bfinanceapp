@@ -7,6 +7,9 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-geolocation": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
@@ -14,19 +17,19 @@
       "API_KEY_FOR_ANDROID": "AIzaSyBw4QFAZB60z7aIAZpFwDKtuMl7FuIBAmc",
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-device": {
+    "cordova-plugin-ionic-webview": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-ionic-webview": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-x-toast": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },

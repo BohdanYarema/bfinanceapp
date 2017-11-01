@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { NavController, NavParams, Platform } from 'ionic-angular';
+import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
+import { NavController, NavParams, Platform, LoadingController, ToastController  } from 'ionic-angular';
 import { Http } from '@angular/http';
-import { ListPage } from '../list/list';
 import { Geolocation } from '@ionic-native/geolocation';
-import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { TabsPage } from '../tabs/tabs';
+import { CustomValidators } from '../../validators/custom';
+import { ListPage } from '../../pages/list/list';
 
 
 @Component({
@@ -16,10 +15,12 @@ import { TabsPage } from '../tabs/tabs';
 
 
 export class FormPage {
-  authForm: FormGroup;
+  addGroup: FormGroup;
+  title: AbstractControl;
+  price: AbstractControl;
+  dates: AbstractControl;
   loading: any;
-  addData = { name:'', price:'', dates:'', category_id:'', gps_x:null, gps_y:null };
-  data: any;
+  response: any;
   category;
   category_id;
   gps_x = 0;
@@ -29,45 +30,66 @@ export class FormPage {
         public navCtrl: NavController, 
         public navParams: NavParams, 
         public http: Http, 
-        public formBuilder: FormBuilder,
+        public formBuilder: FormBuilder,    
         public geolocation: Geolocation,
         public platform: Platform,
         public authService: AuthServiceProvider, 
         public loadingCtrl: LoadingController, 
-        private toastCtrl: ToastController
+        private toastCtrl: ToastController,
     ) {
-        this.navCtrl = navCtrl;
+        // data from category page
+        this.navCtrl    = navCtrl;
         this.category    = navParams.data.category;
         this.category_id = navParams.data.category.id;
 
+        // formbuilder for form
+        this.addGroup = formBuilder.group({
+            title:['', Validators.required],
+            price:['', Validators.compose([
+                Validators.required, 
+                CustomValidators.negativeNumber,
+            ])],
+            dates:['', Validators.required]
+        });
+
+        this.title  = this.addGroup.controls['title'];
+        this.price  = this.addGroup.controls['price'];
+        this.dates  = this.addGroup.controls['dates'];
+
+
+        // init getting gps coords from native plugin
+        this.showLoader("Catching you gps coords");
         platform.ready().then(() => {
             geolocation.getCurrentPosition().then((location) => {
-            
                 console.log(location);
+                this.loading.dismiss();
+                this.presentToast("Your coordinate are catching, we are watching you!");
                 this.gps_x = location.coords.latitude;
                 this.gps_y = location.coords.longitude;
 
             }).catch((error) => {
-            
+                this.loading.dismiss();
+                this.presentToast("Your disallow gps tracking i aour app");
                 this.gps_x = null;
                 this.gps_y = null;
-              
             });
-          });      
+        });      
     }
 
-    doAddAcccounting() {
-        this.showLoader();
+    // sending form data function
+    doAddAcccounting(data) {
+        this.showLoader("Sending data ...");
 
-        this.addData.category_id    = this.category_id;
-        this.addData.gps_x          = this.gps_x;
-        this.addData.gps_y          = this.gps_y;
+        data.category_id    = this.category_id;
+        data.gps_x          = this.gps_x;
+        data.gps_y          = this.gps_y;
+    
 
-        this.authService.addAccounting(this.addData).then((result) => {
+        this.authService.addAccounting(data).then((result) => {
             this.loading.dismiss();
-            this.data = result;
+            this.response = result;
 
-            console.log(this.data);
+            console.log(this.response);
 
             this.navCtrl.push(ListPage, {
                 item : this.category
@@ -79,26 +101,25 @@ export class FormPage {
         });
     }
 
-    showLoader(){
+    // loader show function
+    showLoader(msg){
         this.loading = this.loadingCtrl.create({
-            content: 'Sending data...'
+            content: msg
         });
-    
         this.loading.present();
-      }
+    }
     
-      presentToast(msg) {
+    // toast function
+    presentToast(msg) {
         let toast = this.toastCtrl.create({
           message: msg,
           duration: 3000,
           position: 'bottom',
           dismissOnPageChange: true
         });
-    
         toast.onDidDismiss(() => {
           console.log('Dismissed toast');
         });
-    
         toast.present();
-      }
+    }
 }

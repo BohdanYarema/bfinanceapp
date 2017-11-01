@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { Http } from '@angular/http';
 import { NavController, NavParams } from 'ionic-angular';
 import { FormPage } from '../form/form';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { TabsPage } from '../tabs/tabs';
 import { AccountingPage } from '../accounting/accounting';
 
 @Component({

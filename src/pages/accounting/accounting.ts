@@ -1,13 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {
-  GoogleMaps,
   GoogleMap,
   GoogleMapsEvent,
   GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
-  Marker
  } from '@ionic-native/google-maps';
 
 @Component({
@@ -19,7 +15,7 @@ export class AccountingPage {
   mapElement: HTMLElement;
 
   item    : any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, private googleMaps: GoogleMaps) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.item = navParams.data.item;
   }
 

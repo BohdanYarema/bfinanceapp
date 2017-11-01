@@ -1,1 +1,87 @@
-webpackJsonp([0],{235:function(n,l,a){"use strict";function u(n){return e._24(0,[(n()(),e._23(null,["\n"])),(n()(),e._4(0,null,null,10,"ion-header",[],null,null,null,null,null)),e._2(16384,null,0,m.a,[O.a,e.k,e.D,[2,w.a]],null,null),(n()(),e._23(null,["\n\n  "])),(n()(),e._4(0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,y.b,y.a)),e._2(49152,null,0,k.a,[D.a,[2,w.a],[2,P.a],O.a,e.k,e.D],null,null),(n()(),e._23(3,["\n    "])),(n()(),e._4(0,null,3,2,"ion-title",[],null,null,null,z.b,z.a)),e._2(49152,null,0,T.a,[O.a,e.k,e.D,[2,C.a],[2,k.a]],null,null),(n()(),e._23(0,["Test"])),(n()(),e._23(3,["\n  "])),(n()(),e._23(null,["\n\n"])),(n()(),e._23(null,["\n\n\n"])),(n()(),e._4(0,null,null,2,"ion-content",[["padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],[["window","resize"]],function(n,l,a){var u=!0;return"window:resize"===l&&(u=!1!==e._18(n,14).resize()&&u),u},L.b,L.a)),e._2(4374528,null,0,M.a,[O.a,V.a,x.a,e.k,e.D,D.a,F.a,e.x,[2,w.a],[2,P.a]],null,null),(n()(),e._23(1,["\n\n"])),(n()(),e._23(null,["\n"]))],null,function(n,l){n(l,4,0,e._18(l,5)._hidden,e._18(l,5)._sbPadding),n(l,13,0,e._18(l,14).statusbarPadding,e._18(l,14)._hasRefresher)})}Object.defineProperty(l,"__esModule",{value:!0});var e=a(0),t=a(3),_=a(22),o=function(){function n(n,l){this.navCtrl=n,this.navParams=l}return n.prototype.ionViewDidLoad=function(){console.log("ionViewDidLoad TestPage")},n}();o=Object(t.__decorate)([Object(e.i)({selector:"page-test",templateUrl:"test.html"}),Object(t.__metadata)("design:paramtypes",["function"==typeof(i=void 0!==_.g&&_.g)&&i||Object,"function"==typeof(r=void 0!==_.h&&_.h)&&r||Object])],o);var i,r,s=function(){return function(){}}();s=Object(t.__decorate)([Object(e.u)({declarations:[o],imports:[_.e.forChild(o)]})],s);var d=a(192),c=a(193),b=a(194),f=a(195),p=a(196),g=a(197),h=a(198),v=a(199),j=a(200),m=a(55),O=a(1),w=a(5),y=a(130),k=a(27),D=a(6),P=a(13),z=a(90),T=a(47),C=a(29),L=a(43),M=a(18),V=a(4),x=a(7),F=a(20),J=a(10),N=e._1({encapsulation:2,styles:[],data:{}}),R=e.Z("page-test",o,function(n){return e._24(0,[(n()(),e._4(0,null,null,1,"page-test",[],null,null,null,u,N)),e._2(49152,null,0,o,[P.a,J.a],null,null)],null,null)},{},{},[]),U=a(11),W=a(17),Z=a(131),q=a(46);a.d(l,"TestPageModuleNgFactory",function(){return A});var A=e._0(s,[],function(n){return e._15([e._16(512,e.j,e.W,[[8,[d.a,c.a,b.a,f.a,p.a,g.a,h.a,v.a,j.a,R]],[3,e.j],e.v]),e._16(4608,U.k,U.j,[e.t]),e._16(4608,W.o,W.o,[]),e._16(4608,W.d,W.d,[]),e._16(512,U.b,U.b,[]),e._16(512,W.m,W.m,[]),e._16(512,W.e,W.e,[]),e._16(512,W.l,W.l,[]),e._16(512,Z.a,Z.a,[]),e._16(512,Z.b,Z.b,[]),e._16(512,s,s,[]),e._16(256,q.a,o,[])])})}});
+webpackJsonp([0],{
+
+/***/ 275:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestPageModule", function() { return TestPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__test__ = __webpack_require__(276);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var TestPageModule = (function () {
+    function TestPageModule() {
+    }
+    return TestPageModule;
+}());
+TestPageModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__test__["a" /* TestPage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__test__["a" /* TestPage */]),
+        ],
+    })
+], TestPageModule);
+
+//# sourceMappingURL=test.module.js.map
+
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TestPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the TestPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var TestPage = (function () {
+    function TestPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    TestPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad TestPage');
+    };
+    return TestPage;
+}());
+TestPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-test',template:/*ion-inline-start:"/Users/bohdan/Documents/bfinanceapp/src/pages/test/test.html"*/'<!--\n  Generated template for the TestPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Test</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/Documents/bfinanceapp/src/pages/test/test.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], TestPage);
+
+//# sourceMappingURL=test.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=0.js.map

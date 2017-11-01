@@ -3,7 +3,6 @@ import { NavController } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { TabsPage } from '../tabs/tabs';
 
 /**
  * Generated class for the CategoriesPage page.

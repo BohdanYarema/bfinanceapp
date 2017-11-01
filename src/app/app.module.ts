@@ -20,12 +20,6 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { HttpModule } from '@angular/http';
 import {
   GoogleMaps,
-  GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
-  CameraPosition,
-  MarkerOptions,
-  Marker
  } from '@ionic-native/google-maps';
 
 @NgModule({

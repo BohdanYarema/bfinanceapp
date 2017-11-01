@@ -1,25 +1,17 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Add</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-<h2>Add</h2>
-<form (submit)="doAddAcccounting()">
+<h2>Add Accounting</h2>
+<form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">
     <ion-item>
-        <ion-label stacked>Name</ion-label>
-        <ion-input [(ngModel)]="addData.name" name="name" type="text" placeholder="Your Name" ></ion-input>
+        <ion-input formControlName="title" name="title" type="text" placeholder="Title" ></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label stacked>Price</ion-label>
-        <ion-input [(ngModel)]="addData.price" name="price" type="text" placeholder="Your price" ></ion-input>
+        <ion-input formControlName="price" name="price" type="number" placeholder="price" ></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label>Date</ion-label>
-        <ion-datetime displayFormat="MMM/DD/YYYY" [(ngModel)]="addData.dates" name="dates"></ion-datetime>
+        <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>
     </ion-item>
-    <button ion-button block type="submit">
+    
+    <button ion-button block type="submit" [disabled]="!addGroup.valid">
         Add
     </button>
 </form>
