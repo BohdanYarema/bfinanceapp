@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 import {
   GoogleMaps,
   GoogleMap,
@@ -10,14 +10,11 @@ import {
   Marker
  } from '@ionic-native/google-maps';
 
-@IonicPage()
 @Component({
   selector: 'page-accounting',
   templateUrl: 'accounting.html',
 })
 export class AccountingPage {
-  @ViewChild("map") mapElement;
-
   map: GoogleMap;
   mapElement: HTMLElement;
 
