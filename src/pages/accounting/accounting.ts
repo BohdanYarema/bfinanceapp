@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {
   GoogleMaps,
@@ -16,6 +16,7 @@ import {
   templateUrl: 'accounting.html',
 })
 export class AccountingPage {
+  @ViewChild("map") mapElement;
 
   map: GoogleMap;
   mapElement: HTMLElement;
@@ -26,25 +27,29 @@ export class AccountingPage {
   }
 
   ionViewDidLoad() {
-    console.log(this.item);
-    //this.loadMap(this.item.gps_lat, this.item.gps_lon);
+    if (this.item.gps_x === null || this.item.gps_y === null) {
+      console.log("no map");
+    } else {
+      this.loadMap(this.item.gps_x, this.item.gps_y); 
+    }
   }
 
-  loadMap(gps_lat, gps_lon) {
+  loadMap(gps_x, gps_y) {
     this.mapElement = document.getElementById('map');
 
     let mapOptions: GoogleMapOptions = {
       camera: {
         target: {
-          lat: gps_lat,
-          lng: gps_lon
+          lat: gps_x,
+          lng: gps_y
         },
         zoom: 18,
         tilt: 30
       }
     };
 
-    this.map = this.googleMaps.create(this.mapElement, mapOptions);
+    this.map = new GoogleMap(this.mapElement, mapOptions);
+    //this.map = this.googleMaps.create(this.mapElement, mapOptions);
 
     // Wait the MAP_READY before using any methods.
     this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
@@ -55,8 +60,8 @@ export class AccountingPage {
             icon: 'blue',
             animation: 'DROP',
             position: {
-              lat: gps_lat,
-              lng: gps_lon
+              lat: gps_x,
+              lng: gps_y
             }
           })
           .then(marker => {

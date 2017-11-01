@@ -18,12 +18,12 @@ import { TabsPage } from '../tabs/tabs';
 export class FormPage {
   authForm: FormGroup;
   loading: any;
-  addData = { name:'', price:'', dates:'', category_id:'', gps_lat:null, gps_lon:null };
+  addData = { name:'', price:'', dates:'', category_id:'', gps_x:null, gps_y:null };
   data: any;
   category;
   category_id;
-  gps_lat = 0;
-  gps_lon = 0;
+  gps_x = 0;
+  gps_y = 0;
   
     constructor(
         public navCtrl: NavController, 
@@ -44,13 +44,13 @@ export class FormPage {
             geolocation.getCurrentPosition().then((location) => {
             
                 console.log(location);
-                this.gps_lat = location.coords.latitude;
-                this.gps_lon = location.coords.longitude;
+                this.gps_x = location.coords.latitude;
+                this.gps_y = location.coords.longitude;
 
             }).catch((error) => {
             
-                this.gps_lat = null;
-                this.gps_lon = null;
+                this.gps_x = null;
+                this.gps_y = null;
               
             });
           });      
@@ -60,8 +60,8 @@ export class FormPage {
         this.showLoader();
 
         this.addData.category_id    = this.category_id;
-        this.addData.gps_lat        = this.gps_lat;
-        this.addData.gps_lon        = this.gps_lon;
+        this.addData.gps_x          = this.gps_x;
+        this.addData.gps_y          = this.gps_y;
 
         this.authService.addAccounting(this.addData).then((result) => {
             this.loading.dismiss();
