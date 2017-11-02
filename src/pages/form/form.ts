@@ -16,9 +16,9 @@ import { ListPage } from '../../pages/list/list';
 
 export class FormPage {
   addGroup: FormGroup;
-  title: AbstractControl;
-  price: AbstractControl;
-  dates: AbstractControl;
+  name  : AbstractControl;
+  price : AbstractControl;
+  dates : AbstractControl;
   loading: any;
   response: any;
   category;
@@ -44,7 +44,7 @@ export class FormPage {
 
         // formbuilder for form
         this.addGroup = formBuilder.group({
-            title:['', Validators.required],
+            name:['', Validators.required],
             price:['', Validators.compose([
                 Validators.required, 
                 CustomValidators.negativeNumber,
@@ -52,7 +52,7 @@ export class FormPage {
             dates:['', Validators.required]
         });
 
-        this.title  = this.addGroup.controls['title'];
+        this.name   = this.addGroup.controls['name'];
         this.price  = this.addGroup.controls['price'];
         this.dates  = this.addGroup.controls['dates'];
 

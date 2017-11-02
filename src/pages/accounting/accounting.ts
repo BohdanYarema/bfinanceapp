@@ -30,16 +30,14 @@ export class AccountingPage {
   }
 
   ionViewDidLoad() {
-    if (this.item.gps_x === null || this.item.gps_y === null) {
-      this.mapElement = document.getElementById('map');
-      this.mapElement.innerHTML = "<div class='squirrel'></div>";
-    } else {
+    if (this.item.gps_x !== null || this.item.gps_y !== null) {
       this.loadMap(this.item.gps_x, this.item.gps_y); 
     }
   }
 
   loadMap(gps_x, gps_y) {
     this.mapElement = document.getElementById('map');
+    this.mapElement.innerHTML = '';
 
     let mapOptions: GoogleMapOptions = {
       camera: {
