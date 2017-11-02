@@ -50,7 +50,7 @@ export class AccountingPage {
         // Now you can use all methods safely.
         this.map.addMarker({
             title: 'Ionic',
-            icon: 'blue',
+            icon: 'pin',
             animation: 'DROP',
             position: {
               lat: gps_x,

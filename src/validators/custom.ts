@@ -1,6 +1,4 @@
-import { Directive, Input } from '@angular/core';
-
-import { FormControl, Validator, AbstractControl } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 export class CustomValidators {
     static negativeNumber(control: FormControl) {
