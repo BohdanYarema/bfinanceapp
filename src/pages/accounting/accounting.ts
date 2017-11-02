@@ -17,11 +17,22 @@ export class AccountingPage {
   item    : any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.item = navParams.data.item;
+
+    var date = new Date(parseInt(this.item.dates) * 1000);
+    
+    var curr_date   = date.getDate();
+    var curr_month  = date.getMonth() + 1;
+    var curr_year   = date.getFullYear();
+    
+    var result = (curr_date + "-" + curr_month + "-" + curr_year);
+
+    this.item.dates = result;
   }
 
   ionViewDidLoad() {
     if (this.item.gps_x === null || this.item.gps_y === null) {
-      console.log("no map");
+      this.mapElement = document.getElementById('map');
+      this.mapElement.innerHTML = "<div class='squirrel'></div>";
     } else {
       this.loadMap(this.item.gps_x, this.item.gps_y); 
     }
@@ -50,7 +61,7 @@ export class AccountingPage {
         // Now you can use all methods safely.
         this.map.addMarker({
             title: 'Ionic',
-            icon: 'pin',
+            icon: {url : '../../assets/imgs/logo.png'},
             animation: 'DROP',
             position: {
               lat: gps_x,

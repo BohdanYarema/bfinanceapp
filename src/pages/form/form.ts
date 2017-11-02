@@ -58,17 +58,14 @@ export class FormPage {
 
 
         // init getting gps coords from native plugin
-        this.showLoader("Catching you gps coords");
+        //this.showLoader("Catching you gps coords");
         platform.ready().then(() => {
             geolocation.getCurrentPosition().then((location) => {
-                console.log(location);
-                this.loading.dismiss();
                 this.presentToast("Your coordinate are catching, we are watching you!");
                 this.gps_x = location.coords.latitude;
                 this.gps_y = location.coords.longitude;
 
             }).catch((error) => {
-                this.loading.dismiss();
                 this.presentToast("Your disallow gps tracking i aour app");
                 this.gps_x = null;
                 this.gps_y = null;
