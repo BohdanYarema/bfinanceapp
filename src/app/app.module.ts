@@ -17,6 +17,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 import { HttpModule } from '@angular/http';
 import {
@@ -60,7 +61,8 @@ import {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     Geolocation,
-    GoogleMaps
+    GoogleMaps,
+    Diagnostic
   ]
 })
 export class AppModule {}

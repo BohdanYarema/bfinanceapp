@@ -221,6 +221,14 @@ module.exports = [
     "id": "cordova-plugin-x-toast.tests",
     "file": "plugins/cordova-plugin-x-toast/test/tests.js",
     "pluginId": "cordova-plugin-x-toast"
+  },
+  {
+    "id": "cordova.plugins.diagnostic.Diagnostic",
+    "file": "plugins/cordova.plugins.diagnostic/www/android/diagnostic.js",
+    "pluginId": "cordova.plugins.diagnostic",
+    "clobbers": [
+      "cordova.plugins.diagnostic"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -233,7 +241,8 @@ module.exports.metadata =
   "cordova-plugin-splashscreen": "4.0.3",
   "cordova-plugin-whitelist": "1.3.1",
   "ionic-plugin-keyboard": "2.2.1",
-  "cordova-plugin-x-toast": "2.6.0"
+  "cordova-plugin-x-toast": "2.6.0",
+  "cordova.plugins.diagnostic": "3.7.1"
 };
 // BOTTOM OF METADATA
 });

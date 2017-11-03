@@ -31,6 +31,9 @@
     },
     "cordova-plugin-x-toast": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova.plugins.diagnostic": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {}

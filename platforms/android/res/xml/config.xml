@@ -62,6 +62,10 @@
     <feature name="Toast">
         <param name="android-package" value="nl.xservices.plugins.Toast" />
     </feature>
+    <feature name="Diagnostic">
+        <param name="android-package" value="cordova.plugins.Diagnostic" />
+        <param name="onload" value="true" />
+    </feature>
     <name>MyApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
