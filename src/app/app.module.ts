@@ -11,6 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { AccountingPage } from '../pages/accounting/accounting';
+import { HomePage } from '../pages/home/home';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,6 +33,7 @@ import {
     RegisterPage,
     ListPage,
     FormPage,
+    HomePage,
     AccountingPage
   ],
   imports: [
@@ -49,6 +51,7 @@ import {
     RegisterPage,
     ListPage,
     FormPage,
+    HomePage,
     AccountingPage
   ],
   providers: [

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ProfilePage } from '../profile/profile';
+import { HomePage } from '../home/home';
 import { CategoriesPage } from '../categories/categories';
 import { LoginPage } from '../login/login';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
@@ -12,14 +13,21 @@ import { App, LoadingController, ToastController } from 'ionic-angular';
 export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  tab1Root: any = ProfilePage;
+  tab1Root: any = HomePage;
   tab2Root: any = CategoriesPage;
-  loading: any;
+  tab3Root: any = ProfilePage;
+  loading:  any;
 
-  constructor(public navCtrl: NavController, public authService: AuthServiceProvider, public app: App, private toastCtrl: ToastController, private loadingCtrl: LoadingController) {
-    if(!localStorage.getItem("token")) {
-      navCtrl.setRoot(LoginPage);
-    }
+  constructor(
+    public navCtrl: NavController, 
+    public authService: AuthServiceProvider, 
+    public app: App, 
+    private toastCtrl: ToastController, 
+    private loadingCtrl: LoadingController
+  ) {
+    // if(!localStorage.getItem("token")) {
+    //   navCtrl.setRoot(LoginPage);
+    // }
   }
 
   logout() {

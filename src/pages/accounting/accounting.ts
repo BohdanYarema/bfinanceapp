@@ -56,10 +56,15 @@ export class AccountingPage {
     // Wait the MAP_READY before using any methods.
     this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
         console.log('Map is ready!');
+        var icon = {
+          url  : 'assets/imgs/map.png',
+          size : { width: "32px", height: "32px;" }
+        };
+
         // Now you can use all methods safely.
         this.map.addMarker({
             title: 'Ionic',
-            icon: {url : '../../assets/imgs/logo.png'},
+            icon: icon,
             animation: 'DROP',
             position: {
               lat: gps_x,
