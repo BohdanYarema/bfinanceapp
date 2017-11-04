@@ -121,4 +121,19 @@ export class AuthServiceProvider {
     });
   }
 
+  deleteAccounting(data) {
+    return new Promise((resolve, reject) => {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('authorization', 'Bearer ' + localStorage.getItem("token"));
+
+        this.http.post(apiUrl+'accounting/delete?id='+data.id, JSON.stringify(data), {headers: headers})
+          .subscribe(res => {
+            resolve(res.json());
+          }, (err) => {
+            reject(err);
+          });
+    });
+  }
+
 }

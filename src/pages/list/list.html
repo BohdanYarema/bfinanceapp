@@ -9,11 +9,15 @@
     <div class="list" ion-item *ngFor="let item of items">
         <ion-item-group>
           <ion-item-divider color="light">{{ item[0] }}</ion-item-divider>
-          <div ion-item *ngFor="let data of item[1]" (click)="itemSelected(data)">
-            <ion-item >
-              <p item-start>{{ data.name }}</p>
-              <p item-end>{{ data.price }} uah</p>
+          <div ion-item *ngFor="let data of item[1]">
+            <ion-item>
+              <p (click)="itemSelected(data)" item-start>{{ data.name }}</p>
+              <p (click)="itemSelected(data)" item-end>{{ data.price }} uah</p>
+              <button item-end dark clear ion-button (click)="itemDelete(data)" icon-only>
+                <ion-icon name='trash'></ion-icon>
+              </button>
             </ion-item>
+            <!-- Only icon (no text) -->
           </div>
         </ion-item-group>
     </div>

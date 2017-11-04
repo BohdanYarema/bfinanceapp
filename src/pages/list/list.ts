@@ -87,4 +87,17 @@ export class ListPage {
       item : item
     });
   }
+
+  itemDelete(item) {
+    this.authService.deleteAccounting(item).then((result) => {
+      this.data = result
+      this.loading.dismiss();
+      this.navCtrl.push(ListPage, {
+        item : this.item
+      });
+    }, (err) => {
+      this.loading.dismiss();
+      this.presentToast(err);
+    });
+  }
 }
