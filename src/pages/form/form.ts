@@ -6,7 +6,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { CustomValidators } from '../../validators/custom';
 import { ListPage } from '../../pages/list/list';
-import { Diagnostic } from '@ionic-native/diagnostic';
+//import { Diagnostic } from '@ionic-native/diagnostic';
 
 
 @Component({
@@ -36,12 +36,12 @@ export class FormPage {
         public platform: Platform,
         public authService: AuthServiceProvider, 
         public loadingCtrl: LoadingController, 
-        private toastCtrl: ToastController,
-        private diagnostic: Diagnostic
+        private toastCtrl: ToastController
+        //private diagnostic: Diagnostic
     ) {
-        let successCallback = (isAvailable) => { alert('Is available? ' + isAvailable); };
-        let errorCallback = (e) => alert(e);
-        this.diagnostic.isGpsLocationEnabled().then(successCallback, errorCallback);
+        // let successCallback = (isAvailable) => { alert('Is available? ' + isAvailable); };
+        // let errorCallback = (e) => alert(e);
+        // this.diagnostic.isGpsLocationEnabled().then(successCallback, errorCallback);
 
 
         // data from category page
@@ -92,8 +92,6 @@ export class FormPage {
         this.authService.addAccounting(data).then((result) => {
             this.loading.dismiss();
             this.response = result;
-
-            console.log(this.response);
 
             this.navCtrl.push(ListPage, {
                 item : this.category

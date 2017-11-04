@@ -12,6 +12,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { AccountingPage } from '../pages/accounting/accounting';
 import { HomePage } from '../pages/home/home';
+import { MapPage } from '../pages/map/map';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,7 +36,8 @@ import {
     ListPage,
     FormPage,
     HomePage,
-    AccountingPage
+    AccountingPage,
+    MapPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import {
     ListPage,
     FormPage,
     HomePage,
-    AccountingPage
+    AccountingPage,
+    MapPage
   ],
   providers: [
     StatusBar,

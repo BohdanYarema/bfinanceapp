@@ -4,6 +4,7 @@ import { ProfilePage } from '../profile/profile';
 import { HomePage } from '../home/home';
 import { CategoriesPage } from '../categories/categories';
 import { LoginPage } from '../login/login';
+import { MapPage } from '../map/map';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { App, LoadingController, ToastController } from 'ionic-angular';
 
@@ -15,7 +16,8 @@ export class TabsPage {
   // should be each tab's root Page
   tab1Root: any = HomePage;
   tab2Root: any = CategoriesPage;
-  tab3Root: any = ProfilePage;
+  tab3Root: any = MapPage;
+  tab4Root: any = ProfilePage;
   loading:  any;
 
   constructor(

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {
   GoogleMap,
-  GoogleMapsEvent,
-  GoogleMapOptions,
  } from '@ionic-native/google-maps';
+ 
+ declare var google :any;
 
 @Component({
   selector: 'page-accounting',
@@ -12,10 +12,13 @@ import {
 })
 export class AccountingPage {
   map: GoogleMap;
-  mapElement: HTMLElement;
+  @ViewChild("map") mapElement: ElementRef;
 
   item    : any;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController, 
+    public navParams: NavParams
+  ) {
     this.item = navParams.data.item;
 
     var date = new Date(parseInt(this.item.dates) * 1000);
@@ -31,54 +34,49 @@ export class AccountingPage {
 
   ionViewDidLoad() {
     if (this.item.gps_x !== null || this.item.gps_y !== null) {
-      this.loadMap(this.item.gps_x, this.item.gps_y); 
+      this.loadmap(this.item.gps_x, this.item.gps_y, this.item.name); 
     }
   }
 
-  loadMap(gps_x, gps_y) {
-    this.mapElement = document.getElementById('map');
-    this.mapElement.innerHTML = '';
-
-    let mapOptions: GoogleMapOptions = {
-      camera: {
-        target: {
-          lat: gps_x,
-          lng: gps_y
-        },
-        zoom: 18,
-        tilt: 30
-      }
+  loadmap(x,y,title){
+    let mapOprions = {
+      center: {
+        lat: parseFloat(x),
+        lng: parseFloat(y)
+      },
+      zoom: 12,
     };
 
-    this.map = new GoogleMap(this.mapElement, mapOptions);
-    //this.map = this.googleMaps.create(this.mapElement, mapOptions);
+    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOprions);
 
-    // Wait the MAP_READY before using any methods.
-    this.map.one(GoogleMapsEvent.MAP_READY).then(() => {
-        console.log('Map is ready!');
-        var icon = {
-          url  : 'assets/imgs/map.png',
-          size : { width: "32px", height: "32px;" }
-        };
+    this.addMarker(parseFloat(x),parseFloat(y),title);
+  }
 
-        // Now you can use all methods safely.
-        this.map.addMarker({
-            title: 'Ionic',
-            icon: icon,
-            animation: 'DROP',
-            position: {
-              lat: gps_x,
-              lng: gps_y
-            }
-          })
-          .then(marker => {
-            marker.on(GoogleMapsEvent.MARKER_CLICK)
-              .subscribe(() => {
-                alert('clicked');
-              });
-          });
+  addMarker(x,y,title){
+    let marker = new google.maps.Marker({
+      map : this.map,
+      animation : google.maps.Animation.Drop,
+      position : {
+        lat: x,
+        lng: y
+      },
+      icon: { 
+        url : 'assets/imgs/map.png',
+      }
+    });
 
-      });
+    let content = title;
+    this.addInfoWidnow(marker, content);
+  }
+
+  addInfoWidnow(marker, content){
+    var infowindow = new google.maps.InfoWindow({
+        content: content
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(this.map,marker);
+    });
   }
 
 }

@@ -74,16 +74,19 @@ export class HomePage {
     }
 
     setCharts(type, data){
+        var element;
+        var i;
+        var collection;
         switch(type) {
             case 'line':
-                var collection = {
+                collection = {
                     "label" : [],
                     "data"  : []
                 }
 
-                for(var item in data){
-                    collection.label.push(data[item].name); 
-                    collection.data.push(data[item].count); 
+                for(element in data){
+                    collection.label.push(data[element].name); 
+                    collection.data.push(data[element].count); 
                 }
                 this.lineChart = new Chart(this.lineCanvas.nativeElement, {
                     type: 'line',
@@ -117,26 +120,26 @@ export class HomePage {
                 });  
                 break;
             case 'bar':
-                var coolection = {
+                collection = {
                     "label" : [],
                     "data"  : [],
                     "color" : []
                 }
-                for (var i = 0; i < data.length; i++) {
-                    var element = data[i];
-                    coolection.label.push(element.category.name); 
-                    coolection.data.push(parseInt(element.hour)); 
-                    coolection.color.push(element.category.color); 
+                for (i = 0; i < data.length; i++) {
+                    element = data[i];
+                    collection.label.push(element.category.name); 
+                    collection.data.push(parseInt(element.hour)); 
+                    collection.color.push(element.category.color); 
                 }
                 this.barChart = new Chart(this.barCanvas.nativeElement, {
             
                     type: 'bar',
                     data: {
-                        labels: coolection.label,
+                        labels: collection.label,
                         datasets: [{
                             label: 'Most popular time to buy per category',
-                            data: coolection.data,
-                            backgroundColor: coolection.color,
+                            data: collection.data,
+                            backgroundColor: collection.color,
                             borderWidth: 1
                         }]
                     },
@@ -153,25 +156,25 @@ export class HomePage {
                 });
                 break;
             case 'doughnut':
-                var coolection = {
+                collection = {
                     "label" : [],
                     "data"  : [],
                     "color" : []
                 }
-                for (var i = 0; i < data.length; i++) {
-                    var element = data[i];
-                    coolection.label.push(element.name); 
-                    coolection.data.push(element.accountings.length); 
-                    coolection.color.push(element.color); 
+                for (i = 0; i < data.length; i++) {
+                    element = data[i];
+                    collection.label.push(element.name); 
+                    collection.data.push(element.accountings.length); 
+                    collection.color.push(element.color); 
                 }
                 this.doughnutChart = new Chart(this.doughnutCanvas.nativeElement, {
                     type: 'doughnut',
                     data: {
-                        labels: coolection.label,
+                        labels: collection.label,
                         datasets: [{
                             label: 'Count of by per category',
-                            data: coolection.data,
-                            backgroundColor: coolection.color,
+                            data: collection.data,
+                            backgroundColor: collection.color,
                         }]
                     }
                 });
