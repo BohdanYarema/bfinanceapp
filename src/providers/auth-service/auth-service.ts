@@ -67,7 +67,22 @@ export class AuthServiceProvider {
         headers.append('Content-Type', 'application/json');
         headers.append('authorization', 'Bearer ' + localStorage.getItem("token"));
 
-        this.http.get(apiUrl+'accounting/index?id=' + id, {headers: headers})
+        this.http.get(apiUrl+'accounting/list?id=' + id, {headers: headers})
+          .subscribe(res => {
+            resolve(res.json());
+          }, (err) => {
+            reject(err);
+          });
+    });
+  }
+
+  charts() {
+    return new Promise((resolve, reject) => {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('authorization', 'Bearer ' + localStorage.getItem("token"));
+
+        this.http.get(apiUrl+'accounting/index', {headers: headers})
           .subscribe(res => {
             resolve(res.json());
           }, (err) => {
