@@ -20,6 +20,11 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Diagnostic } from '@ionic-native/diagnostic';
 
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+
+import { Camera } from '@ionic-native/camera';
+
 import { HttpModule } from '@angular/http';
 import {
   GoogleMaps,
@@ -65,7 +70,11 @@ import {
     AuthServiceProvider,
     Geolocation,
     GoogleMaps,
-    Diagnostic
+    Diagnostic,
+    FileTransfer,
+    FileTransferObject,
+    File,
+    Camera
   ]
 })
 export class AppModule {}
