@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, ToastController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 
 
 /**
@@ -15,7 +16,6 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-
   imageURI:any;
   imageFileName:any;
 
@@ -23,7 +23,8 @@ export class ProfilePage {
     public navCtrl: NavController,
     private camera: Camera,
     public loadingCtrl: LoadingController,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private transfer: FileTransfer,
   ) {
   }
 
@@ -58,6 +59,35 @@ export class ProfilePage {
     });
   
     toast.present();
+  }
+
+  uploadFile() {
+    let loader = this.loadingCtrl.create({
+      content: "Uploading..."
+    });
+    loader.present();
+    const fileTransfer: FileTransferObject = this.transfer.create();
+  
+    let options: FileUploadOptions = {
+      fileKey: 'ionicfile',
+      fileName: 'ionicfile',
+      chunkedMode: false,
+      mimeType: "image/jpeg",
+      headers: {}
+    }
+  
+    fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/auth/upload', options)
+      .then((data) => {
+      alert(data);
+      this.presentToast(data);
+      //this.imageFileName = "http://devservice.pro/web/"+data.name;
+      loader.dismiss();
+      this.presentToast("Image uploaded successfully");
+    }, (err) => {
+      console.log(err);
+      loader.dismiss();
+      this.presentToast(err);
+    });
   }
 
 }
