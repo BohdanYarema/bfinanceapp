@@ -1,6 +1,6 @@
 {
   "name": "Ionic2RestAuth",
-  "app_id": "",
+  "app_id": "ec6c06b6",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
