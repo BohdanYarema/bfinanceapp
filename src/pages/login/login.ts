@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController, ToastController } from 'ionic-angular';
 import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { TabsPage } from '../tabs/tabs';
+import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 
 @Component({
@@ -40,7 +40,7 @@ export class LoginPage {
       this.loading.dismiss();
       this.response = result;
       localStorage.setItem('token', this.response.access_token);
-      this.navCtrl.setRoot(TabsPage);
+      this.navCtrl.setRoot(HomePage);
     }, (err) => {
       this.loading.dismiss();
       this.presentToast(err);

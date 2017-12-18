@@ -7,7 +7,6 @@ import { CategoriesPage } from '../pages/categories/categories';
 import { ListPage } from '../pages/list/list';
 import { FormPage } from '../pages/form/form';
 import { ProfilePage } from '../pages/profile/profile';
-import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { AccountingPage } from '../pages/accounting/accounting';
@@ -35,7 +34,6 @@ import {
     MyApp,
     CategoriesPage,
     ProfilePage,
-    TabsPage,
     LoginPage,
     RegisterPage,
     ListPage,
@@ -54,7 +52,6 @@ import {
     MyApp,
     CategoriesPage,
     ProfilePage,
-    TabsPage,
     LoginPage,
     RegisterPage,
     ListPage,

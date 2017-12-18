@@ -1,8 +1,14 @@
-<ion-content>
-    <div class="card-background-page" ion-item *ngFor="let item of data" (click)="itemSelected(item)">
-      <ion-card>
-        <img src="{{ item.thumbnail }}"/>
-        <div class="card-title">{{ item.name }}</div>
-      </ion-card>
-    </div>
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Category
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page">
+  <ion-list id="category-list" ion-item *ngFor="let item of data" (click)="itemSelected(item)">
+    <ion-item color="none" id="category-list-item1">
+        {{ item.name }}
+    </ion-item>
+  </ion-list>
 </ion-content>

@@ -1,32 +1,43 @@
-<ion-content padding>
-      <br><br><br>
-
-      <ion-card>
-        <ion-card-header>
-          Doughnut Chart
-        </ion-card-header>
-        <ion-card-content>
-          <canvas #doughnutCanvas></canvas>
-        </ion-card-content>
-      </ion-card>
-
-      
-     <ion-card>
-       <ion-card-header>
-         Bar Chart
-       </ion-card-header>
-       <ion-card-content>
-         <canvas #barCanvas></canvas>
-       </ion-card-content>
-     </ion-card>
-  
-     <ion-card>
-       <ion-card-header>
-         Line Chart
-       </ion-card-header>
-       <ion-card-content>
-         <canvas #lineCanvas></canvas>
-       </ion-card-content>
-     </ion-card>
-  
- </ion-content>
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <ion-list id="home-list11">
+    <ion-item color="none" on-click="goToCharts()" id="home-list-item47">
+      <ion-thumbnail item-left>
+        <img src="assets/img/QmnR3sRpSgzv8qEb3rdw_charts.png" />
+      </ion-thumbnail>
+      <h2>
+        Charts
+      </h2>
+    </ion-item>
+    <ion-item color="none" on-click="goToCategory()" id="home-list-item48">
+      <ion-thumbnail item-left>
+        <img src="assets/img/lkkeOZkLTUK15GPs3apS_category.png" />
+      </ion-thumbnail>
+      <h2>
+        Category
+      </h2>
+    </ion-item>
+    <ion-item color="none" on-click="goToMap()" id="home-list-item49">
+      <ion-thumbnail item-left>
+        <img src="assets/img/76Szzj9VSg6LYQRvi6jV_map.png" />
+      </ion-thumbnail>
+      <h2>
+        Map
+      </h2>
+    </ion-item>
+    <ion-item color="none" on-click="goToProfile()" id="home-list-item50">
+      <ion-thumbnail item-left>
+        <img src="assets/img/opvUfGcAQeqO5xDc4tmQ_user.png" />
+      </ion-thumbnail>
+      <h2>
+        Profile
+      </h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
