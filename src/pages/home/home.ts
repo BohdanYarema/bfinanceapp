@@ -5,7 +5,7 @@ import { LoadingController, ToastController } from 'ionic-angular';
 import { CategoriesPage } from '../categories/categories';
 import { MapPage } from '../map/map';
 import { ProfilePage } from '../profile/profile';
-//import { ChartsPage } from '../charts/charts';
+import { ChartsPage } from '../charts/charts';
 
 @Component({
   selector: 'page-home',
@@ -38,7 +38,7 @@ export class HomePage {
     }
 
     goToCharts(){
-      this.navCtrl.push(CategoriesPage);
+      this.navCtrl.push(ChartsPage);
     }
 
     goToCategory(){
