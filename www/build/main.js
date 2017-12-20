@@ -453,7 +453,7 @@ __decorate([
 ], AccountingPage.prototype, "mapElement", void 0);
 AccountingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-accounting',template:/*ion-inline-start:"/Users/Bogdanek/bfinanceapp/src/pages/accounting/accounting.html"*/'<ion-content class="accounting--card">\n  <div #map id="map">\n    <ion-img style="width: 100%; height: 100%;" src="assets/imgs/squirrel.png"></ion-img>    \n  </div>\n  <ion-card>\n      <ion-item>\n        <ion-icon name="basket" item-left large></ion-icon>\n        <h2>{{ item.name }}</h2>\n        <p>{{ item.price }} uah</p>\n      </ion-item>\n      <ion-item>\n        <span item-left>{{ item.dates }}</span>\n      </ion-item>\n    </ion-card>\n</ion-content>'/*ion-inline-end:"/Users/Bogdanek/bfinanceapp/src/pages/accounting/accounting.html"*/,
+        selector: 'page-accounting',template:/*ion-inline-start:"/Users/Bogdanek/bfinanceapp/src/pages/accounting/accounting.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{ item.name }}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <ion-list>\n      <ion-item id="item-list-item-container16">\n        <div id="item-markdown18" class="show-list-numbers-and-dots">\n          <p>\n            {{ item.name }} {{ item.dates }}\n          </p>\n        </div>\n      </ion-item>\n      <div style="width:100%;height:350px;" #map id="map">\n          <ion-img style="width: 100%; height:350px;" src="assets/imgs/squirrel.png"></ion-img>    \n      </div>\n      <ion-item>\n        <ion-icon name="basket" item-left></ion-icon>\n        {{ item.price }} uah\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"/Users/Bogdanek/bfinanceapp/src/pages/accounting/accounting.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
@@ -569,7 +569,7 @@ __decorate([
 ], MapPage.prototype, "mapElement", void 0);
 MapPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-map',template:/*ion-inline-start:"/Users/Bogdanek/bfinanceapp/src/pages/map/map.html"*/'<ion-content padding>\n  <div #map id="map">\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/bfinanceapp/src/pages/map/map.html"*/,
+        selector: 'page-map',template:/*ion-inline-start:"/Users/Bogdanek/bfinanceapp/src/pages/map/map.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-title>\n        Map\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n<ion-content padding>\n  <div #map id="map">\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/bfinanceapp/src/pages/map/map.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
@@ -662,13 +662,9 @@ var ProfilePage = (function () {
         };
         fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/auth/upload', options)
             .then(function (data) {
-            alert(data);
-            _this.presentToast(data);
-            //this.imageFileName = "http://devservice.pro/web/"+data.name;
             loader.dismiss();
             _this.presentToast("Image uploaded successfully");
         }, function (err) {
-            console.log(err);
             loader.dismiss();
             _this.presentToast(err);
         });
@@ -677,15 +673,12 @@ var ProfilePage = (function () {
 }());
 ProfilePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/Users/Bogdanek/bfinanceapp/src/pages/profile/profile.html"*/'<ion-content padding>\n        <br><br><br><br>\n<ion-item>\n    <p>{{imageURI}}</p>\n    <button ion-button color="secondary" (click)="getImage()">Get Image</button>\n</ion-item>\n<ion-item>\n    <h4>Image Preview</h4>\n    <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />\n</ion-item>\n<ion-item>\n    <button ion-button (click)="uploadFile()">Upload</button>\n</ion-item>\n</ion-content>'/*ion-inline-end:"/Users/Bogdanek/bfinanceapp/src/pages/profile/profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"/Users/Bogdanek/bfinanceapp/src/pages/profile/profile.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Profile\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n        <br><br><br><br>\n<ion-item>\n    <p>{{imageURI}}</p>\n    <button ion-button color="secondary" (click)="getImage()">Get Image</button>\n</ion-item>\n<ion-item>\n    <h4>Image Preview</h4>\n    <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />\n</ion-item>\n<ion-item>\n    <button ion-button (click)="uploadFile()">Upload</button>\n</ion-item>\n</ion-content>'/*ion-inline-end:"/Users/Bogdanek/bfinanceapp/src/pages/profile/profile.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__["a" /* FileTransfer */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__["a" /* FileTransfer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__["a" /* FileTransfer */]) === "function" && _e || Object])
 ], ProfilePage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=profile.js.map
 
 /***/ }),

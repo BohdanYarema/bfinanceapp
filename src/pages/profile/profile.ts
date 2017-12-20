@@ -78,13 +78,9 @@ export class ProfilePage {
   
     fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/auth/upload', options)
       .then((data) => {
-      alert(data);
-      this.presentToast(data);
-      //this.imageFileName = "http://devservice.pro/web/"+data.name;
       loader.dismiss();
       this.presentToast("Image uploaded successfully");
     }, (err) => {
-      console.log(err);
       loader.dismiss();
       this.presentToast(err);
     });

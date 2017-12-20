@@ -25512,10 +25512,6 @@ ion-navbar.toolbar {
   min-height: calc(46px + constant(safe-area-inset-top));
 }
 
-page-accounting .accounting--card {
-  margin-top: 56px;
-}
-
 page-accounting #map {
   height: 60%;
 }
@@ -25585,6 +25581,5 @@ page-list .button-md {
 }
 
 page-map #map {
-  height: 90%;
-  margin-top: 56px;
+  height: 100%;
 }

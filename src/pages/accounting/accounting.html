@@ -1,15 +1,27 @@
-<ion-content class="accounting--card">
-  <div #map id="map">
-    <ion-img style="width: 100%; height: 100%;" src="assets/imgs/squirrel.png"></ion-img>    
-  </div>
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{ item.name }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
   <ion-card>
-      <ion-item>
-        <ion-icon name="basket" item-left large></ion-icon>
-        <h2>{{ item.name }}</h2>
-        <p>{{ item.price }} uah</p>
+    <ion-list>
+      <ion-item id="item-list-item-container16">
+        <div id="item-markdown18" class="show-list-numbers-and-dots">
+          <p>
+            {{ item.name }} {{ item.dates }}
+          </p>
+        </div>
       </ion-item>
+      <div style="width:100%;height:350px;" #map id="map">
+          <ion-img style="width: 100%; height:350px;" src="assets/imgs/squirrel.png"></ion-img>    
+      </div>
       <ion-item>
-        <span item-left>{{ item.dates }}</span>
+        <ion-icon name="basket" item-left></ion-icon>
+        {{ item.price }} uah
       </ion-item>
-    </ion-card>
+    </ion-list>
+  </ion-card>
 </ion-content>
