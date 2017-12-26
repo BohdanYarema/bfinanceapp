@@ -36,32 +36,40 @@ export class HomePage {
     }
 
     ionViewDidLoad() {
-        console.log('ionViewDidLoad HomePage');
+
     }
 
     goToCharts(){
-      this.navCtrl.push(ChartsPage);
+      if(localStorage.getItem("token")) {
+        this.navCtrl.push(ChartsPage);
+      }
     }
 
     goToCategory(){
-      this.navCtrl.push(CategoriesPage);
+      if(localStorage.getItem("token")) {
+        this.navCtrl.push(CategoriesPage);
+      }
     }
 
     goToMap(){
-      this.navCtrl.push(MapPage);
+      if(localStorage.getItem("token")) {
+        this.navCtrl.push(MapPage);
+      }
     }
 
     goToProfile(){
-      this.navCtrl.push(ProfilePage);
+      if(localStorage.getItem("token")) {
+        this.navCtrl.push(ProfilePage);
+      }
     }
 
     logout() {
+      localStorage.clear();
       this.showLoader();
       localStorage.clear();
       this.loading.dismiss();
       let nav = this.app.getRootNav();
       nav.setRoot(LoginPage);
-      this.navCtrl.push(LoginPage);
     }
 
     showLoader(){

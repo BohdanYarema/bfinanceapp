@@ -1,0 +1,4 @@
+#Wed Dec 27 01:42:10 EET 2017
+base.0=/Users/Bogdanek/bfinanceapp/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/Users/Bogdanek/bfinanceapp/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

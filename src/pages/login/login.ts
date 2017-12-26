@@ -25,6 +25,8 @@ export class LoginPage {
     private toastCtrl: ToastController,
     public formBuilder: FormBuilder,  
   ) {
+    alert('1');
+
     // formbuilder for form
     this.loginGroup = formBuilder.group({
       username:['', Validators.required],
