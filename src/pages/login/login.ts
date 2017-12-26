@@ -16,6 +16,7 @@ export class LoginPage {
   password: AbstractControl;
   loading: any;
   response: any;
+  profile: any;
 
   constructor(
     public navCtrl: NavController, 
@@ -39,7 +40,21 @@ export class LoginPage {
     this.authService.login(data).then((result) => {
       this.loading.dismiss();
       this.response = result;
+
+      this.profile = {
+        username    : this.response.username,
+        email       : this.response.email,
+        avatar      : this.response.avatar,
+        firstname   : this.response.firstname,
+        lastname    : this.response.lastname,
+        middlename  : this.response.middlename,
+        gender      : this.response.gender,
+        created_at  : this.response.created_at
+      };
+
       localStorage.setItem('token', this.response.access_token);
+      localStorage.setItem('profile', this.profile);
+
       this.navCtrl.setRoot(HomePage);
     }, (err) => {
       this.loading.dismiss();

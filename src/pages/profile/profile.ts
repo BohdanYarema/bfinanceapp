@@ -18,6 +18,8 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 export class ProfilePage {
   imageURI:any;
   imageFileName:any;
+  profile: any;
+  response: any;
 
   constructor(
     public navCtrl: NavController,
@@ -30,6 +32,10 @@ export class ProfilePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
+    console.log(localStorage.getItem('avatar'));
+
+    // var myobj = JSON.parse(localStorage.getItem('avatar'));
+    // console.log(myobj.image);
   }
 
   getImage() {
@@ -38,7 +44,7 @@ export class ProfilePage {
       destinationType: this.camera.DestinationType.FILE_URI,
       sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
     }
-  
+
     this.camera.getPicture(options).then((imageData) => {
       this.imageURI = imageData;
     }, (err) => {
@@ -53,11 +59,11 @@ export class ProfilePage {
       duration: 3000,
       position: 'bottom'
     });
-  
+
     toast.onDidDismiss(() => {
       console.log('Dismissed toast');
     });
-  
+
     toast.present();
   }
 
@@ -67,7 +73,7 @@ export class ProfilePage {
     });
     loader.present();
     const fileTransfer: FileTransferObject = this.transfer.create();
-  
+
     let options: FileUploadOptions = {
       fileKey: 'ionicfile',
       fileName: 'ionicfile',
@@ -75,14 +81,21 @@ export class ProfilePage {
       mimeType: "image/jpeg",
       headers: {}
     }
-  
-    fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/auth/upload', options)
+
+    fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/upload/upload', options)
       .then((data) => {
-      loader.dismiss();
-      this.presentToast("Image uploaded successfully");
+        this.response = JSON.parse(localStorage.getItem('avatar'));
+        this.profile        = localStorage.getItem('profile');
+        this.profile.avatar = this.response;
+        localStorage.setItem('profile', this.profile);
+        
+        console.log(localStorage.getItem('profile'));
+
+        loader.dismiss();
+        this.presentToast("Image uploaded successfully");
     }, (err) => {
-      loader.dismiss();
-      this.presentToast(err);
+        loader.dismiss();
+        this.presentToast(err);
     });
   }
 
