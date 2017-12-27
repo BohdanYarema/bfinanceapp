@@ -16,30 +16,30 @@ export class RegisterPage {
   password    : AbstractControl;
   loading     : any;
   response    : any;
-  profile     : any;
+  profile     : object;
 
   constructor(
-    public navCtrl: NavController, 
-    public navParams: NavParams, 
-    public authService: AuthServiceProvider, 
-    public loadingCtrl: LoadingController, 
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public authService: AuthServiceProvider,
+    public loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     public formBuilder: FormBuilder,
   ) {
     // formbuilder for form
     this.singupGroup = formBuilder.group({
         username:['', Validators.compose([
-            Validators.required, 
+            Validators.required,
             Validators.pattern('[a-zA-Z ]*')
         ])],
         email   :['', Validators.compose([
-            Validators.required, 
-            Validators.email, 
+            Validators.required,
+            Validators.email,
             Validators.minLength(2),
-            Validators.maxLength(255) 
+            Validators.maxLength(255)
         ])],
         password   :['', Validators.compose([
-            Validators.required, 
+            Validators.required,
             Validators.minLength(6),
         ])],
     });
@@ -68,7 +68,7 @@ export class RegisterPage {
       };
 
       localStorage.setItem('token', this.response.access_token);
-      localStorage.setItem('profile', this.profile);
+      localStorage.setItem('profile', JSON.stringify(this.profile));
 
       this.navCtrl.setRoot(HomePage);
     }, (err) => {

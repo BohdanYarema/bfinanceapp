@@ -13,9 +13,6 @@ export class MyApp {
   rootPage:any = null;
 
   constructor(platform: Platform) {
-
-    alert(2);
-
     if(!localStorage.getItem("token")) {
       this.rootPage = LoginPage;
     } else {

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, ToastController } from 'ionic-angular';
-import { Camera, CameraOptions } from '@ionic-native/camera';
-import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
-
+import { NavController, LoadingController, App, ToastController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
+import { EditPage } from '../edit/edit';
 
 /**
  * Generated class for the ProfilePage page.
@@ -16,41 +15,42 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-  imageURI:any;
-  imageFileName:any;
   profile: any;
   response: any;
+  loading : any;
 
   constructor(
     public navCtrl: NavController,
-    private camera: Camera,
     public loadingCtrl: LoadingController,
     public toastCtrl: ToastController,
-    private transfer: FileTransfer,
+    public app: App
   ) {
+    this.profile = JSON.parse(localStorage.getItem('profile'));
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilePage');
-    console.log(localStorage.getItem('avatar'));
 
-    // var myobj = JSON.parse(localStorage.getItem('avatar'));
-    // console.log(myobj.image);
   }
 
-  getImage() {
-    const options: CameraOptions = {
-      quality: 100,
-      destinationType: this.camera.DestinationType.FILE_URI,
-      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
-    }
+  logout() {
+    localStorage.clear();
+    this.showLoader();
+    localStorage.clear();
+    this.loading.dismiss();
+    let nav = this.app.getRootNav();
+    nav.setRoot(LoginPage);
+  }
 
-    this.camera.getPicture(options).then((imageData) => {
-      this.imageURI = imageData;
-    }, (err) => {
-      console.log(err);
-      this.presentToast(err);
+  goEdit(){
+    this.navCtrl.push(EditPage);
+  }
+
+  showLoader(){
+    this.loading = this.loadingCtrl.create({
+        content: 'Authenticating...'
     });
+
+    this.loading.present();
   }
 
   presentToast(msg) {
@@ -66,37 +66,4 @@ export class ProfilePage {
 
     toast.present();
   }
-
-  uploadFile() {
-    let loader = this.loadingCtrl.create({
-      content: "Uploading..."
-    });
-    loader.present();
-    const fileTransfer: FileTransferObject = this.transfer.create();
-
-    let options: FileUploadOptions = {
-      fileKey: 'ionicfile',
-      fileName: 'ionicfile',
-      chunkedMode: false,
-      mimeType: "image/jpeg",
-      headers: {}
-    }
-
-    fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/upload/upload', options)
-      .then((data) => {
-        this.response = JSON.parse(localStorage.getItem('avatar'));
-        this.profile        = localStorage.getItem('profile');
-        this.profile.avatar = this.response;
-        localStorage.setItem('profile', this.profile);
-        
-        console.log(localStorage.getItem('profile'));
-
-        loader.dismiss();
-        this.presentToast("Image uploaded successfully");
-    }, (err) => {
-        loader.dismiss();
-        this.presentToast(err);
-    });
-  }
-
 }

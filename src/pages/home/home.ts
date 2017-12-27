@@ -1,12 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { LoadingController,  App, ToastController } from 'ionic-angular';
+import { LoadingController, ToastController } from 'ionic-angular';
 import { CategoriesPage } from '../categories/categories';
 import { MapPage } from '../map/map';
 import { ProfilePage } from '../profile/profile';
 import { ChartsPage } from '../charts/charts';
-import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -25,12 +24,11 @@ export class HomePage {
   loading : any;
 
   constructor(
-      public navCtrl: NavController, 
+      public navCtrl: NavController,
       public navParams: NavParams,
       public authService: AuthServiceProvider,
       public loadingCtrl: LoadingController,
-      public toastCtrl: ToastController,
-      public app: App
+      public toastCtrl: ToastController
     ) {
 
     }
@@ -40,43 +38,26 @@ export class HomePage {
     }
 
     goToCharts(){
-      if(localStorage.getItem("token")) {
-        this.navCtrl.push(ChartsPage);
-      }
+      this.navCtrl.push(ChartsPage);
     }
 
     goToCategory(){
-      if(localStorage.getItem("token")) {
-        this.navCtrl.push(CategoriesPage);
-      }
+      this.navCtrl.push(CategoriesPage);
     }
 
     goToMap(){
-      if(localStorage.getItem("token")) {
-        this.navCtrl.push(MapPage);
-      }
+      this.navCtrl.push(MapPage);
     }
 
     goToProfile(){
-      if(localStorage.getItem("token")) {
-        this.navCtrl.push(ProfilePage);
-      }
-    }
-
-    logout() {
-      localStorage.clear();
-      this.showLoader();
-      localStorage.clear();
-      this.loading.dismiss();
-      let nav = this.app.getRootNav();
-      nav.setRoot(LoginPage);
+      this.navCtrl.push(ProfilePage);
     }
 
     showLoader(){
       this.loading = this.loadingCtrl.create({
           content: 'Authenticating...'
       });
-  
+
       this.loading.present();
     }
 
@@ -86,11 +67,11 @@ export class HomePage {
         duration: 3000,
         position: 'bottom'
       });
-  
+
       toast.onDidDismiss(() => {
         console.log('Dismissed toast');
       });
-  
+
       toast.present();
     }
 }

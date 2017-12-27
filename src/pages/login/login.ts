@@ -16,17 +16,15 @@ export class LoginPage {
   password: AbstractControl;
   loading: any;
   response: any;
-  profile: any;
+  profile: object;
 
   constructor(
-    public navCtrl: NavController, 
-    public authService: AuthServiceProvider, 
-    public loadingCtrl: LoadingController, 
+    public navCtrl: NavController,
+    public authService: AuthServiceProvider,
+    public loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
-    public formBuilder: FormBuilder,  
+    public formBuilder: FormBuilder,
   ) {
-    alert('1');
-
     // formbuilder for form
     this.loginGroup = formBuilder.group({
       username:['', Validators.required],
@@ -55,7 +53,7 @@ export class LoginPage {
       };
 
       localStorage.setItem('token', this.response.access_token);
-      localStorage.setItem('profile', this.profile);
+      localStorage.setItem('profile', JSON.stringify(this.profile));
 
       this.navCtrl.setRoot(HomePage);
     }, (err) => {

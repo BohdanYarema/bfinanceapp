@@ -13,6 +13,7 @@ import { AccountingPage } from '../pages/accounting/accounting';
 import { HomePage } from '../pages/home/home';
 import { MapPage } from '../pages/map/map';
 import { ChartsPage } from '../pages/charts/charts';
+import { EditPage } from '../pages/edit/edit';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -42,7 +43,8 @@ import {
     HomePage,
     AccountingPage,
     MapPage,
-    ChartsPage
+    ChartsPage,
+    EditPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import {
     HomePage,
     AccountingPage,
     MapPage,
-    ChartsPage
+    ChartsPage,
+    EditPage
   ],
   providers: [
     StatusBar,
