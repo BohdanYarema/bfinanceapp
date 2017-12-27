@@ -11,18 +11,16 @@ import { LoginPage } from '../pages/login/login';
 })
 export class MyApp {
   rootPage:any = null;
-
-  constructor(platform: Platform) {
+  constructor(
+      platform: Platform
+    ) {
     if(!localStorage.getItem("token")) {
       this.rootPage = LoginPage;
     } else {
       this.rootPage = HomePage;
     }
     platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
-      //statusBar.styleDefault();
-      //splashScreen.hide();
+      
     });
   }
 }

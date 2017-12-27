@@ -19,6 +19,7 @@ export class ProfilePage {
   response: any;
   loading : any;
 
+
   constructor(
     public navCtrl: NavController,
     public loadingCtrl: LoadingController,
@@ -26,6 +27,7 @@ export class ProfilePage {
     public app: App
   ) {
     this.profile = JSON.parse(localStorage.getItem('profile'));
+    console.log('1');
   }
 
   ionViewDidLoad() {

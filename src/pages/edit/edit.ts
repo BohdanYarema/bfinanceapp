@@ -91,13 +91,10 @@ export class EditPage {
     fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/upload/upload', options)
       .then((data) => {
         this.response = JSON.parse(data.response);
-
-        this.profile        = localStorage.getItem('profile');
+        this.profile = JSON.parse(localStorage.getItem('profile'));
         this.profile.avatar = this.response.image;
-        localStorage.setItem('profile', this.profile);
-
-        console.log(localStorage.getItem('profile'));
-
+        localStorage.setItem('profile', JSON.stringify(this.profile));
+        this.imageFileName = this.response.image;
         loader.dismiss();
         this.presentToast("Image uploaded successfully");
     }, (err) => {
