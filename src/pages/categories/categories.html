@@ -1,9 +1,12 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Category
+        Category
     </ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 <ion-content padding id="page">
   <ion-list id="category-list" ion-item *ngFor="let item of data" (click)="itemSelected(item)">

@@ -1,9 +1,12 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      {{ item.name }}
+        {{ item.name }}
     </ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 <ion-content padding>
   <ion-card>
@@ -16,7 +19,7 @@
         </div>
       </ion-item>
       <div style="width:100%;height:350px;" #map id="map">
-          <ion-img style="width: 100%; height:350px;" src="assets/imgs/squirrel.png"></ion-img>    
+          <ion-img style="width: 100%; height:350px;" src="assets/imgs/squirrel.png"></ion-img>
       </div>
       <ion-item>
         <ion-icon name="basket" item-left></ion-icon>

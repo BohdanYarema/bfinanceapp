@@ -1,5 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+        Add Accounting
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content padding>
-<h2>Add Accounting</h2>
 <form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">
     <ion-item>
         <ion-input formControlName="name" name="name" type="text" placeholder="name" ></ion-input>
@@ -10,7 +19,7 @@
     <ion-item>
         <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>
     </ion-item>
-    
+
     <button ion-button block type="submit" [disabled]="!addGroup.valid">
         Add
     </button>

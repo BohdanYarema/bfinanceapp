@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController} from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { CategoriesPage } from '../categories/categories';
@@ -28,9 +28,10 @@ export class HomePage {
       public navParams: NavParams,
       public authService: AuthServiceProvider,
       public loadingCtrl: LoadingController,
-      public toastCtrl: ToastController
+      public toastCtrl: ToastController,
+      public menu: MenuController
     ) {
-
+      menu.enable(true);
     }
 
     ionViewDidLoad() {

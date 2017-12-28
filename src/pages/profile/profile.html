@@ -1,9 +1,12 @@
 <ion-header>
-  <ion-navbar>
+  <ion-toolbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>
-      Profile
+        Profile
     </ion-title>
-  </ion-navbar>
+  </ion-toolbar>
 </ion-header>
 <ion-content padding id="page8">
   <ion-card id="profile-card26">
@@ -17,6 +20,13 @@
           <ion-icon name="log-out"></ion-icon>
         </button>
       </ion-item>
+
+
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
+
+
       <img src="{{this.profile.avatar}}">
       <ion-item id="profile-list-item-container14">
         <div id="profile-markdown16" class="show-list-numbers-and-dots">

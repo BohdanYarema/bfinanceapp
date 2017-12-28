@@ -1,10 +1,13 @@
 <ion-header>
-    <ion-navbar>
-      <ion-title>
+  <ion-toolbar>
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
         Charts
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
 <ion-content padding>
   <ion-card>
     <ion-card-header>
@@ -14,7 +17,7 @@
       <canvas #doughnutCanvas></canvas>
     </ion-card-content>
   </ion-card>
-  
+
   <ion-card>
     <ion-card-header>
       Bar Chart
