@@ -10,16 +10,45 @@
 </ion-header>
 
 <ion-content padding>
-        <br><br><br><br>
-<ion-item>
-    <p>{{imageURI}}</p>
-    <button ion-button color="secondary" (click)="getImage()">Get Image</button>
-</ion-item>
-<ion-item>
-    <h4>Image Preview</h4>
-    <img src="{{imageFileName}}" *ngIf="imageFileName" alt="Ionic File" width="300" />
-</ion-item>
-<ion-item>
-    <button ion-button (click)="uploadFile()">Upload</button>
-</ion-item>
+    <ion-item>
+        <button ion-start ion-button color="secondary" (click)="getImage()">Get Image</button>
+        <button ion-end ion-button (click)="uploadFile()">Upload</button>
+    </ion-item>
+    
+    <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">
+        <ion-list>
+            <ion-item class="edit-input">
+                <ion-label>
+                    First name
+                </ion-label>
+                <ion-input formControlName="firstname" name="firstname" type="text" placeholder="Your firstname"></ion-input>
+            </ion-item>
+
+            <ion-item class="edit-input">
+                <ion-label>
+                    Last name
+                </ion-label>
+                <ion-input formControlName="lastname" name="lastname" type="text" placeholder="Your lastname"></ion-input>
+            </ion-item>
+
+            <ion-item class="edit-input">
+                <ion-label>
+                    Middle name
+                </ion-label>
+                <ion-input formControlName="middlename" name="middlename" type="text" placeholder="Your middlename"></ion-input>
+            </ion-item>
+
+            <ion-item class="edit-input">
+                <ion-label>
+                    Gender
+                </ion-label>
+                <ion-input formControlName="gender" name="gender" type="text" placeholder="Your gender"></ion-input>
+            </ion-item>
+          
+        </ion-list>
+        <button ion-button color="stable" block type="submit" [disabled]="!editGroup.valid">
+          Update
+        </button>
+    </form>
+
 </ion-content>

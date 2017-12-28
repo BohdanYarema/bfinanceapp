@@ -25,8 +25,7 @@ function BaseArrayClass(array) {
             //       return someValue;
             //    });
             //------------------------
-            results = _array.map(fn.bind(self));
-            return;
+            return _array.map(fn.bind(self));
         }
         //------------------------
         // example:
@@ -171,7 +170,8 @@ function BaseArrayClass(array) {
     };
 
     self.getArray = function() {
-        return _array.slice(0);
+        //return _array.slice(0);  <-- Android browser keeps the same instance of original array
+        return JSON.parse(JSON.stringify(_array));
     };
 
     self.getAt = function(index) {

@@ -76,6 +76,15 @@ var Diagnostic = (function(){
         "NOT_DETERMINED": "not_determined" // Motion authorization request status outcome cannot be determined on device
     };
 
+    Diagnostic.cpuArchitecture = {
+        UNKNOWN: "unknown",
+        ARMv6: "ARMv6",
+        ARMv7: "ARMv7",
+        ARMv8: "ARMv8",
+        X86: "X86",
+        X86_64: "X86_64"
+    };
+
     // Placeholder listeners
     Diagnostic._onBluetoothStateChange =
         Diagnostic._onLocationStateChange = function(){};
@@ -91,6 +100,20 @@ var Diagnostic = (function(){
      ***********/
 
     /**
+     * Enables debug mode, which logs native debug messages to the native and JS consoles.
+     * Debug mode is initially disabled on plugin initialisation.
+     *
+     * @param {Function} successCallback - The callback which will be called when enabling debug is successful.
+     */
+    Diagnostic.enableDebug = function(successCallback) {
+        return cordova.exec(successCallback,
+            null,
+            'Diagnostic',
+            'enableDebug',
+            []);
+    };
+
+    /**
      * Switch to settings app. Opens settings page for this app.
      *
      * @param {Function} successCallback - The callback which will be called when switch to settings is successful.
@@ -103,22 +126,6 @@ var Diagnostic = (function(){
             errorCallback,
             'Diagnostic',
             'switchToSettings',
-            []);
-    };
-
-    /**
-     * Switch to location settings
-     *
-     * @param {Function} successCallback - The callback which will be called when switch to settings is successful.
-     * @param {Function} errorCallback - The callback which will be called when switch to settings encounters an error.
-     * This callback function is passed a single string parameter containing the error message.
-     * This works only on iOS 8+. iOS 7 and below will invoke the errorCallback.
-     */
-    Diagnostic.switchToLocationSettings = function(successCallback, errorCallback) {
-        return cordova.exec(successCallback,
-            errorCallback,
-            'Diagnostic',
-            'switchToLocationSettings',
             []);
     };
 
@@ -957,6 +964,22 @@ var Diagnostic = (function(){
             errorCallback,
             'Diagnostic',
             'getMotionAuthorizationStatus',
+            []);
+    };
+
+    /**
+     * Returns CPU architecture of the current device.
+     *
+     * @param {Function} successCallback -  The callback which will be called when the operation is successful.
+     * This callback function is passed a single string parameter defined as a constant in `cordova.plugins.diagnostic.cpuArchitecture`.
+     * @param {Function} errorCallback -  The callback which will be called when the operation encounters an error.
+     *  This callback function is passed a single string parameter containing the error message.
+     */
+    Diagnostic.getArchitecture = function(successCallback, errorCallback) {
+        return cordova.exec(successCallback,
+            errorCallback,
+            'Diagnostic',
+            'getArchitecture',
             []);
     };
 

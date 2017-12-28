@@ -26,9 +26,9 @@ export class MyApp {
       this.rootPage = HomePage;
     }
     platform.ready().then(() => {
-      platform.registerBackButtonAction(() => {
-          console.log(JSON.stringify(this));
-      });
+      // platform.registerBackButtonAction(() => {
+      //     console.log(this.nav.getActive());
+      // });
     });
   }
 

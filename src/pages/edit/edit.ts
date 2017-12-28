@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { NavController, LoadingController, ToastController } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { ProfilePage } from '../profile/profile';
+import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
 /**
  * Generated class for the EditPage page.
@@ -22,17 +25,83 @@ export class EditPage {
   response: any;
   loading : any;
 
+  editGroup   : FormGroup;
+  firstname   : AbstractControl;
+  lastname    : AbstractControl;
+  middlename  : AbstractControl;
+  gender      : AbstractControl;
+
   constructor(
     public navCtrl: NavController,
     private camera: Camera,
     public loadingCtrl: LoadingController,
     public toastCtrl: ToastController,
-    private transfer: FileTransfer
+    public authService: AuthServiceProvider,
+    private transfer: FileTransfer,
+    public formBuilder: FormBuilder,
   ) {
+
+    // formbuilder for form
+    this.editGroup = formBuilder.group({
+      firstname   :['', Validators.compose([
+          Validators.required,
+          Validators.minLength(2),
+          Validators.maxLength(255),
+          Validators.pattern('[a-zA-Z ]*')
+      ])],
+      lastname   :['', Validators.compose([
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(255),
+        Validators.pattern('[a-zA-Z ]*')
+      ])],
+      middlename   :['', Validators.compose([
+        Validators.required,
+        Validators.minLength(2),
+        Validators.maxLength(255),
+        Validators.pattern('[a-zA-Z ]*')
+      ])],
+      gender   :['', Validators.compose([
+        Validators.required,
+        Validators.pattern('[0-9]*')
+      ])],  
+    });
+
+    this.firstname  = this.editGroup.controls['firstname'];
+    this.lastname   = this.editGroup.controls['lastname'];
+    this.middlename = this.editGroup.controls['middlename'];
+    this.gender     = this.editGroup.controls['gender'];
   }
 
   ionViewDidLoad() {
 
+  }
+
+  doSignup(data) {
+    this.showLoader();
+    this.authService.edit(data).then((result) => {
+      this.loading.dismiss();
+      this.response = result;
+
+      this.profile = {
+        username    : this.response.username,
+        email       : this.response.email,
+        avatar      : this.response.avatar,
+        firstname   : this.response.firstname,
+        lastname    : this.response.lastname,
+        middlename  : this.response.middlename,
+        gender      : this.response.gender,
+        created_at  : this.response.created_at
+      };
+
+      localStorage.setItem('token', this.response.access_token);
+      localStorage.setItem('profile', JSON.stringify(this.profile));
+
+      this.navCtrl.setRoot(ProfilePage);
+    }, (err) => {
+      this.loading.dismiss();
+      this.presentToast(err);
+    });
   }
 
   getImage() {
@@ -44,9 +113,7 @@ export class EditPage {
 
     this.camera.getPicture(options).then((imageData) => {
       this.imageURI = imageData;
-      console.log(this.imageURI);
     }, (err) => {
-      console.log(err);
       this.presentToast(err);
     });
   }
@@ -94,9 +161,10 @@ export class EditPage {
         this.profile = JSON.parse(localStorage.getItem('profile'));
         this.profile.avatar = this.response.image;
         localStorage.setItem('profile', JSON.stringify(this.profile));
-        this.imageFileName = this.response.image;
         loader.dismiss();
         this.presentToast("Image uploaded successfully");
+
+        this.navCtrl.push(ProfilePage);
     }, (err) => {
         loader.dismiss();
         this.presentToast(err);

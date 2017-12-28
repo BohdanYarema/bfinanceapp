@@ -1,35 +1,57 @@
 {
-  "_from": "cordova.plugins.diagnostic",
-  "_id": "cordova.plugins.diagnostic@3.7.1",
-  "_inBundle": false,
-  "_integrity": "sha1-TynArmJz7XetaOmApml502rbg6I=",
+  "_args": [
+    [
+      {
+        "raw": "cordova.plugins.diagnostic@^3.7.1",
+        "scope": null,
+        "escapedName": "cordova.plugins.diagnostic",
+        "name": "cordova.plugins.diagnostic",
+        "rawSpec": "^3.7.1",
+        "spec": ">=3.7.1 <4.0.0",
+        "type": "range"
+      },
+      "/Users/Bogdanek/bfinanceapp"
+    ]
+  ],
+  "_from": "cordova.plugins.diagnostic@>=3.7.1 <4.0.0",
+  "_id": "cordova.plugins.diagnostic@3.8.1",
+  "_inCache": true,
   "_location": "/cordova.plugins.diagnostic",
+  "_nodeVersion": "7.10.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova.plugins.diagnostic-3.8.1.tgz_1514042773886_0.03583284863270819"
+  },
+  "_npmUser": {
+    "name": "davealden",
+    "email": "dave@workingedge.co.uk"
+  },
+  "_npmVersion": "4.2.0",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "cordova.plugins.diagnostic",
-    "name": "cordova.plugins.diagnostic",
+    "raw": "cordova.plugins.diagnostic@^3.7.1",
+    "scope": null,
     "escapedName": "cordova.plugins.diagnostic",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
+    "name": "cordova.plugins.diagnostic",
+    "rawSpec": "^3.7.1",
+    "spec": ">=3.7.1 <4.0.0",
+    "type": "range"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova.plugins.diagnostic/-/cordova.plugins.diagnostic-3.7.1.tgz",
-  "_shasum": "4f29c0ae6273ed77ad68e980a66979d36adb83a2",
-  "_spec": "cordova.plugins.diagnostic",
-  "_where": "/Users/bohdan/Documents/bfinanceapp",
+  "_resolved": "https://registry.npmjs.org/cordova.plugins.diagnostic/-/cordova.plugins.diagnostic-3.8.1.tgz",
+  "_shasum": "4be048489cd3c2d04be94645abe84a612700bd6a",
+  "_shrinkwrap": null,
+  "_spec": "cordova.plugins.diagnostic@^3.7.1",
+  "_where": "/Users/Bogdanek/bfinanceapp",
   "author": {
     "name": "Dave Alden"
   },
   "bugs": {
     "url": "https://github.com/dpa99c/cordova-diagnostic-plugin/issues"
   },
-  "bundleDependencies": false,
   "cordova": {
     "id": "cordova.plugins.diagnostic",
     "platforms": [
@@ -39,8 +61,15 @@
     ]
   },
   "cordova_name": "Diagnostic",
-  "deprecated": false,
+  "dependencies": {},
   "description": "Cordova/Phonegap plugin to check the state of Location/WiFi/Camera/Bluetooth device settings.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "4be048489cd3c2d04be94645abe84a612700bd6a",
+    "tarball": "https://registry.npmjs.org/cordova.plugins.diagnostic/-/cordova.plugins.diagnostic-3.8.1.tgz"
+  },
+  "gitHead": "1dadb908a66bea1568664cccaf62205bf0095f21",
   "homepage": "https://github.com/dpa99c/cordova-diagnostic-plugin#readme",
   "issue": "https://github.com/dpa99c/cordova-diagnostic-plugin/issues",
   "keywords": [
@@ -59,11 +88,20 @@
     "settings"
   ],
   "license": "MIT",
+  "maintainers": [
+    {
+      "name": "davealden",
+      "email": "dave@workingedge.co.uk"
+    }
+  ],
   "name": "cordova.plugins.diagnostic",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dpa99c/cordova-diagnostic-plugin.git"
   },
+  "scripts": {},
   "types": "./cordova.plugins.diagnostic.d.ts",
-  "version": "3.7.1"
+  "version": "3.8.1"
 }

@@ -145,14 +145,22 @@ GroundOverlay.prototype.getClickable = function() {
     return this.get('clickable');
 };
 
-GroundOverlay.prototype.remove = function() {
-    this.trigger(this.id + "_remove");
-    exec.call(this, null, this.errorHandler, this.getPluginName(), 'remove', [this.getId()]);
+GroundOverlay.prototype.remove = function(callback) {
+    var self = this;
+    if (self._isRemoved) {
+      return;
+    }
     Object.defineProperty(self, "_isRemoved", {
         value: true,
         writable: false
     });
-    this.destroy();
+    self.trigger(self.id + "_remove");
+    exec.call(self, function() {
+        self.destroy();
+        if (typeof callback === "function") {
+            callback.call(self);
+        }
+    }, self.errorHandler, self.getPluginName(), 'remove', [self.getId()], {remove: true});
 };
 
 
