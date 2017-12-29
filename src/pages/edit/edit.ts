@@ -77,24 +77,20 @@ export class EditPage {
 
   }
 
-  doSignup(data) {
+  doEdit(data) {
+
     this.showLoader();
-    this.authService.edit(data).then((result) => {
+    
+    this.authService.editProfile(data).then((result) => {
       this.loading.dismiss();
       this.response = result;
 
-      this.profile = {
-        username    : this.response.username,
-        email       : this.response.email,
-        avatar      : this.response.avatar,
-        firstname   : this.response.firstname,
-        lastname    : this.response.lastname,
-        middlename  : this.response.middlename,
-        gender      : this.response.gender,
-        created_at  : this.response.created_at
-      };
+      this.profile = JSON.parse(localStorage.getItem('profile'));
+      this.profile.firstname  = this.response.profile.firstname;
+      this.profile.lastname   = this.response.profile.lastname;
+      this.profile.middlename = this.response.profile.middlename;
+      this.profile.gender     = this.response.profile.gender;
 
-      localStorage.setItem('token', this.response.access_token);
       localStorage.setItem('profile', JSON.stringify(this.profile));
 
       this.navCtrl.setRoot(ProfilePage);
@@ -147,16 +143,22 @@ export class EditPage {
     //loader.present();
     const fileTransfer: FileTransferObject = this.transfer.create();
 
+    this.profile = JSON.parse(localStorage.getItem('profile'));
+
+
     let options: FileUploadOptions = {
       fileKey: 'ionicfile',
       fileName: 'ionicfile',
       chunkedMode: false,
       mimeType: "image/jpeg",
-      headers: {}
+      params: {
+        username:this.profile.username
+      }
     }
 
     fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/upload/upload', options)
       .then((data) => {
+        console.log(JSON.stringify(data));
         this.response = JSON.parse(data.response);
         this.profile = JSON.parse(localStorage.getItem('profile'));
         this.profile.avatar = this.response.image;
