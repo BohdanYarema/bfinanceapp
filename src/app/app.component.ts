@@ -9,6 +9,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { ChartsPage } from '../pages/charts/charts';
 import { MapPage } from '../pages/map/map';
 import { CategoriesPage } from '../pages/categories/categories';
+import { StatisticPage } from '../pages/statistic/statistic';
 
 @Component({
   templateUrl: 'app.html'
@@ -50,5 +51,9 @@ export class MyApp {
 
   gotoCategories() {
     this.nav.push(CategoriesPage);
+  }
+
+  gotoStatistic() {
+    this.nav.push(StatisticPage);
   }
 }

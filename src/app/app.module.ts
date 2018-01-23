@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { MapPage } from '../pages/map/map';
 import { ChartsPage } from '../pages/charts/charts';
 import { EditPage } from '../pages/edit/edit';
+import { StatisticPage } from '../pages/statistic/statistic';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -44,7 +45,8 @@ import {
     AccountingPage,
     MapPage,
     ChartsPage,
-    EditPage
+    EditPage,
+    StatisticPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import {
     AccountingPage,
     MapPage,
     ChartsPage,
-    EditPage
+    EditPage,
+    StatisticPage
   ],
   providers: [
     StatusBar,
