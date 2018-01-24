@@ -1,46 +1,53 @@
-<ion-header>
-  <ion-toolbar>
-    <button ion-button menuToggle left>
-      <ion-icon name="menu"></ion-icon>
+<div class="home">
+  <div class="home__bg">
+      <div>
+        <img class="home__image" src="assets/img/home_img.png">
+      </div>
+    <button class="home__menu" menuToggle left>
     </button>
-    <ion-title>
-        Home
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content padding id="page1">
-  <ion-list id="home-list11">
-    <ion-item color="none" on-click="goToCharts()" id="home-list-item47">
-      <ion-thumbnail item-left>
-        <img src="assets/img/QmnR3sRpSgzv8qEb3rdw_charts.png" />
-      </ion-thumbnail>
-      <h2>
-        Charts
-      </h2>
-    </ion-item>
-    <ion-item color="none" on-click="goToCategory()" id="home-list-item48">
-      <ion-thumbnail item-left>
-        <img src="assets/img/lkkeOZkLTUK15GPs3apS_category.png" />
-      </ion-thumbnail>
-      <h2>
-        Category
-      </h2>
-    </ion-item>
-    <ion-item color="none" on-click="goToMap()" id="home-list-item49">
-      <ion-thumbnail item-left>
-        <img src="assets/img/76Szzj9VSg6LYQRvi6jV_map.png" />
-      </ion-thumbnail>
-      <h2>
-        Map
-      </h2>
-    </ion-item>
-    <ion-item color="none" on-click="goToProfile()" id="home-list-item50">
-      <ion-thumbnail item-left>
-        <img src="assets/img/opvUfGcAQeqO5xDc4tmQ_user.png" />
-      </ion-thumbnail>
-      <h2>
-        Profile
-      </h2>
-    </ion-item>
-  </ion-list>
-</ion-content>
+    <div class="home__info">
+        <img class="home__icon" src="assets/img/avatar.png">
+        <div class="home__info__text">
+            <p class="home__info__text--title">6 Task</p>
+            <span class="home__info__text--description">April 7, 2015</span>
+        </div>
+    </div>
+  </div>
+  
+  <div class="home__form">
+    <ion-list id="home-list11">
+      <ion-item color="none" on-click="goToCharts()" id="home-list-item47">
+        <ion-thumbnail item-left>
+          <img src="assets/img/QmnR3sRpSgzv8qEb3rdw_charts.png" />
+        </ion-thumbnail>
+        <h2>
+          Charts
+        </h2>
+      </ion-item>
+      <ion-item color="none" on-click="goToCategory()" id="home-list-item48">
+        <ion-thumbnail item-left>
+          <img src="assets/img/lkkeOZkLTUK15GPs3apS_category.png" />
+        </ion-thumbnail>
+        <h2>
+          Category
+        </h2>
+      </ion-item>
+      <ion-item color="none" on-click="goToMap()" id="home-list-item49">
+        <ion-thumbnail item-left>
+          <img src="assets/img/76Szzj9VSg6LYQRvi6jV_map.png" />
+        </ion-thumbnail>
+        <h2>
+          Map
+        </h2>
+      </ion-item>
+      <ion-item color="none" on-click="goToProfile()" id="home-list-item50">
+        <ion-thumbnail item-left>
+          <img src="assets/img/opvUfGcAQeqO5xDc4tmQ_user.png" />
+        </ion-thumbnail>
+        <h2>
+          Profile
+        </h2>
+      </ion-item>
+    </ion-list>
+  </div>
+</div>

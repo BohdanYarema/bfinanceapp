@@ -74,7 +74,7 @@ var CategoriesPage = (function () {
 }());
 CategoriesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-categories',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/categories/categories.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Category\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding id="page">\n  <ion-list id="category-list" ion-item *ngFor="let item of data" (click)="itemSelected(item)">\n    <ion-item color="none" id="category-list-item1">\n        {{ item.name }}\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/categories/categories.html"*/,
+        selector: 'page-categories',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/categories/categories.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Category\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding id="page">\n  <ion-list id="category-list" ion-item *ngFor="let item of data" (click)="itemSelected(item)">\n    <ion-item color="none" id="category-list-item1">\n        {{ item.name }}\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/categories/categories.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
@@ -187,7 +187,7 @@ var ListPage = ListPage_1 = (function () {
 }());
 ListPage = ListPage_1 = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-list',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/list/list.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        {{item.name}}\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class="main_content">\n    <div class="list" ion-item *ngFor="let item of items">\n        <ion-item-group>\n          <ion-item-divider color="light">{{ item[0] }}</ion-item-divider>\n          <div ion-item *ngFor="let data of item[1]">\n            <ion-item>\n              <p (click)="itemSelected(data)" item-start>{{ data.name }}</p>\n              <p (click)="itemSelected(data)" item-end>{{ data.price }} uah</p>\n              <button item-end dark clear ion-button (click)="itemDelete(data)" icon-only>\n                <ion-icon name=\'trash\'></ion-icon>\n              </button>\n            </ion-item>\n            <!-- Only icon (no text) -->\n          </div>\n        </ion-item-group>\n    </div>\n</ion-content>\n\n<button class="btn_float_right" (click)="goForm(item)" ion-button color="secondary" round>\n  <ion-icon name="add"></ion-icon>\n</button>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/list/list.html"*/
+        selector: 'page-list',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/list/list.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        {{item.name}}\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content class="main_content">\n    <div class="list" ion-item *ngFor="let item of items">\n        <ion-item-group>\n          <ion-item-divider color="light">{{ item[0] }}</ion-item-divider>\n          <div ion-item *ngFor="let data of item[1]">\n            <ion-item>\n              <p (click)="itemSelected(data)" item-start>{{ data.name }}</p>\n              <p (click)="itemSelected(data)" item-end>{{ data.price }} uah</p>\n              <button item-end dark clear ion-button (click)="itemDelete(data)" icon-only>\n                <ion-icon name=\'trash\'></ion-icon>\n              </button>\n            </ion-item>\n            <!-- Only icon (no text) -->\n          </div>\n        </ion-item-group>\n    </div>\n</ion-content>\n\n<button class="btn_float_right" (click)="goForm(item)" ion-button color="secondary" round>\n  <ion-icon name="add"></ion-icon>\n</button>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/list/list.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -307,7 +307,7 @@ __decorate([
 ], MapPage.prototype, "mapElement", void 0);
 MapPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-map',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/map/map.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-title>\n        Map\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n<ion-content padding>\n  <div #map id="map">\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/map/map.html"*/,
+        selector: 'page-map',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/map/map.html"*/'<ion-header>\n    <ion-navbar>\n      <ion-title>\n        Map\n      </ion-title>\n    </ion-navbar>\n  </ion-header>\n<ion-content padding>\n  <div #map id="map">\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/map/map.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -410,7 +410,7 @@ var LoginPage = (function () {
 }());
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/login/login.html"*/'<div class="login">\n  <div class="login__bg">\n      <div>\n        <img class="login__image" src="assets/img/login-bg.png">\n      </div>\n    <img class="login__icon" src="assets/img/mark.png">\n  </div>\n  \n  <form class="login__form" [formGroup]="loginGroup" (ngSubmit)="doLogin(loginGroup.value)">\n    <div class="login__form__elements">\n        <label class="login__form__elements--label">Username</label>\n        <input class="login__form__elements--label" formControlName="username" name="username" type="text" placeholder="Your username">\n    </div>\n    <div class="login__form__elements">\n        <label class="login__form__elements--label">Password</label>\n        <input class="login__form__elements--label" formControlName="password" name="password" type="password" placeholder="Your password">\n    </div>\n    <button class="login__form__elements" id="login-button1" type="submit" [disabled]="!loginGroup.valid" block>Log in</button>\n    <button class="login__form__elements" id="login-button2" block (click)="register()">Or create an account</button>\n  </form>\n</div>\n\n<style>\n  .login{\n    height: 100%;\n  }\n\n  .login__image{\n    height: 24.375rem;\n    width: 100%;\n  }\n\n  .login__bg{\n    position: relative;\n  }\n\n  .login__icon{\n    height: 9.375rem;\n    width: 9.375rem;\n    position: absolute;\n    bottom: -1.40625rem;\n    left: 50%;\n    margin-left: -4.6875rem;\n  }\n\n  .login__form{\n    margin-top: 9.609375rem;\n    height: 100%;\n    text-align: center;\n  }\n\n  .login__form__elements{\n    width: 40rem;\n    height: 6.25rem;\n  }\n\n  .login__form__elements--label{\n    display: block;\n  }\n\n  .login__form__elements--input{\n    display: block;\n  }\n\n\n</style>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/login/login.html"*/
+        selector: 'page-login',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/login/login.html"*/'<div class="login">\n  <div class="login__bg">\n      <div>\n        <img class="login__image" src="assets/img/login.png">\n      </div>\n    <img class="login__icon" src="assets/img/mark.png">\n  </div>\n  \n  <form class="login__form" [formGroup]="loginGroup" (ngSubmit)="doLogin(loginGroup.value)">\n    <div class="login__form__elements">\n        <label class="login__form__elements--label">Username</label>\n        <input class="login__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">\n    </div>\n    <div class="login__form__elements">\n        <label class="login__form__elements--label">Password</label>\n        <input class="login__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">\n    </div>\n    <button class="login__form__elements" id="login-button1" type="submit" [disabled]="!loginGroup.valid" block>Log in</button>\n    <div class="login__form__list">\n        <div class="login__form__elements--simple login__form__elements" id="login-button2" (click)="register()">Forgot password?</div>\n        <div class="login__form__elements--simple login__form__elements" id="login-button3" (click)="register()">Sign In</div>\n    </div>\n  </form>\n</div>'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/login/login.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
@@ -430,7 +430,7 @@ LoginPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChartsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chart_js__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chart_js__ = __webpack_require__(403);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_chart_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_chart_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(23);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -612,7 +612,7 @@ __decorate([
 ], ChartsPage.prototype, "lineCanvas", void 0);
 ChartsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-charts',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/charts/charts.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Charts\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <ion-card-header>\n      Doughnut Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #doughnutCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Bar Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #barCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Line Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #lineCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/charts/charts.html"*/,
+        selector: 'page-charts',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/charts/charts.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Charts\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <ion-card-header>\n      Doughnut Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #doughnutCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Bar Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #barCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Line Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #lineCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/charts/charts.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -661,7 +661,7 @@ var StatisticPage = (function () {
 }());
 StatisticPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-statistic',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/statistic/statistic.html"*/'<!--\n  Generated template for the StatisticPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<div class="login">\n  <div class="login--bg"></div>\n  <span class="login__icon"></span>\n  <form>\n    <input type="text">\n    <input type="text">\n    <button>Sign in</button>\n  </form>\n  <a href="">test</a>\n  <a href="">test</a>\n</div>\n\n\n<style>\n  .login--bg{\n    background-image: url(\'assets/img/login-bg.png\');\n    background-size: cover;\n    background-position: center;\n    height: 32rem;\n  }\n</style>'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/statistic/statistic.html"*/,
+        selector: 'page-statistic',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/statistic/statistic.html"*/'<!--\n  Generated template for the StatisticPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<div class="login">\n  <div class="login--bg"></div>\n  <span class="login__icon"></span>\n  <form>\n    <input type="text">\n    <input type="text">\n    <button>Sign in</button>\n  </form>\n  <a href="">test</a>\n  <a href="">test</a>\n</div>\n\n\n<style>\n  .login--bg{\n    background-image: url(\'assets/img/login-bg.png\');\n    background-size: cover;\n    background-position: center;\n    height: 32rem;\n  }\n</style>'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/statistic/statistic.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
 ], StatisticPage);
@@ -692,7 +692,7 @@ webpackEmptyAsyncContext.id = 125;
 
 var map = {
 	"../pages/statistic/statistic.module": [
-		458,
+		457,
 		0
 	]
 };
@@ -723,7 +723,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_auth_service_auth_service__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__validators_custom__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__validators_custom__ = __webpack_require__(402);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_list_list__ = __webpack_require__(111);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -834,7 +834,7 @@ var FormPage = (function () {
 }());
 FormPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-form',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/form/form.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Add Accounting\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding>\n<form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">\n    <ion-item>\n        <ion-input formControlName="name" name="name" type="text" placeholder="name" ></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-input formControlName="price" name="price" type="number" placeholder="price" ></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>\n    </ion-item>\n\n    <button ion-button block type="submit" [disabled]="!addGroup.valid">\n        Add\n    </button>\n</form>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/form/form.html"*/
+        selector: 'page-form',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/form/form.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Add Accounting\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding>\n<form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">\n    <ion-item>\n        <ion-input formControlName="name" name="name" type="text" placeholder="name" ></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-input formControlName="price" name="price" type="number" placeholder="price" ></ion-input>\n    </ion-item>\n    <ion-item>\n        <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>\n    </ion-item>\n\n    <button ion-button block type="submit" [disabled]="!addGroup.valid">\n        Add\n    </button>\n</form>\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/form/form.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
@@ -930,7 +930,7 @@ __decorate([
 ], AccountingPage.prototype, "mapElement", void 0);
 AccountingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-accounting',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/accounting/accounting.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        {{ item.name }}\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <ion-list>\n      <ion-item id="item-list-item-container16">\n        <div id="item-markdown18" class="show-list-numbers-and-dots">\n          <p>\n            {{ item.name }} {{ item.dates }}\n          </p>\n        </div>\n      </ion-item>\n      <div style="width:100%;height:350px;" #map id="map">\n          <ion-img style="width: 100%; height:350px;" src="assets/imgs/squirrel.png"></ion-img>\n      </div>\n      <ion-item>\n        <ion-icon name="basket" item-left></ion-icon>\n        {{ item.price }} uah\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/accounting/accounting.html"*/,
+        selector: 'page-accounting',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/accounting/accounting.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        {{ item.name }}\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <ion-list>\n      <ion-item id="item-list-item-container16">\n        <div id="item-markdown18" class="show-list-numbers-and-dots">\n          <p>\n            {{ item.name }} {{ item.dates }}\n          </p>\n        </div>\n      </ion-item>\n      <div style="width:100%;height:350px;" #map id="map">\n          <ion-img style="width: 100%; height:350px;" src="assets/imgs/squirrel.png"></ion-img>\n      </div>\n      <ion-item>\n        <ion-icon name="basket" item-left></ion-icon>\n        {{ item.price }} uah\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/accounting/accounting.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
@@ -1039,7 +1039,7 @@ var RegisterPage = (function () {
 }());
 RegisterPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-register',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/register/register.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Signup\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page3">\n  <form [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">\n    <ion-list id="signup-list2">\n      <ion-item class="signup-input">\n        <ion-label>\n          Username\n        </ion-label>\n        <ion-input formControlName="username" name="username" type="text" placeholder="Your username"></ion-input>\n      </ion-item>\n      <ion-item class="signup-input">\n        <ion-label>\n          Email\n        </ion-label>\n        <ion-input formControlName="email" name="email" type="text" placeholder="Your email"></ion-input>\n      </ion-item>\n      <ion-item class="signup-input">\n        <ion-label>\n          Password\n        </ion-label>\n        <ion-input formControlName="password" name="password" type="password" placeholder="Your password"></ion-input>\n      </ion-item>\n    </ion-list>\n    <button id="signup-button3" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">\n      Sign up\n    </button>\n  </form>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/register/register.html"*/
+        selector: 'page-register',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/register/register.html"*/'<div class="register">\n  <div class="register__bg">\n      <div>\n        <img class="register__image" src="assets/img/login.png">\n      </div>\n    <img class="register__icon" src="assets/img/mark.png">\n  </div>\n  \n  <form class="register__form" [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">\n    <div class="register__form__elements">\n        <label class="register__form__elements--label">Username</label>\n        <input class="register__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">\n    </div>\n    <div class="register__form__elements">\n        <label class="register__form__elements--label">Email</label>\n        <input class="register__form__elements--input" formControlName="email" name="email" type="text" placeholder="Your email">\n    </div>\n    <div class="register__form__elements">\n        <label class="register__form__elements--label">Password</label>\n        <input class="register__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">\n    </div>\n    <button class="register__form__elements" id="register-button1" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">Sign Up</button>\n  </form>\n</div>'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/register/register.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
@@ -1212,7 +1212,7 @@ var EditPage = (function () {
 }());
 EditPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-edit',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/edit/edit.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Edit Profile\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-item>\n        <button ion-start ion-button color="secondary" (click)="getImage()">Get Image</button>\n        <button ion-end ion-button (click)="uploadFile()">Upload</button>\n    </ion-item>\n    \n    <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">\n        <ion-list>\n            <ion-item class="edit-input">\n                <ion-label>\n                    First name\n                </ion-label>\n                <ion-input formControlName="firstname" name="firstname" type="text" placeholder="Your firstname"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Last name\n                </ion-label>\n                <ion-input formControlName="lastname" name="lastname" type="text" placeholder="Your lastname"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Middle name\n                </ion-label>\n                <ion-input formControlName="middlename" name="middlename" type="text" placeholder="Your middlename"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Gender\n                </ion-label>\n                <ion-input formControlName="gender" name="gender" type="text" placeholder="Your gender"></ion-input>\n            </ion-item>\n          \n        </ion-list>\n        <button ion-button color="stable" block type="submit" [disabled]="!editGroup.valid">\n          Update\n        </button>\n    </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/edit/edit.html"*/,
+        selector: 'page-edit',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/edit/edit.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Edit Profile\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-item>\n        <button ion-start ion-button color="secondary" (click)="getImage()">Get Image</button>\n        <button ion-end ion-button (click)="uploadFile()">Upload</button>\n    </ion-item>\n    \n    <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">\n        <ion-list>\n            <ion-item class="edit-input">\n                <ion-label>\n                    First name\n                </ion-label>\n                <ion-input formControlName="firstname" name="firstname" type="text" placeholder="Your firstname"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Last name\n                </ion-label>\n                <ion-input formControlName="lastname" name="lastname" type="text" placeholder="Your lastname"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Middle name\n                </ion-label>\n                <ion-input formControlName="middlename" name="middlename" type="text" placeholder="Your middlename"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Gender\n                </ion-label>\n                <ion-input formControlName="gender" name="gender" type="text" placeholder="Your gender"></ion-input>\n            </ion-item>\n          \n        </ion-list>\n        <button ion-button color="stable" block type="submit" [disabled]="!editGroup.valid">\n          Update\n        </button>\n    </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/edit/edit.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */],
@@ -1234,7 +1234,7 @@ EditPage = __decorate([
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(396);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(394);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1394,13 +1394,13 @@ AuthServiceProvider = __decorate([
 
 /***/ }),
 
-/***/ 336:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(337);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(353);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1408,7 +1408,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 355:
+/***/ 353:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1416,7 +1416,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(395);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(393);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_categories_categories__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_form_form__ = __webpack_require__(207);
@@ -1429,16 +1429,16 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_charts_charts__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_edit_edit__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_statistic_statistic__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_status_bar__ = __webpack_require__(453);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_splash_screen__ = __webpack_require__(454);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_status_bar__ = __webpack_require__(452);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_splash_screen__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_auth_service_auth_service__ = __webpack_require__(23);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_geolocation__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_diagnostic__ = __webpack_require__(455);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_diagnostic__ = __webpack_require__(454);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_file_transfer__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_file__ = __webpack_require__(456);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_file__ = __webpack_require__(455);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_camera__ = __webpack_require__(214);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_http__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_google_maps__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_google_maps__ = __webpack_require__(456);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1538,7 +1538,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 395:
+/***/ 393:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1612,7 +1612,7 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="gotoHome()">\n        Home\n      </button>\n      <button ion-item (click)="gotoProfile()">\n        Profile\n      </button>\n      <button ion-item (click)="gotoCategories()">\n        Categories\n      </button>\n      <button ion-item (click)="gotoCharts()">\n        Charts\n      </button>\n      <button ion-item (click)="gotoMap()">\n        Map\n      </button>\n      <button ion-item (click)="gotoStatistic()">\n        Statistic\n      </button>\n      <button ion-item menuToggle>Toggle Menu</button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/app/app.html"*/'<ion-menu [content]="content">\n  <ion-header>\n    <ion-toolbar>\n      <ion-title>Menu</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  <ion-content>\n    <ion-list>\n      <button ion-item (click)="gotoHome()">\n        Home\n      </button>\n      <button ion-item (click)="gotoProfile()">\n        Profile\n      </button>\n      <button ion-item (click)="gotoCategories()">\n        Categories\n      </button>\n      <button ion-item (click)="gotoCharts()">\n        Charts\n      </button>\n      <button ion-item (click)="gotoMap()">\n        Map\n      </button>\n      <button ion-item (click)="gotoStatistic()">\n        Statistic\n      </button>\n      <button ion-item menuToggle>Toggle Menu</button>\n    </ion-list>\n  </ion-content>\n</ion-menu>\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */]])
 ], MyApp);
@@ -1621,7 +1621,7 @@ MyApp = __decorate([
 
 /***/ }),
 
-/***/ 404:
+/***/ 402:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1646,240 +1646,240 @@ var CustomValidators = (function () {
 
 /***/ }),
 
-/***/ 435:
+/***/ 434:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 221,
-	"./af.js": 221,
-	"./ar": 222,
-	"./ar-dz": 223,
-	"./ar-dz.js": 223,
-	"./ar-kw": 224,
-	"./ar-kw.js": 224,
-	"./ar-ly": 225,
-	"./ar-ly.js": 225,
-	"./ar-ma": 226,
-	"./ar-ma.js": 226,
-	"./ar-sa": 227,
-	"./ar-sa.js": 227,
-	"./ar-tn": 228,
-	"./ar-tn.js": 228,
-	"./ar.js": 222,
-	"./az": 229,
-	"./az.js": 229,
-	"./be": 230,
-	"./be.js": 230,
-	"./bg": 231,
-	"./bg.js": 231,
-	"./bn": 232,
-	"./bn.js": 232,
-	"./bo": 233,
-	"./bo.js": 233,
-	"./br": 234,
-	"./br.js": 234,
-	"./bs": 235,
-	"./bs.js": 235,
-	"./ca": 236,
-	"./ca.js": 236,
-	"./cs": 237,
-	"./cs.js": 237,
-	"./cv": 238,
-	"./cv.js": 238,
-	"./cy": 239,
-	"./cy.js": 239,
-	"./da": 240,
-	"./da.js": 240,
-	"./de": 241,
-	"./de-at": 242,
-	"./de-at.js": 242,
-	"./de-ch": 243,
-	"./de-ch.js": 243,
-	"./de.js": 241,
-	"./dv": 244,
-	"./dv.js": 244,
-	"./el": 245,
-	"./el.js": 245,
-	"./en-au": 246,
-	"./en-au.js": 246,
-	"./en-ca": 247,
-	"./en-ca.js": 247,
-	"./en-gb": 248,
-	"./en-gb.js": 248,
-	"./en-ie": 249,
-	"./en-ie.js": 249,
-	"./en-nz": 250,
-	"./en-nz.js": 250,
-	"./eo": 251,
-	"./eo.js": 251,
-	"./es": 252,
-	"./es-do": 253,
-	"./es-do.js": 253,
-	"./es.js": 252,
-	"./et": 254,
-	"./et.js": 254,
-	"./eu": 255,
-	"./eu.js": 255,
-	"./fa": 256,
-	"./fa.js": 256,
-	"./fi": 257,
-	"./fi.js": 257,
-	"./fo": 258,
-	"./fo.js": 258,
-	"./fr": 259,
-	"./fr-ca": 260,
-	"./fr-ca.js": 260,
-	"./fr-ch": 261,
-	"./fr-ch.js": 261,
-	"./fr.js": 259,
-	"./fy": 262,
-	"./fy.js": 262,
-	"./gd": 263,
-	"./gd.js": 263,
-	"./gl": 264,
-	"./gl.js": 264,
-	"./gom-latn": 265,
-	"./gom-latn.js": 265,
-	"./he": 266,
-	"./he.js": 266,
-	"./hi": 267,
-	"./hi.js": 267,
-	"./hr": 268,
-	"./hr.js": 268,
-	"./hu": 269,
-	"./hu.js": 269,
-	"./hy-am": 270,
-	"./hy-am.js": 270,
-	"./id": 271,
-	"./id.js": 271,
-	"./is": 272,
-	"./is.js": 272,
-	"./it": 273,
-	"./it.js": 273,
-	"./ja": 274,
-	"./ja.js": 274,
-	"./jv": 275,
-	"./jv.js": 275,
-	"./ka": 276,
-	"./ka.js": 276,
-	"./kk": 277,
-	"./kk.js": 277,
-	"./km": 278,
-	"./km.js": 278,
-	"./kn": 279,
-	"./kn.js": 279,
-	"./ko": 280,
-	"./ko.js": 280,
-	"./ky": 281,
-	"./ky.js": 281,
-	"./lb": 282,
-	"./lb.js": 282,
-	"./lo": 283,
-	"./lo.js": 283,
-	"./lt": 284,
-	"./lt.js": 284,
-	"./lv": 285,
-	"./lv.js": 285,
-	"./me": 286,
-	"./me.js": 286,
-	"./mi": 287,
-	"./mi.js": 287,
-	"./mk": 288,
-	"./mk.js": 288,
-	"./ml": 289,
-	"./ml.js": 289,
-	"./mr": 290,
-	"./mr.js": 290,
-	"./ms": 291,
-	"./ms-my": 292,
-	"./ms-my.js": 292,
-	"./ms.js": 291,
-	"./my": 293,
-	"./my.js": 293,
-	"./nb": 294,
-	"./nb.js": 294,
-	"./ne": 295,
-	"./ne.js": 295,
-	"./nl": 296,
-	"./nl-be": 297,
-	"./nl-be.js": 297,
-	"./nl.js": 296,
-	"./nn": 298,
-	"./nn.js": 298,
-	"./pa-in": 299,
-	"./pa-in.js": 299,
-	"./pl": 300,
-	"./pl.js": 300,
-	"./pt": 301,
-	"./pt-br": 302,
-	"./pt-br.js": 302,
-	"./pt.js": 301,
-	"./ro": 303,
-	"./ro.js": 303,
-	"./ru": 304,
-	"./ru.js": 304,
-	"./sd": 305,
-	"./sd.js": 305,
-	"./se": 306,
-	"./se.js": 306,
-	"./si": 307,
-	"./si.js": 307,
-	"./sk": 308,
-	"./sk.js": 308,
-	"./sl": 309,
-	"./sl.js": 309,
-	"./sq": 310,
-	"./sq.js": 310,
-	"./sr": 311,
-	"./sr-cyrl": 312,
-	"./sr-cyrl.js": 312,
-	"./sr.js": 311,
-	"./ss": 313,
-	"./ss.js": 313,
-	"./sv": 314,
-	"./sv.js": 314,
-	"./sw": 315,
-	"./sw.js": 315,
-	"./ta": 316,
-	"./ta.js": 316,
-	"./te": 317,
-	"./te.js": 317,
-	"./tet": 318,
-	"./tet.js": 318,
-	"./th": 319,
-	"./th.js": 319,
-	"./tl-ph": 320,
-	"./tl-ph.js": 320,
-	"./tlh": 321,
-	"./tlh.js": 321,
-	"./tr": 322,
-	"./tr.js": 322,
-	"./tzl": 323,
-	"./tzl.js": 323,
-	"./tzm": 324,
-	"./tzm-latn": 325,
-	"./tzm-latn.js": 325,
-	"./tzm.js": 324,
-	"./uk": 326,
-	"./uk.js": 326,
-	"./ur": 327,
-	"./ur.js": 327,
-	"./uz": 328,
-	"./uz-latn": 329,
-	"./uz-latn.js": 329,
-	"./uz.js": 328,
-	"./vi": 330,
-	"./vi.js": 330,
-	"./x-pseudo": 331,
-	"./x-pseudo.js": 331,
-	"./yo": 332,
-	"./yo.js": 332,
-	"./zh-cn": 333,
-	"./zh-cn.js": 333,
-	"./zh-hk": 334,
-	"./zh-hk.js": 334,
-	"./zh-tw": 335,
-	"./zh-tw.js": 335
+	"./af": 219,
+	"./af.js": 219,
+	"./ar": 220,
+	"./ar-dz": 221,
+	"./ar-dz.js": 221,
+	"./ar-kw": 222,
+	"./ar-kw.js": 222,
+	"./ar-ly": 223,
+	"./ar-ly.js": 223,
+	"./ar-ma": 224,
+	"./ar-ma.js": 224,
+	"./ar-sa": 225,
+	"./ar-sa.js": 225,
+	"./ar-tn": 226,
+	"./ar-tn.js": 226,
+	"./ar.js": 220,
+	"./az": 227,
+	"./az.js": 227,
+	"./be": 228,
+	"./be.js": 228,
+	"./bg": 229,
+	"./bg.js": 229,
+	"./bn": 230,
+	"./bn.js": 230,
+	"./bo": 231,
+	"./bo.js": 231,
+	"./br": 232,
+	"./br.js": 232,
+	"./bs": 233,
+	"./bs.js": 233,
+	"./ca": 234,
+	"./ca.js": 234,
+	"./cs": 235,
+	"./cs.js": 235,
+	"./cv": 236,
+	"./cv.js": 236,
+	"./cy": 237,
+	"./cy.js": 237,
+	"./da": 238,
+	"./da.js": 238,
+	"./de": 239,
+	"./de-at": 240,
+	"./de-at.js": 240,
+	"./de-ch": 241,
+	"./de-ch.js": 241,
+	"./de.js": 239,
+	"./dv": 242,
+	"./dv.js": 242,
+	"./el": 243,
+	"./el.js": 243,
+	"./en-au": 244,
+	"./en-au.js": 244,
+	"./en-ca": 245,
+	"./en-ca.js": 245,
+	"./en-gb": 246,
+	"./en-gb.js": 246,
+	"./en-ie": 247,
+	"./en-ie.js": 247,
+	"./en-nz": 248,
+	"./en-nz.js": 248,
+	"./eo": 249,
+	"./eo.js": 249,
+	"./es": 250,
+	"./es-do": 251,
+	"./es-do.js": 251,
+	"./es.js": 250,
+	"./et": 252,
+	"./et.js": 252,
+	"./eu": 253,
+	"./eu.js": 253,
+	"./fa": 254,
+	"./fa.js": 254,
+	"./fi": 255,
+	"./fi.js": 255,
+	"./fo": 256,
+	"./fo.js": 256,
+	"./fr": 257,
+	"./fr-ca": 258,
+	"./fr-ca.js": 258,
+	"./fr-ch": 259,
+	"./fr-ch.js": 259,
+	"./fr.js": 257,
+	"./fy": 260,
+	"./fy.js": 260,
+	"./gd": 261,
+	"./gd.js": 261,
+	"./gl": 262,
+	"./gl.js": 262,
+	"./gom-latn": 263,
+	"./gom-latn.js": 263,
+	"./he": 264,
+	"./he.js": 264,
+	"./hi": 265,
+	"./hi.js": 265,
+	"./hr": 266,
+	"./hr.js": 266,
+	"./hu": 267,
+	"./hu.js": 267,
+	"./hy-am": 268,
+	"./hy-am.js": 268,
+	"./id": 269,
+	"./id.js": 269,
+	"./is": 270,
+	"./is.js": 270,
+	"./it": 271,
+	"./it.js": 271,
+	"./ja": 272,
+	"./ja.js": 272,
+	"./jv": 273,
+	"./jv.js": 273,
+	"./ka": 274,
+	"./ka.js": 274,
+	"./kk": 275,
+	"./kk.js": 275,
+	"./km": 276,
+	"./km.js": 276,
+	"./kn": 277,
+	"./kn.js": 277,
+	"./ko": 278,
+	"./ko.js": 278,
+	"./ky": 279,
+	"./ky.js": 279,
+	"./lb": 280,
+	"./lb.js": 280,
+	"./lo": 281,
+	"./lo.js": 281,
+	"./lt": 282,
+	"./lt.js": 282,
+	"./lv": 283,
+	"./lv.js": 283,
+	"./me": 284,
+	"./me.js": 284,
+	"./mi": 285,
+	"./mi.js": 285,
+	"./mk": 286,
+	"./mk.js": 286,
+	"./ml": 287,
+	"./ml.js": 287,
+	"./mr": 288,
+	"./mr.js": 288,
+	"./ms": 289,
+	"./ms-my": 290,
+	"./ms-my.js": 290,
+	"./ms.js": 289,
+	"./my": 291,
+	"./my.js": 291,
+	"./nb": 292,
+	"./nb.js": 292,
+	"./ne": 293,
+	"./ne.js": 293,
+	"./nl": 294,
+	"./nl-be": 295,
+	"./nl-be.js": 295,
+	"./nl.js": 294,
+	"./nn": 296,
+	"./nn.js": 296,
+	"./pa-in": 297,
+	"./pa-in.js": 297,
+	"./pl": 298,
+	"./pl.js": 298,
+	"./pt": 299,
+	"./pt-br": 300,
+	"./pt-br.js": 300,
+	"./pt.js": 299,
+	"./ro": 301,
+	"./ro.js": 301,
+	"./ru": 302,
+	"./ru.js": 302,
+	"./sd": 303,
+	"./sd.js": 303,
+	"./se": 304,
+	"./se.js": 304,
+	"./si": 305,
+	"./si.js": 305,
+	"./sk": 306,
+	"./sk.js": 306,
+	"./sl": 307,
+	"./sl.js": 307,
+	"./sq": 308,
+	"./sq.js": 308,
+	"./sr": 309,
+	"./sr-cyrl": 310,
+	"./sr-cyrl.js": 310,
+	"./sr.js": 309,
+	"./ss": 311,
+	"./ss.js": 311,
+	"./sv": 312,
+	"./sv.js": 312,
+	"./sw": 313,
+	"./sw.js": 313,
+	"./ta": 314,
+	"./ta.js": 314,
+	"./te": 315,
+	"./te.js": 315,
+	"./tet": 316,
+	"./tet.js": 316,
+	"./th": 317,
+	"./th.js": 317,
+	"./tl-ph": 318,
+	"./tl-ph.js": 318,
+	"./tlh": 319,
+	"./tlh.js": 319,
+	"./tr": 320,
+	"./tr.js": 320,
+	"./tzl": 321,
+	"./tzl.js": 321,
+	"./tzm": 322,
+	"./tzm-latn": 323,
+	"./tzm-latn.js": 323,
+	"./tzm.js": 322,
+	"./uk": 324,
+	"./uk.js": 324,
+	"./ur": 325,
+	"./ur.js": 325,
+	"./uz": 326,
+	"./uz-latn": 327,
+	"./uz-latn.js": 327,
+	"./uz.js": 326,
+	"./vi": 328,
+	"./vi.js": 328,
+	"./x-pseudo": 329,
+	"./x-pseudo.js": 329,
+	"./yo": 330,
+	"./yo.js": 330,
+	"./zh-cn": 331,
+	"./zh-cn.js": 331,
+	"./zh-hk": 332,
+	"./zh-hk.js": 332,
+	"./zh-tw": 333,
+	"./zh-tw.js": 333
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -1895,7 +1895,7 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 435;
+webpackContext.id = 434;
 
 /***/ }),
 
@@ -1985,7 +1985,7 @@ __decorate([
 ], HomePage.prototype, "lineCanvas", void 0);
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/home/home.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Home\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding id="page1">\n  <ion-list id="home-list11">\n    <ion-item color="none" on-click="goToCharts()" id="home-list-item47">\n      <ion-thumbnail item-left>\n        <img src="assets/img/QmnR3sRpSgzv8qEb3rdw_charts.png" />\n      </ion-thumbnail>\n      <h2>\n        Charts\n      </h2>\n    </ion-item>\n    <ion-item color="none" on-click="goToCategory()" id="home-list-item48">\n      <ion-thumbnail item-left>\n        <img src="assets/img/lkkeOZkLTUK15GPs3apS_category.png" />\n      </ion-thumbnail>\n      <h2>\n        Category\n      </h2>\n    </ion-item>\n    <ion-item color="none" on-click="goToMap()" id="home-list-item49">\n      <ion-thumbnail item-left>\n        <img src="assets/img/76Szzj9VSg6LYQRvi6jV_map.png" />\n      </ion-thumbnail>\n      <h2>\n        Map\n      </h2>\n    </ion-item>\n    <ion-item color="none" on-click="goToProfile()" id="home-list-item50">\n      <ion-thumbnail item-left>\n        <img src="assets/img/opvUfGcAQeqO5xDc4tmQ_user.png" />\n      </ion-thumbnail>\n      <h2>\n        Profile\n      </h2>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/home/home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/home/home.html"*/'<div class="home">\n  <div class="home__bg">\n      <div>\n        <img class="home__image" src="assets/img/home_img.png">\n      </div>\n    <button class="home__menu" menuToggle left>\n    </button>\n    <div class="home__info">\n        <img class="home__icon" src="assets/img/avatar.png">\n        <div class="home__info__text">\n            <p class="home__info__text--title">6 Task</p>\n            <span class="home__info__text--description">April 7, 2015</span>\n        </div>\n    </div>\n  </div>\n  \n  <div class="home__form">\n    <ion-list id="home-list11">\n      <ion-item color="none" on-click="goToCharts()" id="home-list-item47">\n        <ion-thumbnail item-left>\n          <img src="assets/img/QmnR3sRpSgzv8qEb3rdw_charts.png" />\n        </ion-thumbnail>\n        <h2>\n          Charts\n        </h2>\n      </ion-item>\n      <ion-item color="none" on-click="goToCategory()" id="home-list-item48">\n        <ion-thumbnail item-left>\n          <img src="assets/img/lkkeOZkLTUK15GPs3apS_category.png" />\n        </ion-thumbnail>\n        <h2>\n          Category\n        </h2>\n      </ion-item>\n      <ion-item color="none" on-click="goToMap()" id="home-list-item49">\n        <ion-thumbnail item-left>\n          <img src="assets/img/76Szzj9VSg6LYQRvi6jV_map.png" />\n        </ion-thumbnail>\n        <h2>\n          Map\n        </h2>\n      </ion-item>\n      <ion-item color="none" on-click="goToProfile()" id="home-list-item50">\n        <ion-thumbnail item-left>\n          <img src="assets/img/opvUfGcAQeqO5xDc4tmQ_user.png" />\n        </ion-thumbnail>\n        <h2>\n          Profile\n        </h2>\n      </ion-item>\n    </ion-list>\n  </div>\n</div>'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/home/home.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */],
@@ -2077,7 +2077,7 @@ var ProfilePage = (function () {
 }());
 ProfilePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Profile\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding id="page8">\n  <ion-card id="profile-card26">\n    <ion-list>\n      <ion-item color="none" id="profile-list-item53">\n        <h2>{{this.profile.username}}</h2>\n        <button item-right ion-button clear (click)="goEdit()">\n          <ion-icon ios="ios-create" md="md-create"></ion-icon>\n        </button>\n        <button item-right ion-button clear (click)="logout()">\n          <ion-icon name="log-out"></ion-icon>\n        </button>\n      </ion-item>\n\n\n      <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n      </ion-refresher>\n\n\n      <img src="{{this.profile.avatar}}">\n      <ion-item id="profile-list-item-container14">\n        <div id="profile-markdown16" class="show-list-numbers-and-dots">\n          <p style="margin-top:0px;color:#000000;">\n            <strong>\n              Email\n            </strong> :\n            {{this.profile.email}}\n          </p>\n          <p style="margin-top:10px;color:#000000;">\n            <strong>\n              Firstname\n            </strong> :\n            {{this.profile.firstname}}\n          </p>\n          <p style="margin-top:10px;color:#000000;">\n            <strong>\n              Lastname\n            </strong> :\n            {{this.profile.lastname}}\n          </p>\n          <p style="margin-top:10px;color:#000000;">\n            <strong>\n              Middlename\n            </strong> :\n            {{this.profile.middilename}}\n          </p>\n          <p style="margin-top:10px;color:#000000;">\n            <strong>\n              Create_at\n            </strong> :\n            {{this.profile.created_at}}\n          </p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/profile/profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/profile/profile.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Profile\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding id="page8">\n  <ion-card id="profile-card26">\n    <ion-list>\n      <ion-item color="none" id="profile-list-item53">\n        <h2>{{this.profile.username}}</h2>\n        <button item-right ion-button clear (click)="goEdit()">\n          <ion-icon ios="ios-create" md="md-create"></ion-icon>\n        </button>\n        <button item-right ion-button clear (click)="logout()">\n          <ion-icon name="log-out"></ion-icon>\n        </button>\n      </ion-item>\n\n\n      <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content></ion-refresher-content>\n      </ion-refresher>\n\n\n      <img src="{{this.profile.avatar}}">\n      <ion-item id="profile-list-item-container14">\n        <div id="profile-markdown16" class="show-list-numbers-and-dots">\n          <p style="margin-top:0px;color:#000000;">\n            <strong>\n              Email\n            </strong> :\n            {{this.profile.email}}\n          </p>\n          <p style="margin-top:10px;color:#000000;">\n            <strong>\n              Firstname\n            </strong> :\n            {{this.profile.firstname}}\n          </p>\n          <p style="margin-top:10px;color:#000000;">\n            <strong>\n              Lastname\n            </strong> :\n            {{this.profile.lastname}}\n          </p>\n          <p style="margin-top:10px;color:#000000;">\n            <strong>\n              Middlename\n            </strong> :\n            {{this.profile.middilename}}\n          </p>\n          <p style="margin-top:10px;color:#000000;">\n            <strong>\n              Create_at\n            </strong> :\n            {{this.profile.created_at}}\n          </p>\n        </div>\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/Bogdanek/Documents/bfinanceapp/src/pages/profile/profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
@@ -2089,5 +2089,5 @@ ProfilePage = __decorate([
 
 /***/ })
 
-},[336]);
+},[334]);
 //# sourceMappingURL=main.js.map

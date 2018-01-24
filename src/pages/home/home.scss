@@ -1,3 +1,57 @@
 page-home {
+    overflow: scroll;    
+      .home{
+        height: 100%;
+      }
+    
+      .home__image{
+        height: 37.5rem;
+        width: 100%;
+      }
+    
+      .home__bg{
+        position: relative;
+      }
+    
+      .home__icon{
+        height: 9.375rem;
+        width: 9.375rem;
+        position: absolute;
+        left: 50%;
+        margin-left: -4.6875rem;
+      }
 
+      .home__info{
+        width: 100%;
+        position: absolute;
+        top: 10.3125rem;
+      }
+
+      .home__menu{
+        position: absolute;
+        top: 2.71875rem;
+        left: 1.171875rem;
+        border: 0;
+        background: transparent;
+        height: 2.34375rem;
+        width: 2.34375rem;
+        background-image: url(../assets/img/menu_img.png);
+        background-size: cover;
+      }
+    
+      .home__form{
+        margin-top: 4rem;
+        text-align: center;
+        width: 100%;
+        padding: 0 2.375rem;
+      }
+
+      .home__info__text{
+          text-align: center;
+          position: absolute;
+          top: 10.3125rem;
+          left: 50%;
+          width: 10rem;
+          margin-left: -5rem;
+      }
 }

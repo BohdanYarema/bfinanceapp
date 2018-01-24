@@ -1,7 +1,7 @@
 <div class="login">
   <div class="login__bg">
       <div>
-        <img class="login__image" src="assets/img/login-bg.png">
+        <img class="login__image" src="assets/img/login.png">
       </div>
     <img class="login__icon" src="assets/img/mark.png">
   </div>
@@ -9,58 +9,16 @@
   <form class="login__form" [formGroup]="loginGroup" (ngSubmit)="doLogin(loginGroup.value)">
     <div class="login__form__elements">
         <label class="login__form__elements--label">Username</label>
-        <input class="login__form__elements--label" formControlName="username" name="username" type="text" placeholder="Your username">
+        <input class="login__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">
     </div>
     <div class="login__form__elements">
         <label class="login__form__elements--label">Password</label>
-        <input class="login__form__elements--label" formControlName="password" name="password" type="password" placeholder="Your password">
+        <input class="login__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">
     </div>
     <button class="login__form__elements" id="login-button1" type="submit" [disabled]="!loginGroup.valid" block>Log in</button>
-    <button class="login__form__elements" id="login-button2" block (click)="register()">Or create an account</button>
+    <div class="login__form__list">
+        <div class="login__form__elements--simple login__form__elements" id="login-button2" (click)="register()">Forgot password?</div>
+        <div class="login__form__elements--simple login__form__elements" id="login-button3" (click)="register()">Sign In</div>
+    </div>
   </form>
 </div>
-
-<style>
-  .login{
-    height: 100%;
-  }
-
-  .login__image{
-    height: 24.375rem;
-    width: 100%;
-  }
-
-  .login__bg{
-    position: relative;
-  }
-
-  .login__icon{
-    height: 9.375rem;
-    width: 9.375rem;
-    position: absolute;
-    bottom: -1.40625rem;
-    left: 50%;
-    margin-left: -4.6875rem;
-  }
-
-  .login__form{
-    margin-top: 9.609375rem;
-    height: 100%;
-    text-align: center;
-  }
-
-  .login__form__elements{
-    width: 40rem;
-    height: 6.25rem;
-  }
-
-  .login__form__elements--label{
-    display: block;
-  }
-
-  .login__form__elements--input{
-    display: block;
-  }
-
-
-</style>

@@ -1,34 +1,24 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Signup
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content padding id="page3">
-  <form [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">
-    <ion-list id="signup-list2">
-      <ion-item class="signup-input">
-        <ion-label>
-          Username
-        </ion-label>
-        <ion-input formControlName="username" name="username" type="text" placeholder="Your username"></ion-input>
-      </ion-item>
-      <ion-item class="signup-input">
-        <ion-label>
-          Email
-        </ion-label>
-        <ion-input formControlName="email" name="email" type="text" placeholder="Your email"></ion-input>
-      </ion-item>
-      <ion-item class="signup-input">
-        <ion-label>
-          Password
-        </ion-label>
-        <ion-input formControlName="password" name="password" type="password" placeholder="Your password"></ion-input>
-      </ion-item>
-    </ion-list>
-    <button id="signup-button3" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">
-      Sign up
-    </button>
+<div class="register">
+  <div class="register__bg">
+      <div>
+        <img class="register__image" src="assets/img/login.png">
+      </div>
+    <img class="register__icon" src="assets/img/mark.png">
+  </div>
+  
+  <form class="register__form" [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">
+    <div class="register__form__elements">
+        <label class="register__form__elements--label">Username</label>
+        <input class="register__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">
+    </div>
+    <div class="register__form__elements">
+        <label class="register__form__elements--label">Email</label>
+        <input class="register__form__elements--input" formControlName="email" name="email" type="text" placeholder="Your email">
+    </div>
+    <div class="register__form__elements">
+        <label class="register__form__elements--label">Password</label>
+        <input class="register__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">
+    </div>
+    <button class="register__form__elements" id="register-button1" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">Sign Up</button>
   </form>
-</ion-content>
+</div>
