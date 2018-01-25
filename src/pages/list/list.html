@@ -1,31 +1,39 @@
-<ion-header>
-  <ion-toolbar>
-    <button ion-button menuToggle left>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-        {{item.name}}
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content class="main_content">
-    <div class="list" ion-item *ngFor="let item of items">
-        <ion-item-group>
-          <ion-item-divider color="light">{{ item[0] }}</ion-item-divider>
-          <div ion-item *ngFor="let data of item[1]">
-            <ion-item>
-              <p (click)="itemSelected(data)" item-start>{{ data.name }}</p>
-              <p (click)="itemSelected(data)" item-end>{{ data.price }} uah</p>
-              <button item-end dark clear ion-button (click)="itemDelete(data)" icon-only>
-                <ion-icon name='trash'></ion-icon>
-              </button>
-            </ion-item>
-            <!-- Only icon (no text) -->
+<div class="page">
+    <div class="page__bg">
+        <button class="page__add" (click)="goForm(item)"><img src="assets/img/add.png"></button>
+        <div>
+          <img class="page__image" src="assets/img/list_bg.png">
+        </div>
+      <button class="page__menu" menuToggle left></button>
+      <div class="page__info">
+          <div class="page__info__text">
+              <p class="page__info__text--title">{{item.name}}</p>
           </div>
-        </ion-item-group>
+      </div>
     </div>
-</ion-content>
-
-<button class="btn_float_right" (click)="goForm(item)" ion-button color="secondary" round>
-  <ion-icon name="add"></ion-icon>
-</button>
+  
+    <div class="page__list">
+      <div *ngFor="let item of items">
+          <div *ngFor="let data of item[1]">
+            <div class="page__list__item" (click)="itemSelected(data)">
+                <div class="page__list__info">
+                  <p>{{ data.price }}</p>
+                  <span>uah</span>
+                </div>
+                <div class="page__list__image">
+                  <img src="assets/img/avatar_list.png">
+                </div>
+                <div class="page__list__title">
+                  <p>{{ data.name }}</p>
+                  <span>{{ item[0] }}</span>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- <button item-end dark clear ion-button (click)="itemDelete(data)" icon-only>
+      <ion-icon name='trash'></ion-icon>
+    </button> -->

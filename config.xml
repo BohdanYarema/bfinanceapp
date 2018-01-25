@@ -100,7 +100,7 @@
     <plugin name="cordova-plugin-camera" spec="^2.4.1" />
     <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist.git" />
     <preference name="loadUrlTimeoutValue" value="60000" />
-    <plugin name="cordova-plugin-file-transfer" spec="^1.7.0" />
     <engine name="browser" spec="^5.0.2" />
     <engine name="android" spec="6.3.0" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.7.0" />
 </widget>

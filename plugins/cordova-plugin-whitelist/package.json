@@ -19,7 +19,7 @@
           "directUrl": "https://raw.githubusercontent.com/apache/cordova-plugin-whitelist/master/package.json"
         }
       },
-      "/Users/Bogdanek/Documents/bfinanceapp"
+      "/Users/bohdan/bfinanceapp"
     ]
   ],
   "_from": "git+https://github.com/apache/cordova-plugin-whitelist.git",
@@ -50,10 +50,10 @@
     "/"
   ],
   "_resolved": "git+https://github.com/apache/cordova-plugin-whitelist.git#aed9b33e69da6a444b3dbb82a61dd0a371c1699b",
-  "_shasum": "2c93f1959c62a25bd8fd0f8c6d27bcf7d2879953",
+  "_shasum": "6c78413281a446d3d78c21668a1be2c7218db0ff",
   "_shrinkwrap": null,
   "_spec": "https://github.com/apache/cordova-plugin-whitelist.git",
-  "_where": "/Users/Bogdanek/Documents/bfinanceapp",
+  "_where": "/Users/bohdan/bfinanceapp",
   "author": {
     "name": "Apache Software Foundation"
   },

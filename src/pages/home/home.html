@@ -1,33 +1,27 @@
-<div class="home">
-  <div class="home__bg">
-      <button class="home__add"><img src="assets/img/add.png"></button>
+<div class="page">
+  <div class="page__bg">
+      <button class="page__add" (click)="goForm(item)"><img src="assets/img/add.png"></button>
       <div>
-        <img class="home__image" src="assets/img/home_img.png">
+        <img class="page__image" src="assets/img/list_bg.png">
       </div>
-    <button class="home__menu" menuToggle left></button>
-    <div class="home__info">
-        <img class="home__icon" src="assets/img/avatar.png">
-        <div class="home__info__text">
-            <p class="home__info__text--title">6 Task</p>
-            <span class="home__info__text--description">April 7, 2015</span>
+    <button class="page__menu" menuToggle left></button>
+    <div class="page__info">
+        <div class="page__info__text">
+            <p class="page__info__text--title">Test</p>
         </div>
     </div>
   </div>
 
-  <div class="home__list">
+  <div class="page__list">
       <div *ngFor="let item of data" (click)="itemSelected(item)">
-        <div class="home__list__item">
-          <div class="home__list__info">
-            <p>24</p>
-            <span>min</span>
+        <div class="page__list__item">
+          <div class="page__list__image">
+            <img src="assets/img/category_img.png">
+            <div class="page__list__image--notify">
+              <p>2</p>
+            </div>
           </div>
-          <div class="home__list__image">
-            <img src="assets/img/avatar_list.png">
-          </div>
-          <div class="home__list__title">
-            <p>{{ item.name }}</p>
-            <span>{{ item.name }}</span>
-          </div>
+          <div class="page__list__image--diagonal"></div>
         </div>
       </div>
   </div>
