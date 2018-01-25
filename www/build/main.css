@@ -25517,6 +25517,13 @@ ion-navbar.toolbar {
   src: url(../assets/fonts/Avenir.ttf);
 }
 
+p, span {
+  padding: 0;
+  margin: 0;
+  font-family: Avenir;
+  color: #1D1D26;
+}
+
 page-accounting #map {
   height: 60%;
 }
@@ -25607,20 +25614,93 @@ page-home .home__menu {
   background-size: cover;
 }
 
-page-home .home__form {
+page-home .home__add {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  height: 5.90625rem;
+  width: 5.90625rem;
+  background: transparent;
+  padding: 0;
+}
+
+page-home .home__list {
   margin-top: 4rem;
   text-align: center;
   width: 100%;
-  padding: 0 2.375rem;
 }
 
 page-home .home__info__text {
   text-align: center;
   position: absolute;
   top: 10.3125rem;
-  left: 50%;
-  width: 10rem;
-  margin-left: -5rem;
+  width: 100%;
+}
+
+page-home .home__list__item {
+  height: 5.625rem;
+  text-align: left;
+  border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
+  margin-bottom: 1.875rem;
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+}
+
+page-home .home__list__item div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+page-home .home__list__info {
+  width: 10%;
+}
+
+page-home .home__list__info p {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+page-home .home__list__info span {
+  font-size: 1.5rem;
+  opacity: 0.5;
+  line-height: 1;
+}
+
+page-home .home__list__image {
+  height: 3.75rem;
+  width: 3.75rem;
+  margin-left: 1.875rem;
+}
+
+page-home .home__list__title {
+  margin-left: 1.875rem;
+}
+
+page-home .home__list__title p {
+  font-size: 1.875rem;
+  line-height: 1;
+  padding-bottom: 5px;
+}
+
+page-home .home__list__title span {
+  font-size: 1.5rem;
+  opacity: 0.5;
+  line-height: 1;
+}
+
+page-home .home__info__text--title {
+  font-size: 4.375rem;
+  color: #ffffff;
+  line-height: 1;
+}
+
+page-home .home__info__text--description {
+  font-size: 1.375rem;
+  color: #ffffff;
+  opacity: 0.5;
+  line-height: 1;
+  margin-top: 1.6875rem;
+  display: inline-block;
 }
 
 page-list .button-round-md {

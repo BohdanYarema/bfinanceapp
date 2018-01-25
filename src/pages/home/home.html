@@ -1,10 +1,10 @@
 <div class="home">
   <div class="home__bg">
+      <button class="home__add"><img src="assets/img/add.png"></button>
       <div>
         <img class="home__image" src="assets/img/home_img.png">
       </div>
-    <button class="home__menu" menuToggle left>
-    </button>
+    <button class="home__menu" menuToggle left></button>
     <div class="home__info">
         <img class="home__icon" src="assets/img/avatar.png">
         <div class="home__info__text">
@@ -13,41 +13,22 @@
         </div>
     </div>
   </div>
-  
-  <div class="home__form">
-    <ion-list id="home-list11">
-      <ion-item color="none" on-click="goToCharts()" id="home-list-item47">
-        <ion-thumbnail item-left>
-          <img src="assets/img/QmnR3sRpSgzv8qEb3rdw_charts.png" />
-        </ion-thumbnail>
-        <h2>
-          Charts
-        </h2>
-      </ion-item>
-      <ion-item color="none" on-click="goToCategory()" id="home-list-item48">
-        <ion-thumbnail item-left>
-          <img src="assets/img/lkkeOZkLTUK15GPs3apS_category.png" />
-        </ion-thumbnail>
-        <h2>
-          Category
-        </h2>
-      </ion-item>
-      <ion-item color="none" on-click="goToMap()" id="home-list-item49">
-        <ion-thumbnail item-left>
-          <img src="assets/img/76Szzj9VSg6LYQRvi6jV_map.png" />
-        </ion-thumbnail>
-        <h2>
-          Map
-        </h2>
-      </ion-item>
-      <ion-item color="none" on-click="goToProfile()" id="home-list-item50">
-        <ion-thumbnail item-left>
-          <img src="assets/img/opvUfGcAQeqO5xDc4tmQ_user.png" />
-        </ion-thumbnail>
-        <h2>
-          Profile
-        </h2>
-      </ion-item>
-    </ion-list>
+
+  <div class="home__list">
+      <div *ngFor="let item of data" (click)="itemSelected(item)">
+        <div class="home__list__item">
+          <div class="home__list__info">
+            <p>24</p>
+            <span>min</span>
+          </div>
+          <div class="home__list__image">
+            <img src="assets/img/avatar_list.png">
+          </div>
+          <div class="home__list__title">
+            <p>{{ item.name }}</p>
+            <span>{{ item.name }}</span>
+          </div>
+        </div>
+      </div>
   </div>
 </div>

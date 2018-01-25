@@ -1,78 +1,63 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, MenuController} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController} from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController } from 'ionic-angular';
-import { CategoriesPage } from '../categories/categories';
-import { MapPage } from '../map/map';
-import { ProfilePage } from '../profile/profile';
-import { ChartsPage } from '../charts/charts';
+import { ListPage } from '../list/list';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
 })
 export class HomePage {
-
-  @ViewChild('barCanvas') barCanvas;
-  @ViewChild('doughnutCanvas') doughnutCanvas;
-  @ViewChild('lineCanvas') lineCanvas;
-
-  barChart: any;
-  doughnutChart: any;
-  lineChart: any;
-  reponse: any;
   loading : any;
+  data    : any;
 
   constructor(
-      public navCtrl: NavController,
-      public navParams: NavParams,
-      public authService: AuthServiceProvider,
-      public loadingCtrl: LoadingController,
-      public toastCtrl: ToastController,
-      public menu: MenuController
-    ) {
-      menu.enable(true);
-    }
+    public navCtrl: NavController, 
+    public authService: AuthServiceProvider, 
+    public loadingCtrl: LoadingController, 
+    private toastCtrl: ToastController
+  ) {
+    
+  }
 
-    ionViewDidLoad() {
+  ionViewDidLoad() {
+    this.showLoader();
+    this.authService.category().then((result) => {
+      this.data = result;
+      this.loading.dismiss();
+    }, (err) => {
+      this.loading.dismiss();
+      this.presentToast(err);
+    });
+  }
 
-    }
+  showLoader(){
+    this.loading = this.loadingCtrl.create({
+        content: 'Serching...'
+    });
 
-    goToCharts(){
-      this.navCtrl.push(ChartsPage);
-    }
+    this.loading.present();
+  }
 
-    goToCategory(){
-      this.navCtrl.push(CategoriesPage);
-    }
+  presentToast(msg) {
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 3000,
+      position: 'bottom',
+      dismissOnPageChange: true
+    });
 
-    goToMap(){
-      this.navCtrl.push(MapPage);
-    }
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
 
-    goToProfile(){
-      this.navCtrl.push(ProfilePage);
-    }
+    toast.present();
+  }
 
-    showLoader(){
-      this.loading = this.loadingCtrl.create({
-          content: 'Authenticating...'
-      });
-
-      this.loading.present();
-    }
-
-    presentToast(msg) {
-      let toast = this.toastCtrl.create({
-        message: msg,
-        duration: 3000,
-        position: 'bottom'
-      });
-
-      toast.onDidDismiss(() => {
-        console.log('Dismissed toast');
-      });
-
-      toast.present();
-    }
+  itemSelected(item: string) {
+    this.navCtrl.push(ListPage, {
+      item : item
+    });
+  }
 }
