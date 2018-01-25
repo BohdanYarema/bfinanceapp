@@ -1,27 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <button ion-button menuToggle left>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-        Add Accounting
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content padding>
-<form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">
-    <ion-item>
-        <ion-input formControlName="name" name="name" type="text" placeholder="name" ></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-input formControlName="price" name="price" type="number" placeholder="price" ></ion-input>
-    </ion-item>
-    <ion-item>
-        <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>
-    </ion-item>
-
-    <button ion-button block type="submit" [disabled]="!addGroup.valid">
-        Add
-    </button>
-</form>
-</ion-content>
+<div class="page">
+    <div class="page__bg">
+        <div>
+            <img class="page__image" src="assets/img/create_img.png">
+        </div>
+        <button class="page__menu" menuToggle left></button>
+        <div class="page__info">
+            <div class="page__info__text">
+                <p class="page__info__text--title">Create</p>
+            </div>
+        </div>
+    </div>
+    <div class="page__form">
+        <form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">
+            <input class="page__form__elements" formControlName="name" name="name" type="text" placeholder="name" >
+            <input class="page__form__elements" formControlName="price" name="price" type="number" placeholder="price" >
+            <ion-item class="page__form__elements--datapicker">
+                <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>
+            </ion-item>
+            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!addGroup.valid">Add</button>
+        </form>
+    </div>
+</div>
