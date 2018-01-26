@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController} from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { LoadingController, ToastController } from 'ionic-angular';
+import { LoadingController, ToastController, App } from 'ionic-angular';
 import { ListPage } from '../list/list';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-home',
@@ -16,15 +17,26 @@ export class HomePage {
     public navCtrl: NavController, 
     public authService: AuthServiceProvider, 
     public loadingCtrl: LoadingController, 
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    public app: App
   ) {
     
+  }
+
+  logout() {
+    localStorage.clear();
+    this.showLoader();
+    localStorage.clear();
+    this.loading.dismiss();
+    let nav = this.app.getRootNav();
+    nav.setRoot(LoginPage);
   }
 
   ionViewDidLoad() {
     this.showLoader();
     this.authService.category().then((result) => {
       this.data = result;
+      console.log(this.data);
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();

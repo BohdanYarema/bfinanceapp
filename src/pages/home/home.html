@@ -1,6 +1,5 @@
 <div class="page">
   <div class="page__bg">
-      <button class="page__add" (click)="goForm(item)"><img src="assets/img/add.png"></button>
       <div>
         <img class="page__image" src="assets/img/list_bg.png">
       </div>
@@ -11,12 +10,11 @@
         </div>
     </div>
   </div>
-
   <div class="page__list">
       <div *ngFor="let item of data" (click)="itemSelected(item)">
         <div class="page__list__item">
           <div class="page__list__image">
-            <img src="assets/img/category_img.png">
+            <img src="{{item.thumbnail}}">
             <div class="page__list__image--notify">
               <p>2</p>
             </div>

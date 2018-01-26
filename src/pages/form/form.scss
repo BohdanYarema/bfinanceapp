@@ -1,6 +1,230 @@
 page-form {
-    .btn_add_accounting {
-        margin: 0 auto;
-        width: 13em;
+    overflow: scroll;    
+    .page{
+      height: 100%;
     }
+  
+    .page__image{
+      height: 20.15625rem;
+      width: 100%;
+    }
+  
+    .page__bg{
+      position: relative;
+    }
+  
+    .page__icon{
+      height: 9.375rem;
+      width: 9.375rem;
+      position: absolute;
+      left: 50%;
+      margin-left: -4.6875rem;
+    }
+
+    .page__info{
+      width: 100%;
+      position: absolute;
+      top: 8.015625rem;
+    }
+
+    .page__menu{
+      position: absolute;
+      top: 2.71875rem;
+      left: 1.171875rem;
+      border: 0;
+      background: transparent;
+      height: 2.34375rem;
+      width: 2.34375rem;
+      background-image: url(../assets/img/menu_img.png);
+      background-size: cover;
+    }
+
+    .page__add{
+      position: absolute;
+      bottom: 1.5rem;
+      right: 2rem;
+      height: 5.90625rem;
+      width: 5.90625rem;
+      background: transparent;
+      padding: 0;
+    }
+  
+    .page__list{
+      text-align: center;
+      width: 100%;
+    }
+
+    .page__info__text{
+        text-align: center;
+        position: absolute;
+        width: 100%;
+    }
+
+    .page__list__item{
+      
+    }
+
+    .page__list__item div{
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .page__list__info{
+      width: 20%;
+    }
+
+    .page__list__info p{
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+
+    .page__list__info span{
+      font-size: 1.5rem;
+      opacity: 0.5;
+      line-height: 1;
+    }
+
+    .page__list__image{
+      position: relative;
+      height: 9.375rem;
+      width: 9.375rem;
+    }
+
+    .page__list__image img{
+      border-radius: 50%;
+    }
+
+    .page__list__image--notify{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2.8125rem;
+      width: 2.8125rem;
+      background-image: url(../assets/img/notify.png);
+      background-size: cover;
+    }
+
+    .page__list__image--notify p{
+      color: #ffffff;
+      font-size: 1.5 rem;
+      padding-top: 0.4rem;
+    }
+
+
+    .page__list__image--diagonal{
+      height: 6.625rem;
+      width: 100%;
+      background-image: url(../assets/img/line.png);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .page__list__title{
+      margin-left: 1.875rem;
+    }
+
+    .page__list__title p{
+      font-size: 1.875rem;
+      line-height: 1;
+      padding-bottom: 5px;
+    }
+
+    .page__list__title span{
+      font-size: 1.5rem;
+      opacity: 0.5;
+      line-height: 1;
+    }
+
+    .page__info__text--title{
+      font-size: 4.375rem;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .page__info__text--description{
+      font-size: 1.375rem;
+      color: #ffffff;
+      opacity: 0.5;
+      line-height: 1;
+      margin-top: 1.6875rem;
+      display: inline-block;
+    }
+
+    .page__form{
+        margin-top: 4rem;
+        text-align: center;
+        width: 100%;
+        padding: 0 2.375rem;
+    }
+    
+      .page__form__elements{
+        display: block;
+        width: 100%;
+        text-align: center; 
+        outline: none;
+        border: none;
+        height: 6.25rem;
+        font-family: Avenir;
+        margin-bottom: 1.875rem;
+        border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .page__form__elements--datapicker .datetime-md{
+            padding: 0;
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .datetime-md .datetime-placeholder{
+            padding-top: 20px;
+            color: #1D1D26;
+            font-family: Avenir;
+            height: 100%;
+        }
+
+        .datetime-text{
+            padding-top: 20px;
+            color: #1D1D26;
+            font-family: Avenir;
+            height: 100%;
+        }
+
+        .item-md {
+            padding: 0;
+            height: 6.25rem;
+            margin-bottom: 1.875rem;
+            border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
+        }
+
+        .item-md.item-block .item-inner {
+            padding: 0;
+            border: 0;
+        }
+    
+      .page__form__elements--simple {
+        width: 49%;
+        margin: 1rem 0 0 0;
+        display: inline-block;
+        height: 1.25 rem !important;
+        border: none;
+        text-transform: uppercase;
+      }
+
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: #1D1D26;
+        font-size: 1.75rem;
+      }
+
+      #login-button1{
+        background-color: #FF3366;
+        width: 100%;
+        margin-top:5.46rem !important; 
+        font-size: 1.375rem;
+        color: #ffffff;
+        margin-bottom: 0;
+      }
 }
