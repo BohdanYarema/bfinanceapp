@@ -6,9 +6,7 @@ import { Platform, Nav } from 'ionic-angular';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
-import { ChartsPage } from '../pages/charts/charts';
 import { MapPage } from '../pages/map/map';
-import { CategoriesPage } from '../pages/categories/categories';
 import { StatisticPage } from '../pages/statistic/statistic';
 
 @Component({
@@ -41,16 +39,8 @@ export class MyApp {
     this.nav.push(HomePage);
   }
 
-  gotoCharts() {
-    this.nav.push(ChartsPage);
-  }
-
   gotoMap() {
     this.nav.push(MapPage);
-  }
-
-  gotoCategories() {
-    this.nav.push(CategoriesPage);
   }
 
   gotoStatistic() {

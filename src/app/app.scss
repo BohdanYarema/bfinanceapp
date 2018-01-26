@@ -26,3 +26,35 @@ p, span {
     font-family: Avenir;
     color: #1D1D26;
 }
+
+.menu-inner {
+    background-image: url(../assets/img/sidemenu_img.png) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 100%;
+    padding-left: 4.6875rem;
+    padding-top: 15.9375rem;
+    position: relative;
+}
+
+
+.custom button{
+    display: block;
+    background: transparent;
+    color: #ffffff;
+    font-family: Avenir;
+    font-size: 2.25rem;
+    text-transform: capitalize;
+    padding-top:  1.875rem;
+    padding-bottom:  1.875rem;
+}
+
+.toogle_button{
+    position: absolute;
+    top: 3.125rem;
+    left: 1.5rem;
+    padding: 0 !important;
+    margin: 0;
+    height: 1.875rem;
+    width: 1.875rem;
+}
