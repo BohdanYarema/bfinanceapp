@@ -12,6 +12,9 @@ import {
 })
 export class AccountingPage {
   map: GoogleMap;
+  monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
   @ViewChild("map") mapElement: ElementRef;
 
   item    : any;
@@ -29,7 +32,8 @@ export class AccountingPage {
     
     var result = (curr_date + "-" + curr_month + "-" + curr_year);
 
-    this.item.dates = result;
+    this.item.dates = curr_date;
+    this.item.mounth = this.monthNames[curr_month];
   }
 
   ionViewDidLoad() {

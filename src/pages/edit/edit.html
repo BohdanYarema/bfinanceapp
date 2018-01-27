@@ -1,54 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <button ion-button menuToggle left>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-        Edit Profile
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-    <ion-item>
-        <button ion-start ion-button color="secondary" (click)="getImage()">Get Image</button>
-        <button ion-end ion-button (click)="uploadFile()">Upload</button>
-    </ion-item>
-    
-    <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">
-        <ion-list>
-            <ion-item class="edit-input">
-                <ion-label>
-                    First name
-                </ion-label>
-                <ion-input formControlName="firstname" name="firstname" type="text" placeholder="Your firstname"></ion-input>
-            </ion-item>
-
-            <ion-item class="edit-input">
-                <ion-label>
-                    Last name
-                </ion-label>
-                <ion-input formControlName="lastname" name="lastname" type="text" placeholder="Your lastname"></ion-input>
-            </ion-item>
-
-            <ion-item class="edit-input">
-                <ion-label>
-                    Middle name
-                </ion-label>
-                <ion-input formControlName="middlename" name="middlename" type="text" placeholder="Your middlename"></ion-input>
-            </ion-item>
-
-            <ion-item class="edit-input">
-                <ion-label>
-                    Gender
-                </ion-label>
-                <ion-input formControlName="gender" name="gender" type="text" placeholder="Your gender"></ion-input>
-            </ion-item>
-          
-        </ion-list>
-        <button ion-button color="stable" block type="submit" [disabled]="!editGroup.valid">
-          Update
+<div class="page">
+    <div class="page__bg">
+        <img class="page__image" src="assets/img/create_img.png">
+        <button class="page__menu" menuToggle left></button>
+        <p class="page__name">Settings</p>
+        <div class="page__info">
+            <div class="page__info__text">
+                <p class="page__info__text--title">{{this.profile_info.firstname}} {{this.profile_info.lastname}}</p>
+                <p class="page__info__text--description">{{this.profile_info.username}}</p>
+            </div>
+        </div>
+        <button class="page__add" (click)="getImage()">
+            <img src="assets/img/avatar.png">
         </button>
-    </form>
+    </div>
+    <div class="page__form">
+        <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">
+            <div class="page__form__group">
+                <label>firstname</label>
+                <input class="page__form__elements" value="{{this.profile_info.firstname}}" formControlName="firstname" name="firstname" type="text" placeholder="firstname" >
+            </div>
+            <div class="page__form__group">
+                <label>lastname</label>
+                <input class="page__form__elements" value="{{this.profile_info.lastname}}" formControlName="lastname" name="lastname" type="text" placeholder="lastname" >
+            </div>
+            <div class="page__form__group">
+                <label>middlename</label>
+                <input class="page__form__elements" value="{{this.profile_info.middlename}}" formControlName="middlename" name="middlename" type="text" placeholder="middlename" >
+            </div>
+            <div class="page__form__group">
+                <label>gender</label>
+                <input class="page__form__elements" value="{{this.profile_info.gender}}" formControlName="gender" name="gender" type="text" placeholder="gender" >
+            </div>
+        
+            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!editGroup.valid">Update Form</button>
+        </form>
 
-</ion-content>
+        <button class="page__form__elements" id="login-button2" type="submit" (click)="uploadFile()">Upload Image</button>
+    </div>
+</div>

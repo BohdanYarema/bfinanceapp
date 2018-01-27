@@ -7,8 +7,8 @@ webpackJsonp([1],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__edit_edit__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__edit_edit__ = __webpack_require__(113);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_auth_service_auth_service__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -92,7 +92,7 @@ var ProfilePage = (function () {
 }());
 ProfilePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/profile/profile.html"*/'<div class="page">\n  <div class="page__bg">\n      <div>\n        <img class="page__image" src="assets/img/profile_img.png">\n      </div>\n    <img class="page__icon" src="{{this.profile.avatar}}">\n    <button class="page__menu" menuToggle></button>\n    <button class="page__logout" (click)="logout()"></button>\n    <div class="page__info">\n        <div class="page__info__text">\n            <p class="page__info__text--title">{{this.profile.firstname}} {{this.profile.lastname}}</p>\n            <p class="page__info__text--description">{{this.profile.username}}</p>\n        </div>\n  </div>\n  <div class="page__content">\n    <div class="page__stats">\n      <div class="page__stats-item">\n        <p class="page__stats-item--title">128</p>\n        <p class="page__stats-item--description">complete</p>\n        <div class="page__stats-item--green"></div>\n      </div>\n      <div class="page__stats-item">\n        <p class="page__stats-item--title">14</p>\n        <p class="page__stats-item--description">complete</p>\n        <div class="page__stats-item--rose"></div>\n      </div>\n      <div class="page__stats-item">\n        <p class="page__stats-item--title">28</p>\n        <p class="page__stats-item--description">complete</p>\n        <div class="page__stats-item--fiolet"></div>\n      </div>\n    </div>\n    <div class="page__list">\n      <div *ngFor="let item of items">\n          <div *ngFor="let data of item[1]">\n            <div class="page__list__item">\n                <div class="page__list__info">\n                  <p>{{ data.price }}</p>\n                  <span>uah</span>\n                </div>\n                <div class="page__list__image">\n                  <img src="assets/img/avatar_list.png">\n                </div>\n                <div class="page__list__title">\n                  <p>{{ data.name }}</p>\n                  <span>{{ item[0] }}</span>\n                </div>\n              </div>\n          </div>\n      </div>\n    </div>\n  </div>\n</div>'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/profile/profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\profile\profile.html"*/'<div class="page">\n\n  <div class="page__bg">\n\n      <div>\n\n        <img class="page__image" src="assets/img/profile_img.png">\n\n      </div>\n\n    <img class="page__icon" src="{{this.profile.avatar}}">\n\n    <button class="page__menu" menuToggle></button>\n\n    <button class="page__logout" (click)="logout()"></button>\n\n    <div class="page__info">\n\n        <div class="page__info__text">\n\n            <p class="page__info__text--title">{{this.profile.firstname}} {{this.profile.lastname}}</p>\n\n            <p class="page__info__text--description">{{this.profile.username}}</p>\n\n        </div>\n\n  </div>\n\n  <div class="page__content">\n\n    <div class="page__stats">\n\n      <div class="page__stats-item">\n\n        <p class="page__stats-item--title">128</p>\n\n        <p class="page__stats-item--description">complete</p>\n\n        <div class="page__stats-item--green"></div>\n\n      </div>\n\n      <div class="page__stats-item">\n\n        <p class="page__stats-item--title">14</p>\n\n        <p class="page__stats-item--description">complete</p>\n\n        <div class="page__stats-item--rose"></div>\n\n      </div>\n\n      <div class="page__stats-item">\n\n        <p class="page__stats-item--title">28</p>\n\n        <p class="page__stats-item--description">complete</p>\n\n        <div class="page__stats-item--fiolet"></div>\n\n      </div>\n\n    </div>\n\n    <div class="page__list">\n\n      <div *ngFor="let item of items">\n\n          <div *ngFor="let data of item[1]">\n\n            <div class="page__list__item">\n\n                <div class="page__list__info">\n\n                  <p>{{ data.price }}</p>\n\n                  <span>uah</span>\n\n                </div>\n\n                <div class="page__list__image">\n\n                  <img src="assets/img/avatar_list.png">\n\n                </div>\n\n                <div class="page__list__title">\n\n                  <p>{{ data.name }}</p>\n\n                  <span>{{ item[0] }}</span>\n\n                </div>\n\n              </div>\n\n          </div>\n\n      </div>\n\n    </div>\n\n  </div>\n\n</div>'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\profile\profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
@@ -110,9 +110,14 @@ ProfilePage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatisticPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_profile__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_auth_service_auth_service__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -124,30 +129,155 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
+
+
 /**
- * Generated class for the StatisticPage page.
+ * Generated class for the EditPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var StatisticPage = (function () {
-    function StatisticPage(navCtrl, navParams) {
+var EditPage = (function () {
+    function EditPage(navCtrl, camera, loadingCtrl, toastCtrl, authService, transfer, formBuilder) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
+        this.camera = camera;
+        this.loadingCtrl = loadingCtrl;
+        this.toastCtrl = toastCtrl;
+        this.authService = authService;
+        this.transfer = transfer;
+        this.formBuilder = formBuilder;
+        this.profile_info = JSON.parse(localStorage.getItem('profile'));
+        // formbuilder for form
+        this.editGroup = formBuilder.group({
+            firstname: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].required,
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].minLength(2),
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].maxLength(255),
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*')
+                ])],
+            lastname: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].required,
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].minLength(2),
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].maxLength(255),
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*')
+                ])],
+            middlename: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].required,
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].minLength(2),
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].maxLength(255),
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*')
+                ])],
+            gender: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].compose([
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].required,
+                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].pattern('[0-9]*')
+                ])],
+        });
+        this.firstname = this.editGroup.controls['firstname'];
+        this.lastname = this.editGroup.controls['lastname'];
+        this.middlename = this.editGroup.controls['middlename'];
+        this.gender = this.editGroup.controls['gender'];
     }
-    StatisticPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad StatisticPage');
+    EditPage.prototype.ionViewDidLoad = function () {
     };
-    return StatisticPage;
+    EditPage.prototype.doEdit = function (data) {
+        var _this = this;
+        this.showLoader();
+        this.authService.editProfile(data).then(function (result) {
+            _this.loading.dismiss();
+            _this.response = result;
+            _this.profile = JSON.parse(localStorage.getItem('profile'));
+            _this.profile.firstname = _this.response.profile.firstname;
+            _this.profile.lastname = _this.response.profile.lastname;
+            _this.profile.middlename = _this.response.profile.middlename;
+            _this.profile.gender = _this.response.profile.gender;
+            localStorage.setItem('profile', JSON.stringify(_this.profile));
+            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__profile_profile__["a" /* ProfilePage */]);
+        }, function (err) {
+            _this.loading.dismiss();
+            _this.presentToast(err);
+        });
+    };
+    EditPage.prototype.getImage = function () {
+        var _this = this;
+        var options = {
+            quality: 100,
+            destinationType: this.camera.DestinationType.FILE_URI,
+            sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
+        };
+        this.camera.getPicture(options).then(function (imageData) {
+            _this.imageURI = imageData;
+        }, function (err) {
+            _this.presentToast(err);
+        });
+    };
+    EditPage.prototype.showLoader = function () {
+        this.loading = this.loadingCtrl.create({
+            content: 'Authenticating...'
+        });
+        this.loading.present();
+    };
+    EditPage.prototype.presentToast = function (msg) {
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 3000,
+            position: 'bottom'
+        });
+        toast.onDidDismiss(function () {
+            console.log('Dismissed toast');
+        });
+        toast.present();
+    };
+    EditPage.prototype.uploadFile = function () {
+        var _this = this;
+        var loader = this.loadingCtrl.create({
+            content: "Uploading..."
+        });
+        //loader.present();
+        var fileTransfer = this.transfer.create();
+        this.profile = JSON.parse(localStorage.getItem('profile'));
+        var options = {
+            fileKey: 'ionicfile',
+            fileName: 'ionicfile',
+            chunkedMode: false,
+            mimeType: "image/jpeg",
+            params: {
+                username: this.profile.username
+            }
+        };
+        fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/upload/upload', options)
+            .then(function (data) {
+            console.log(JSON.stringify(data));
+            _this.response = JSON.parse(data.response);
+            _this.profile = JSON.parse(localStorage.getItem('profile'));
+            _this.profile.avatar = _this.response.image;
+            localStorage.setItem('profile', JSON.stringify(_this.profile));
+            loader.dismiss();
+            _this.presentToast("Image uploaded successfully");
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__profile_profile__["a" /* ProfilePage */]);
+        }, function (err) {
+            loader.dismiss();
+            _this.presentToast(err);
+        });
+    };
+    return EditPage;
 }());
-StatisticPage = __decorate([
+EditPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-statistic',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/statistic/statistic.html"*/'<!--\n  Generated template for the StatisticPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<div class="login">\n  <div class="login--bg"></div>\n  <span class="login__icon"></span>\n  <form>\n    <input type="text">\n    <input type="text">\n    <button>Sign in</button>\n  </form>\n  <a href="">test</a>\n  <a href="">test</a>\n</div>\n\n\n<style>\n  .login--bg{\n    background-image: url(\'assets/img/login-bg.png\');\n    background-size: cover;\n    background-position: center;\n    height: 32rem;\n  }\n</style>'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/statistic/statistic.html"*/,
+        selector: 'page-edit',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\edit\edit.html"*/'<div class="page">\n\n    <div class="page__bg">\n\n        <img class="page__image" src="assets/img/create_img.png">\n\n        <button class="page__menu" menuToggle left></button>\n\n        <p class="page__name">Settings</p>\n\n        <div class="page__info">\n\n            <div class="page__info__text">\n\n                <p class="page__info__text--title">{{this.profile_info.firstname}} {{this.profile_info.lastname}}</p>\n\n                <p class="page__info__text--description">{{this.profile_info.username}}</p>\n\n            </div>\n\n        </div>\n\n        <button class="page__add" (click)="getImage()">\n\n            <img src="assets/img/avatar.png">\n\n        </button>\n\n    </div>\n\n    <div class="page__form">\n\n        <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">\n\n            <div class="page__form__group">\n\n                <label>firstname</label>\n\n                <input class="page__form__elements" value="{{this.profile_info.firstname}}" formControlName="firstname" name="firstname" type="text" placeholder="firstname" >\n\n            </div>\n\n            <div class="page__form__group">\n\n                <label>lastname</label>\n\n                <input class="page__form__elements" value="{{this.profile_info.lastname}}" formControlName="lastname" name="lastname" type="text" placeholder="lastname" >\n\n            </div>\n\n            <div class="page__form__group">\n\n                <label>middlename</label>\n\n                <input class="page__form__elements" value="{{this.profile_info.middlename}}" formControlName="middlename" name="middlename" type="text" placeholder="middlename" >\n\n            </div>\n\n            <div class="page__form__group">\n\n                <label>gender</label>\n\n                <input class="page__form__elements" value="{{this.profile_info.gender}}" formControlName="gender" name="gender" type="text" placeholder="gender" >\n\n            </div>\n\n        \n\n            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!editGroup.valid">Update Form</button>\n\n        </form>\n\n\n\n        <button class="page__form__elements" id="login-button2" type="submit" (click)="uploadFile()">Upload Image</button>\n\n    </div>\n\n</div>\n\n'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\edit\edit.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-], StatisticPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */],
+        __WEBPACK_IMPORTED_MODULE_6__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
+        __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__["a" /* FileTransfer */],
+        __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormBuilder */]])
+], EditPage);
 
-//# sourceMappingURL=statistic.js.map
+//# sourceMappingURL=edit.js.map
 
 /***/ }),
 
@@ -173,7 +303,7 @@ webpackEmptyAsyncContext.id = 122;
 
 var map = {
 	"../pages/statistic/statistic.module": [
-		458,
+		459,
 		0
 	]
 };
@@ -199,8 +329,8 @@ module.exports = webpackAsyncContext;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthServiceProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -360,7 +490,7 @@ AuthServiceProvider = __decorate([
 
 /***/ }),
 
-/***/ 204:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -368,11 +498,11 @@ AuthServiceProvider = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_geolocation__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_auth_service_auth_service__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__validators_custom__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_list_list__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_list_list__ = __webpack_require__(60);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -482,7 +612,7 @@ var FormPage = (function () {
 }());
 FormPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-form',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/form/form.html"*/'<div class="page">\n    <div class="page__bg">\n        <div>\n            <img class="page__image" src="assets/img/create_img.png">\n        </div>\n        <button class="page__menu" menuToggle left></button>\n        <div class="page__info">\n            <div class="page__info__text">\n                <p class="page__info__text--title">Create</p>\n            </div>\n        </div>\n    </div>\n    <div class="page__form">\n        <form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">\n            <input class="page__form__elements" formControlName="name" name="name" type="text" placeholder="name" >\n            <input class="page__form__elements" formControlName="price" name="price" type="number" placeholder="price" >\n            <ion-item class="page__form__elements--datapicker">\n                <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>\n            </ion-item>\n            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!addGroup.valid">Add</button>\n        </form>\n    </div>\n</div>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/form/form.html"*/
+        selector: 'page-form',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\form\form.html"*/'<div class="page">\n\n    <div class="page__bg">\n\n        <div>\n\n            <img class="page__image" src="assets/img/create_img.png">\n\n        </div>\n\n        <button class="page__menu" menuToggle left></button>\n\n        <div class="page__info">\n\n            <div class="page__info__text">\n\n                <p class="page__info__text--title">Create</p>\n\n            </div>\n\n        </div>\n\n    </div>\n\n    <div class="page__form">\n\n        <form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">\n\n            <input class="page__form__elements" formControlName="name" name="name" type="text" placeholder="name" >\n\n            <input class="page__form__elements" formControlName="price" name="price" type="number" placeholder="price" >\n\n            <ion-item class="page__form__elements--datapicker">\n\n                <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>\n\n            </ion-item>\n\n            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!addGroup.valid">Add</button>\n\n        </form>\n\n    </div>\n\n</div>\n\n'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\form\form.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
@@ -501,7 +631,7 @@ FormPage = __decorate([
 
 /***/ }),
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -523,13 +653,17 @@ var AccountingPage = (function () {
     function AccountingPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
         this.item = navParams.data.item;
         var date = new Date(parseInt(this.item.dates) * 1000);
         var curr_date = date.getDate();
         var curr_month = date.getMonth() + 1;
         var curr_year = date.getFullYear();
         var result = (curr_date + "-" + curr_month + "-" + curr_year);
-        this.item.dates = result;
+        this.item.dates = curr_date;
+        this.item.mounth = this.monthNames[curr_month];
     }
     AccountingPage.prototype.ionViewDidLoad = function () {
         if (this.item.gps_x !== null || this.item.gps_y !== null) {
@@ -578,7 +712,7 @@ __decorate([
 ], AccountingPage.prototype, "mapElement", void 0);
 AccountingPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-accounting',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/accounting/accounting.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        {{ item.name }}\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <ion-list>\n      <ion-item id="item-list-item-container16">\n        <div id="item-markdown18" class="show-list-numbers-and-dots">\n          <p>\n            {{ item.name }} {{ item.dates }}\n          </p>\n        </div>\n      </ion-item>\n      <div style="width:100%;height:350px;" #map id="map">\n          <ion-img style="width: 100%; height:350px;" src="assets/imgs/squirrel.png"></ion-img>\n      </div>\n      <ion-item>\n        <ion-icon name="basket" item-left></ion-icon>\n        {{ item.price }} uah\n      </ion-item>\n    </ion-list>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/accounting/accounting.html"*/,
+        selector: 'page-accounting',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\accounting\accounting.html"*/'<div class="page">\n\n  <div class="page__bg">\n\n      <div>\n\n          <img class="page__image" src="assets/img/create_img.png">\n\n      </div>\n\n      <button class="page__menu" menuToggle left></button>\n\n      <div class="page__info">\n\n          <div class="page__info__text">\n\n              <p class="page__info__text--title">{{item.name}}</p>\n\n          </div>\n\n      </div>\n\n  </div>\n\n  <div class="page__content">\n\n    <div class="page__stats">\n\n      <div class="page__stats-item">\n\n        <p class="page__stats-item--title">{{item.price}}</p>\n\n        <p class="page__stats-item--description">summ</p>\n\n        <div class="page__stats-item--green"></div>\n\n      </div>\n\n      <div class="page__stats-item">\n\n        <p class="page__stats-item--title">{{item.dates}}</p>\n\n        <p class="page__stats-item--description">{{item.mounth}}</p>\n\n        <div class="page__stats-item--rose"></div>\n\n      </div>\n\n      <div class="page__stats-item">\n\n        <p class="page__stats-item--title">28</p>\n\n        <p class="page__stats-item--description">count</p>\n\n        <div class="page__stats-item--fiolet"></div>\n\n      </div>\n\n    </div>\n\n    <div #map id="map">\n\n    </div>\n\n  </div>\n\n</div>\n\n'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\accounting\accounting.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
@@ -588,7 +722,7 @@ AccountingPage = __decorate([
 
 /***/ }),
 
-/***/ 209:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -687,7 +821,7 @@ var RegisterPage = (function () {
 }());
 RegisterPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-register',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/register/register.html"*/'<div class="register">\n  <div class="register__bg">\n      <div>\n        <img class="register__image" src="assets/img/login.png">\n      </div>\n    <img class="register__icon" src="assets/img/mark.png">\n  </div>\n  \n  <form class="register__form" [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">\n    <div class="register__form__elements">\n        <label class="register__form__elements--label">Username</label>\n        <input class="register__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">\n    </div>\n    <div class="register__form__elements">\n        <label class="register__form__elements--label">Email</label>\n        <input class="register__form__elements--input" formControlName="email" name="email" type="text" placeholder="Your email">\n    </div>\n    <div class="register__form__elements">\n        <label class="register__form__elements--label">Password</label>\n        <input class="register__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">\n    </div>\n    <button class="register__form__elements" id="register-button1" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">Sign Up</button>\n  </form>\n</div>'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/register/register.html"*/
+        selector: 'page-register',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\register\register.html"*/'<div class="register">\n\n  <div class="register__bg">\n\n      <div>\n\n        <img class="register__image" src="assets/img/login.png">\n\n      </div>\n\n    <img class="register__icon" src="assets/img/mark.png">\n\n  </div>\n\n  \n\n  <form class="register__form" [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">\n\n    <div class="register__form__elements">\n\n        <label class="register__form__elements--label">Username</label>\n\n        <input class="register__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">\n\n    </div>\n\n    <div class="register__form__elements">\n\n        <label class="register__form__elements--label">Email</label>\n\n        <input class="register__form__elements--input" formControlName="email" name="email" type="text" placeholder="Your email">\n\n    </div>\n\n    <div class="register__form__elements">\n\n        <label class="register__form__elements--label">Password</label>\n\n        <input class="register__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">\n\n    </div>\n\n    <button class="register__form__elements" id="register-button1" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">Sign Up</button>\n\n  </form>\n\n</div>'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\register\register.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */],
@@ -698,180 +832,6 @@ RegisterPage = __decorate([
 ], RegisterPage);
 
 //# sourceMappingURL=register.js.map
-
-/***/ }),
-
-/***/ 210:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_profile__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_auth_service_auth_service__ = __webpack_require__(20);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-/**
- * Generated class for the EditPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var EditPage = (function () {
-    function EditPage(navCtrl, camera, loadingCtrl, toastCtrl, authService, transfer, formBuilder) {
-        this.navCtrl = navCtrl;
-        this.camera = camera;
-        this.loadingCtrl = loadingCtrl;
-        this.toastCtrl = toastCtrl;
-        this.authService = authService;
-        this.transfer = transfer;
-        this.formBuilder = formBuilder;
-        // formbuilder for form
-        this.editGroup = formBuilder.group({
-            firstname: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].required,
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].minLength(2),
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].maxLength(255),
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*')
-                ])],
-            lastname: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].required,
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].minLength(2),
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].maxLength(255),
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*')
-                ])],
-            middlename: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].required,
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].minLength(2),
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].maxLength(255),
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].pattern('[a-zA-Z ]*')
-                ])],
-            gender: ['', __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].compose([
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].required,
-                    __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* Validators */].pattern('[0-9]*')
-                ])],
-        });
-        this.firstname = this.editGroup.controls['firstname'];
-        this.lastname = this.editGroup.controls['lastname'];
-        this.middlename = this.editGroup.controls['middlename'];
-        this.gender = this.editGroup.controls['gender'];
-    }
-    EditPage.prototype.ionViewDidLoad = function () {
-    };
-    EditPage.prototype.doEdit = function (data) {
-        var _this = this;
-        this.showLoader();
-        this.authService.editProfile(data).then(function (result) {
-            _this.loading.dismiss();
-            _this.response = result;
-            _this.profile = JSON.parse(localStorage.getItem('profile'));
-            _this.profile.firstname = _this.response.profile.firstname;
-            _this.profile.lastname = _this.response.profile.lastname;
-            _this.profile.middlename = _this.response.profile.middlename;
-            _this.profile.gender = _this.response.profile.gender;
-            localStorage.setItem('profile', JSON.stringify(_this.profile));
-            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__profile_profile__["a" /* ProfilePage */]);
-        }, function (err) {
-            _this.loading.dismiss();
-            _this.presentToast(err);
-        });
-    };
-    EditPage.prototype.getImage = function () {
-        var _this = this;
-        var options = {
-            quality: 100,
-            destinationType: this.camera.DestinationType.FILE_URI,
-            sourceType: this.camera.PictureSourceType.PHOTOLIBRARY
-        };
-        this.camera.getPicture(options).then(function (imageData) {
-            _this.imageURI = imageData;
-        }, function (err) {
-            _this.presentToast(err);
-        });
-    };
-    EditPage.prototype.showLoader = function () {
-        this.loading = this.loadingCtrl.create({
-            content: 'Authenticating...'
-        });
-        this.loading.present();
-    };
-    EditPage.prototype.presentToast = function (msg) {
-        var toast = this.toastCtrl.create({
-            message: msg,
-            duration: 3000,
-            position: 'bottom'
-        });
-        toast.onDidDismiss(function () {
-            console.log('Dismissed toast');
-        });
-        toast.present();
-    };
-    EditPage.prototype.uploadFile = function () {
-        var _this = this;
-        var loader = this.loadingCtrl.create({
-            content: "Uploading..."
-        });
-        //loader.present();
-        var fileTransfer = this.transfer.create();
-        this.profile = JSON.parse(localStorage.getItem('profile'));
-        var options = {
-            fileKey: 'ionicfile',
-            fileName: 'ionicfile',
-            chunkedMode: false,
-            mimeType: "image/jpeg",
-            params: {
-                username: this.profile.username
-            }
-        };
-        fileTransfer.upload(this.imageURI, 'http://devservice.pro/api/upload/upload', options)
-            .then(function (data) {
-            console.log(JSON.stringify(data));
-            _this.response = JSON.parse(data.response);
-            _this.profile = JSON.parse(localStorage.getItem('profile'));
-            _this.profile.avatar = _this.response.image;
-            localStorage.setItem('profile', JSON.stringify(_this.profile));
-            loader.dismiss();
-            _this.presentToast("Image uploaded successfully");
-            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__profile_profile__["a" /* ProfilePage */]);
-        }, function (err) {
-            loader.dismiss();
-            _this.presentToast(err);
-        });
-    };
-    return EditPage;
-}());
-EditPage = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-edit',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/edit/edit.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Edit Profile\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-item>\n        <button ion-start ion-button color="secondary" (click)="getImage()">Get Image</button>\n        <button ion-end ion-button (click)="uploadFile()">Upload</button>\n    </ion-item>\n    \n    <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">\n        <ion-list>\n            <ion-item class="edit-input">\n                <ion-label>\n                    First name\n                </ion-label>\n                <ion-input formControlName="firstname" name="firstname" type="text" placeholder="Your firstname"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Last name\n                </ion-label>\n                <ion-input formControlName="lastname" name="lastname" type="text" placeholder="Your lastname"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Middle name\n                </ion-label>\n                <ion-input formControlName="middlename" name="middlename" type="text" placeholder="Your middlename"></ion-input>\n            </ion-item>\n\n            <ion-item class="edit-input">\n                <ion-label>\n                    Gender\n                </ion-label>\n                <ion-input formControlName="gender" name="gender" type="text" placeholder="Your gender"></ion-input>\n            </ion-item>\n          \n        </ion-list>\n        <button ion-button color="stable" block type="submit" [disabled]="!editGroup.valid">\n          Update\n        </button>\n    </form>\n\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/edit/edit.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */],
-        __WEBPACK_IMPORTED_MODULE_6__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
-        __WEBPACK_IMPORTED_MODULE_3__ionic_native_file_transfer__["a" /* FileTransfer */],
-        __WEBPACK_IMPORTED_MODULE_5__angular_forms__["a" /* FormBuilder */]])
-], EditPage);
-
-//# sourceMappingURL=edit.js.map
 
 /***/ }),
 
@@ -981,7 +941,7 @@ __decorate([
 ], MapPage.prototype, "mapElement", void 0);
 MapPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-map',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/map/map.html"*/'<div class="page">\n  <div class="page__bg">\n    <div>\n      <img class="page__image" src="assets/img/map_img.png">\n    </div>\n    <button class="page__menu" menuToggle left></button>\n    <div class="page__info">\n        <div class="page__info__text">\n            <p class="page__info__text--title">Map</p>\n        </div>\n    </div>\n  </div>\n  <div #map id="map">\n  </div>\n</div>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/map/map.html"*/,
+        selector: 'page-map',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\map\map.html"*/'<div class="page">\n\n  <div class="page__bg">\n\n    <div>\n\n      <img class="page__image" src="assets/img/map_img.png">\n\n    </div>\n\n    <button class="page__menu" menuToggle left></button>\n\n    <div class="page__info">\n\n        <div class="page__info__text">\n\n            <p class="page__info__text--title">Map</p>\n\n        </div>\n\n    </div>\n\n  </div>\n\n  <div #map id="map">\n\n  </div>\n\n</div>\n\n'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\map\map.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -998,9 +958,54 @@ MapPage = __decorate([
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StatisticPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the StatisticPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var StatisticPage = (function () {
+    function StatisticPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    StatisticPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad StatisticPage');
+    };
+    return StatisticPage;
+}());
+StatisticPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-statistic',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\statistic\statistic.html"*/'<!--\n\n  Generated template for the StatisticPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<div class="login">\n\n  <div class="login--bg"></div>\n\n  <span class="login__icon"></span>\n\n  <form>\n\n    <input type="text">\n\n    <input type="text">\n\n    <button>Sign in</button>\n\n  </form>\n\n  <a href="">test</a>\n\n  <a href="">test</a>\n\n</div>\n\n\n\n\n\n<style>\n\n  .login--bg{\n\n    background-image: url(\'assets/img/login-bg.png\');\n\n    background-size: cover;\n\n    background-position: center;\n\n    height: 32rem;\n\n  }\n\n</style>'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\statistic\statistic.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+], StatisticPage);
+
+//# sourceMappingURL=statistic.js.map
+
+/***/ }),
+
+/***/ 335:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(354);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1008,7 +1013,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 353:
+/***/ 354:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1016,35 +1021,37 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(394);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_categories_categories__ = __webpack_require__(403);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_form_form__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_list_list__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_form_form__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_profile_profile__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_register_register__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_accounting_accounting__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_register_register__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_accounting_accounting__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_map_map__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_charts_charts__ = __webpack_require__(404);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_edit_edit__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_statistic_statistic__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_edit_edit__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_statistic_statistic__ = __webpack_require__(334);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_status_bar__ = __webpack_require__(453);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_splash_screen__ = __webpack_require__(454);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_auth_service_auth_service__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_geolocation__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_geolocation__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_diagnostic__ = __webpack_require__(455);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_file_transfer__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_file__ = __webpack_require__(456);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_camera__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_http__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__angular_http__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_google_maps__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__providers_injectable_injectable__ = __webpack_require__(458);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -1129,7 +1136,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_21__ionic_native_file_transfer__["a" /* FileTransfer */],
             __WEBPACK_IMPORTED_MODULE_21__ionic_native_file_transfer__["b" /* FileTransferObject */],
             __WEBPACK_IMPORTED_MODULE_22__ionic_native_file__["a" /* File */],
-            __WEBPACK_IMPORTED_MODULE_23__ionic_native_camera__["a" /* Camera */]
+            __WEBPACK_IMPORTED_MODULE_23__ionic_native_camera__["a" /* Camera */],
+            __WEBPACK_IMPORTED_MODULE_26__providers_injectable_injectable__["a" /* InjectableProvider */]
         ]
     })
 ], AppModule);
@@ -1138,7 +1146,7 @@ AppModule = __decorate([
 
 /***/ }),
 
-/***/ 393:
+/***/ 394:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1146,10 +1154,10 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_profile_profile__ = __webpack_require__(112);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_map_map__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_statistic_statistic__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_edit_edit__ = __webpack_require__(113);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1169,7 +1177,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var MyApp = (function () {
-    function MyApp(platform) {
+    function MyApp(platform, loadingCtrl, toastCtrl, app) {
+        this.loadingCtrl = loadingCtrl;
+        this.toastCtrl = toastCtrl;
+        this.app = app;
         this.rootPage = null;
         if (!localStorage.getItem("token")) {
             this.rootPage = __WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */];
@@ -1192,8 +1203,34 @@ var MyApp = (function () {
     MyApp.prototype.gotoMap = function () {
         this.nav.push(__WEBPACK_IMPORTED_MODULE_5__pages_map_map__["a" /* MapPage */]);
     };
-    MyApp.prototype.gotoStatistic = function () {
-        this.nav.push(__WEBPACK_IMPORTED_MODULE_6__pages_statistic_statistic__["a" /* StatisticPage */]);
+    MyApp.prototype.gotoEdit = function () {
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_6__pages_edit_edit__["a" /* EditPage */]);
+    };
+    MyApp.prototype.logout = function () {
+        localStorage.clear();
+        this.showLoader();
+        localStorage.clear();
+        this.loading.dismiss();
+        var nav = this.app.getRootNav();
+        nav.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+    };
+    MyApp.prototype.showLoader = function () {
+        this.loading = this.loadingCtrl.create({
+            content: 'Serching...'
+        });
+        this.loading.present();
+    };
+    MyApp.prototype.presentToast = function (msg) {
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 3000,
+            position: 'bottom',
+            dismissOnPageChange: true
+        });
+        toast.onDidDismiss(function () {
+            console.log('Dismissed toast');
+        });
+        toast.present();
     };
     return MyApp;
 }());
@@ -1202,9 +1239,12 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* Nav */])
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/app/app.html"*/'<ion-menu class="custom" [content]="content">\n  <button (click)="gotoHome()">Home</button>\n  <button (click)="gotoProfile()">Profile</button>\n  <button (click)="gotoMap()">Map</button>\n  <button (click)="gotoStatistic()">Timeline</button>\n  <button menuToggle class="toogle_button"><img src="assets/img/close_img.png"></button>\n</ion-menu>\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\app\app.html"*/'<ion-menu class="custom" [content]="content">\n\n  <button menuToggle (click)="gotoHome()">Home</button>\n\n  <button menuToggle (click)="gotoProfile()">Profile</button>\n\n  <button menuToggle (click)="gotoMap()">Map</button>\n\n  <button menuToggle (click)="gotoMap()">Timeline</button>\n\n  <button menuToggle class="toogle_button"><img src="assets/img/close_img.png"></button>\n\n  <div class="footer_button">\n\n    <button menuToggle (click)="gotoEdit()">Settings</button>\n\n    <button style="padding-left: 15.5625rem;" menuToggle (click)="logout()">Logout</button>\n\n  </div>\n\n</ion-menu>\n\n<ion-nav id="nav" #content [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* App */]])
 ], MyApp);
 
 //# sourceMappingURL=app.component.js.map
@@ -1243,7 +1283,7 @@ var CustomValidators = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CategoriesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_list__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__list_list__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1310,7 +1350,7 @@ var CategoriesPage = (function () {
 }());
 CategoriesPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-categories',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/categories/categories.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Category\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding id="page">\n  <ion-list id="category-list" ion-item *ngFor="let item of data" (click)="itemSelected(item)">\n    <ion-item color="none" id="category-list-item1">\n        {{ item.name }}\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/categories/categories.html"*/,
+        selector: 'page-categories',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\categories\categories.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <button ion-button menuToggle left>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n        Category\n\n    </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content padding id="page">\n\n  <ion-list id="category-list" ion-item *ngFor="let item of data" (click)="itemSelected(item)">\n\n    <ion-item color="none" id="category-list-item1">\n\n        {{ item.name }}\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\categories\categories.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
@@ -1511,7 +1551,7 @@ __decorate([
 ], ChartsPage.prototype, "lineCanvas", void 0);
 ChartsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-charts',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/charts/charts.html"*/'<ion-header>\n  <ion-toolbar>\n    <button ion-button menuToggle left>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>\n        Charts\n    </ion-title>\n  </ion-toolbar>\n</ion-header>\n<ion-content padding>\n  <ion-card>\n    <ion-card-header>\n      Doughnut Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #doughnutCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Bar Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #barCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n\n  <ion-card>\n    <ion-card-header>\n      Line Chart\n    </ion-card-header>\n    <ion-card-content>\n      <canvas #lineCanvas></canvas>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/charts/charts.html"*/,
+        selector: 'page-charts',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\charts\charts.html"*/'<ion-header>\n\n  <ion-toolbar>\n\n    <button ion-button menuToggle left>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>\n\n        Charts\n\n    </ion-title>\n\n  </ion-toolbar>\n\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Doughnut Chart\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #doughnutCanvas></canvas>\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Bar Chart\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #barCanvas></canvas>\n\n    </ion-card-content>\n\n  </ion-card>\n\n\n\n  <ion-card>\n\n    <ion-card-header>\n\n      Line Chart\n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <canvas #lineCanvas></canvas>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\charts\charts.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -1777,6 +1817,55 @@ webpackContext.id = 435;
 
 /***/ }),
 
+/***/ 458:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InjectableProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the InjectableProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var InjectableProvider = (function () {
+    function InjectableProvider(http) {
+        this.http = http;
+        console.log('Hello InjectableProvider Provider');
+    }
+    InjectableProvider.prototype.openMenu = function () {
+        console.log(1);
+    };
+    InjectableProvider.prototype.closeMenu = function () {
+        console.log(this);
+    };
+    return InjectableProvider;
+}());
+InjectableProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], InjectableProvider);
+
+//# sourceMappingURL=injectable.js.map
+
+/***/ }),
+
 /***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1785,8 +1874,8 @@ webpackContext.id = 435;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_list__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__list_list__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(61);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1857,7 +1946,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/home/home.html"*/'<div class="page">\n  <div class="page__bg">\n      <div>\n        <img class="page__image" src="assets/img/list_bg.png">\n      </div>\n    <button class="page__menu" menuToggle left></button>\n    <div class="page__info">\n        <div class="page__info__text">\n            <p class="page__info__text--title">Test</p>\n        </div>\n    </div>\n  </div>\n  <div class="page__list">\n      <div *ngFor="let item of data" (click)="itemSelected(item)">\n        <div class="page__list__item">\n          <div class="page__list__image">\n            <img src="{{item.thumbnail}}">\n            <div class="page__list__image--notify">\n              <p>2</p>\n            </div>\n          </div>\n          <div class="page__list__image--diagonal"></div>\n        </div>\n      </div>\n  </div>\n</div>'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/home/home.html"*/,
+        selector: 'page-home',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\home\home.html"*/'<div class="page" [class.enableMenu] = "ApplyClass">\n\n  <div class="page__bg">\n\n      <div>\n\n        <img class="page__image" src="assets/img/list_bg.png">\n\n      </div>\n\n    <button class="page__menu" menuToggle left></button>\n\n    <div class="page__info">\n\n        <div class="page__info__text">\n\n            <p class="page__info__text--title">Test</p>\n\n        </div>\n\n    </div>\n\n  </div>\n\n  <div class="page__list">\n\n      <div *ngFor="let item of data" (click)="itemSelected(item)">\n\n        <div class="page__list__item">\n\n          <div class="page__list__image">\n\n            <img src="{{item.thumbnail}}">\n\n            <div class="page__list__image--notify">\n\n              <p>2</p>\n\n            </div>\n\n          </div>\n\n          <div class="page__list__image--diagonal"></div>\n\n        </div>\n\n      </div>\n\n  </div>\n\n</div>'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\home\home.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_2__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
@@ -1870,16 +1959,16 @@ HomePage = __decorate([
 
 /***/ }),
 
-/***/ 59:
+/***/ 60:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__form_form__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__form_form__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__accounting_accounting__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__accounting_accounting__ = __webpack_require__(209);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1971,7 +2060,7 @@ var ListPage = ListPage_1 = (function () {
 }());
 ListPage = ListPage_1 = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-list',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/list/list.html"*/'<div class="page">\n    <div class="page__bg">\n        <button class="page__add" (click)="goForm(item)"><img src="assets/img/add.png"></button>\n        <div>\n          <img class="page__image" src="assets/img/list_bg.png">\n        </div>\n      <button class="page__menu" menuToggle left></button>\n      <div class="page__info">\n          <div class="page__info__text">\n              <p class="page__info__text--title">{{item.name}}</p>\n          </div>\n      </div>\n    </div>\n  \n    <div class="page__list">\n      <div *ngFor="let item of items">\n          <div *ngFor="let data of item[1]">\n            <div class="page__list__item" (click)="itemSelected(data)">\n                <div class="page__list__info">\n                  <p>{{ data.price }}</p>\n                  <span>uah</span>\n                </div>\n                <div class="page__list__image">\n                  <img src="assets/img/avatar_list.png">\n                </div>\n                <div class="page__list__title">\n                  <p>{{ data.name }}</p>\n                  <span>{{ item[0] }}</span>\n                </div>\n              </div>\n          </div>\n      </div>\n    </div>\n  </div>\n  \n  \n  <!-- <button item-end dark clear ion-button (click)="itemDelete(data)" icon-only>\n      <ion-icon name=\'trash\'></ion-icon>\n    </button> -->'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/list/list.html"*/
+        selector: 'page-list',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\list\list.html"*/'<div class="page">\n\n    <div class="page__bg">\n\n        <button class="page__add" (click)="goForm(item)"><img src="assets/img/add.png"></button>\n\n        <div>\n\n          <img class="page__image" src="assets/img/list_bg.png">\n\n        </div>\n\n      <button class="page__menu" menuToggle left></button>\n\n      <div class="page__info">\n\n          <div class="page__info__text">\n\n              <p class="page__info__text--title">{{item.name}}</p>\n\n          </div>\n\n      </div>\n\n    </div>\n\n  \n\n    <div class="page__list">\n\n      <div *ngFor="let item of items">\n\n          <div *ngFor="let data of item[1]">\n\n            <div class="page__list__item" (click)="itemSelected(data)">\n\n                <div class="page__list__info">\n\n                  <p>{{ data.price }}</p>\n\n                  <span>uah</span>\n\n                </div>\n\n                <div class="page__list__image">\n\n                  <img src="assets/img/avatar_list.png">\n\n                </div>\n\n                <div class="page__list__title">\n\n                  <p>{{ data.name }}</p>\n\n                  <span>{{ item[0] }}</span>\n\n                </div>\n\n              </div>\n\n          </div>\n\n      </div>\n\n    </div>\n\n  </div>\n\n  \n\n  \n\n  <!-- <button item-end dark clear ion-button (click)="itemDelete(data)" icon-only>\n\n      <ion-icon name=\'trash\'></ion-icon>\n\n    </button> -->'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\list\list.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
@@ -1985,7 +2074,7 @@ var ListPage_1;
 
 /***/ }),
 
-/***/ 60:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1995,7 +2084,7 @@ var ListPage_1;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__register_register__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__register_register__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2075,7 +2164,7 @@ var LoginPage = (function () {
 }());
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"/Users/bohdan/bfinanceapp/src/pages/login/login.html"*/'<div class="login">\n  <div class="login__bg">\n      <div>\n        <img class="login__image" src="assets/img/login.png">\n      </div>\n    <img class="login__icon" src="assets/img/mark.png">\n  </div>\n  \n  <form class="login__form" [formGroup]="loginGroup" (ngSubmit)="doLogin(loginGroup.value)">\n    <div class="login__form__elements">\n        <label class="login__form__elements--label">Username</label>\n        <input class="login__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">\n    </div>\n    <div class="login__form__elements">\n        <label class="login__form__elements--label">Password</label>\n        <input class="login__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">\n    </div>\n    <button class="login__form__elements" id="login-button1" type="submit" [disabled]="!loginGroup.valid" block>Log in</button>\n    <div class="login__form__list">\n        <div class="login__form__elements--simple login__form__elements" id="login-button2" (click)="register()">Forgot password?</div>\n        <div class="login__form__elements--simple login__form__elements" id="login-button3" (click)="register()">Sign In</div>\n    </div>\n  </form>\n</div>'/*ion-inline-end:"/Users/bohdan/bfinanceapp/src/pages/login/login.html"*/
+        selector: 'page-login',template:/*ion-inline-start:"C:\OSPanel\domains\bfinanceapp\src\pages\login\login.html"*/'<div class="login">\n\n  <div class="login__bg">\n\n      <div>\n\n        <img class="login__image" src="assets/img/login.png">\n\n      </div>\n\n    <img class="login__icon" src="assets/img/mark.png">\n\n  </div>\n\n  \n\n  <form class="login__form" [formGroup]="loginGroup" (ngSubmit)="doLogin(loginGroup.value)">\n\n    <div class="login__form__elements">\n\n        <label class="login__form__elements--label">Username</label>\n\n        <input class="login__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">\n\n    </div>\n\n    <div class="login__form__elements">\n\n        <label class="login__form__elements--label">Password</label>\n\n        <input class="login__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">\n\n    </div>\n\n    <button class="login__form__elements" id="login-button1" type="submit" [disabled]="!loginGroup.valid" block>Log in</button>\n\n    <div class="login__form__list">\n\n        <div class="login__form__elements--simple login__form__elements" id="login-button2" (click)="register()">Forgot password?</div>\n\n        <div class="login__form__elements--simple login__form__elements" id="login-button3" (click)="register()">Sign In</div>\n\n    </div>\n\n  </form>\n\n</div>'/*ion-inline-end:"C:\OSPanel\domains\bfinanceapp\src\pages\login\login.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_3__providers_auth_service_auth_service__["a" /* AuthServiceProvider */],
@@ -2088,5 +2177,5 @@ LoginPage = __decorate([
 
 /***/ })
 
-},[334]);
+},[335]);
 //# sourceMappingURL=main.js.map
