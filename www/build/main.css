@@ -25528,8 +25528,7 @@ p, span {
   background-image: url(../assets/img/sidemenu_img.png) !important;
   background-size: cover !important;
   background-position: center !important;
-  padding-left: 4.6875rem;
-  padding-right: 4.6875rem;
+  padding-left: 1.5rem;
   padding-top: 15.9375rem;
   position: relative;
   width: 100%;
@@ -25574,7 +25573,7 @@ p, span {
 }
 
 page-accounting {
-  overflow: scroll;
+  overflow: hidden;
 }
 
 page-accounting #map {
@@ -25795,6 +25794,8 @@ page-edit .page__add {
   width: 5.625rem;
   background: transparent;
   padding: 0;
+  border-radius: 50%;
+  border: 1px solid #999999;
 }
 
 page-edit .page__list {
@@ -25903,11 +25904,8 @@ page-edit .page__form {
 }
 
 page-edit .page__form__group {
-  height: 6.25rem;
   border-bottom: rgba(29, 29, 38, 0.05) 1px solid;
   border-top: rgba(29, 29, 38, 0.05) 1px solid;
-  padding-bottom: 1.40625rem;
-  padding-top: 1.640625rem;
 }
 
 page-edit .page__form__elements {
@@ -25919,28 +25917,17 @@ page-edit .page__form__elements {
   font-family: Avenir;
   display: inline-block;
   width: 100%;
+  font-size: 1.6875rem;
+  margin-bottom: 1.5rem;
 }
 
-page-edit .page__form__elements--datapicker .datetime-md {
-  padding: 0;
-  text-align: center;
+page-edit .page__form__group label {
+  font-size: 1.4375rem;
+  opacity: 0.5;
+  text-transform: capitalize;
+  margin-top: 1.5rem;
   display: inline-block;
-  width: 100%;
-  height: 100%;
-}
-
-page-edit .datetime-md .datetime-placeholder {
-  padding-top: 20px;
-  color: #1D1D26;
-  font-family: Avenir;
-  height: 100%;
-}
-
-page-edit .datetime-text {
-  padding-top: 20px;
-  color: #1D1D26;
-  font-family: Avenir;
-  height: 100%;
+  padding-bottom: 0.75rem;
 }
 
 page-edit .item-md {
@@ -25975,17 +25962,17 @@ page-edit #login-button1 {
   width: 100%;
   font-size: 1.375rem;
   color: #ffffff;
-  margin-bottom: 0;
+  margin-top: 2rem !important;
+  height: 6.25rem;
 }
 
 page-edit #login-button2 {
   background-color: #FF3366;
   width: 100%;
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
   font-size: 1.375rem;
   color: #ffffff;
   margin-bottom: 0;
+  height: 6.25rem;
 }
 
 page-form {

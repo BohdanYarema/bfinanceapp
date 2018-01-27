@@ -56,6 +56,8 @@ page-edit {
       width: 5.625rem;
       background: transparent;
       padding: 0;
+      border-radius: 50%;
+      border: 1px solid #999999;
     }
   
     .page__list{
@@ -169,11 +171,8 @@ page-edit {
     }
 
     .page__form__group{
-        height: 6.25rem;
         border-bottom: rgba(29, 29, 38, 0.05) 1px solid;
         border-top: rgba(29, 29, 38, 0.05) 1px solid;
-        padding-bottom: 1.40625rem;
-        padding-top: 1.640625rem;
     }
     
     .page__form__elements{
@@ -185,41 +184,31 @@ page-edit {
         font-family: Avenir;
         display: inline-block;
         width: 100%;
+        font-size: 1.6875rem;
+        margin-bottom: 1.5rem;
     }
 
-      .page__form__elements--datapicker .datetime-md{
-            padding: 0;
-            text-align: center;
-            display: inline-block;
-            width: 100%;
-            height: 100%;
-        }
+    .page__form__group label{
+        font-size: 1.4375rem;
+        opacity: 0.5;
+        text-transform: capitalize;
+        margin-top: 1.5rem;
+        display: inline-block;
+        padding-bottom: 0.75rem;
+    }
 
-        .datetime-md .datetime-placeholder{
-            padding-top: 20px;
-            color: #1D1D26;
-            font-family: Avenir;
-            height: 100%;
-        }
 
-        .datetime-text{
-            padding-top: 20px;
-            color: #1D1D26;
-            font-family: Avenir;
-            height: 100%;
-        }
+    .item-md {
+        padding: 0;
+        height: 6.25rem;
+        margin-bottom: 1.875rem;
+        border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
+    }
 
-        .item-md {
-            padding: 0;
-            height: 6.25rem;
-            margin-bottom: 1.875rem;
-            border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
-        }
-
-        .item-md.item-block .item-inner {
-            padding: 0;
-            border: 0;
-        }
+    .item-md.item-block .item-inner {
+        padding: 0;
+        border: 0;
+    }
     
       .page__form__elements--simple {
         width: 49%;
@@ -240,16 +229,16 @@ page-edit {
         width: 100%;
         font-size: 1.375rem;
         color: #ffffff;
-        margin-bottom: 0;
+        margin-top:2rem !important; 
+        height: 6.25rem;
       }
 
       #login-button2{
         background-color: #FF3366;
         width: 100%;
-        margin-top:2rem !important; 
-        margin-bottom:2rem !important; 
         font-size: 1.375rem;
         color: #ffffff;
         margin-bottom: 0;
+        height: 6.25rem;
       }
 }

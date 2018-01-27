@@ -42,6 +42,8 @@ export class EditPage {
     public formBuilder: FormBuilder,
   ) {
     this.profile_info = JSON.parse(localStorage.getItem('profile'));
+
+    console.log(this.profile_info);
     
     // formbuilder for form
     this.editGroup = formBuilder.group({

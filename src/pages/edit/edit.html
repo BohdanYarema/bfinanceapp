@@ -1,6 +1,6 @@
 <div class="page">
     <div class="page__bg">
-        <img class="page__image" src="assets/img/create_img.png">
+        <img class="page__image" src="assets/img/settings_img.png">
         <button class="page__menu" menuToggle left></button>
         <p class="page__name">Settings</p>
         <div class="page__info">
@@ -10,26 +10,26 @@
             </div>
         </div>
         <button class="page__add" (click)="getImage()">
-            <img src="assets/img/avatar.png">
+            <img src="{{this.profile_info.avatar}}">
         </button>
     </div>
     <div class="page__form">
         <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">
             <div class="page__form__group">
-                <label>firstname</label>
-                <input class="page__form__elements" value="{{this.profile_info.firstname}}" formControlName="firstname" name="firstname" type="text" placeholder="firstname" >
+                <label>firstname ({{this.profile_info.firstname}})</label>
+                <input class="page__form__elements" formControlName="firstname" name="firstname" type="text" >
             </div>
             <div class="page__form__group">
-                <label>lastname</label>
-                <input class="page__form__elements" value="{{this.profile_info.lastname}}" formControlName="lastname" name="lastname" type="text" placeholder="lastname" >
+                <label>lastname ({{this.profile_info.lastname}})</label>
+                <input class="page__form__elements" formControlName="lastname" name="lastname" type="text">
             </div>
             <div class="page__form__group">
-                <label>middlename</label>
-                <input class="page__form__elements" value="{{this.profile_info.middlename}}" formControlName="middlename" name="middlename" type="text" placeholder="middlename" >
+                <label>middlename ({{this.profile_info.middlename}})</label>
+                <input class="page__form__elements" formControlName="middlename" name="middlename" type="text">
             </div>
             <div class="page__form__group">
-                <label>gender</label>
-                <input class="page__form__elements" value="{{this.profile_info.gender}}" formControlName="gender" name="gender" type="text" placeholder="gender" >
+                <label>gender ({{this.profile_info.gender}})</label>
+                <input class="page__form__elements" formControlName="gender" name="gender" type="text">
             </div>
         
             <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!editGroup.valid">Update Form</button>
