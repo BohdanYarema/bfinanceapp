@@ -156,7 +156,7 @@ export class EditPage {
       chunkedMode: false,
       mimeType: "image/jpeg",
       params: {
-        username:this.profile.username
+        username:this.profile_info.username
       }
     }
 

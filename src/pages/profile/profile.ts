@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, App, ToastController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { EditPage } from '../edit/edit';
+import { AccountingPage } from '../accounting/accounting';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
 /**
@@ -38,7 +39,7 @@ export class ProfilePage {
   }
 
   ionViewDidLoad() {
-    this.authService.accounting(2).then((result) => {
+    this.authService.accounting_last().then((result) => {
       this.data = result
 
       for (var variable in this.data) {
@@ -93,5 +94,11 @@ export class ProfilePage {
     });
 
     toast.present();
+  }
+
+  itemSelected(item: string) {
+    this.navCtrl.push(AccountingPage, {
+      item : item
+    });
   }
 }

@@ -28,9 +28,9 @@ export class AccountingPage {
     
     var curr_date   = date.getDate();
     var curr_month  = date.getMonth() + 1;
-    var curr_year   = date.getFullYear();
+    //var curr_year   = date.getFullYear();
     
-    var result = (curr_date + "-" + curr_month + "-" + curr_year);
+    //var result = (curr_date + "-" + curr_month + "-" + curr_year);
 
     this.item.dates = curr_date;
     this.item.mounth = this.monthNames[curr_month];
