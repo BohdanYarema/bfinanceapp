@@ -31,12 +31,15 @@ p, span {
     background-image: url(../assets/img/sidemenu_img.png) !important;
     background-size: cover !important;
     background-position: center !important;
-    width: 100%;
-    padding-left: 4.6875rem;
+    padding-left: 1.5rem;
     padding-top: 15.9375rem;
     position: relative;
+    width: 100%;
 }
 
+.custom {
+    //z-index: 0 !important;
+}
 
 .custom button{
     display: block;
@@ -57,4 +60,32 @@ p, span {
     margin: 0;
     height: 1.875rem;
     width: 1.875rem;
+}
+
+.footer_button{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer_button button {
+    display: inline-block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.5rem
+}
+
+.page-home{
+    //perspective: 1200px;
+}
+
+.page {
+    //-webkit-transition: all 1s ease-in-out;
+    background: #ffffff;
+}
+
+.enableMenu {
+    // transform: translate(178px, 0) scale(0.5) rotateY(-30deg);
+    // overflow: hidden;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

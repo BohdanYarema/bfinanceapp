@@ -10,8 +10,8 @@ import { LoginPage } from '../login/login';
   templateUrl: 'home.html',
 })
 export class HomePage {
-  loading : any;
-  data    : any;
+  loading   : any;
+  data      : any;
 
   constructor(
     public navCtrl: NavController, 

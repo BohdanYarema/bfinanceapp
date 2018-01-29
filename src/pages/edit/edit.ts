@@ -22,6 +22,7 @@ export class EditPage {
   imageURI:any;
   imageFileName:any;
   profile: any;
+  profile_info: any;
   response: any;
   loading : any;
 
@@ -40,7 +41,10 @@ export class EditPage {
     private transfer: FileTransfer,
     public formBuilder: FormBuilder,
   ) {
+    this.profile_info = JSON.parse(localStorage.getItem('profile'));
 
+    console.log(this.profile_info);
+    
     // formbuilder for form
     this.editGroup = formBuilder.group({
       firstname   :['', Validators.compose([

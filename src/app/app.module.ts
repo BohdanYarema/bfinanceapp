@@ -31,6 +31,7 @@ import { HttpModule } from '@angular/http';
 import {
   GoogleMaps,
  } from '@ionic-native/google-maps';
+import { InjectableProvider } from '../providers/injectable/injectable';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import {
     FileTransfer,
     FileTransferObject,
     File,
-    Camera
+    Camera,
+    InjectableProvider
   ]
 })
 export class AppModule {}
