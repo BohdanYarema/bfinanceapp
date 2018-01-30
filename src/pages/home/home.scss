@@ -86,12 +86,12 @@ page-home {
 
       .page__list__image{
         position: relative;
-        height: 9.375rem;
-        width: 9.375rem;
       }
 
       .page__list__image img{
         border-radius: 50%;
+        height: 100px;
+        width: 100px;
       }
 
       .page__list__image--notify{
