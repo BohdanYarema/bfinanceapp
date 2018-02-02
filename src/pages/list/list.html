@@ -15,17 +15,20 @@
     <div class="page__list">
       <div *ngFor="let item of items">
           <div *ngFor="let data of item[1]">
-            <div class="page__list__item" (click)="itemSelected(data)">
-                <div class="page__list__info">
+            <div class="page__list__item">
+                <div class="page__list__info" (click)="itemSelected(data)">
                   <p>{{ data.price }}</p>
                   <span>uah</span>
                 </div>
-                <div class="page__list__image">
+                <div class="page__list__image" (click)="itemSelected(data)">
                   <img src="{{data.thumbnail}}">
                 </div>
-                <div class="page__list__title">
+                <div class="page__list__title" (click)="itemSelected(data)">
                   <p>{{ data.name }}</p>
                   <span>{{ item[0] }}</span>
+                </div>
+                <div class="page__list__icon" (click)="itemDelete(data)">
+                  <img src="assets/img/trash.png">
                 </div>
               </div>
           </div>

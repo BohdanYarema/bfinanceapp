@@ -65,7 +65,7 @@ export class AccountingPage {
         lng: y
       },
       icon: { 
-        url : 'assets/imgs/map.png',
+        url : 'assets/icon/map.png',
       }
     });
 

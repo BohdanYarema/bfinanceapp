@@ -1,11 +1,13 @@
 <ion-menu class="custom" [content]="content">
-  <button menuToggle (click)="gotoHome()">Home</button>
-  <button menuToggle (click)="gotoProfile()">Profile</button>
-  <button menuToggle (click)="gotoMap()">Map</button>
+  <div class="menu-inner--links">
+      <button menuToggle (click)="gotoHome()">Home</button>
+      <button menuToggle (click)="gotoProfile()">Profile</button>
+      <button menuToggle (click)="gotoMap()">Map</button>
+  </div>
   <button menuToggle class="toogle_button"><img src="assets/img/close_img.png"></button>
   <div class="footer_button">
-    <button menuToggle (click)="gotoEdit()">Settings</button>
-    <button style="padding-left: 18rem;" menuToggle (click)="logout()">Logout</button>
+    <button style="text-align:left;" menuToggle (click)="gotoEdit()">Settings</button>
+    <button style="text-align:right;" menuToggle (click)="logout()">Logout</button>
   </div>
 </ion-menu>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>

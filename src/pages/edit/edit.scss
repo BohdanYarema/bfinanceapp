@@ -56,8 +56,14 @@ page-edit {
       width: 5.625rem;
       background: transparent;
       padding: 0;
-      border-radius: 50%;
+      border-radius: 50px;
       border: 1px solid #999999;
+    }
+
+    .page__add img{
+      border-radius: 50px;
+      height: inherit;
+      width : inherit;
     }
   
     .page__list{

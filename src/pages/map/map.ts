@@ -67,7 +67,7 @@ export class MapPage {
         lng: y
       },
       icon: { 
-        url : 'assets/imgs/map.png',
+        url : 'assets/icon/map.png',
       }
     });
 

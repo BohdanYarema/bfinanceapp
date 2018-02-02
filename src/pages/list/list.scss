@@ -76,7 +76,7 @@ page-list {
       }
 
       .page__list__info{
-        width: 20%;
+        width: 30%;
       }
 
       .page__list__info p{
@@ -93,7 +93,20 @@ page-list {
       .page__list__image{
         height: 3.75rem;
         width: 3.75rem;
-        margin-left: 1.875rem;
+      }
+
+      .page__list__image img{
+        border-radius: 50%;
+      }
+
+      .page__list__icon{
+        margin-top: .8rem;
+        float: right;
+      }
+
+      .page__list__icon img{
+        height: 2.5rem;
+        width: 2.5rem;
       }
 
       .page__list__title{

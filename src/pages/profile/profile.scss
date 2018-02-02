@@ -80,8 +80,6 @@ page-profile {
       text-align: left;
       border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
       margin-bottom: 1.875rem;
-      margin-left: 1.875rem;
-      margin-right: 1.875rem;
     }
 
     .page__list__item div{
@@ -91,6 +89,16 @@ page-profile {
 
     .page__list__info{
       width: 30%;
+    }
+
+    .page__list__icon{
+      margin-top: .8rem;
+      float: right;
+    }
+
+    .page__list__icon img{
+      height: 2.5rem;
+      width: 2.5rem;
     }
 
     .page__list__info p{
@@ -107,7 +115,6 @@ page-profile {
     .page__list__image{
       height: 3.75rem;
       width: 3.75rem;
-      margin-left: 1.875rem;
     }
 
     .page__list__image img{

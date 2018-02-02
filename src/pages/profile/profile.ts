@@ -78,7 +78,6 @@ export class ProfilePage {
     this.loading = this.loadingCtrl.create({
         content: 'Authenticating...'
     });
-
     this.loading.present();
   }
 
@@ -99,6 +98,18 @@ export class ProfilePage {
   itemSelected(item: string) {
     this.navCtrl.push(AccountingPage, {
       item : item
+    });
+  }
+
+  itemDelete(item) {
+    this.showLoader();
+    this.authService.deleteAccounting(item).then((result) => {
+      this.data = result
+      this.loading.dismiss();
+      this.navCtrl.push(ProfilePage);
+    }, (err) => {
+      this.loading.dismiss();
+      this.presentToast(err);
     });
   }
 }

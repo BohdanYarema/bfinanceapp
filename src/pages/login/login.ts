@@ -58,7 +58,7 @@ export class LoginPage {
       this.navCtrl.setRoot(HomePage);
     }, (err) => {
       this.loading.dismiss();
-      this.presentToast(err);
+      this.presentToast("Wrong credentials data");
     });
 
 
