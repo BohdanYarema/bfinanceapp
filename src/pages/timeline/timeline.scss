@@ -1,4 +1,8 @@
 page-timeline {
+    @function sp($sp) {
+      @return ($sp / 16) * 1rem;
+    }
+
     overflow: scroll;    
       .page{
         height: 100%;
@@ -126,9 +130,10 @@ page-timeline {
       }
 
       .page__info__text--title{
-        font-size: 4.375rem;
+        font-size: sp(35);
+        line-height: sp(35);
+        letter-spacing: sp(.5);
         color: #ffffff;
-        line-height: 1;
       }
 
       .page__info__text--description{

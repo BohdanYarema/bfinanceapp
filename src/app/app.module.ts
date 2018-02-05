@@ -2,7 +2,6 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { CalendarModule } from 'ionic3-calendar';
 
 import { CategoriesPage } from '../pages/categories/categories';
 import { ListPage } from '../pages/list/list';
@@ -55,8 +54,7 @@ import { InjectableProvider } from '../providers/injectable/injectable';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule,
-    CalendarModule
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

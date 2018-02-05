@@ -14,7 +14,7 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
   templateUrl: 'timeline.html',
 })
 export class TimelinePage {
-  date:any;
+  date    :any;
   loading : any;
   data    : any;
   item    : any;
@@ -31,7 +31,16 @@ export class TimelinePage {
   }
 
   ionViewDidLoad() {
-    
+    this.showLoader();
+
+    this.authService.timeline(2018, 0).then((result) => {
+      this.data = result;
+      console.log(this.data);
+      this.loading.dismiss();
+    }, (err) => {
+      this.loading.dismiss();
+      this.presentToast(err);
+    });
   }
 
   date_Value(){
@@ -41,7 +50,7 @@ export class TimelinePage {
     
     this.showLoader();
 
-    this.authService.category().then((result) => {
+    this.authService.timeline(this.date.getFullYear(), this.date.getMonth()).then((result) => {
       this.data = result;
       console.log(this.data);
       this.loading.dismiss();

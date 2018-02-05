@@ -10,11 +10,14 @@
     <div class="page__info">
         <div class="page__info__text">
             <p class="page__info__text--title">TimeLine</p>
+            <p class="page__info__text--description">2018</p>
         </div>
     </div>
   </div>
 
   <div class="page__list">
-      
+    <div *ngFor="let item of data">
+        {{item}}
+    </div>
   </div>
 </div>
