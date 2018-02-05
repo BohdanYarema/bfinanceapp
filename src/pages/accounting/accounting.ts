@@ -27,7 +27,7 @@ export class AccountingPage {
     var date = new Date(parseInt(this.item.dates) * 1000);
     
     var curr_date   = date.getDate();
-    var curr_month  = date.getMonth() + 1;
+    var curr_month  = date.getMonth();
     //var curr_year   = date.getFullYear();
     
     //var result = (curr_date + "-" + curr_month + "-" + curr_year);

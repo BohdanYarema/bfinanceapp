@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { AccountingPage } from '../accounting/accounting';
 
 /**
  * Generated class for the TimelinePage page.
@@ -14,11 +15,17 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
   templateUrl: 'timeline.html',
 })
 export class TimelinePage {
-  date    :any;
-  loading : any;
-  data    : any;
-  item    : any;
-  items   = [];
+  date        : any;
+  month       : any;
+  month_name  : any;
+  year        : any;
+  loading     : any;
+  data        : any;
+  item        : any;
+  items       = [];
+  monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
 
   constructor(
     public navCtrl: NavController, 
@@ -31,9 +38,14 @@ export class TimelinePage {
   }
 
   ionViewDidLoad() {
+    var date = new Date();
+    this.month_name   = this.monthNames[date.getMonth()];
+    this.month        = date.getMonth()+1;
+    this.year         = date.getFullYear();
+
     this.showLoader();
 
-    this.authService.timeline(2018, 0).then((result) => {
+    this.authService.timeline(this.year, this.month).then((result) => {
       this.data = result;
       console.log(this.data);
       this.loading.dismiss();
@@ -45,13 +57,15 @@ export class TimelinePage {
 
   date_Value(){
     this.date = new Date(this['dateValue']);
-    console.log(this.date.getMonth());
-    console.log(this.date.getFullYear());
-    
+    this.month_name   = this.monthNames[this.date.getMonth()];
+    this.month        = this.date.getMonth()+1;
+    this.year         = this.date.getFullYear();
+  
+  
     this.showLoader();
 
-    this.authService.timeline(this.date.getFullYear(), this.date.getMonth()).then((result) => {
-      this.data = result;
+    this.authService.timeline(this.year, this.month).then((result) => {
+      this.data = Object.keys(result).map(function (key) { return result[key]; });
       console.log(this.data);
       this.loading.dismiss();
     }, (err) => {
@@ -81,6 +95,12 @@ export class TimelinePage {
     });
 
     toast.present();
+  }
+
+  itemSelected(item: string) {
+    this.navCtrl.push(AccountingPage, {
+      item : item
+    });
   }
 
 }

@@ -9,15 +9,33 @@
     <button class="page__menu" menuToggle left></button>
     <div class="page__info">
         <div class="page__info__text">
-            <p class="page__info__text--title">TimeLine</p>
-            <p class="page__info__text--description">2018</p>
+            <p class="page__info__text--title">{{month_name}}</p>
+            <p class="page__info__text--description">{{year}}</p>
         </div>
     </div>
   </div>
 
   <div class="page__list">
-    <div *ngFor="let item of data">
-        {{item}}
+    <div class="page__list__item" *ngFor="let item of data">
+        <div class="page__list__item--date">{{item.dates}}</div>
+        <div class="page__list__item--element" *ngFor="let value of item.data">
+          <div style="width:100%; display:block !important;" (click)="itemSelected(value)">
+              <div class="page__list__item--circle" [ngStyle]="{'border-color':value.color}"></div>
+              <div class="page__list__item--avatar">
+                <img src="{{value.avatar}}" alt="{{value.title}}">
+              </div>
+              <div class="page__list__item__block">
+                <p class="page__list__item__block--title">{{value.name}}</p>
+                <p class="page__list__item__block--description">{{value.time}}</p>
+              </div>
+              <div class="page__list__item__block page__list__item__block--right">
+                <p class="page__list__item__block--title">{{value.price}}</p>
+                <p class="page__list__item__block--description">uah</p>
+              </div>
+          </div>
+       </div>
     </div>
   </div>
+
+  <div class="line__divider"></div>
 </div>

@@ -1,11 +1,21 @@
 page-timeline {
-    @function sp($sp) {
-      @return ($sp / 16) * 1rem;
+  $baseFontSize : 16;
+  @function rem($pixels, $context: $baseFontSize) {
+    @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
     }
+  
+    @if (unitless($context)) {
+      $context: $context * 1px;
+    }
+  
+    @return $pixels / $context * 1rem;
+  }
 
     overflow: scroll;    
       .page{
         height: 100%;
+        position: relative;
       }
     
       .page__image{
@@ -14,6 +24,7 @@ page-timeline {
       }
     
       .page__bg{
+        z-index: 2;
         position: relative;
       }
     
@@ -55,6 +66,8 @@ page-timeline {
     
       .page__list{
         margin-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         text-align: center;
         width: 100%;
       }
@@ -66,12 +79,72 @@ page-timeline {
       }
 
       .page__list__item{
-        height: 5.625rem;
+        
+      }
+
+      .page__list__item--element{
+        height: 40px;
+        position: relative;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+
+      .page__list__item--circle{
+        width: 1rem;
+        height: 1rem;
+        background-color: transparent;
+        border-radius: 50px;
+        border: .2rem solid;
+        position: absolute;
+        left: -0.4rem;
+        top: 1rem;
+      }
+
+      .page__list__item--date{
+        display: block !important;
+        color: #1D1D26;
+        opacity: 0.5;
+        font-size: 1.5rem;
+        padding-bottom: 40px;
+        text-transform: uppercase;
+      }
+
+      .page__list__item--avatar{
+        width: 40px;
+        height: 40px;
+        margin-left: 40px;
+        margin-right: 20px;
+      }
+
+      .page__list__item--avatar img{
+        border-radius: 50px;
+      }
+
+      .page__list__item__block{
+        width: 35%;
         text-align: left;
-        border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
-        margin-bottom: 1.875rem;
-        margin-left: 1.875rem;
-        margin-right: 1.875rem;
+        color: #1D1D26;
+      }
+
+      .page__list__item__block--right{
+        text-align: right;
+      }
+
+      .page__list__item__block--right .page__list__item__block--title{
+        font-size: rem(40);
+      }
+
+      .page__list__item__block--title{
+        font-size: rem(30);
+        line-height: rem(30);
+        padding-bottom: 7.5px;
+      }
+      
+      .page__list__item__block--description{
+        opacity: 0.5;
+        font-size: rem(24);
+        line-height: rem(24);
+      
       }
 
       .page__list__item div{
@@ -156,5 +229,15 @@ page-timeline {
 
       .datetime-text{
         display: none !important;
+      }
+
+      .line__divider{
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        width: .2rem;
+        height: 100%;
+        background-color: #1d1d26;
+        opacity: 0.05;
       }
 }
