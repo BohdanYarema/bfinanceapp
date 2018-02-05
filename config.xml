@@ -103,4 +103,5 @@
     <engine name="browser" spec="^5.0.2" />
     <engine name="android" spec="6.3.0" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.0" />
+    <plugin name="cordova-plugin-calendar" spec="^5.0.0" />
 </widget>

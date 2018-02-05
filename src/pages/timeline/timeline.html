@@ -1,0 +1,20 @@
+<div class="page">
+  <div class="page__bg">
+      <button class="page__add">
+        <ion-datetime class="datetime" displayFormat="MMM/YYYY" (ionChange)="date_Value()" [(ngModel)]="dateValue"></ion-datetime>
+      </button>
+      <div>
+        <img class="page__image" src="assets/img/timeline.png">
+      </div>
+    <button class="page__menu" menuToggle left></button>
+    <div class="page__info">
+        <div class="page__info__text">
+            <p class="page__info__text--title">TimeLine</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="page__list">
+      
+  </div>
+</div>

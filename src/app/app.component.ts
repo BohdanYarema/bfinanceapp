@@ -8,6 +8,7 @@ import { LoginPage } from '../pages/login/login';
 import { ProfilePage } from '../pages/profile/profile';
 import { MapPage } from '../pages/map/map';
 import { EditPage } from '../pages/edit/edit';
+import { TimelinePage } from '../pages/timeline/timeline';
 
 @Component({
   templateUrl: 'app.html'
@@ -46,6 +47,10 @@ export class MyApp {
 
   gotoMap() {
     this.nav.push(MapPage);
+  }
+
+  gotoTimeline() {
+    this.nav.push(TimelinePage);
   }
 
   gotoEdit() {

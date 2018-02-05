@@ -2,6 +2,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { CalendarModule } from 'ionic3-calendar';
 
 import { CategoriesPage } from '../pages/categories/categories';
 import { ListPage } from '../pages/list/list';
@@ -15,6 +16,7 @@ import { MapPage } from '../pages/map/map';
 import { ChartsPage } from '../pages/charts/charts';
 import { EditPage } from '../pages/edit/edit';
 import { StatisticPage } from '../pages/statistic/statistic';
+import { TimelinePage } from '../pages/timeline/timeline';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -47,12 +49,14 @@ import { InjectableProvider } from '../providers/injectable/injectable';
     MapPage,
     ChartsPage,
     EditPage,
-    StatisticPage
+    StatisticPage,
+    TimelinePage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -68,7 +72,8 @@ import { InjectableProvider } from '../providers/injectable/injectable';
     MapPage,
     ChartsPage,
     EditPage,
-    StatisticPage
+    StatisticPage,
+    TimelinePage
   ],
   providers: [
     StatusBar,
