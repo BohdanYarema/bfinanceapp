@@ -17,7 +17,7 @@
 
   <div class="page__list">
     <div class="page__list__item" *ngFor="let item of data">
-        <div class="page__list__item--date">{{item.dates}}</div>
+        <div class="page__list__item--date">{{item.name}}</div>
         <div class="page__list__item--element" *ngFor="let value of item.data">
           <div style="width:100%; display:block !important;" (click)="itemSelected(value)">
               <div class="page__list__item--circle" [ngStyle]="{'border-color':value.color}"></div>

@@ -46,8 +46,9 @@ export class TimelinePage {
     this.showLoader();
 
     this.authService.timeline(this.year, this.month).then((result) => {
-      this.data = result;
-      console.log(this.data);
+      this.data = Object.keys(result).map(function (key) { 
+        return {"name": key, 'data': result[key]}; 
+      });
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();
@@ -65,7 +66,9 @@ export class TimelinePage {
     this.showLoader();
 
     this.authService.timeline(this.year, this.month).then((result) => {
-      this.data = Object.keys(result).map(function (key) { return result[key]; });
+      this.data = Object.keys(result).map(function (key) { 
+        return {"name": key, 'data': result[key]}; 
+      });
       console.log(this.data);
       this.loading.dismiss();
     }, (err) => {
