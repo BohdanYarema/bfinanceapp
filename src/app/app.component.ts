@@ -9,6 +9,8 @@ import { ProfilePage } from '../pages/profile/profile';
 import { MapPage } from '../pages/map/map';
 import { EditPage } from '../pages/edit/edit';
 import { TimelinePage } from '../pages/timeline/timeline';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +25,8 @@ export class MyApp {
       platform  : Platform,
       public loadingCtrl: LoadingController, 
       private toastCtrl: ToastController,
-      public app: App
+      public app: App,
+      private translateService: TranslateService
     ) {
     if(!localStorage.getItem("token")) {
       this.rootPage = LoginPage;
@@ -34,6 +37,9 @@ export class MyApp {
       // platform.registerBackButtonAction(() => {
       //     console.log(this.nav.getActive());
       // });
+
+      this.translateService.setDefaultLang('pt');
+      this.translateService.use('pt');  
     });
   }
 

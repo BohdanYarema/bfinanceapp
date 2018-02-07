@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { TranslateModule, TranslateLoader} from '@ngx-translate/core';
-import { TranslateHttpLoader} from '@ngx-translate/http-loader';
-
 import { CategoriesPage } from '../pages/categories/categories';
 import { ListPage } from '../pages/list/list';
 import { FormPage } from '../pages/form/form';
@@ -31,11 +28,19 @@ import { File } from '@ionic-native/file';
 
 import { Camera } from '@ionic-native/camera';
 
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import {
   GoogleMaps,
  } from '@ionic-native/google-maps';
 import { InjectableProvider } from '../providers/injectable/injectable';
+
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -56,8 +61,16 @@ import { InjectableProvider } from '../providers/injectable/injectable';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient]
+        }
+    })   
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -10,7 +10,21 @@
         </div>
     </div>
   </div>
+  <ion-content padding>
+    <h2>{{ 'IN_APP' | translate }}</h2>
+    {{ 'FOO' | translate }}
+    <!-- Segment in content -->
+    <ion-segment [(ngModel)]="relationship" color="primary" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="en">
+            {{ 'BUTTONS.btn_eng' | translate }}
+        </ion-segment-button>
+        <ion-segment-button value="pt">
+            {{ 'BUTTONS.btn_cro' | translate }}
+        </ion-segment-button>
+    </ion-segment>
+</ion-content>
   <div class="page__list">
+    
       <div *ngFor="let item of data" (click)="itemSelected(item)">
         <div class="page__list__item">
           <div class="page__list__image">
