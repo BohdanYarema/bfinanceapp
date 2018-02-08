@@ -4,7 +4,6 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController, App } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { LoginPage } from '../login/login';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'page-home',
@@ -19,14 +18,9 @@ export class HomePage {
     public authService: AuthServiceProvider, 
     public loadingCtrl: LoadingController, 
     private toastCtrl: ToastController,
-    public app: App, 
-    private translateService: TranslateService
+    public app: App
   ) {
     
-  }
-
-  segmentChanged(event) {
-    this.translateService.use(event._value);
   }
 
   logout() {

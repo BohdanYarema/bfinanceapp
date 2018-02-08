@@ -6,18 +6,18 @@
         <button class="page__menu" menuToggle left></button>
         <div class="page__info">
             <div class="page__info__text">
-                <p class="page__info__text--title">Create</p>
+                <p class="page__info__text--title">{{ 'CREATE' | translate }}</p>
             </div>
         </div>
     </div>
     <div class="page__form">
         <form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">
-            <input class="page__form__elements" formControlName="name" name="name" type="text" placeholder="name" >
-            <input class="page__form__elements" formControlName="price" name="price" type="number" placeholder="price" >
+            <input class="page__form__elements" formControlName="name" name="name" type="text" placeholder="{{ 'NAME' | translate }}" >
+            <input class="page__form__elements" formControlName="price" name="price" type="number" placeholder="{{ 'PRICE' | translate }}" >
             <ion-item class="page__form__elements--datapicker">
-                <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="dates"></ion-datetime>
+                <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="{{ 'DATES' | translate }}"></ion-datetime>
             </ion-item>
-            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!addGroup.valid">Add</button>
+            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!addGroup.valid">{{ 'ADD' | translate }}</button>
         </form>
     </div>
 </div>

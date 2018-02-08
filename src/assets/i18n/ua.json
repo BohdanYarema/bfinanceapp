@@ -1,0 +1,15 @@
+{
+  "LINK_HOME"             : "Головна",
+  "LINK_MAP"              : "Мапа",
+  "LINK_PROFILE"          : "Профайл",
+  "LINK_SETTINGS"         : "Налаштування",
+  "LINK_TIMELINE"         : "Таймлайн", 
+  "LINK_LOG_OUT"          : "Вихід",
+  "USERNAME"              : "Логін",
+  "PASSWORD"              : "Пароль",
+  "USERNAME_PLACEHOLDER"  : "Ваш логін",
+  "PASSWORD_PLACEHOLDER"  : "Ваш пароль",
+  "CATEGORIES_NAME"       : "Категорії",
+  "UPDATE_FORM"           : "Оновити форму",
+  "UPLOAD_IMAGE"          : "Завантажити фото"
+}

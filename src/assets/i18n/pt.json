@@ -1,9 +1,0 @@
-{
-  "PAGE_TITLE" : "Translation tutorial",  
-  "BUTTONS" : {
-      "btn_eng" : "English",
-      "btn_cro" : "Croatian"
-  },
-  "IN_APP" : "Prijevod unutar aplikacije",
-  "FOO": "Foo pt"
-}

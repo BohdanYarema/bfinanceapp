@@ -34,12 +34,8 @@ export class MyApp {
       this.rootPage = HomePage;
     }
     platform.ready().then(() => {
-      // platform.registerBackButtonAction(() => {
-      //     console.log(this.nav.getActive());
-      // });
-
-      this.translateService.setDefaultLang('pt');
-      this.translateService.use('pt');  
+      this.translateService.setDefaultLang('ua');
+      this.translateService.use('ua');  
     });
   }
 

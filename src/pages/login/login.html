@@ -8,17 +8,17 @@
   
   <form class="login__form" [formGroup]="loginGroup" (ngSubmit)="doLogin(loginGroup.value)">
     <div class="login__form__elements">
-        <label class="login__form__elements--label">Username</label>
-        <input class="login__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">
+        <label class="login__form__elements--label">{{ 'USERNAME' | translate }}</label>
+        <input class="login__form__elements--input" formControlName="username" name="username" type="text" placeholder="{{ 'USERNAME_PLACEHOLDER' | translate }}">
     </div>
     <div class="login__form__elements">
-        <label class="login__form__elements--label">Password</label>
-        <input class="login__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">
+        <label class="login__form__elements--label">{{ 'PASSWORD' | translate }}</label>
+        <input class="login__form__elements--input" formControlName="password" name="password" type="password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}">
     </div>
-    <button class="login__form__elements" id="login-button1" type="submit" [disabled]="!loginGroup.valid" block>Log in</button>
+    <button class="login__form__elements" id="login-button1" type="submit" [disabled]="!loginGroup.valid" block>{{ 'LOG_IN' | translate }}</button>
     <div class="login__form__list">
-        <div class="login__form__elements--simple login__form__elements" id="login-button2" (click)="register()">Forgot password?</div>
-        <div class="login__form__elements--simple login__form__elements" id="login-button3" (click)="register()">Sign In</div>
+        <div class="login__form__elements--simple login__form__elements" id="login-button2" (click)="register()">{{ 'FORGOT_PASSWORD' | translate }}</div>
+        <div class="login__form__elements--simple login__form__elements" id="login-button3" (click)="register()">{{ 'SIGN_IN' | translate }}</div>
     </div>
   </form>
 </div>

@@ -2,7 +2,7 @@
     <div class="page__bg">
         <img class="page__image" src="assets/img/settings_img.png">
         <button class="page__menu" menuToggle left></button>
-        <p class="page__name">Settings</p>
+        <p class="page__name">{{ 'LINK_SETTINGS' | translate }}</p>
         <div class="page__info">
             <div class="page__info__text">
                 <p class="page__info__text--title">{{this.profile_info.firstname}} {{this.profile_info.lastname}}</p>
@@ -16,25 +16,25 @@
     <div class="page__form">
         <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">
             <div class="page__form__group">
-                <label>firstname ({{this.profile_info.firstname}})</label>
+                <label>{{ 'FIRSTNAME' | translate }} ({{this.profile_info.firstname}})</label>
                 <input class="page__form__elements" formControlName="firstname" name="firstname" type="text" >
             </div>
             <div class="page__form__group">
-                <label>lastname ({{this.profile_info.lastname}})</label>
+                <label>{{ 'LASTNAME' | translate }} ({{this.profile_info.lastname}})</label>
                 <input class="page__form__elements" formControlName="lastname" name="lastname" type="text">
             </div>
             <div class="page__form__group">
-                <label>middlename ({{this.profile_info.middlename}})</label>
+                <label>{{ 'MIDDLENAME' | translate }} ({{this.profile_info.middlename}})</label>
                 <input class="page__form__elements" formControlName="middlename" name="middlename" type="text">
             </div>
             <div class="page__form__group">
-                <label>gender ({{this.profile_info.gender}})</label>
+                <label>{{ 'GENDER' | translate }} ({{this.profile_info.gender}})</label>
                 <input class="page__form__elements" formControlName="gender" name="gender" type="text">
             </div>
         
-            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!editGroup.valid">Update Form</button>
+            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!editGroup.valid">{{ 'UPDATE_FORM' | translate }}</button>
         </form>
 
-        <button class="page__form__elements" id="login-button2" type="submit" (click)="uploadFile()">Upload Image</button>
+        <button class="page__form__elements" id="login-button2" type="submit" (click)="uploadFile()">{{ 'UPLOAD_IMAGE' | translate }}</button>
     </div>
 </div>

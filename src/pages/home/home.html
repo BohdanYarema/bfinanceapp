@@ -6,23 +6,10 @@
     <button class="page__menu" menuToggle left></button>
     <div class="page__info">
         <div class="page__info__text">
-            <p class="page__info__text--title">Categories</p>
+            <p class="page__info__text--title">{{ 'CATEGORIES_NAME' | translate }}</p>
         </div>
     </div>
   </div>
-  <ion-content padding>
-    <h2>{{ 'IN_APP' | translate }}</h2>
-    {{ 'FOO' | translate }}
-    <!-- Segment in content -->
-    <ion-segment [(ngModel)]="relationship" color="primary" (ionChange)="segmentChanged($event)">
-        <ion-segment-button value="en">
-            {{ 'BUTTONS.btn_eng' | translate }}
-        </ion-segment-button>
-        <ion-segment-button value="pt">
-            {{ 'BUTTONS.btn_cro' | translate }}
-        </ion-segment-button>
-    </ion-segment>
-</ion-content>
   <div class="page__list">
     
       <div *ngFor="let item of data" (click)="itemSelected(item)">

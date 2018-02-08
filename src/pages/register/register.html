@@ -8,17 +8,17 @@
   
   <form class="register__form" [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">
     <div class="register__form__elements">
-        <label class="register__form__elements--label">Username</label>
-        <input class="register__form__elements--input" formControlName="username" name="username" type="text" placeholder="Your username">
+        <label class="register__form__elements--label">{{ 'USERNAME' | translate }}</label>
+        <input class="register__form__elements--input" formControlName="username" name="username" type="text" placeholder="{{ 'USERNAME_PLACEHOLDER' | translate }}">
     </div>
     <div class="register__form__elements">
-        <label class="register__form__elements--label">Email</label>
-        <input class="register__form__elements--input" formControlName="email" name="email" type="text" placeholder="Your email">
+        <label class="register__form__elements--label">{{ 'EMAIL' | translate }}</label>
+        <input class="register__form__elements--input" formControlName="email" name="email" type="text" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}">
     </div>
     <div class="register__form__elements">
-        <label class="register__form__elements--label">Password</label>
-        <input class="register__form__elements--input" formControlName="password" name="password" type="password" placeholder="Your password">
+        <label class="register__form__elements--label">{{ 'PASSWORD' | translate }}</label>
+        <input class="register__form__elements--input" formControlName="password" name="password" type="password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}">
     </div>
-    <button class="register__form__elements" id="register-button1" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">Sign Up</button>
+    <button class="register__form__elements" id="register-button1" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">{{ 'SIGN_UP' | translate }}</button>
   </form>
 </div>

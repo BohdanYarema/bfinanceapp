@@ -18,7 +18,7 @@
             <div class="page__list__item">
                 <div class="page__list__info" (click)="itemSelected(data)">
                   <p>{{ data.price }}</p>
-                  <span>uah</span>
+                  <span>{{ 'CURRENCY' | translate }}</span>
                 </div>
                 <div class="page__list__image" (click)="itemSelected(data)">
                   <img src="{{data.thumbnail}}">

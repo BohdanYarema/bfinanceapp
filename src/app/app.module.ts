@@ -12,9 +12,7 @@ import { RegisterPage } from '../pages/register/register';
 import { AccountingPage } from '../pages/accounting/accounting';
 import { HomePage } from '../pages/home/home';
 import { MapPage } from '../pages/map/map';
-import { ChartsPage } from '../pages/charts/charts';
 import { EditPage } from '../pages/edit/edit';
-import { StatisticPage } from '../pages/statistic/statistic';
 import { TimelinePage } from '../pages/timeline/timeline';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -28,7 +26,7 @@ import { File } from '@ionic-native/file';
 
 import { Camera } from '@ionic-native/camera';
 
-import { HttpModule, Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import {
   GoogleMaps,
  } from '@ionic-native/google-maps';
@@ -54,9 +52,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomePage,
     AccountingPage,
     MapPage,
-    ChartsPage,
     EditPage,
-    StatisticPage,
     TimelinePage
   ],
   imports: [
@@ -84,9 +80,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomePage,
     AccountingPage,
     MapPage,
-    ChartsPage,
     EditPage,
-    StatisticPage,
     TimelinePage
   ],
   providers: [
