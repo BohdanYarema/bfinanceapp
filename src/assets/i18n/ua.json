@@ -11,5 +11,16 @@
   "PASSWORD_PLACEHOLDER"  : "Ваш пароль",
   "CATEGORIES_NAME"       : "Категорії",
   "UPDATE_FORM"           : "Оновити форму",
-  "UPLOAD_IMAGE"          : "Завантажити фото"
+  "UPLOAD_IMAGE"          : "Завантажити фото",
+  "FIRSTNAME"             : "Ім'я",
+  "LASTNAME"              : "Прізвище",
+  "MIDDLENAME"            : "По батькові",
+  "GENDER"                : "Стать",
+  "CREATE"                : "Створити",
+  "ADD"                   : "Додати",
+  "CURRENCY"              : "Валюта",
+  "LOG_IN"                : "Логін",
+  "FORGOT_PASSWORD"       : "Забули пароль ?",
+  "SIGN_IN"               : "Увійти",
+  "SIGN_UP"               : "Зареєструватись"
 }

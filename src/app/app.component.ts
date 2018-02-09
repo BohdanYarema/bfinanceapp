@@ -36,6 +36,14 @@ export class MyApp {
     platform.ready().then(() => {
       this.translateService.setDefaultLang('ua');
       this.translateService.use('ua');  
+
+      // translateService.get('ADD').subscribe(
+      //   value => {
+      //     console.log(value);
+      //   }
+      // )
+      
+
     });
   }
 
