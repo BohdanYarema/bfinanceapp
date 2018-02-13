@@ -22,5 +22,14 @@
   "LOG_IN"                : "Логін",
   "FORGOT_PASSWORD"       : "Забули пароль ?",
   "SIGN_IN"               : "Увійти",
-  "SIGN_UP"               : "Зареєструватись"
+  "SIGN_UP"               : "Зареєструватись",
+  "SEARCHING"             : "Пошук",
+  "DISMISSED"             : "Звільнено",
+  "IMAGE_UPLOAD_SUCCESS"  : "Зображення завантажено вдало",
+  "AUTENTIFICATING"       : "Аутентифікація",
+  "GPS_GET"               : "GPS дані отримано",
+  "GPS_CANCEL"            : "GPS дані відмовлено",
+  "SENDING"               : "Відправка",
+  "WRONG_CREDENTIALS"     : "Неправильні реквізити",
+  "LOADING"               : "Завантаження"
 }

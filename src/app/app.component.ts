@@ -20,7 +20,8 @@ export class MyApp {
 
   rootPage:any = null;
   loading:any;
-  
+  searching:any;
+
   constructor(
       platform  : Platform,
       public loadingCtrl: LoadingController, 
@@ -35,15 +36,7 @@ export class MyApp {
     }
     platform.ready().then(() => {
       this.translateService.setDefaultLang('ua');
-      this.translateService.use('ua');  
-
-      // translateService.get('ADD').subscribe(
-      //   value => {
-      //     console.log(value);
-      //   }
-      // )
-      
-
+      this.translateService.use('ua');
     });
   }
 
@@ -78,7 +71,7 @@ export class MyApp {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Serching...'
+        content: this.searching
     });
 
     this.loading.present();

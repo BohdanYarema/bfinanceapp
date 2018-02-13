@@ -23,14 +23,13 @@
   "FORGOT_PASSWORD"       : "Forgot password ?",
   "SIGN_IN"               : "Sing in",
   "SIGN_UP"               : "Sing up",
-  "SEARCHING"             : "",
-  "DISMISSED"             : "",
-  "SEARCHING"             : "",
-  "SEARCHING"             : "",
-  "SEARCHING"             : "",
-  "SEARCHING"             : "",
-  "SEARCHING"             : "",
-  "SEARCHING"             : "",
-  "SEARCHING"             : "",
-  "SEARCHING"             : ""
+  "SEARCHING"             : "Searching",
+  "DISMISSED"             : "Dismissed",
+  "IMAGE_UPLOAD_SUCCESS"  : "Image upload success",
+  "AUTENTIFICATING"       : "Autentificating",
+  "GPS_GET"               : "GPS get success",
+  "GPS_CANCEL"            : "GPS cansel",
+  "SENDING"               : "Sending",
+  "WRONG_CREDENTIALS"     : "Wrong credentials",
+  "LOADING"               : "Loading"
 }
