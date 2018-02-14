@@ -45,10 +45,7 @@ export class EditPage {
     public injectableProvider: InjectableProvider,
     public translateService:TranslateService
   ) {
-    this.profile_info = JSON.parse(localStorage.getItem('profile'));
-
-    console.log(this.profile_info);
-    
+    this.profile_info = JSON.parse(localStorage.getItem('profile'));    
     // formbuilder for form
     this.editGroup = formBuilder.group({
       firstname   :['', Validators.compose([
@@ -128,9 +125,7 @@ export class EditPage {
   }
 
   showLoader(){
-    this.loading = this.loadingCtrl.create({
-        content: this.injectableProvider.autentificating
-    });
+    this.loading = this.loadingCtrl.create({});
 
     this.loading.present();
   }
@@ -142,9 +137,7 @@ export class EditPage {
       position: 'bottom'
     });
 
-    toast.onDidDismiss(() => {
-      console.log(this.injectableProvider.dismissed);
-    });
+    toast.onDidDismiss(() => {});
 
     toast.present();
   }

@@ -60,7 +60,7 @@ export class LoginPage {
       this.navCtrl.setRoot(HomePage);
     }, (err) => {
       this.loading.dismiss();
-      this.presentToast(this.injectableProvider.wrong_credentials);
+      this.presentToast('');
     });
 
 
@@ -71,9 +71,7 @@ export class LoginPage {
   }
 
   showLoader(){
-    this.loading = this.loadingCtrl.create({
-        content: this.injectableProvider.autentificating
-    });
+    this.loading = this.loadingCtrl.create({});
 
     this.loading.present();
   }
@@ -86,9 +84,7 @@ export class LoginPage {
       dismissOnPageChange: true
     });
 
-    toast.onDidDismiss(() => {
-      console.log(this.injectableProvider.dismissed);
-    });
+    toast.onDidDismiss(() => {});
 
     toast.present();
   }

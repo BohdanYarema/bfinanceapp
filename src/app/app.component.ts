@@ -80,9 +80,7 @@ export class MyApp {
   }
 
   showLoader(){
-    this.loading = this.loadingCtrl.create({
-        content: this.searching
-    });
+    this.loading = this.loadingCtrl.create({});
 
     this.loading.present();
   }
@@ -95,9 +93,7 @@ export class MyApp {
       dismissOnPageChange: true
     });
 
-    toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
-    });
+    toast.onDidDismiss(() => {});
 
     toast.present();
   }

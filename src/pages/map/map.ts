@@ -88,9 +88,7 @@ export class MapPage {
   }
 
   showLoader(){
-    this.loading = this.loadingCtrl.create({
-        content: this.injectableProvider.loading
-    });
+    this.loading = this.loadingCtrl.create({});
 
     this.loading.present();
   }
@@ -103,9 +101,7 @@ export class MapPage {
         dismissOnPageChange: true
     });
 
-    toast.onDidDismiss(() => {
-        console.log(this.injectableProvider.dismissed);
-    });
+    toast.onDidDismiss(() => {});
 
     toast.present();
   }

@@ -56,9 +56,7 @@ export class ListPage {
   }
 
   showLoader(){
-    this.loading = this.loadingCtrl.create({
-        content: this.injectableProvider.searching
-    });
+    this.loading = this.loadingCtrl.create({});
 
     this.loading.present();
   }
@@ -71,9 +69,7 @@ export class ListPage {
       dismissOnPageChange: true
     });
 
-    toast.onDidDismiss(() => {
-      console.log(this.injectableProvider.dismissed);
-    });
+    toast.onDidDismiss(() => {});
 
     toast.present();
   }

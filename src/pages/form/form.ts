@@ -121,9 +121,7 @@ export class FormPage {
           position: 'bottom',
           dismissOnPageChange: true
         });
-        toast.onDidDismiss(() => {
-          console.log(this.injectableProvider.dismissed);
-        });
+        toast.onDidDismiss(() => {});
         toast.present();
     }
 }

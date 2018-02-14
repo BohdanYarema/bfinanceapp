@@ -76,9 +76,7 @@ export class AccountingPage {
   }
 
   addInfoWidnow(marker, content){
-    var infowindow = new google.maps.InfoWindow({
-        content: content
-    });
+    var infowindow = new google.maps.InfoWindow({});
 
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(this.map,marker);

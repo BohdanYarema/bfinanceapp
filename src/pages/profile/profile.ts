@@ -24,6 +24,7 @@ export class ProfilePage {
   item    : any;
   items   = [];
   data    : any;
+  stats   : any;
 
 
   constructor(
@@ -37,29 +38,28 @@ export class ProfilePage {
   ) {
     this.profile = JSON.parse(localStorage.getItem('profile'));
     this.item = navParams.data.item;
-    console.log(this.item);
   }
 
   ionViewDidLoad() {
+    this.authService.stats().then((result) => {
+      this.stats = result;
+      console.log(result);
+    }, (err) => {
+    });
+
     this.authService.accounting_last().then((result) => {
       this.data = result
-
       for (var variable in this.data) {
-        
         var date = new Date(parseInt(variable) * 1000);
-      
         var curr_date   = date.getDate();
         var curr_month  = date.getMonth() + 1;
         var curr_year   = date.getFullYear();
-        
         var test = (curr_date + "-" + curr_month + "-" + curr_year);
-        
         this.items.push([
           test, this.data[variable]
         ]);
       }
     }, (err) => {
-      
     });
   }
 
@@ -77,9 +77,7 @@ export class ProfilePage {
   }
 
   showLoader(){
-    this.loading = this.loadingCtrl.create({
-        content: this.injectableProvider.autentificating
-    });
+    this.loading = this.loadingCtrl.create({});
     this.loading.present();
   }
 
@@ -90,9 +88,7 @@ export class ProfilePage {
       position: 'bottom'
     });
 
-    toast.onDidDismiss(() => {
-      console.log(this.injectableProvider.dismissed);
-    });
+    toast.onDidDismiss(() => {});
 
     toast.present();
   }

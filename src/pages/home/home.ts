@@ -14,6 +14,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class HomePage {
   loading   : any;
   data      : any;
+  translate : any;
 
   constructor(
     public navCtrl: NavController, 
@@ -36,15 +37,9 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-
-    this.injectableProvider.translate(localStorage.getItem("language")).then((result) => {
-        console.log(result);
-    });
-
     this.showLoader();
     this.authService.category().then((result) => {
       this.data = result;
-      console.log(this.data);
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();
@@ -53,10 +48,7 @@ export class HomePage {
   }
 
   showLoader(){
-    this.loading = this.loadingCtrl.create({
-        content: this.injectableProvider.searching
-    });
-
+    this.loading = this.loadingCtrl.create({});
     this.loading.present();
   }
 
@@ -68,9 +60,7 @@ export class HomePage {
       dismissOnPageChange: true
     });
 
-    toast.onDidDismiss(() => {
-      console.log(this.injectableProvider.dismissed);
-    });
+    toast.onDidDismiss(() => {});
 
     toast.present();
   }

@@ -91,6 +91,21 @@ export class AuthServiceProvider {
     });
   }
 
+  stats() {
+    return new Promise((resolve, reject) => {
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        headers.append('authorization', 'Bearer ' + localStorage.getItem("token"));
+
+        this.http.get(apiUrl+'statistic/index', {headers: headers})
+          .subscribe(res => {
+            resolve(res.json());
+          }, (err) => {
+            reject(err);
+          });
+    });
+  }
+
   accounting_last() {
     return new Promise((resolve, reject) => {
         let headers = new Headers();

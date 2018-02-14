@@ -80,9 +80,7 @@ export class RegisterPage {
   }
 
   showLoader(){
-    this.loading = this.loadingCtrl.create({
-        content: this.injectableProvider.searching
-    });
+    this.loading = this.loadingCtrl.create({});
 
     this.loading.present();
   }
@@ -95,9 +93,7 @@ export class RegisterPage {
       dismissOnPageChange: true
     });
 
-    toast.onDidDismiss(() => {
-      console.log(this.injectableProvider.dismissed);
-    });
+    toast.onDidDismiss(() => {});
 
     toast.present();
   }
