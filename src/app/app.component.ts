@@ -30,6 +30,7 @@ export class MyApp {
       public app: App,
       private translateService: TranslateService
     ) {
+      
     if(!localStorage.getItem("token")) {
       this.rootPage = LoginPage;
     } else {
@@ -39,7 +40,8 @@ export class MyApp {
     if(localStorage.getItem("language") !== null) {
       this.language = localStorage.getItem("language");
     } else {
-      this.language = 'en';
+      localStorage.setItem('language', 'en');
+      this.language = localStorage.getItem("language");
     }
 
     platform.ready().then(() => {

@@ -37,7 +37,9 @@ export class HomePage {
 
   ionViewDidLoad() {
 
-    console.log(this.translateService.getLangs());
+    this.injectableProvider.translate(localStorage.getItem("language")).then((result) => {
+        console.log(result);
+    });
 
     this.showLoader();
     this.authService.category().then((result) => {

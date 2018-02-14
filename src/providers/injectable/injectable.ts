@@ -31,90 +31,29 @@ export class InjectableProvider {
     } else {
       this.language = 'en';
     }
-    this.translateService.use(this.language);
+  }
 
-    translateService.get('LOADING').subscribe(
-      value => {
-        // value is our translated string
-        this.loading = value;
-      }
-    )
-
-    translateService.get('WRONG_CREDENTIALS').subscribe(
-      value => {
-        // value is our translated string
-        this.wrong_credentials = value;
-      }
-    )
-
-    translateService.get('SENDING').subscribe(
-      value => {
-        // value is our translated string
-        this.sending = value;
-      }
-    )
-
-    translateService.get('GPS_CANCEL').subscribe(
-      value => {
-        // value is our translated string
-        this.gps_cancel = value;
-      }
-    )
-
-    translateService.get('GPS_GET').subscribe(
-      value => {
-        // value is our translated string
-        this.gps_get = value;
-      }
-    )
-
-    translateService.get('AUTENTIFICATING').subscribe(
-      value => {
-        // value is our translated string
-        this.autentificating = value;
-      }
-    )
-
-    translateService.get('IMAGE_UPLOAD_SUCCESS').subscribe(
-      value => {
-        // value is our translated string
-        this.image_upload_success = value;
-      }
-    )
-
-    translateService.get('DISMISSED').subscribe(
-      value => {
-        // value is our translated string
-        this.dismissed = value;
-      }
-    )
-
-    translateService.get('SEARCHING').subscribe(
-      value => {
-        // value is our translated string
-        this.searching = value;
-      }
-    )
-
-    translateService.get('UPLOADING').subscribe(
-      value => {
-        // value is our translated string
-        this.uploading = value;
-      }
-    )
-
-    translateService.get('GPS_ENABLED').subscribe(
-      value => {
-        // value is our translated string
-        this.gps_enabled = value;
-      }
-    )
-
-    translateService.get('GPS_DISABLED').subscribe(
-      value => {
-        // value is our translated string
-        this.gps_disabled = value;
-      }
-    )
+  translate(lang) {
+    return new Promise((resolve, reject) => {
+      this.translateService.use(lang);
+      this.translateService.get([
+        'LOADING',
+        'WRONG_CREDENTIALS',
+        'SENDING',
+        'GPS_CANCEL',
+        'GPS_GET',
+        'AUTENTIFICATING',
+        'IMAGE_UPLOAD_SUCCESS',
+        'DISMISSED',
+        'SEARCHING',
+        'UPLOADING',
+        'GPS_ENABLED',
+        'GPS_DISABLED'
+      ]).subscribe(
+        res => {
+          resolve(res);
+        }
+      ); 
+    });
   }
 }
