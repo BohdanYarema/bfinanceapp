@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { GoogleMap } from '@ionic-native/google-maps';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController } from 'ionic-angular';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 
 declare var google :any;
 
@@ -22,7 +23,8 @@ export class MapPage {
     public navParams: NavParams,
     public authService: AuthServiceProvider,
     public loadingCtrl: LoadingController,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    public injectableProvider: InjectableProvider
   ) {
 
   }
@@ -87,7 +89,7 @@ export class MapPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Loading map...'
+        content: this.injectableProvider.loading
     });
 
     this.loading.present();
@@ -102,7 +104,7 @@ export class MapPage {
     });
 
     toast.onDidDismiss(() => {
-        console.log('Dismissed toast');
+        console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();

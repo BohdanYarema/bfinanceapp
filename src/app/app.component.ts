@@ -21,6 +21,7 @@ export class MyApp {
   rootPage:any = null;
   loading:any;
   searching:any;
+  language:any;
 
   constructor(
       platform  : Platform,
@@ -34,9 +35,16 @@ export class MyApp {
     } else {
       this.rootPage = HomePage;
     }
+
+    if(localStorage.getItem("language") !== null) {
+      this.language = localStorage.getItem("language");
+    } else {
+      this.language = 'en';
+    }
+
     platform.ready().then(() => {
-      this.translateService.setDefaultLang('ua');
-      this.translateService.use('ua');
+      this.translateService.setDefaultLang(this.language);
+      this.translateService.use(this.language);
     });
   }
 

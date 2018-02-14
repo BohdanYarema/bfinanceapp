@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 import {
   GoogleMap,
  } from '@ionic-native/google-maps';
@@ -20,7 +21,8 @@ export class AccountingPage {
   item    : any;
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams
+    public navParams: NavParams,
+    public injectableProvider: InjectableProvider
   ) {
     this.item = navParams.data.item;
 

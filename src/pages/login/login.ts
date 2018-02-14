@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/fo
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 
 @Component({
   selector: 'page-login',
@@ -24,6 +25,7 @@ export class LoginPage {
     public loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     public formBuilder: FormBuilder,
+    public injectableProvider: InjectableProvider
   ) {
     // formbuilder for form
     this.loginGroup = formBuilder.group({
@@ -58,7 +60,7 @@ export class LoginPage {
       this.navCtrl.setRoot(HomePage);
     }, (err) => {
       this.loading.dismiss();
-      this.presentToast("Wrong credentials data");
+      this.presentToast(this.injectableProvider.wrong_credentials);
     });
 
 
@@ -70,7 +72,7 @@ export class LoginPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Authenticating...'
+        content: this.injectableProvider.autentificating
     });
 
     this.loading.present();
@@ -85,7 +87,7 @@ export class LoginPage {
     });
 
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();

@@ -31,5 +31,10 @@
   "GPS_CANCEL"            : "GPS cansel",
   "SENDING"               : "Sending",
   "WRONG_CREDENTIALS"     : "Wrong credentials",
-  "LOADING"               : "Loading"
+  "LOADING"               : "Loading",
+  "UPLOADING"             : "Uploading",
+  "GPS_ENABLED"           : "Your coordinate are catching, we are watching you!",
+  "GPS_DISABLED"          : "Your disallow gps tracking i aour app",
+  "TO_ENGLISH"            : "Translate to English",
+  "TO_UKRAINE"            : "Translate to Ukraine"
 }

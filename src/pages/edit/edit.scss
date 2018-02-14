@@ -1,5 +1,15 @@
 page-edit {
-    overflow: scroll;    
+    overflow: scroll; 
+    
+    .lang {
+      background-color: #FF3366;
+      width: 100%;
+      font-size: 1.375rem;
+      color: #ffffff;
+      margin-bottom: 0;
+      height: 6.25rem;
+    }
+    
     .page{
       height: 100%;
     }

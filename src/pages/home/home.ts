@@ -4,6 +4,8 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController, App } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { LoginPage } from '../login/login';
+import { InjectableProvider } from '../../providers/injectable/injectable';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'page-home',
@@ -18,9 +20,10 @@ export class HomePage {
     public authService: AuthServiceProvider, 
     public loadingCtrl: LoadingController, 
     private toastCtrl: ToastController,
-    public app: App
+    public app: App,
+    public injectableProvider: InjectableProvider,
+    public translateService:TranslateService
   ) {
-    
   }
 
   logout() {
@@ -33,6 +36,9 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
+
+    console.log(this.translateService.getLangs());
+
     this.showLoader();
     this.authService.category().then((result) => {
       this.data = result;
@@ -46,7 +52,7 @@ export class HomePage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Serching...'
+        content: this.injectableProvider.searching
     });
 
     this.loading.present();
@@ -61,7 +67,7 @@ export class HomePage {
     });
 
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();

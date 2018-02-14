@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { AccountingPage } from '../accounting/accounting';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 
 /**
  * Generated class for the TimelinePage page.
@@ -32,7 +33,8 @@ export class TimelinePage {
     public navParams: NavParams,
     public authService: AuthServiceProvider, 
     public loadingCtrl: LoadingController, 
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    public injectableProvider: InjectableProvider
   ) {
     
   }
@@ -79,7 +81,7 @@ export class TimelinePage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Serching...'
+        content: this.injectableProvider.searching
     });
 
     this.loading.present();
@@ -94,7 +96,7 @@ export class TimelinePage {
     });
 
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();

@@ -6,6 +6,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { CustomValidators } from '../../validators/custom';
 import { ListPage } from '../../pages/list/list';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 //import { Diagnostic } from '@ionic-native/diagnostic';
 
 
@@ -36,7 +37,8 @@ export class FormPage {
         public platform: Platform,
         public authService: AuthServiceProvider, 
         public loadingCtrl: LoadingController, 
-        private toastCtrl: ToastController
+        private toastCtrl: ToastController,
+        public injectableProvider: InjectableProvider
         //private diagnostic: Diagnostic
     ) {
         // let successCallback = (isAvailable) => { alert('Is available? ' + isAvailable); };
@@ -68,12 +70,12 @@ export class FormPage {
         //this.showLoader("Catching you gps coords");
         platform.ready().then(() => {
             geolocation.getCurrentPosition().then((location) => {
-                this.presentToast("Your coordinate are catching, we are watching you!");
+                this.presentToast(this.injectableProvider.gps_enabled);
                 this.gps_x = location.coords.latitude;
                 this.gps_y = location.coords.longitude;
 
             }).catch((error) => {
-                this.presentToast("Your disallow gps tracking i aour app");
+                this.presentToast(this.injectableProvider.gps_disabled);
                 this.gps_x = null;
                 this.gps_y = null;
             });
@@ -82,7 +84,7 @@ export class FormPage {
 
     // sending form data function
     doAddAcccounting(data) {
-        this.showLoader("Sending data ...");
+        this.showLoader(this.injectableProvider.searching);
 
         data.category_id    = this.category_id;
         data.gps_x          = this.gps_x;
@@ -120,7 +122,7 @@ export class FormPage {
           dismissOnPageChange: true
         });
         toast.onDidDismiss(() => {
-          console.log('Dismissed toast');
+          console.log(this.injectableProvider.dismissed);
         });
         toast.present();
     }

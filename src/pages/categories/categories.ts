@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 
 /**
  * Generated class for the CategoriesPage page.
@@ -23,7 +24,8 @@ export class CategoriesPage {
     public navCtrl: NavController, 
     public authService: AuthServiceProvider, 
     public loadingCtrl: LoadingController, 
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    public injectableProvider: InjectableProvider
   ) {
     
   }
@@ -41,7 +43,7 @@ export class CategoriesPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Serching...'
+        content: this.injectableProvider.searching
     });
 
     this.loading.present();
@@ -56,7 +58,7 @@ export class CategoriesPage {
     });
 
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();

@@ -4,6 +4,7 @@ import { FormPage } from '../form/form';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { AccountingPage } from '../accounting/accounting';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 
 @Component({
   selector: 'page-list',
@@ -21,7 +22,8 @@ export class ListPage {
     public navParams: NavParams, 
     public authService: AuthServiceProvider, 
     public loadingCtrl: LoadingController, 
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    public injectableProvider: InjectableProvider
   ) {
     this.item = navParams.data.item;
   }
@@ -55,7 +57,7 @@ export class ListPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Serching...'
+        content: this.injectableProvider.searching
     });
 
     this.loading.present();
@@ -70,7 +72,7 @@ export class ListPage {
     });
 
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();

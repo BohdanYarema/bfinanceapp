@@ -4,6 +4,7 @@ import { LoginPage } from '../login/login';
 import { EditPage } from '../edit/edit';
 import { AccountingPage } from '../accounting/accounting';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 
 /**
  * Generated class for the ProfilePage page.
@@ -31,7 +32,8 @@ export class ProfilePage {
     public toastCtrl: ToastController,
     public navParams: NavParams,
     public authService: AuthServiceProvider, 
-    public app: App
+    public app: App,
+    public injectableProvider: InjectableProvider
   ) {
     this.profile = JSON.parse(localStorage.getItem('profile'));
     this.item = navParams.data.item;
@@ -76,7 +78,7 @@ export class ProfilePage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Authenticating...'
+        content: this.injectableProvider.autentificating
     });
     this.loading.present();
   }
@@ -89,7 +91,7 @@ export class ProfilePage {
     });
 
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();

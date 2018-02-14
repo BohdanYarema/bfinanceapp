@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/fo
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { HomePage } from '../home/home';
+import { InjectableProvider } from '../../providers/injectable/injectable';
 
 @Component({
   selector: 'page-register',
@@ -25,6 +26,7 @@ export class RegisterPage {
     public loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     public formBuilder: FormBuilder,
+    public injectableProvider: InjectableProvider
   ) {
     // formbuilder for form
     this.singupGroup = formBuilder.group({
@@ -79,7 +81,7 @@ export class RegisterPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Sending data...'
+        content: this.injectableProvider.searching
     });
 
     this.loading.present();
@@ -94,7 +96,7 @@ export class RegisterPage {
     });
 
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();

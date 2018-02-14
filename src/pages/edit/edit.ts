@@ -5,6 +5,8 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import { ProfilePage } from '../profile/profile';
 import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/forms';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { InjectableProvider } from '../../providers/injectable/injectable';
+import { TranslateService } from '@ngx-translate/core';
 
 /**
  * Generated class for the EditPage page.
@@ -40,6 +42,8 @@ export class EditPage {
     public authService: AuthServiceProvider,
     private transfer: FileTransfer,
     public formBuilder: FormBuilder,
+    public injectableProvider: InjectableProvider,
+    public translateService:TranslateService
   ) {
     this.profile_info = JSON.parse(localStorage.getItem('profile'));
 
@@ -81,6 +85,11 @@ export class EditPage {
 
   }
 
+  changeLanguage(langauge) {
+    this.translateService.use(langauge);
+    localStorage.setItem('language', langauge);
+  }
+
   doEdit(data) {
 
     this.showLoader();
@@ -120,7 +129,7 @@ export class EditPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({
-        content: 'Authenticating...'
+        content: this.injectableProvider.autentificating
     });
 
     this.loading.present();
@@ -134,7 +143,7 @@ export class EditPage {
     });
 
     toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
+      console.log(this.injectableProvider.dismissed);
     });
 
     toast.present();
@@ -142,7 +151,7 @@ export class EditPage {
 
   uploadFile() {
     let loader = this.loadingCtrl.create({
-      content: "Uploading..."
+      content: this.injectableProvider.uploading
     });
     //loader.present();
     const fileTransfer: FileTransferObject = this.transfer.create();
@@ -168,7 +177,7 @@ export class EditPage {
         this.profile.avatar = this.response.image;
         localStorage.setItem('profile', JSON.stringify(this.profile));
         loader.dismiss();
-        this.presentToast("Image uploaded successfully");
+        this.presentToast(this.injectableProvider.image_upload_success);
 
         this.navCtrl.push(ProfilePage);
     }, (err) => {
