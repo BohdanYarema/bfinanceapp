@@ -38,7 +38,9 @@ page-profile {
       height: 2.34375rem;
       width: 2.34375rem;
       background-image: url(../assets/img/menu_img.png);
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
+      padding: 0;
     }
 
     .page__logout{
@@ -50,7 +52,8 @@ page-profile {
       height: 2.34375rem;
       width: 2.34375rem;
       background-image: url(../assets/img/logout_img.png);
-      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat 
     }
 
     .page__add{
@@ -173,11 +176,11 @@ page-profile {
     }
 
     .page__stats-item--title {
-        font-size: 3.125rem;
+        font-size: 2.125rem;
     }
 
     .page__stats-item--description {
-        font-size: 1.375 rem;
+        font-size: 1.2 rem;
         opacity: 0.5;
         text-transform: uppercase;
         margin-bottom: 1.40625rem;

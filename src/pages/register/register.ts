@@ -3,7 +3,9 @@ import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/fo
 import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { HomePage } from '../home/home';
+import { LoginPage } from '../login/login';
 import { InjectableProvider } from '../../providers/injectable/injectable';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'page-register',
@@ -26,7 +28,8 @@ export class RegisterPage {
     public loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     public formBuilder: FormBuilder,
-    public injectableProvider: InjectableProvider
+    public injectableProvider: InjectableProvider,
+    public translateService:TranslateService
   ) {
     // formbuilder for form
     this.singupGroup = formBuilder.group({
@@ -49,6 +52,10 @@ export class RegisterPage {
     this.username   = this.singupGroup.controls['username'];
     this.email      = this.singupGroup.controls['email'];
     this.password   = this.singupGroup.controls['password'];
+  }
+
+  login() {
+    this.navCtrl.push(LoginPage);
   }
 
 
@@ -75,7 +82,9 @@ export class RegisterPage {
       this.navCtrl.setRoot(HomePage);
     }, (err) => {
       this.loading.dismiss();
-      this.presentToast(err);
+      this.translateService.get('DATA_ALREADY_TAKEN').subscribe((res: string) => {
+        this.presentToast(res);
+      });
     });
   }
 

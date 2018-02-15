@@ -5,6 +5,8 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { InjectableProvider } from '../../providers/injectable/injectable';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'page-login',
@@ -25,7 +27,8 @@ export class LoginPage {
     public loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     public formBuilder: FormBuilder,
-    public injectableProvider: InjectableProvider
+    public injectableProvider: InjectableProvider,
+    public translateService:TranslateService
   ) {
     // formbuilder for form
     this.loginGroup = formBuilder.group({
@@ -60,7 +63,10 @@ export class LoginPage {
       this.navCtrl.setRoot(HomePage);
     }, (err) => {
       this.loading.dismiss();
-      this.presentToast('');
+      
+      this.translateService.get('WRONG_CREDENTIALS').subscribe((res: string) => {
+        this.presentToast(res);
+      });
     });
 
 

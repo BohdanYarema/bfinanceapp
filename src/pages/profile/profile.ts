@@ -25,6 +25,9 @@ export class ProfilePage {
   items   = [];
   data    : any;
   stats   : any;
+  summary : any;
+  count   : any;
+  avg     : any;
 
 
   constructor(
@@ -42,8 +45,10 @@ export class ProfilePage {
 
   ionViewDidLoad() {
     this.authService.stats().then((result) => {
-      this.stats = result;
-      console.log(result);
+      this.stats = JSON.parse(JSON.stringify(result));
+      this.summary  = Math.round(this.stats.summary.summary * 100) / 100;
+      this.count    = this.stats.count.count;
+      this.avg      = Math.round(this.stats.avg.avg * 100) / 100;
     }, (err) => {
     });
 

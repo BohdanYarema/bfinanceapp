@@ -48,6 +48,7 @@ export class ListPage {
         ]);
       }
 
+      this.items.reverse();
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();

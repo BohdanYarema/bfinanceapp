@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { InjectableProvider } from '../../providers/injectable/injectable';
+import { TranslateService } from '@ngx-translate/core';
 import {
   GoogleMap,
  } from '@ionic-native/google-maps';
@@ -22,7 +23,8 @@ export class AccountingPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
-    public injectableProvider: InjectableProvider
+    public injectableProvider: InjectableProvider,
+    public translateService:TranslateService
   ) {
     this.item = navParams.data.item;
 
@@ -30,12 +32,15 @@ export class AccountingPage {
     
     var curr_date   = date.getDate();
     var curr_month  = date.getMonth();
-    //var curr_year   = date.getFullYear();
+    var curr_year   = date.getFullYear();
     
     //var result = (curr_date + "-" + curr_month + "-" + curr_year);
 
-    this.item.dates = curr_date;
-    this.item.mounth = this.monthNames[curr_month];
+    this.item.dates   = curr_date;
+    this.item.year    = curr_year;
+    this.translateService.get(this.monthNames[curr_month].toUpperCase()).subscribe((res: string) => {
+      this.item.mounth = res;
+    });
   }
 
   ionViewDidLoad() {

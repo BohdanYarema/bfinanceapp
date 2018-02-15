@@ -20,5 +20,8 @@
         <input class="register__form__elements--input" formControlName="password" name="password" type="password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}">
     </div>
     <button class="register__form__elements" id="register-button1" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">{{ 'SIGN_UP' | translate }}</button>
+    <div class="login__form__list" style="text-align:center;">
+        <div class="register__form__elements--simple register__form__elements" id="register-button2" (click)="login()">{{ 'LOGIN' | translate }}</div>
+    </div>
   </form>
 </div>
