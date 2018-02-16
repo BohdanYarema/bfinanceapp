@@ -29,10 +29,16 @@
                 <input class="page__form__elements" formControlName="middlename" name="middlename" type="text">
             </div>
             <div class="page__form__group">
-                <label>{{ 'GENDER' | translate }} ({{this.profile_info.gender}})</label>
-                <input class="page__form__elements" formControlName="gender" name="gender" type="text">
+                <label>{{ 'GENDER' | translate }} ({{this.gender_[this.profile_info.gender]}})</label><br>
+                <label for="man">{{this.gender_[1]}}
+                    <input type="radio" id="man" formControlName="gender" name="gender" value="1"> 
+                </label>
+                <label for="woman">{{this.gender_[2]}}
+                    <input type="radio" id="woman" formControlName="gender" name="gender" value="2"> 
+                </label>
             </div>
-        
+            <br>
+
             <p class="page__form__elements lang" (click)="changeLanguage('en')">
                 {{ 'TO_ENGLISH' | translate }}
             </p>

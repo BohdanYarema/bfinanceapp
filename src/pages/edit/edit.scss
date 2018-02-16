@@ -8,6 +8,7 @@ page-edit {
       color: #ffffff;
       margin-bottom: 0;
       height: 6.25rem;
+      padding-top: 1.5rem
     }
     
     .page{
@@ -192,8 +193,6 @@ page-edit {
     }
     
     .page__form__elements{
-        display: block;
-        width: 100%;
         text-align: center; 
         outline: none;
         border: none;
@@ -208,7 +207,7 @@ page-edit {
         font-size: 1.4375rem;
         opacity: 0.5;
         text-transform: capitalize;
-        margin-top: 1.5rem;
+        margin: 1.5rem 1rem 0 1rem;
         display: inline-block;
         padding-bottom: 0.75rem;
     }

@@ -27,6 +27,7 @@ export class EditPage {
   profile_info: any;
   response: any;
   loading : any;
+  gender_ = {1: '', 2: ''};
 
   editGroup   : FormGroup;
   firstname   : AbstractControl;
@@ -45,6 +46,12 @@ export class EditPage {
     public injectableProvider: InjectableProvider,
     public translateService:TranslateService
   ) {
+    this.translateService.get('MAN').subscribe((res: string) => {
+      this.gender_[1] = res;
+    })
+    this.translateService.get('WOMAN').subscribe((res: string) => {
+      this.gender_[2] = res;
+    })
     this.profile_info = JSON.parse(localStorage.getItem('profile'));    
     // formbuilder for form
     this.editGroup = formBuilder.group({

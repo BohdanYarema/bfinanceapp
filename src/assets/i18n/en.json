@@ -58,5 +58,7 @@
   "YEAR"                  : "Year",
   "MONTH"                 : "Month",
   "NAME"                  : "Name",
-  "DATE"                  : "Date"
+  "DATE"                  : "Date",
+  "MAN"                   : "Man",
+  "WOMAN"                 : "Woman"
 }
