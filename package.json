@@ -44,6 +44,7 @@
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-file": "^4.3.3",
     "cordova-plugin-file-transfer": "^1.7.0",
+    "cordova-plugin-filepath": "^1.2.0",
     "cordova-plugin-geolocation": "^2.4.3",
     "cordova-plugin-googlemaps": "^2.1.1",
     "cordova-plugin-ionic-webview": "^1.1.16",
@@ -82,7 +83,8 @@
       "cordova-plugin-camera": {},
       "cordova-plugin-file-transfer": {},
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-calendar": {}
+      "cordova-plugin-calendar": {},
+      "cordova-plugin-filepath": {}
     },
     "platforms": [
       "browser",
