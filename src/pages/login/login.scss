@@ -1,96 +1,33 @@
 page-login {
   overflow: scroll;
 
-  #login-button1{
-    background-color: #FF3366;
-    width: 100%;
-    margin-top:5.46rem !important; 
-    font-size: 1.375rem;
-    color: #ffffff;
-    margin-bottom: 0;
+  .auth {
+    padding-top: 25%;
   }
 
-  .login{
-    height: 100%;
-  }
-
-  .login__image{
-    height: 24.375rem;
-    width: 100%;
-  }
-
-  .login__bg{
-    position: relative;
-  }
-
-  .login__icon{
-    height: 9.375rem;
-    width: 9.375rem;
-    position: absolute;
-    bottom: -1.40625rem;
-    left: 50%;
-    margin-left: -4.6875rem;
-  }
-
-  .login__form{
-    margin-top: 4rem;
+  .authForm{
+    margin: 0 calculateRem(30px);
+    padding: 0 calculateRem(20px);
+    background: #ffffff;
+    height: calculateRem(320px);
     text-align: center;
-    width: 100%;
-    padding: 0 2.375rem;
+    border-radius: calculateRem(6px);    
   }
 
-  .login__form__elements{
-    height: 6.25rem;
-    font-family: Avenir;
-    margin-bottom: 1.875rem;
-    border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
-  }
-
-  .login__form__elements--label{
+  .authFormGroup__title{
+    @include fonts(24px, #343941, normal, 600);
     display: block;
-    color: #1D1D26;
-    font-size: 1.5rem;
-    opacity: 0.5;
-    width: 100%;
-    margin-bottom: 1rem;
+    padding: calculateRem(20px) 0 calculateRem(40px) 0;
   }
 
-  .login__form__elements--input{
-    display: block;
-    width: 100%;
-    text-align: center; 
-    outline: none;
-    border: none;
-  }
-
-  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: #1D1D26;
-    font-size: 1.75rem;
-  }
-
-  .login__form__list {
-    width: 100%;
-  }
-
-  .login__form__elements--simple {
-    margin: 1rem 0 0 0;
+  .authFormGroup__input{
+    @include fonts(14px, #9fa7b3, normal, 400);
     display: inline-block;
-    height: 1.25 rem !important;
+    height: calculateRem(40px);
+    box-shadow: 0 calculateRem(1px) 0 0 #dde6f0;
+    padding: 0 calculateRem(30px) 0 calculateRem(30px);
+    width: 100%;
     border: none;
-    text-transform: uppercase;
+    border-bottom: 1px solid #dde6f0;
   }
-  
-  #login-button2{
-    text-align: left;
-    color: #1D1D26;
-    opacity: 0.5;
-    font-family: 1.25rem;
-  }
-
-  #login-button3{
-    text-align: right;
-    color: #FF3366;
-    font-family: 1.25rem;
-  }
-
 }
