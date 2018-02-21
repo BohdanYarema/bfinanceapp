@@ -46,18 +46,13 @@ page-home {
     }
 
     .homeBodyCategory{
-      width:100vw; 
-      min-height:110px;
+      width:100vw;
 
       .homeBodyCategory__item{
         background-color: #ffffff;
         border-radius: 6px;
         display: inline;
         margin-right: 10px;
-      }
-
-      .homeBodyCategory__image{
-        
       }
     }
   }

@@ -11,17 +11,10 @@
 
 <div class="homeBody">
   <p class="homeBody__title">Send money to</p>
-  <ion-scroll scrollX="true" >
-        <div style="display:inline;" *ngFor="let item of data" (click)="itemSelected(item)" class="homeBodyCategory__item">
-            <img src="{{item.thumbnail}}">
-        </div>
-  </ion-scroll>
-  
-
   <ion-scroll scrollX="true" class="homeBodyCategory">
     <ion-row nowrap>
       <div *ngFor="let item of data;" class="homeBodyCategory__item">
-          <img class="homeBodyCategory__image" src="{{item.thumbnail}}">
+          <div class="homeBodyCategory__image" style="background-image: url({{item.thumbnail}})"></div>
       </div>
     </ion-row>
   </ion-scroll>
