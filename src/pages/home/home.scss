@@ -41,6 +41,7 @@ page-home {
 
   .homeBody {
     padding: 10px;
+    padding-bottom: 40px;
     .homeBody__title{
       @include fonts(14px, #9fa7b3, normal, 600);
     }
@@ -91,7 +92,7 @@ page-home {
         }
         .homeBodyLastItemGroup{
           height: 100%;
-          width: 40%;
+          width: 38%;
           display: inline-block;
           padding-left: 10px;
           vertical-align: top;
@@ -126,7 +127,6 @@ page-home {
 
     .homeBodyMore{
       width: 100%;
-      margin-bottom: 10px;
       height: 50px;
       border-radius: 6px;
       background-color: #ffffff;
