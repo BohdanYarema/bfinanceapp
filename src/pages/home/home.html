@@ -1,27 +1,29 @@
-<div class="page" [class.enableMenu] = "ApplyClass">
-  <div class="page__bg">
-      <div>
-        <img class="page__image" src="assets/img/list_bg.png">
-      </div>
-    <button class="page__menu" menuToggle left></button>
-    <div class="page__info">
-        <div class="page__info__text">
-            <p class="page__info__text--title">{{ 'CATEGORIES_NAME' | translate }}</p>
-        </div>
-    </div>
-  </div>
-  <div class="page__list">
-    
-      <div *ngFor="let item of data" (click)="itemSelected(item)">
-        <div class="page__list__item">
-          <div class="page__list__image">
+<!-- menuToggle -->
+<!-- {{ 'CATEGORIES_NAME' | translate }} -->
+<!-- <p>{{item.count}}</p> -->
+
+<div class="homeHeader">
+  <span class="homeHeader__small homeHeader__small--left"><img src="assets/img/user_icon_white.png"></span>
+  <span class="homeHeader__small homeHeader__small--middle">Salary account</span>
+  <span class="homeHeader__small homeHeader__small--right"><img src="assets/img/user_icon_white.png"></span>
+  <span class="homeHeader__big">10 234,12</span>
+</div>
+
+<div class="homeBody">
+  <p class="homeBody__title">Send money to</p>
+  <ion-scroll scrollX="true" >
+        <div style="display:inline;" *ngFor="let item of data" (click)="itemSelected(item)" class="homeBodyCategory__item">
             <img src="{{item.thumbnail}}">
-            <div class="page__list__image--notify">
-              <p>{{item.count}}</p>
-            </div>
-          </div>
-          <div class="page__list__image--diagonal"></div>
         </div>
+  </ion-scroll>
+  
+
+  <ion-scroll scrollX="true" class="homeBodyCategory">
+    <ion-row nowrap>
+      <div *ngFor="let item of data;" class="homeBodyCategory__item">
+          <img class="homeBodyCategory__image" src="{{item.thumbnail}}">
       </div>
-  </div>
+    </ion-row>
+  </ion-scroll>
+  <p class="homeBody__title">Last transations</p>
 </div>

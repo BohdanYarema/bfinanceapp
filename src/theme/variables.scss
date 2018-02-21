@@ -8,16 +8,9 @@ $app-direction: ltr;
     src: url(../assets/fonts/Monaco.ttf);
 }
 
-// Function for converting a px based font-size to rem.
-@function calculateRem($size) {
-    $remSize: $size / 16px;
-    //Default font size on html element is 100%, equivalent to 16px;
-    @return #{$remSize}rem;
-}
-
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin fonts($size, $color, $line_height, $weight) {
-    font-size   : calculateRem($size);
+    font-size   : $size;
     line-height : $line_height;
     color       : $color;
     font-family : Monaco;

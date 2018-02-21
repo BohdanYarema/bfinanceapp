@@ -4,16 +4,15 @@
       <p class="authFormGroup__title">{{ 'LOG_IN' | translate }}</p>
     </div>
     <div class="authFormGroup">
+        <img src="assets/img/user_icon.png" class="authFormGroup__image">
         <input class="authFormGroup__input" formControlName="username" name="username" type="text" placeholder="{{ 'USERNAME_PLACEHOLDER' | translate }}">
     </div>
     <div class="authFormGroup">
+        <img src="assets/img/password_icon.png" class="authFormGroup__image">
         <input class="authFormGroup__input" formControlName="password" name="password" type="password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}">
     </div>
     <div class="authFormGroup">
       <button class="authFormGroup__button" type="submit" [disabled]="!loginGroup.valid">{{ 'LOG_IN' | translate }}</button>
-    </div>
-    <div class="authFormGroup">
-      <div class="authFormGroup__link" (click)="register()">{{ 'SIGN_IN' | translate }}</div>
     </div>
   </form>
 </div>

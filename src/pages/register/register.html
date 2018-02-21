@@ -1,27 +1,22 @@
-<div class="register">
-  <div class="register__bg">
-      <div>
-        <img class="register__image" src="assets/img/login.png">
-      </div>
-    <img class="register__icon" src="assets/img/mark.png">
-  </div>
-  
-  <form class="register__form" [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">
-    <div class="register__form__elements">
-        <label class="register__form__elements--label">{{ 'USERNAME' | translate }}</label>
-        <input class="register__form__elements--input" formControlName="username" name="username" type="text" placeholder="{{ 'USERNAME_PLACEHOLDER' | translate }}">
-    </div>
-    <div class="register__form__elements">
-        <label class="register__form__elements--label">{{ 'EMAIL' | translate }}</label>
-        <input class="register__form__elements--input" formControlName="email" name="email" type="text" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}">
-    </div>
-    <div class="register__form__elements">
-        <label class="register__form__elements--label">{{ 'PASSWORD' | translate }}</label>
-        <input class="register__form__elements--input" formControlName="password" name="password" type="password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}">
-    </div>
-    <button class="register__form__elements" id="register-button1" ion-button color="stable" block type="submit" [disabled]="!singupGroup.valid">{{ 'SIGN_UP' | translate }}</button>
-    <div class="login__form__list" style="text-align:center;">
-        <div class="register__form__elements--simple register__form__elements" id="register-button2" (click)="login()">{{ 'LOGIN' | translate }}</div>
-    </div>
-  </form>
+<div class="auth">
+    <form class="authForm" [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">
+        <div class="authFormGroup">
+            <p class="authFormGroup__title">{{ 'SIGN_UP' | translate }}</p>
+        </div>
+        <div class="authFormGroup">
+            <img src="assets/img/user_icon.png" class="authFormGroup__image">
+            <input class="authFormGroup__input" formControlName="username" name="username" type="text" placeholder="{{ 'USERNAME_PLACEHOLDER' | translate }}">
+        </div>
+        <div class="authFormGroup">
+            <img src="assets/img/user_icon.png" class="authFormGroup__image">
+            <input class="authFormGroup__input" formControlName="email" name="email" type="text" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}">
+        </div>
+        <div class="authFormGroup">
+            <img src="assets/img/password_icon.png" class="authFormGroup__image">
+            <input class="authFormGroup__input" formControlName="password" name="password" type="password" placeholder="{{ 'PASSWORD_PLACEHOLDER' | translate }}">
+        </div>
+        <div class="authFormGroup">
+            <button class="authFormGroup__button" type="submit" [disabled]="!singupGroup.valid">{{ 'SIGN_UP' | translate }}</button>
+        </div>
+    </form>
 </div>

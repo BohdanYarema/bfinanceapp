@@ -5,6 +5,7 @@ import { Platform, Nav, LoadingController, App, ToastController } from 'ionic-an
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 import { ProfilePage } from '../pages/profile/profile';
 import { MapPage } from '../pages/map/map';
 import { EditPage } from '../pages/edit/edit';
