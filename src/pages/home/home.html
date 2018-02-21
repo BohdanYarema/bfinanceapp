@@ -13,10 +13,35 @@
   <p class="homeBody__title">Send money to</p>
   <ion-scroll scrollX="true" class="homeBodyCategory">
     <ion-row nowrap>
-      <div *ngFor="let item of data;" class="homeBodyCategory__item">
-          <div class="homeBodyCategory__image" style="background-image: url({{item.thumbnail}})"></div>
+      <div *ngFor="let item of data;" class="homeBodyCategoryItem">
+          <div class="homeBodyCategoryItemInfo">
+            <img class="homeBodyCategoryItemInfo__image" src="{{item.thumbnail}}">
+            <p class="homeBodyCategoryItemInfo__text">{{item.name}}</p>
+          </div>
       </div>
     </ion-row>
   </ion-scroll>
   <p class="homeBody__title">Last transations</p>
+  <div class="homeBodyLast">
+    <div *ngFor="let item of data;" class="homeBodyLastItem">
+      <img class="homeBodyLastItem__image" src="{{item.thumbnail}}">
+      <div class="homeBodyLastItemGroup">
+        <p class="homeBodyLastItemGroup__name">{{item.name}}</p>
+        <p class="homeBodyLastItemGroup__date">{{item.name}}</p>
+      </div>
+      <p class="homeBodyLastItem__price">{{item.name}}</p>
+      <p class="homeBodyLastItem__arrow">></p>
+    </div>
+  </div>
+  <div class="homeBodyMore">
+    <p class="homeBodyMore__text">{{ 'MORE' | translate }}</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p class="footer__link"></p>
+  <p class="footer__link"></p>
+  <p class="footer__link footer__link--middle"></p>
+  <p class="footer__link"></p>
+  <p class="footer__link"></p>
 </div>

@@ -62,8 +62,10 @@ export class LoginPage {
 
       this.navCtrl.setRoot(HomePage);
     }, (err) => {
-      this.loading.dismiss();
-      
+
+      console.log(err);
+
+      this.loading.dismiss();    
       this.translateService.get('WRONG_CREDENTIALS').subscribe((res: string) => {
         this.presentToast(res);
       });

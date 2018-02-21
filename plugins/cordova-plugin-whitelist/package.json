@@ -50,7 +50,7 @@
     "/"
   ],
   "_resolved": "git+https://github.com/apache/cordova-plugin-whitelist.git#aed9b33e69da6a444b3dbb82a61dd0a371c1699b",
-  "_shasum": "6c78413281a446d3d78c21668a1be2c7218db0ff",
+  "_shasum": "e8198025f54e2cd4643d652a878a129380676752",
   "_shrinkwrap": null,
   "_spec": "https://github.com/apache/cordova-plugin-whitelist.git",
   "_where": "/Users/bohdan/bfinanceapp",

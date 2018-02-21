@@ -28,3 +28,21 @@ p, span, h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
 }
+
+.footer{
+    height: 55px;
+    width: 100%;
+    background-color: #ffffff;
+    
+    .footer__link{
+        box-sizing: border-box;
+        width: 19%;
+        height: 55px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .footer__link--middle{
+        
+    }
+}
