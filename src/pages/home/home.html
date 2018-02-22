@@ -2,48 +2,53 @@
 <!-- {{ 'CATEGORIES_NAME' | translate }} -->
 <!-- <p>{{item.count}}</p> -->
 
-<div class="homeHeader">
-  <span class="homeHeader__small homeHeader__small--left"><img src="assets/img/user_icon_white.png"></span>
-  <span class="homeHeader__small homeHeader__small--middle">Salary account</span>
-  <span class="homeHeader__small homeHeader__small--right"><img src="assets/img/user_icon_white.png"></span>
-  <span class="homeHeader__big">10 234,12</span>
-</div>
-
-<div class="homeBody">
-  <p class="homeBody__title">Send money to</p>
-  <ion-scroll scrollX="true" class="homeBodyCategory">
-    <ion-row nowrap>
-      <div *ngFor="let item of data;" class="homeBodyCategoryItem">
-          <div class="homeBodyCategoryItemInfo">
-            <img class="homeBodyCategoryItemInfo__image" src="{{item.thumbnail}}">
-            <p class="homeBodyCategoryItemInfo__text">{{item.name}}</p>
+<div class="pageBody">
+  <div class="homeHeader">
+    <span class="homeHeader__small homeHeader__small--left"><img src="assets/img/user_icon_white.png"></span>
+    <span class="homeHeader__small homeHeader__small--middle">Salary account</span>
+    <span class="homeHeader__small homeHeader__small--right"><img src="assets/img/user_icon_white.png"></span>
+    <span class="homeHeader__big">10 234,12</span>
+  </div>
+  <div class="Category">
+      <p class="CategoryTitle">Send money to</p>
+      <ion-scroll scrollX="true" class="CategoryWrapper">
+        <ion-row nowrap>
+          <div *ngFor="let item of data;" class="CategoryWrapperItem">
+              <div class="CategoryWrapperItemInfo">
+                <img class="CategoryWrapperItemInfo__image" src="{{item.thumbnail}}">
+                <p class="CategoryWrapperItemInfo__text">{{item.name}}</p>
+              </div>
           </div>
+        </ion-row>
+      </ion-scroll>
+  </div>
+  <div class="homeBody">
+    <p class="homeBody__title">Last transations</p>
+    <div class="homeBodyLast">
+        
+      <div *ngFor="let item of last" class="homeBodyLastItem">
+          <img class="homeBodyLastItem__image" src="{{item.thumbnail}}">
+          <div class="homeBodyLastItemGroup">
+            <p class="homeBodyLastItemGroup__name">{{ item.name }}</p>
+            <p class="homeBodyLastItemGroup__date">{{ item.dates }}</p>
+          </div>
+          <p class="homeBodyLastItem__price">{{ item.price }} {{ 'CURRENCY' | translate }}</p>
+          <p class="homeBodyLastItem__arrow">></p>
       </div>
-    </ion-row>
-  </ion-scroll>
-  <p class="homeBody__title">Last transations</p>
-  <div class="homeBodyLast">
-    <div *ngFor="let item of data;" class="homeBodyLastItem">
-      <img class="homeBodyLastItem__image" src="{{item.thumbnail}}">
-      <div class="homeBodyLastItemGroup">
-        <p class="homeBodyLastItemGroup__name">{{item.name}}</p>
-        <p class="homeBodyLastItemGroup__date">{{item.name}}</p>
-      </div>
-      <p class="homeBodyLastItem__price">{{item.name}}</p>
-      <p class="homeBodyLastItem__arrow">></p>
+      
+    </div>
+    <div class="homeBodyMore">
+      <p class="homeBodyMore__text">{{ 'MORE' | translate }}</p>
     </div>
   </div>
-  <div class="homeBodyMore">
-    <p class="homeBodyMore__text">{{ 'MORE' | translate }}</p>
+  
+  <div class="footer">
+    <p class="footer__link footer__link--home"></p>
+    <p class="footer__link footer__link--explore"></p>
+    <p class="footer__link footer__link--middle">
+      <img class="footer__link--image" src="assets/img/add.png">
+    </p>
+    <p class="footer__link footer__link--notification"></p>
+    <p class="footer__link footer__link--profile"></p>
   </div>
-</div>
-
-<div class="footer">
-  <p class="footer__link footer__link--home"></p>
-  <p class="footer__link footer__link--explore"></p>
-  <p class="footer__link footer__link--middle">
-    <img class="footer__link--image" src="assets/img/add.png">
-  </p>
-  <p class="footer__link footer__link--notification"></p>
-  <p class="footer__link footer__link--profile"></p>
 </div>

@@ -60,5 +60,6 @@
   "NAME"                  : "Name",
   "DATE"                  : "Date",
   "MAN"                   : "Man",
-  "WOMAN"                 : "Woman"
+  "WOMAN"                 : "Woman",
+  "MORE"                  : "More"
 }

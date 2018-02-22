@@ -15,6 +15,8 @@ export class HomePage {
   loading   : any;
   data      : any;
   translate : any;
+  items   = [];
+  last      : any;
 
   constructor(
     public navCtrl: NavController, 
@@ -25,7 +27,9 @@ export class HomePage {
     public injectableProvider: InjectableProvider,
     public translateService:TranslateService
   ) {
+    
   }
+  
 
   logout() {
     localStorage.clear();
@@ -38,12 +42,18 @@ export class HomePage {
 
   ionViewDidLoad() {
     this.showLoader();
+
     this.authService.category().then((result) => {
       this.data = result;
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();
       this.presentToast(err);
+    });
+
+    this.authService.accounting_last().then((result) => {
+      this.last = result
+    }, (err) => {
     });
   }
 

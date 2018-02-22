@@ -29,7 +29,14 @@ p, span, h1, h2, h3, h4, h5, h6 {
     height: 100%;
 }
 
+.pageBody{
+    overflow: scroll;
+    height: 100%;
+}
+
 .footer{
+    position: fixed;
+    bottom: 0;
     height: 55px;
     width: 100%;
     background-color: #ffffff;
