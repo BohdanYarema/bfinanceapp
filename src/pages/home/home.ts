@@ -4,6 +4,7 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController, App } from 'ionic-angular';
 import { ListPage } from '../list/list';
 import { LoginPage } from '../login/login';
+import { AccountingPage } from '../accounting/accounting';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -77,6 +78,12 @@ export class HomePage {
 
   itemSelected(item: string) {
     this.navCtrl.push(ListPage, {
+      item : item
+    });
+  }
+
+  accSelected(item: string) {
+    this.navCtrl.push(AccountingPage, {
       item : item
     });
   }

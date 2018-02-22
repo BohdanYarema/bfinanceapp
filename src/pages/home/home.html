@@ -4,7 +4,7 @@
 
 <div class="pageBody">
   <div class="homeHeader">
-    <span class="homeHeader__small homeHeader__small--left"><img src="assets/img/user_icon_white.png"></span>
+    <span class="homeHeader__small homeHeader__small--left" menuToggle><img src="assets/img/user_icon_white.png"></span>
     <span class="homeHeader__small homeHeader__small--middle">Salary account</span>
     <span class="homeHeader__small homeHeader__small--right"><img src="assets/img/user_icon_white.png"></span>
     <span class="homeHeader__big">10 234,12</span>
@@ -13,7 +13,7 @@
       <p class="CategoryTitle">Send money to</p>
       <ion-scroll scrollX="true" class="CategoryWrapper">
         <ion-row nowrap>
-          <div *ngFor="let item of data;" class="CategoryWrapperItem">
+          <div *ngFor="let item of data;" class="CategoryWrapperItem" (click)="itemSelected(item)">
               <div class="CategoryWrapperItemInfo">
                 <img class="CategoryWrapperItemInfo__image" src="{{item.thumbnail}}">
                 <p class="CategoryWrapperItemInfo__text">{{item.name}}</p>
@@ -26,7 +26,7 @@
     <p class="homeBody__title">Last transations</p>
     <div class="homeBodyLast">
         
-      <div *ngFor="let item of last" class="homeBodyLastItem">
+      <div *ngFor="let item of last" class="homeBodyLastItem" (click)="accSelected(item)">
           <img class="homeBodyLastItem__image" src="{{item.thumbnail}}">
           <div class="homeBodyLastItemGroup">
             <p class="homeBodyLastItemGroup__name">{{ item.name }}</p>

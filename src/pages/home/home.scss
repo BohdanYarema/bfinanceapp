@@ -105,6 +105,7 @@ page-home {
       border-radius: 6px;
       background-color: #ffffff;
       text-align: center;
+      margin-bottom: 75px;
 
       .homeBodyMore__text{
         @include fonts(14px, #353a41, normal, 600);

@@ -1,14 +1,21 @@
-<ion-menu class="custom" [content]="content">
-  <div class="menu-inner--links">
+<ion-menu class="menu" [content]="content">
+  <div class="profile">
+    <span><img src="assets/img/Bitmap.png"></span>
+    <span>
+      <p>Yarema Bogdan</p>
+      <p>Wasted - 200000</p>
+    </span>
+  </div>
+  <div class="links">
       <button menuToggle (click)="gotoHome()">{{ 'LINK_HOME' | translate }}</button>
       <button menuToggle (click)="gotoProfile()">{{ 'LINK_PROFILE' | translate }}</button>
       <button menuToggle (click)="gotoMap()">{{ 'LINK_MAP' | translate }}</button>
       <button menuToggle (click)="gotoTimeline()">{{ 'LINK_TIMELINE' | translate }}</button>
+      <button menuToggle (click)="gotoEdit()">{{ 'LINK_SETTINGS' | translate }}</button>
+      <button menuToggle (click)="logout()">{{ 'LINK_LOG_OUT' | translate }}</button>
   </div>
-  <button menuToggle class="toogle_button"><img src="assets/img/close_img.png"></button>
-  <div class="footer_button">
-    <button style="text-align:left;" menuToggle (click)="gotoEdit()">{{ 'LINK_SETTINGS' | translate }}</button>
-    <button style="text-align:right;" menuToggle (click)="logout()">{{ 'LINK_LOG_OUT' | translate }}</button>
-  </div>
+  <button menuToggle class="menuClose">
+    <img src="assets/img/close_img.png">
+  </button>
 </ion-menu>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
