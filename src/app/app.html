@@ -1,21 +1,26 @@
 <ion-menu class="menu" [content]="content">
   <div class="profile">
-    <span><img src="assets/img/Bitmap.png"></span>
-    <span>
-      <p>Yarema Bogdan</p>
-      <p>Wasted - 200000</p>
-    </span>
+    <div class="profile__img" style="background-image:url('../assets/img/Bitmap.png');"></div>
+    <div class="profileText">
+      <p class="profileText__name">Yarema Bogdan</p>
+      <p class="profileText__info">Wasted - 200000</p>
+    </div>
   </div>
   <div class="links">
-      <button menuToggle (click)="gotoHome()">{{ 'LINK_HOME' | translate }}</button>
-      <button menuToggle (click)="gotoProfile()">{{ 'LINK_PROFILE' | translate }}</button>
-      <button menuToggle (click)="gotoMap()">{{ 'LINK_MAP' | translate }}</button>
-      <button menuToggle (click)="gotoTimeline()">{{ 'LINK_TIMELINE' | translate }}</button>
-      <button menuToggle (click)="gotoEdit()">{{ 'LINK_SETTINGS' | translate }}</button>
-      <button menuToggle (click)="logout()">{{ 'LINK_LOG_OUT' | translate }}</button>
+      <button class="linksButton" menuToggle (click)="gotoHome()"> 
+        <img class="linksButton_img" src="assets/img/menu.png"> 
+        <span class="linksButton_text"> {{ 'LINK_HOME' | translate }}</span>
+      </button>
+      <button class="linksButton" menuToggle (click)="gotoProfile()"> 
+        <img class="linksButton_img" src="assets/img/menu.png"> 
+        <span class="linksButton_text"> {{ 'LINK_PROFILE' | translate }}</span>
+      </button>
   </div>
-  <button menuToggle class="menuClose">
-    <img src="assets/img/close_img.png">
-  </button>
 </ion-menu>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+
+<!-- <button class="linksButton" menuToggle (click)="gotoProfile()"> <img src="assets/img/menu.png">  {{ 'LINK_PROFILE' | translate }}</button>
+<button class="linksButton" menuToggle (click)="gotoMap()"> <img src="assets/img/menu.png">  {{ 'LINK_MAP' | translate }}</button>
+<button class="linksButton" menuToggle (click)="gotoTimeline()"> <img src="assets/img/menu.png">  {{ 'LINK_TIMELINE' | translate }}</button>
+<button class="linksButton" menuToggle (click)="gotoEdit()"> <img src="assets/img/menu.png">  {{ 'LINK_SETTINGS' | translate }}</button>
+<button class="linksButton" menuToggle (click)="logout()"> <img src="assets/img/menu.png"> {{ 'LINK_LOG_OUT' | translate }}</button> -->

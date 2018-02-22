@@ -3,4 +3,55 @@
 }
 .menu-inner{
     background-image: linear-gradient(43deg, #485563, #29323c) !important;
+    .profile {
+        padding-left: 20px;
+        padding-top: 70px;
+    }
+
+    .profile__img {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        vertical-align: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50px;
+    }
+    .profileText {
+        display: inline-block;
+        width: 170px;
+        vertical-align: top;
+        padding-left: 20px;
+    }
+
+    .profileText__name {
+        @include fonts(16px, #FFFFFF, normal, 600);
+        padding-top: 10px;
+    }
+
+    .profileText__info {
+        padding-top: 10px;
+        @include fonts(12px, #FFFFFF, normal, 600);
+    }
+
+    .links {
+        padding-top: 70px;
+        padding-left: 40px;
+        .linksButton{
+            background: transparent;
+            border: none;
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 40px;
+            .linksButton_img{
+
+            }
+            .linksButton_text{
+                @include fonts(14px, #FFFFFF, normal, 600);
+                vertical-align: top;
+                margin-left: 15px;
+            }
+        }
+    }
 }
