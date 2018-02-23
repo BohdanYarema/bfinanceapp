@@ -1,42 +1,41 @@
-<div class="page">
-    <div class="page__bg">
-        <button class="page__add" (click)="goForm(item)"><img src="assets/img/add.png"></button>
-        <div>
-          <img class="page__image" src="assets/img/list_bg.png">
-        </div>
-      <button class="page__menu" menuToggle left></button>
-      <div class="page__info">
-          <div class="page__info__text">
-              <p class="page__info__text--title">{{item.name}}</p>
+<div class="pageBody">
+  <div class="Header">
+    <span class="Header__small Header__small--left" menuToggle><img src="assets/img/user_icon_white.png"></span>
+    <span class="Header__small Header__small--middle">Salary account</span>
+    <span class="Header__small Header__small--right"><img src="assets/img/user_icon_white.png"></span>
+    <span class="Header__big">10 234,12</span>
+  </div>
+
+  <div class="list">
+    <p class="list__title">{{item.name}}</p>
+    <div class="listWrapper">
+        
+      <div *ngFor="let item of data" class="listItem" (click)="itemSelected(item)">
+          <img class="listItem__image" src="{{item.thumbnail}}">
+          <div class="listItemGroup">
+            <p class="listItemGroup__name">{{ item.name }}</p>
+            <p class="listItemGroup__date">{{ item.dates }}</p>
           </div>
+          <p class="listItem__price">{{ item.price }} {{ 'CURRENCY' | translate }}</p>
+          <p class="listItem__arrow">></p>
       </div>
-    </div>
-  
-    <div class="page__list">
-      <div *ngFor="let item of items">
-          <div *ngFor="let data of item[1]">
-            <div class="page__list__item">
-                <div class="page__list__info" (click)="itemSelected(data)">
-                  <p>{{ data.price }}</p>
-                  <span>{{ 'CURRENCY' | translate }}</span>
-                </div>
-                <div class="page__list__image" (click)="itemSelected(data)">
-                  <img src="{{data.thumbnail}}">
-                </div>
-                <div class="page__list__title" (click)="itemSelected(data)">
-                  <p>{{ data.name }}</p>
-                  <span>{{ item[0] }}</span>
-                </div>
-                <div class="page__list__icon" (click)="itemDelete(data)">
-                  <img src="assets/img/trash.png">
-                </div>
-              </div>
-          </div>
-      </div>
+      
     </div>
   </div>
+
+  <div class="footer">
+    <p class="footer__link footer__link--home"></p>
+    <p class="footer__link footer__link--explore"></p>
+    <p class="footer__link footer__link--middle">
+      <img class="footer__link--image" src="assets/img/add.png">
+    </p>
+    <p class="footer__link footer__link--notification"></p>
+    <p class="footer__link footer__link--profile"></p>
+  </div>
+</div>
   
-  
+  <!-- {{item.name}} -->
+  <!-- <button class="page__add" (click)="goForm(item)"><img src="assets/img/add.png"></button> -->
   <!-- <button item-end dark clear ion-button (click)="itemDelete(data)" icon-only>
       <ion-icon name='trash'></ion-icon>
     </button> -->

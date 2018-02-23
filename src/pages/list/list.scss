@@ -1,142 +1,64 @@
 page-list {
-    overflow: scroll;    
-      .page{
-        height: 100%;
-      }
-    
-      .page__image{
-        height: 20.15625rem;
-        width: 100%;
-      }
-    
-      .page__bg{
-        position: relative;
-      }
-    
-      .page__icon{
-        height: 9.375rem;
-        width: 9.375rem;
-        position: absolute;
-        left: 50%;
-        margin-left: -4.6875rem;
-      }
+   
+  
+  .list {
+    height: 100%;
+    overflow: scroll;   
+    padding: 85px 10px 85px 10px;
+    background-color: #f6f9fc;
+    .list__title{
+      @include fonts(14px, #9fa7b3, normal, 600);
+      padding: 10px 0;
+    }
 
-      .page__info{
-        width: 100%;
-        position: absolute;
-        top: 8.015625rem;
+    .listWrapper{
+      width: 100%;
+      height: auto;
+      .listItem{
+        margin-bottom: 10px;
+        height: 50px;
+        border-radius: 6px;
+        background-color: #ffffff;
+        .listItem__image{
+          height: 100%;
+          display: inline-block;
+          padding: 12px;
+          border-radius: 50px;
+          vertical-align: top;
+        }
+        .listItemGroup{
+          height: 100%;
+          width: 38%;
+          display: inline-block;
+          padding-left: 10px;
+          vertical-align: top;
+          padding-top: 7px;
+          .listItemGroup__name{
+            @include fonts(14px, #353a41, normal, 600);
+            text-align: left;
+          }
+          .listItemGroup__date{
+            @include fonts(12px, #9fa7b3, normal, 600);
+            text-align: left;
+          }
+        }
+        .listItem__price{
+          @include fonts(14px, #ee5a55, normal, 600);
+          vertical-align: top;
+          padding: 15px 0;
+          display: inline-block;
+          text-align: right;
+          width: 30%;
+        }
+        .listItem__arrow{
+          @include fonts(14px, #ee5a55, normal, 600);
+          display: inline-block;
+          width: 10%;
+          color: #9fa7b3;
+          text-align: right;
+          padding: 15px 10px;
+        }
       }
-
-      .page__menu{
-        position: absolute;
-        top: 2.71875rem;
-        left: 1.171875rem;
-        border: 0;
-        background: transparent;
-        height: 2.34375rem;
-        width: 2.34375rem;
-        background-image: url(../assets/img/menu_img.png);
-        background-size: cover;
-      }
-
-      .page__add{
-        position: absolute;
-        bottom: 1.5rem;
-        right: 2rem;
-        height: 5.90625rem;
-        width: 5.90625rem;
-        background: transparent;
-        padding: 0;
-      }
-    
-      .page__list{
-        margin-top: 2rem;
-        text-align: center;
-        width: 100%;
-      }
-
-      .page__info__text{
-          text-align: center;
-          position: absolute;
-          width: 100%;
-      }
-
-      .page__list__item{
-        height: 5.625rem;
-        text-align: left;
-        border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
-        margin-bottom: 1.875rem;
-        margin-left: 1.875rem;
-        margin-right: 1.875rem;
-      }
-
-      .page__list__item div{
-        display: inline-block;
-        vertical-align: top;
-      }
-
-      .page__list__info{
-        width: 30%;
-      }
-
-      .page__list__info p{
-        font-size: 2.4rem;
-        line-height: 1;
-      }
-
-      .page__list__info span{
-        font-size: 1.5rem;
-        opacity: 0.5;
-        line-height: 1;
-      }
-
-      .page__list__image{
-        height: 3.75rem;
-        width: 3.75rem;
-      }
-
-      .page__list__image img{
-        border-radius: 50%;
-      }
-
-      .page__list__icon{
-        margin-top: .8rem;
-        float: right;
-      }
-
-      .page__list__icon img{
-        height: 2.5rem;
-        width: 2.5rem;
-      }
-
-      .page__list__title{
-        margin-left: 1.875rem;
-      }
-
-      .page__list__title p{
-        font-size: 1.875rem;
-        line-height: 1;
-        padding-bottom: 5px;
-      }
-
-      .page__list__title span{
-        font-size: 1.5rem;
-        opacity: 0.5;
-        line-height: 1;
-      }
-
-      .page__info__text--title{
-        font-size: 4.375rem;
-        color: #ffffff;
-        line-height: 1;
-      }
-
-      .page__info__text--description{
-        font-size: 1.375rem;
-        color: #ffffff;
-        opacity: 0.5;
-        line-height: 1;
-        margin-top: 1.6875rem;
-        display: inline-block;
-      }
+    }
+  }
 }

@@ -17,7 +17,7 @@ export class AccountingPage {
   monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
-  @ViewChild("map") mapElement: ElementRef;
+  //@ViewChild("map") mapElement: ElementRef;
 
   item    : any;
   constructor(
@@ -58,7 +58,7 @@ export class AccountingPage {
       zoom: 12,
     };
 
-    this.map = new google.maps.Map(this.mapElement.nativeElement, mapOprions);
+    //this.map = new google.maps.Map(this.mapElement.nativeElement, mapOprions);
 
     this.addMarker(parseFloat(x),parseFloat(y),title);
   }

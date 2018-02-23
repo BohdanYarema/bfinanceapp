@@ -31,24 +31,8 @@ export class ListPage {
   ionViewDidLoad() {
     this.showLoader();
     this.authService.accounting(this.item.id).then((result) => {
-      this.data = result
-
-      for (var variable in this.data) {
-        
-        var date = new Date(parseInt(variable) * 1000);
-      
-        var curr_date   = date.getDate();
-        var curr_month  = date.getMonth() + 1;
-        var curr_year   = date.getFullYear();
-        
-        var test = (curr_date + "-" + curr_month + "-" + curr_year);
-        
-        this.items.push([
-          test, this.data[variable]
-        ]);
-      }
-
-      this.items.reverse();
+      this.data = result;
+      console.log(this.data);
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();
