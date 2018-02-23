@@ -1,13 +1,27 @@
 <div class="pageBody">
-    <div class="Header">
-      <span class="Header__small Header__small--left" menuToggle><img src="assets/img/user_icon_white.png"></span>
-      <span class="Header__small Header__small--middle">Salary account</span>
-      <span class="Header__small Header__small--right"><img src="assets/img/user_icon_white.png"></span>
-      <span class="Header__big">10 234,12</span>
-    </div>
-  
     <div class="item">
-      
+      <div class="itemMain">
+        <p class="itemMain__title">{{item.name}}</p>
+        <p class="itemMain__description">30000 {{ 'CURRENCY' | translate }}</p>
+
+        <div class="itemMainTabs">
+          <p class="itemMainTabs__link itemMainTabs__link--active">Info</p>
+          <p class="itemMainTabs__link">Map</p>
+        </div>
+      </div>
+      <div class="itemSecondary">
+        <div class="itemSecondaryBody">
+          <p class="itemSecondaryBody__text">Category name -> Test</p>
+          <p class="itemSecondaryBody__text">Address -> Test</p>
+          <p class="itemSecondaryBody__text">Date -> Test</p>
+          <p class="itemSecondaryBody__text">Count -> Test</p>
+          <p class="itemSecondaryBody__text">Summary -> Test</p>
+        </div>
+        <p class="itemSecondaryBtn itemSecondaryBtn--green">Update</p>
+        <p class="itemSecondaryBtn itemSecondaryBtn--red">Delete</p>
+
+        <div #map id="map" class="itemSecondaryMap"></div>
+      </div>
     </div>
   
     <div class="footer">
@@ -23,7 +37,7 @@
 
 <!-- <div #map id="map">
   </div>
-{{ 'PRICE' | translate }}
+
 
 {{item.name}}
 

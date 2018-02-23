@@ -93,7 +93,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
     background-image: url('../assets/img/home_bg.png');
     background-size: cover;
     z-index: 2;
-    height: 85px;
+    height: 86px;
 
     .Header__small{
         @include fonts(16px, #FFFFFF, normal, 600);

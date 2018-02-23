@@ -226,5 +226,86 @@ page-form {
         font-size: 1.375rem;
         color: #ffffff;
         margin-bottom: 0;
-      }
+      } 
+}
+
+page-form {
+  overflow: scroll;
+
+  .auth {
+    padding-top: 25%;
+  }
+
+  .authForm{
+    margin: 0 15px;
+    padding: 0 20px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 6px;  
+    box-sizing: border-box;  
+  }
+
+  .authFormGroup{
+    position: relative;
+  }
+
+  .authFormGroup__title{
+    @include fonts(24px, #343941, normal, 600);
+    display: block;
+    padding: 20px 0 40px 0;
+  }
+
+  .authFormGroup__input{
+    @include fonts(14px, #343941, normal, 400);
+    display: inline-block;
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #9FA7B3;
+    margin-bottom: 35px;
+  }
+
+  .item-ios{
+    padding: 0;
+  }
+
+  .datetime-ios{
+    padding: 0;
+    .datetime-placeholder{
+      color: #343941 !important;
+    }
+  }
+
+  .authFormGroup__datapicker .datetime-md{
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    height: 40px;
+  }
+
+  .datetime-md .datetime-placeholder{
+    padding-top: 20px;
+    height: 100%;
+  }
+
+  .datetime-text{
+    padding-top: 0;
+    height: 100%;
+  }
+
+  .authFormGroup__button{
+    @include fonts(18px, #FFFFFF, normal, 600);
+    background-color: #2CC197;
+    padding: 0;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+    box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+  }
 }

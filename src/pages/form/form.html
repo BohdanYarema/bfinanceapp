@@ -1,23 +1,19 @@
-<div class="page">
-    <div class="page__bg">
-        <div>
-            <img class="page__image" src="assets/img/create_img.png">
+<div class="auth">
+    <form class="authForm" [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">
+        <div class="authFormGroup">
+            <p class="authFormGroup__title">{{ 'CREATE' | translate }}</p>
         </div>
-        <button class="page__menu" menuToggle left></button>
-        <div class="page__info">
-            <div class="page__info__text">
-                <p class="page__info__text--title">{{ 'CREATE' | translate }}</p>
-            </div>
+        <div class="authFormGroup">
+            <input class="authFormGroup__input" formControlName="name" name="name" type="text" placeholder="{{ 'NAME' | translate }}" >
         </div>
-    </div>
-    <div class="page__form">
-        <form [formGroup]="addGroup" (ngSubmit)="doAddAcccounting(addGroup.value)">
-            <input class="page__form__elements" formControlName="name" name="name" type="text" placeholder="{{ 'NAME' | translate }}" >
-            <input class="page__form__elements" formControlName="price" name="price" type="number" placeholder="{{ 'PRICE' | translate }}" >
-            <ion-item class="page__form__elements--datapicker">
-                <ion-datetime displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="{{ 'DATES' | translate }}"></ion-datetime>
-            </ion-item>
-            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!addGroup.valid">{{ 'ADD' | translate }}</button>
-        </form>
-    </div>
+        <div class="authFormGroup">
+            <input class="authFormGroup__input" formControlName="price" name="price" type="number" placeholder="{{ 'PRICE' | translate }}" >
+        </div>
+        <ion-item class="authFormGroup">
+            <ion-datetime class="authFormGroup__datapicker" displayFormat="MMM/DD/YYYY" formControlName="dates" name="dates" placeholder="{{ 'DATES' | translate }}"></ion-datetime>
+        </ion-item>
+        <div class="authFormGroup">
+            <button class="authFormGroup__button" type="submit" [disabled]="!addGroup.valid">{{ 'ADD' | translate }}</button>
+        </div>
+    </form>
 </div>

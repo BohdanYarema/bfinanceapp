@@ -87,4 +87,8 @@ export class HomePage {
       item : item
     });
   }
+
+  goForm(category : object) {
+    this.navCtrl.push(CategoriesPage);
+  }
 }

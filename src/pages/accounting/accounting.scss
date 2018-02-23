@@ -1,5 +1,4 @@
 page-accounting {
-    overflow: hidden;
     #map{
         height: 55%;
     }
@@ -7,17 +6,82 @@ page-accounting {
     background-color: #f6f9fc;
 
     .item{
+        height: 100%;
+        padding-bottom: 85px;
+        overflow: scroll;
         .itemMain{
             background-image: linear-gradient(66deg, #485563, #29323c);
             height: 200px;
             .itemMain__title {
-                @include fonts(72px, #ffffff, normal, 600);
-                font-size: 72px;
+                @include fonts(14px, #ffffff, normal, 600);
                 text-align: center;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+            .itemMain__description {
+                @include fonts(32px, #ffffff, normal, 600);
+                text-align: center;
+                padding-top: 15px;
+                padding-bottom: 45px;
+            }
+
+            .itemMainTabs{
+                width: 100%;
+                height: 50px;
+                background-color: rgba(0, 0, 0, 0.15);
+                .itemMainTabs__link{
+                    display: inline-block;
+                    @include fonts(14px, #ffffff, normal, 600);
+                    width: 49%;
+                    text-align: center;
+                    padding-top: 15px;
+                    color: #9fa7b3;
+                }
+                .itemMainTabs__link--active{
+                    color: #ffffff;
+                }
             }
         }
         .itemSecondary{
-            background-image: f6f9fc;
+            padding: 10px;
+
+            .itemSecondaryMap {
+                display: none;
+            }
+            .itemSecondaryBody{
+                background-color: #ffffff;
+                border-radius: 6px;
+                min-height: 100px;
+                width: 100%;
+                height: auto;
+                .itemSecondaryBody__text{
+                    padding: 5px;
+                    @include fonts(16px, #353a41, normal, 600);
+                    border-bottom: 1px solid #dce6f0;
+                }
+            }
+            .itemSecondaryBtn--red {
+                background-color: #ee5a55;
+                -webkit-box-shadow: 0px 0px 7px 0px #ee5a55;
+                -moz-box-shadow: 0px 0px 7px 0px #ee5a55;
+                box-shadow: 0px 0px 7px 0px #ee5a55;
+            }
+            .itemSecondaryBtn--green {
+                background-color: #2CC197;
+                -webkit-box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+                -moz-box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+                box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+            }
+            .itemSecondaryBtn{
+                @include fonts(18px, #FFFFFF, normal, 600);
+                padding: 0;
+                width: 100%;
+                height: 50px;
+                border-radius: 6px;
+                text-align: center;
+                padding: 13px 0 ;
+                margin: 10px 0 ;
+            }
         }
     }
 }
