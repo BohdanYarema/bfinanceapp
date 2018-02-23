@@ -1,17 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <button ion-button menuToggle left>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>
-      {{ 'CATEGORIES_NAME' | translate }}
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content padding id="page">
-  <ion-list id="category-list" ion-item *ngFor="let item of data" (click)="itemSelected(item)">
-    <ion-item color="none" id="category-list-item1">
-        {{ item.name }}
-    </ion-item>
-  </ion-list>
-</ion-content>
+<div class="pageBody">
+  <div class="Header">
+    <span class="Header__small Header__small--left" menuToggle><img src="assets/img/user_icon_white.png"></span>
+    <span class="Header__small Header__small--middle">Salary account</span>
+    <span class="Header__small Header__small--right"><img src="assets/img/user_icon_white.png"></span>
+    <span class="Header__big">10 234,12</span>
+  </div>
+  <div class="plates">
+    <p class="platesTitle">{{ 'CATEGORIES_NAME' | translate }}</p>
+    <div class="platesWrapper">
+        <div *ngFor="let item of data;" class="platesWrapperItem" (click)="itemSelected(item)">
+            <div class="platesWrapperItemInfo">
+              <img class="platesWrapperItemInfo__image" src="{{item.thumbnail}}">
+              <p class="platesWrapperItemInfo__text">{{item.name}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p class="footer__link footer__link--home"></p>
+    <p class="footer__link footer__link--explore"></p>
+    <p class="footer__link footer__link--middle">
+      <img class="footer__link--image" src="assets/img/add.png">
+    </p>
+    <p class="footer__link footer__link--notification"></p>
+    <p class="footer__link footer__link--profile"></p>
+  </div>
+</div>
+
