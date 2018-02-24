@@ -1,41 +1,49 @@
-<div class="page">
-  <div class="page__bg">
-      <button class="page__add">
-        <ion-datetime class="datetime" displayFormat="MMM/YYYY" (ionChange)="date_Value()" [(ngModel)]="dateValue"></ion-datetime>
-      </button>
-      <div>
-        <img class="page__image" src="assets/img/timeline.png">
-      </div>
-    <button class="page__menu" menuToggle left></button>
-    <div class="page__info">
-        <div class="page__info__text">
-            <p class="page__info__text--title">{{month_name}}</p>
-            <p class="page__info__text--description">{{year}}</p>
-        </div>
-    </div>
+<!-- {{month_name}}
+{{year}} -->
+<div class="pageBody">
+  <div class="Header">
+    <span class="Header__small Header__small--left" menuToggle><img class="HeaderBtnMenu" src="assets/img/menu_left.png"></span>
+    <span class="Header__small Header__small--middle">Salary account</span>
+    <span class="Header__small Header__small--right" (click)="logout()" ><img class="HeaderBtnLogout" src="assets/img/logout.png"></span>
+    <div class="clearfix"></div>
+    <span class="Header__big">10 234,12</span>
   </div>
-
-  <div class="page__list">
-    <div class="page__list__item" *ngFor="let item of data">
-        <div class="page__list__item--date">{{item.name}}</div>
-        <div class="page__list__item--element" *ngFor="let value of item.data">
-          <div style="width:100%; display:block !important;" (click)="itemSelected(value)">
-              <div class="page__list__item--circle" [ngStyle]="{'border-color':value.color}"></div>
-              <div class="page__list__item--avatar">
+  <div class="timeline">
+    <div class="timelineLine"></div>
+    <div class="timelineList">
+      <div class="timelineListItem" *ngFor="let item of data">
+        <div class="timelineListItemGroup">
+            <div class="timelineListItemGroup__date">{{item.name}}</div>
+            <div class="timelineListItemGroupChild" *ngFor="let value of item.data">
+                <div class="timelineListItemGroup__marker" [ngStyle]="{'background-color':value.color}"></div>
                 <img src="{{value.avatar}}" alt="{{value.title}}">
-              </div>
-              <div class="page__list__item__block">
-                <p class="page__list__item__block--title">{{value.name}}</p>
-                <p class="page__list__item__block--description">{{value.time}}</p>
-              </div>
-              <div class="page__list__item__block page__list__item__block--right">
-                <p class="page__list__item__block--title">{{value.price}}</p>
-                <p class="page__list__item__block--description">uah</p>
-              </div>
-          </div>
-       </div>
+                <div class="timelineListItemGroup__text">{{value.name}}</div>
+                <div class="timelineListItemGroup__text">{{value.price}}</div>
+                <div class="timelineListItemGroup__text">{{value.time}}</div>
+                <div class="timelineListItemGroup__text">uah</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="timelineForm">
+        <button class="timelineForm__btn">
+          <ion-datetime placeholder="Choose Date" class="datetime" displayFormat="MMM/YYYY" (ionChange)="date_Value()" [(ngModel)]="dateValue"></ion-datetime>
+        </button>
     </div>
   </div>
-
-  <div class="line__divider"></div>
+  <div class="footer">
+    <p class="footer__link footer__link--home" (click)="gotoHome()"></p>
+    <p class="footer__link footer__link--explore" (click)="gotoCategories()"></p>
+    <p class="footer__link footer__link--middle" (click)="gotoCategories()">
+      <img class="footer__link--image" src="assets/img/plus_inverse.png">
+    </p>
+    <p class="footer__link footer__link--notification" (click)="gotoTimeline()"></p>
+    <p class="footer__link footer__link--profile" (click)="gotoMap()"></p>
+    <div class="clearfix"></div>
+  </div>
 </div>
+
+
+
+
+<!-- (click)="itemSelected(value)" -->

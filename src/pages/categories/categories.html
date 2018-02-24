@@ -17,13 +17,14 @@
     </div>
   </div>
   <div class="footer">
-    <p class="footer__link footer__link--home"></p>
-    <p class="footer__link footer__link--explore"></p>
-    <p class="footer__link footer__link--middle">
-      <img class="footer__link--image" src="assets/img/add.png">
+    <p class="footer__link footer__link--home" (click)="gotoHome()"></p>
+    <p class="footer__link footer__link--explore" (click)="gotoCategories()"></p>
+    <p class="footer__link footer__link--middle" (click)="gotoCategories()">
+      <img class="footer__link--image" src="assets/img/plus_inverse.png">
     </p>
-    <p class="footer__link footer__link--notification"></p>
-    <p class="footer__link footer__link--profile"></p>
+    <p class="footer__link footer__link--notification" (click)="gotoTimeline()"></p>
+    <p class="footer__link footer__link--profile" (click)="gotoMap()"></p>
+    <div class="clearfix"></div>
   </div>
 </div>
 

@@ -5,6 +5,9 @@ import { LoadingController, ToastController, App } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { AccountingPage } from '../accounting/accounting';
 import { CategoriesPage } from '../categories/categories';
+import { ListPage } from '../list/list';
+import { MapPage } from '../map/map';
+import { TimelinePage } from '../timeline/timeline';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -77,7 +80,7 @@ export class HomePage {
   }
 
   itemSelected(item: string) {
-    this.navCtrl.push(CategoriesPage, {
+    this.navCtrl.push(ListPage, {
       item : item
     });
   }
@@ -88,7 +91,19 @@ export class HomePage {
     });
   }
 
-  goForm(category : object) {
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(){
     this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 }

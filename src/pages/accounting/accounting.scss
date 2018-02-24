@@ -7,11 +7,13 @@ page-accounting {
 
     .item{
         height: 100%;
-        padding-bottom: 85px;
+        padding-bottom: 55px;
         overflow: scroll;
         .itemMain{
             background-image: linear-gradient(66deg, #485563, #29323c);
             height: 200px;
+            position: fixed;
+            width: 100%;
             .itemMain__title {
                 @include fonts(14px, #ffffff, normal, 600);
                 text-align: center;
@@ -29,35 +31,39 @@ page-accounting {
                 width: 100%;
                 height: 50px;
                 background-color: rgba(0, 0, 0, 0.15);
+                text-align: center;
+
                 .itemMainTabs__link{
                     display: inline-block;
                     @include fonts(14px, #ffffff, normal, 600);
-                    width: 49%;
-                    text-align: center;
                     padding-top: 15px;
-                    color: #9fa7b3;
-                }
-                .itemMainTabs__link--active{
+                    padding-bottom: 15px;
                     color: #ffffff;
                 }
             }
         }
         .itemSecondary{
-            padding: 10px;
+            padding: 210px 10px 10px 10px;
+            height: 100%;
+            overflow: scroll;
 
-            .itemSecondaryMap {
-                display: none;
-            }
             .itemSecondaryBody{
-                background-color: #ffffff;
-                border-radius: 6px;
                 min-height: 100px;
                 width: 100%;
                 height: auto;
-                .itemSecondaryBody__text{
+                padding-bottom: 10px;
+                .itemSecondaryBody__description{
                     padding: 5px;
-                    @include fonts(16px, #353a41, normal, 600);
-                    border-bottom: 1px solid #dce6f0;
+                    @include fonts(14px, #353a41, normal, 600);
+                    margin: 5px 0;
+                    background-color: #ffffff;
+                    border-radius: 6px;
+                }
+                .itemSecondaryBody__title{
+                    padding: 5px;
+                    @include fonts(14px, #353a41, normal, 600);
+                    margin: 5px 0;
+                    opacity: 0.7;
                 }
             }
             .itemSecondaryBtn--red {

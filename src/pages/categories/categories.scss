@@ -9,23 +9,28 @@ page-categories {
     
         .platesTitle{
           @include fonts(14px, #9fa7b3, normal, 600);
-          padding-bottom: 10px;
+          padding-bottom: 5px;
           padding-top: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
         }
     
         .platesWrapper{
           height: auto;
           width: 100%;
+          display: block;
     
           .platesWrapperItem{
-            background-color: #ffffff;
-            border-radius: 6px;
-            display: inline-block;
-            width: 47%;
-            margin: 5px;
+            background-color: #f6f9fc;
+            display: block;
+            width: 50%;
+            float: left;
+            padding: 5px;
           }
       
           .platesWrapperItemInfo{
+            border-radius: 6px;
+            background-color: #ffffff;
             width: 100%;
             height: 110px;
             text-align: center;

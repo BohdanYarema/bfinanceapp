@@ -3,7 +3,7 @@ page-home {
   background-color: #f6f9fc;
 
   .homeBody {
-    padding: 0 10px;
+    padding: 0 10px 55px 10px;
     .homeBody__title{
       @include fonts(14px, #9fa7b3, normal, 600);
     }
@@ -16,20 +16,26 @@ page-home {
         height: 50px;
         border-radius: 6px;
         background-color: #ffffff;
-        .homeBodyLastItem__image{
+        .homeBodyLastItemImage{
           height: 100%;
-          display: inline-block;
-          padding: 12px;
-          border-radius: 50px;
+          display: block;
           vertical-align: top;
+          width: 16.67%;
+          float: left;
+          .homeBodyLastItemImage__image{
+            width: 50px;
+            border-radius: 50px;
+            padding: 12px;
+          }
         }
         .homeBodyLastItemGroup{
           height: 100%;
-          width: 38%;
-          display: inline-block;
+          width: 38.33%;
+          display: block;
           padding-left: 10px;
           vertical-align: top;
           padding-top: 7px;
+          float: left;
           .homeBodyLastItemGroup__name{
             @include fonts(14px, #353a41, normal, 600);
             text-align: left;
@@ -43,17 +49,19 @@ page-home {
           @include fonts(14px, #ee5a55, normal, 600);
           vertical-align: top;
           padding: 15px 0;
-          display: inline-block;
+          display: block;
           text-align: right;
-          width: 30%;
+          width: 35%;
+          float: left;
         }
         .homeBodyLastItem__arrow{
           @include fonts(14px, #ee5a55, normal, 600);
-          display: inline-block;
+          display: block;
           width: 10%;
           color: #9fa7b3;
           text-align: right;
           padding: 15px 10px;
+          float: left;
         }
       }
     }

@@ -5,6 +5,10 @@ import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { AccountingPage } from '../accounting/accounting';
 import { InjectableProvider } from '../../providers/injectable/injectable';
+import { CategoriesPage } from '../categories/categories';
+import { MapPage } from '../map/map';
+import { TimelinePage } from '../timeline/timeline';
+import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-list',
@@ -63,6 +67,22 @@ export class ListPage {
     this.navCtrl.push(FormPage, {
       category : category
     });
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(){
+    this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 
   itemSelected(item: string) {

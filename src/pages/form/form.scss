@@ -1,4 +1,7 @@
 page-form {
+  .item-ios.item-block .item-inner{
+    padding: 0 !important;
+  }
     overflow: scroll;    
     .page{
       height: 100%;

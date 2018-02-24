@@ -4,6 +4,9 @@ import { ListPage } from '../list/list';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { InjectableProvider } from '../../providers/injectable/injectable';
+import { MapPage } from '../map/map';
+import { TimelinePage } from '../timeline/timeline';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the CategoriesPage page.
@@ -64,6 +67,22 @@ export class CategoriesPage {
     this.navCtrl.push(ListPage, {
       item : item
     });
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(){
+    this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 
 }

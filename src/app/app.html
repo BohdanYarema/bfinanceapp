@@ -11,10 +11,14 @@
         <img class="linksButton_img" src="assets/img/menu.png"> 
         <span class="linksButton_text"> {{ 'LINK_HOME' | translate }}</span>
       </button>
-      <button class="linksButton" menuToggle (click)="gotoProfile()"> 
+      <!-- <button class="linksButton" menuToggle (click)="gotoProfile()"> 
         <img class="linksButton_img" src="assets/img/menu.png"> 
         <span class="linksButton_text"> {{ 'LINK_PROFILE' | translate }}</span>
-      </button>
+      </button> -->
+      <button class="linksButton" menuToggle (click)="logout()"> 
+          <img class="linksButton_img" src="assets/img/menu.png"> 
+          <span class="linksButton_text"> {{ 'LINK_LOG_OUT' | translate }}</span>
+        </button>
   </div>
 </ion-menu>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>

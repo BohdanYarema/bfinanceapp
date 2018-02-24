@@ -1,39 +1,40 @@
 <div class="pageBody">
-    <div class="item">
-      <div class="itemMain">
-        <p class="itemMain__title">{{item.name}}</p>
-        <p class="itemMain__description">30000 {{ 'CURRENCY' | translate }}</p>
-
-        <div class="itemMainTabs">
-          <p class="itemMainTabs__link itemMainTabs__link--active">Info</p>
-          <p class="itemMainTabs__link">Map</p>
-        </div>
-      </div>
-      <div class="itemSecondary">
-        <div class="itemSecondaryBody">
-          <p class="itemSecondaryBody__text">Category name -> Test</p>
-          <p class="itemSecondaryBody__text">Address -> Test</p>
-          <p class="itemSecondaryBody__text">Date -> Test</p>
-          <p class="itemSecondaryBody__text">Count -> Test</p>
-          <p class="itemSecondaryBody__text">Summary -> Test</p>
-        </div>
-        <p class="itemSecondaryBtn itemSecondaryBtn--green">Update</p>
-        <p class="itemSecondaryBtn itemSecondaryBtn--red">Delete</p>
-
-        <div #map id="map" class="itemSecondaryMap"></div>
+  <div class="item">
+    <div class="itemMain">
+      <p class="itemMain__title">{{item.name}}</p>
+      <p class="itemMain__description">30000 {{ 'CURRENCY' | translate }}</p>
+      <div class="itemMainTabs">
+          <p class="itemMainTabs__link">Info</p>
       </div>
     </div>
-  
-    <div class="footer">
-      <p class="footer__link footer__link--home"></p>
-      <p class="footer__link footer__link--explore"></p>
-      <p class="footer__link footer__link--middle">
-        <img class="footer__link--image" src="assets/img/add.png">
-      </p>
-      <p class="footer__link footer__link--notification"></p>
-      <p class="footer__link footer__link--profile"></p>
+    <div class="itemSecondary">
+      <div class="itemSecondaryBody">
+        <p class="itemSecondaryBody__title">Category: </p>
+        <p class="itemSecondaryBody__description">Category name -> Test</p>
+        <p class="itemSecondaryBody__title">Address: </p>
+        <p class="itemSecondaryBody__description">Address name -> Test</p>
+        <p class="itemSecondaryBody__title">Date: </p>
+        <p class="itemSecondaryBody__description">Date name -> Test</p>
+        <p class="itemSecondaryBody__title">Count: </p>
+        <p class="itemSecondaryBody__description">Count name -> Test</p>
+        <p class="itemSecondaryBody__title">Summary: </p>
+        <p class="itemSecondaryBody__description">Summary name -> Test</p>
+      </div>
+      <p class="itemSecondaryBtn itemSecondaryBtn--red">Delete</p>
     </div>
   </div>
+
+  <div class="footer">
+    <p class="footer__link footer__link--home" (click)="gotoHome()"></p>
+    <p class="footer__link footer__link--explore" (click)="gotoCategories()"></p>
+    <p class="footer__link footer__link--middle" (click)="gotoCategories()">
+      <img class="footer__link--image" src="assets/img/plus_inverse.png">
+    </p>
+    <p class="footer__link footer__link--notification" (click)="gotoTimeline()"></p>
+    <p class="footer__link footer__link--profile" (click)="gotoMap()"></p>
+    <div class="clearfix"></div>
+  </div>
+</div>
 
 <!-- <div #map id="map">
   </div>

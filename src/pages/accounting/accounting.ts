@@ -2,6 +2,11 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
+import { CategoriesPage } from '../categories/categories';
+import { ListPage } from '../list/list';
+import { MapPage } from '../map/map';
+import { TimelinePage } from '../timeline/timeline';
+import { HomePage } from '../home/home';
 import {
   GoogleMap,
  } from '@ionic-native/google-maps';
@@ -43,25 +48,29 @@ export class AccountingPage {
     });
   }
 
+  segmentChanged(model){
+    console.log(model.value);
+  }
+
   ionViewDidLoad() {
     if (this.item.gps_x !== null || this.item.gps_y !== null) {
-      this.loadmap(this.item.gps_x, this.item.gps_y, this.item.name); 
+      //this.loadmap(this.item.gps_x, this.item.gps_y, this.item.name); 
     }
   }
 
-  loadmap(x,y,title){
-    let mapOprions = {
-      center: {
-        lat: parseFloat(x),
-        lng: parseFloat(y)
-      },
-      zoom: 12,
-    };
+  // loadmap(x,y,title){
+  //   let mapOprions = {
+  //     center: {
+  //       lat: parseFloat(x),
+  //       lng: parseFloat(y)
+  //     },
+  //     zoom: 12,
+  //   };
 
-    //this.map = new google.maps.Map(this.mapElement.nativeElement, mapOprions);
+  //   this.map = new google.maps.Map(this.mapElement.nativeElement, mapOprions);
 
-    this.addMarker(parseFloat(x),parseFloat(y),title);
-  }
+  //   this.addMarker(parseFloat(x),parseFloat(y),title);
+  // }
 
   addMarker(x,y,title){
     let marker = new google.maps.Marker({
@@ -86,6 +95,22 @@ export class AccountingPage {
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(this.map,marker);
     });
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(){
+    this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 
 }

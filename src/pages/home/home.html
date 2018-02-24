@@ -4,9 +4,10 @@
 
 <div class="pageBody">
   <div class="Header">
-    <span class="Header__small Header__small--left" menuToggle><img src="assets/img/user_icon_white.png"></span>
+    <span class="Header__small Header__small--left" menuToggle><img class="HeaderBtnMenu" src="assets/img/menu_left.png"></span>
     <span class="Header__small Header__small--middle">Salary account</span>
-    <span class="Header__small Header__small--right"><img src="assets/img/user_icon_white.png"></span>
+    <span class="Header__small Header__small--right" (click)="logout()" ><img class="HeaderBtnLogout" src="assets/img/logout.png"></span>
+    <div class="clearfix"></div>
     <span class="Header__big">10 234,12</span>
   </div>
   
@@ -26,30 +27,29 @@
   <div class="homeBody">
     <p class="homeBody__title">Last transations</p>
     <div class="homeBodyLast">
-        
       <div *ngFor="let item of last" class="homeBodyLastItem" (click)="accSelected(item)">
-          <img class="homeBodyLastItem__image" src="{{item.thumbnail}}">
+          <div class="homeBodyLastItemImage">
+              <img class="homeBodyLastItemImage__image" src="{{item.thumbnail}}">
+          </div>    
           <div class="homeBodyLastItemGroup">
             <p class="homeBodyLastItemGroup__name">{{ item.name }}</p>
             <p class="homeBodyLastItemGroup__date">{{ item.dates }}</p>
           </div>
           <p class="homeBodyLastItem__price">{{ item.price }} {{ 'CURRENCY' | translate }}</p>
           <p class="homeBodyLastItem__arrow">></p>
+          <div class="clearfix"></div>
       </div>
-      
-    </div>
-    <div class="homeBodyMore">
-      <p class="homeBodyMore__text">{{ 'MORE' | translate }}</p>
     </div>
   </div>
   
   <div class="footer">
-    <p class="footer__link footer__link--home"></p>
-    <p class="footer__link footer__link--explore"></p>
-    <p class="footer__link footer__link--middle" (click)="goForm(item)">
-      <img class="footer__link--image" src="assets/img/add.png">
+    <p class="footer__link footer__link--home" (click)="gotoHome()"></p>
+    <p class="footer__link footer__link--explore" (click)="gotoCategories()"></p>
+    <p class="footer__link footer__link--middle" (click)="gotoCategories()">
+      <img class="footer__link--image" src="assets/img/plus_inverse.png">
     </p>
-    <p class="footer__link footer__link--notification"></p>
-    <p class="footer__link footer__link--profile"></p>
+    <p class="footer__link footer__link--notification" (click)="gotoTimeline()"></p>
+    <p class="footer__link footer__link--profile" (click)="gotoMap()"></p>
+    <div class="clearfix"></div>
   </div>
 </div>
