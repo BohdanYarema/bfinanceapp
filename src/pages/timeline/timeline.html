@@ -16,11 +16,17 @@
             <div class="timelineListItemGroup__date">{{item.name}}</div>
             <div class="timelineListItemGroupChild" *ngFor="let value of item.data">
                 <div class="timelineListItemGroup__marker" [ngStyle]="{'background-color':value.color}"></div>
-                <img src="{{value.avatar}}" alt="{{value.title}}">
-                <div class="timelineListItemGroup__text">{{value.name}}</div>
-                <div class="timelineListItemGroup__text">{{value.price}}</div>
-                <div class="timelineListItemGroup__text">{{value.time}}</div>
-                <div class="timelineListItemGroup__text">uah</div>
+                <div class="timelineListItemGroupContent">
+                  <div class="timelineListItemGroupContentImage">
+                    <img class="timelineListItemGroupContentImage__image" src="{{value.avatar}}" alt="{{value.title}}">
+                  </div>
+                  <div class="timelineListItemGroupContentText">
+                    <div class="timelineListItemGroupContentText__text">{{value.name}}</div>
+                    <div class="timelineListItemGroupContentText__text">{{value.price}} uah</div>
+                    <div class="timelineListItemGroupContentText__text">{{value.time}}</div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
             </div>
         </div>
       </div>

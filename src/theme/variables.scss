@@ -40,7 +40,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
     height: 55px;
     width: 100%;
     background-color: #ffffff;
-    z-index: 2;
+    z-index: 3;
 
     -webkit-box-shadow: 0px -1px 6px 1px rgba(0,0,0,0.19);
     -moz-box-shadow: 0px -1px 6px 1px rgba(0,0,0,0.19);
@@ -97,7 +97,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
     padding: 15px 20px;
     background-image: url('../assets/img/home_bg.png');
     background-size: cover;
-    z-index: 2;
+    z-index: 3;
     height: 86px;
 
     -webkit-box-shadow: 0px 2px 6px 1px rgba(0,0,0,0.19);
