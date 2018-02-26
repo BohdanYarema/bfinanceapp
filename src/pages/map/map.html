@@ -1,15 +1,24 @@
-<div class="page">
-  <div class="page__bg">
-    <div>
-      <img class="page__image" src="assets/img/map_img.png">
-    </div>
-    <button class="page__menu" menuToggle left></button>
-    <div class="page__info">
-        <div class="page__info__text">
-            <p class="page__info__text--title">{{ 'LINK_MAP' | translate }}</p>
-        </div>
-    </div>
+<!-- {{ 'LINK_MAP' | translate }} -->
+
+
+<div class="pageBody">
+  <div class="Header">
+    <span class="Header__small Header__small--left" menuToggle><img class="HeaderBtnMenu" src="assets/img/menu_left.png"></span>
+    <span class="Header__small Header__small--middle">Salary account</span>
+    <span class="Header__small Header__small--right" (click)="logout()" ><img class="HeaderBtnLogout" src="assets/img/logout.png"></span>
+    <div class="clearfix"></div>
+    <span class="Header__big">10 234,12</span>
   </div>
   <div #map id="map">
+  </div>
+  <div class="footer">
+    <p class="footer__link footer__link--home" (click)="gotoHome()"></p>
+    <p class="footer__link footer__link--explore" (click)="gotoCategories()"></p>
+    <p class="footer__link footer__link--middle" (click)="gotoCategories()">
+      <img class="footer__link--image" src="assets/img/plus_inverse.png">
+    </p>
+    <p class="footer__link footer__link--notification" (click)="gotoTimeline()"></p>
+    <p class="footer__link footer__link--profile" (click)="gotoMap()"></p>
+    <div class="clearfix"></div>
   </div>
 </div>

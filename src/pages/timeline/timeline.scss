@@ -21,7 +21,21 @@ page-timeline {
       position: relative;
       background: #FFFFFF;
       border-radius: 6px;
-      margin: 10px;
+      margin: 20px 10px;
+      -webkit-box-shadow: 0px 0px 10px 2px rgba(159,167,179,0.7);
+      -moz-box-shadow: 0px 0px 10px 2px rgba(159,167,179,0.7);
+      box-shadow: 0px 0px 10px 2px rgba(159,167,179,0.7);
+
+      .timelineListItemGroupChild{
+        border-bottom: #9fa7b3 1px solid;
+      }
+
+      .timelineListItemGroupChild:last-child {
+        border: none;
+      }
+
+      
+
       .timelineListItemGroup__marker{
         width: 16px;
         height: 16px;
@@ -44,8 +58,8 @@ page-timeline {
 
         width: 100%;
         padding-left: 35px;
-        padding-top: 35px;
-        border-bottom: 1px solid #9fa7b3;
+        padding-top: 15px;
+        padding-bottom: 15px;
 
         .timelineListItemGroupContentImage{
           float: left;

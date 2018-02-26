@@ -69,7 +69,7 @@ export class MapPage {
         lng: y
       },
       icon: { 
-        url : 'assets/icon/map.png',
+        url : 'assets/img/pinMap.png',
       }
     });
 

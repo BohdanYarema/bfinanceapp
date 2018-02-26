@@ -14,7 +14,7 @@
       <div class="timelineListItem" *ngFor="let item of data">
         <div class="timelineListItemGroup">
             <div class="timelineListItemGroup__date">{{item.name}}</div>
-            <div class="timelineListItemGroupChild" *ngFor="let value of item.data">
+            <div class="timelineListItemGroupChild" *ngFor="let value of item.data" (click)="itemSelected(value)">
                 <div class="timelineListItemGroup__marker" [ngStyle]="{'background-color':value.color}"></div>
                 <div class="timelineListItemGroupContent">
                   <div class="timelineListItemGroupContentImage">
@@ -48,8 +48,4 @@
     <div class="clearfix"></div>
   </div>
 </div>
-
-
-
-
 <!-- (click)="itemSelected(value)" -->
