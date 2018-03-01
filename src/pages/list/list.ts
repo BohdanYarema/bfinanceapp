@@ -69,22 +69,6 @@ export class ListPage {
     });
   }
 
-  gotoHome(){
-    this.navCtrl.push(HomePage);
-  }
-
-  gotoCategories(){
-    this.navCtrl.push(CategoriesPage);
-  }
-
-  gotoMap(){
-    this.navCtrl.push(MapPage);
-  }
-
-  gotoTimeline(){
-    this.navCtrl.push(TimelinePage);
-  }
-
   itemSelected(item: string) {
     this.navCtrl.push(AccountingPage, {
       item : item

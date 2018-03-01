@@ -10,7 +10,8 @@ import { MapPage } from '../pages/map/map';
 import { EditPage } from '../pages/edit/edit';
 import { TimelinePage } from '../pages/timeline/timeline';
 import { TranslateService } from '@ngx-translate/core';
-
+import { CategoriesPage } from '../pages/categories/categories';
+import { ListPage } from '../pages/list/list';
 
 @Component({
   templateUrl: 'app.html'
@@ -54,15 +55,19 @@ export class MyApp {
     this.nav.push(ProfilePage);
   }
 
-  gotoHome() {
+  gotoHome(){
     this.nav.push(HomePage);
   }
 
-  gotoMap() {
+  gotoCategories(){
+    this.nav.push(CategoriesPage);
+  }
+
+  gotoMap(){
     this.nav.push(MapPage);
   }
 
-  gotoTimeline() {
+  gotoTimeline(){
     this.nav.push(TimelinePage);
   }
 

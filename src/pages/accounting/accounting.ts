@@ -96,21 +96,4 @@ export class AccountingPage {
       infowindow.open(this.map,marker);
     });
   }
-
-  gotoHome(){
-    this.navCtrl.push(HomePage);
-  }
-
-  gotoCategories(){
-    this.navCtrl.push(CategoriesPage);
-  }
-
-  gotoMap(){
-    this.navCtrl.push(MapPage);
-  }
-
-  gotoTimeline(){
-    this.navCtrl.push(TimelinePage);
-  }
-
 }

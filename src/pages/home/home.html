@@ -2,15 +2,7 @@
 <!-- {{ 'CATEGORIES_NAME' | translate }} -->
 <!-- <p>{{item.count}}</p> -->
 
-<div class="pageBody">
-  <div class="Header">
-    <span class="Header__small Header__small--left" menuToggle><img class="HeaderBtnMenu" src="assets/img/menu_left.png"></span>
-    <span class="Header__small Header__small--middle">Salary account</span>
-    <span class="Header__small Header__small--right" (click)="logout()" ><img class="HeaderBtnLogout" src="assets/img/logout.png"></span>
-    <div class="clearfix"></div>
-    <span class="Header__big">10 234,12</span>
-  </div>
-  
+<div class="pageBody"> 
   <div class="Category">
       <p class="CategoryTitle">Send money to</p>
       <ion-scroll scrollX="true" class="CategoryWrapper">
@@ -40,16 +32,5 @@
           <div class="clearfix"></div>
       </div>
     </div>
-  </div>
-  
-  <div class="footer">
-    <p class="footer__link footer__link--home" (click)="gotoHome()"></p>
-    <p class="footer__link footer__link--explore" (click)="gotoCategories()"></p>
-    <p class="footer__link footer__link--middle" (click)="gotoCategories()">
-      <img class="footer__link--image" src="assets/img/plus_inverse.png">
-    </p>
-    <p class="footer__link footer__link--notification" (click)="gotoTimeline()"></p>
-    <p class="footer__link footer__link--profile" (click)="gotoMap()"></p>
-    <div class="clearfix"></div>
   </div>
 </div>

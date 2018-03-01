@@ -90,20 +90,4 @@ export class HomePage {
       item : item
     });
   }
-
-  gotoHome(){
-    this.navCtrl.push(HomePage);
-  }
-
-  gotoCategories(){
-    this.navCtrl.push(CategoriesPage);
-  }
-
-  gotoMap(){
-    this.navCtrl.push(MapPage);
-  }
-
-  gotoTimeline(){
-    this.navCtrl.push(TimelinePage);
-  }
 }
