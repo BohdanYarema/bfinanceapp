@@ -1,12 +1,7 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
-import { CategoriesPage } from '../categories/categories';
-import { ListPage } from '../list/list';
-import { MapPage } from '../map/map';
-import { TimelinePage } from '../timeline/timeline';
-import { HomePage } from '../home/home';
 import {
   GoogleMap,
  } from '@ionic-native/google-maps';

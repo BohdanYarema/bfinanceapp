@@ -8,23 +8,35 @@
   </div>
   <div class="links">
       <button class="linksButton" menuToggle (click)="gotoHome()"> 
-        <img class="linksButton_img" src="assets/img/menu.png"> 
+        <ion-icon name="home"></ion-icon>
         <span class="linksButton_text"> {{ 'LINK_HOME' | translate }}</span>
       </button>
-      <!-- <button class="linksButton" menuToggle (click)="gotoProfile()"> 
-        <img class="linksButton_img" src="assets/img/menu.png"> 
+      <button class="linksButton" menuToggle (click)="gotoCategories()"> 
+        <ion-icon name="list"></ion-icon>
+        <span class="linksButton_text"> {{ 'CATEGORIES' | translate }}</span>
+      </button>
+      <button class="linksButton" menuToggle (click)="gotoProfile()"> 
+        <ion-icon name="contact"></ion-icon>
         <span class="linksButton_text"> {{ 'LINK_PROFILE' | translate }}</span>
-      </button> -->
+      </button>
+      <button class="linksButton" menuToggle (click)="gotoEdit()"> 
+        <ion-icon name="construct"></ion-icon>
+        <span class="linksButton_text"> {{ 'LINK_SETTINGS' | translate }}</span>
+      </button>
       <button class="linksButton" menuToggle (click)="logout()"> 
-          <img class="linksButton_img" src="assets/img/menu.png"> 
-          <span class="linksButton_text"> {{ 'LINK_LOG_OUT' | translate }}</span>
-        </button>
+        <ion-icon name="log-out"></ion-icon>
+        <span class="linksButton_text"> {{ 'LINK_LOG_OUT' | translate }}</span>
+      </button>
   </div>
 </ion-menu>
 <div class="Header">
-  <span class="Header__small Header__small--left" menuToggle><img class="HeaderBtnMenu" src="assets/img/menu_left.png"></span>
+  <span class="Header__small Header__small--left" menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </span>
   <span class="Header__small Header__small--middle">Salary account</span>
-  <span class="Header__small Header__small--right" (click)="logout()" ><img class="HeaderBtnLogout" src="assets/img/logout.png"></span>
+  <span class="Header__small Header__small--right" (click)="logout()" >
+    <ion-icon name="log-out"></ion-icon>
+  </span>
   <div class="clearfix"></div>
 </div>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
@@ -34,9 +46,6 @@
   </p>
   <p class="footer__link" (click)="gotoCategories()">
     <ion-icon name="list-box"></ion-icon>
-  </p>
-  <p class="footer__link footer__link--middle" (click)="gotoCategories()">
-    <ion-icon name="add"></ion-icon>
   </p>
   <p class="footer__link" (click)="gotoTimeline()">
     <ion-icon name="timer"></ion-icon>

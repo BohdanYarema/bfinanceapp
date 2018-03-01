@@ -4,10 +4,7 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController, App } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { AccountingPage } from '../accounting/accounting';
-import { CategoriesPage } from '../categories/categories';
 import { ListPage } from '../list/list';
-import { MapPage } from '../map/map';
-import { TimelinePage } from '../timeline/timeline';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
 

@@ -5,10 +5,6 @@ import { LoadingController, ToastController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { AccountingPage } from '../accounting/accounting';
 import { InjectableProvider } from '../../providers/injectable/injectable';
-import { CategoriesPage } from '../categories/categories';
-import { MapPage } from '../map/map';
-import { TimelinePage } from '../timeline/timeline';
-import { HomePage } from '../home/home';
 
 @Component({
   selector: 'page-list',

@@ -35,7 +35,7 @@
     }
 
     .links {
-        padding-top: 20px;
+        padding-top: 50px;
         padding-left: 20px;
         .linksButton{
             background: transparent;
@@ -43,14 +43,15 @@
             display: inline-block;
             width: 100%;
             text-align: left;
-            margin-bottom: 15px;
-            .linksButton_img{
-
+            margin-bottom: 25px;
+            ion-icon{
+                color: #FFFFFF;
+                font-size: 20px;
             }
             .linksButton_text{
                 @include fonts(14px, #FFFFFF, normal, 600);
                 vertical-align: top;
-                margin-left: 15px;
+                margin-left: 25px;
             }
         }
     }

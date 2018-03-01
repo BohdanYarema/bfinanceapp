@@ -1,6 +1,6 @@
 <div class="pageBody">
   <div class="list">
-    <p class="list__title">{{item.name}}</p>
+    <p class="list__title">{{item.name}}</p> <ion-icon name="add" (click)="goForm(item)"></ion-icon>
     <div class="listWrapper">
         
       <div *ngFor="let item of data" class="listItem" (click)="itemSelected(item)">
