@@ -61,5 +61,11 @@
   "DATE"                  : "Date",
   "MAN"                   : "Man",
   "WOMAN"                 : "Woman",
-  "MORE"                  : "More"
+  "MORE"                  : "More",
+  "CATEGORY"              : "Category",
+  "ADDRESS"               : "Address",
+  "INFO"                  : "Information",
+  "LAST_TRANSACTION"      : "Last transaction",
+  "DELETE"                : "Delete",
+  "CHOOSE_DATE"           : "Choose date"
 }

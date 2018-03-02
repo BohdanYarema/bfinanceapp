@@ -2,14 +2,23 @@
     <span class="Header__small Header__small--left" menuToggle>
       <ion-icon name="menu"></ion-icon>
     </span>
-    <span class="Header__small Header__small--middle">Salary account</span>
-    <span class="Header__small Header__small--right" (click)="logout()" >
-      <ion-icon name="log-out"></ion-icon>
-    </span>
+    <span class="Header__small Header__small--middle">BFinance</span>
     <div class="clearfix"></div>
   </div>
 <div class="pageBody">
-
+  <div class="profile">
+    <div class="profileImage">
+      <img class="profileImage__image" src="{{this.profile.avatar}}">
+      <p class="profileImage__text">{{this.profile.username}}</p>
+      <p class="profileImage__text">{{this.profile.firstname}}</p>
+      <p class="profileImage__text">{{this.profile.lastname}}</p>
+    </div>
+    <div class="profileStats">
+      <p class="profileStats__text">{{ 'AVG' | translate }} - {{this.avg}}</p>
+      <p class="profileStats__text">{{ 'COUNT' | translate }} - {{this.count}}</p>
+      <p class="profileStats__text">{{ 'SUMMARY' | translate }} - {{this.summary}}</p>
+    </div>
+  </div>
 </div>
 <div class="footer">
   <p class="footer__link" (click)="gotoHome()">
@@ -26,35 +35,3 @@
   </p>
   <div class="clearfix"></div>
 </div>
-
-<!-- {{this.profile.firstname}} 
-{{this.profile.lastname}}
-{{this.profile.username}}
-{{this.profile.avatar}}
-{{this.summary}}
-{{this.count}}
-{{this.avg}}
-{{ 'AVG' | translate }}
-{{ 'COUNT' | translate }}
-{{ 'SUMMARY' | translate }}
-
-<div *ngFor="let item of items">
-    <div *ngFor="let data of item[1]">
-      <div class="page__list__item">
-          <div class="page__list__info" (click)="itemSelected(data)">
-            <p>{{ data.price }}</p>
-            <span>{{ 'CURRENCY' | translate }}</span>
-          </div>
-          <div class="page__list__image" (click)="itemSelected(data)">
-            <img src="{{data.thumbnail}}">
-          </div>
-          <div class="page__list__title" (click)="itemSelected(data)">
-            <p>{{ data.name }}</p>
-            <span>{{ item[0] }}</span>
-          </div>
-          <div class="page__list__icon" (click)="itemDelete(data)">
-            <img src="assets/img/trash.png">
-          </div>
-        </div>
-    </div>
-</div> -->

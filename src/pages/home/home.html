@@ -5,16 +5,13 @@
   <span class="Header__small Header__small--left" menuToggle>
     <ion-icon name="menu"></ion-icon>
   </span>
-  <span class="Header__small Header__small--middle">Salary account</span>
-  <span class="Header__small Header__small--right" (click)="logout()" >
-    <ion-icon name="log-out"></ion-icon>
-  </span>
+  <span class="Header__small Header__small--middle">BFinance</span>
   <div class="clearfix"></div>
 </div>
 
 <div class="pageBody"> 
   <div class="Category">
-      <p class="CategoryTitle">Send money to</p>
+      <p class="CategoryTitle">{{ 'CATEGORIES_NAME' | translate }}</p>
       <ion-scroll scrollX="true" class="CategoryWrapper">
         <ion-row nowrap>
           <div *ngFor="let item of data;" class="CategoryWrapperItem" (click)="itemSelected(item)">
@@ -27,7 +24,7 @@
       </ion-scroll>
   </div>
   <div class="homeBody">
-    <p class="homeBody__title">Last transations</p>
+    <p class="homeBody__title">{{ 'LAST_TRANSACTION' | translate }}</p>
     <div class="homeBodyLast">
       <div *ngFor="let item of last" class="homeBodyLastItem" (click)="accSelected(item)">
           <div class="homeBodyLastItemImage">

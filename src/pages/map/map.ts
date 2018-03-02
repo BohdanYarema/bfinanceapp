@@ -6,7 +6,6 @@ import { LoadingController, ToastController } from 'ionic-angular';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TimelinePage }   from '../timeline/timeline';
 import { CategoriesPage } from '../categories/categories';
-import { FormPage }       from '../form/form';
 import { HomePage }       from '../home/home';
 
 declare var google :any;

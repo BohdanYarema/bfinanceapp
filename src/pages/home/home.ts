@@ -10,7 +10,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { MapPage }        from '../map/map';
 import { TimelinePage }   from '../timeline/timeline';
 import { CategoriesPage } from '../categories/categories';
-import { FormPage }       from '../form/form';
 import { ListPage }       from '../list/list';
 
 @Component({

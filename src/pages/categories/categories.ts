@@ -6,7 +6,6 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { MapPage }        from '../map/map';
 import { TimelinePage }   from '../timeline/timeline';
-import { FormPage }       from '../form/form';
 import { HomePage }       from '../home/home';
 
 /**

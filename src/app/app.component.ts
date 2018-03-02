@@ -11,7 +11,6 @@ import { EditPage } from '../pages/edit/edit';
 import { TimelinePage } from '../pages/timeline/timeline';
 import { TranslateService } from '@ngx-translate/core';
 import { CategoriesPage } from '../pages/categories/categories';
-import { FormPage } from '../pages/form/form';
 
 @Component({
   templateUrl: 'app.html'

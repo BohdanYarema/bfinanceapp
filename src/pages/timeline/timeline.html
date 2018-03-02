@@ -4,10 +4,7 @@
   <span class="Header__small Header__small--left" menuToggle>
     <ion-icon name="menu"></ion-icon>
   </span>
-  <span class="Header__small Header__small--middle">Salary account</span>
-  <span class="Header__small Header__small--right" (click)="logout()" >
-    <ion-icon name="log-out"></ion-icon>
-  </span>
+  <span class="Header__small Header__small--middle">BFinance</span>
   <div class="clearfix"></div>
 </div>
 <div class="pageBody">
@@ -25,7 +22,7 @@
                   </div>
                   <div class="timelineListItemGroupContentText">
                     <div class="timelineListItemGroupContentText__text">{{value.name}}</div>
-                    <div class="timelineListItemGroupContentText__text">{{value.price}} uah</div>
+                    <div class="timelineListItemGroupContentText__text">{{value.price}} {{ 'CURRENCY' | translate }}</div>
                     <div class="timelineListItemGroupContentText__text">{{value.time}}</div>
                   </div>
                   <div class="clearfix"></div>
@@ -36,7 +33,7 @@
     </div>
     <div class="timelineForm">
         <button class="timelineForm__btn">
-          <ion-datetime placeholder="Choose Date" class="datetime" displayFormat="MMM/YYYY" (ionChange)="date_Value()" [(ngModel)]="dateValue"></ion-datetime>
+          <ion-datetime placeholder="{{ 'CHOOSE_DATE' | translate }}" class="datetime" displayFormat="MMM/YYYY" (ionChange)="date_Value()" [(ngModel)]="dateValue"></ion-datetime>
         </button>
     </div>
   </div>

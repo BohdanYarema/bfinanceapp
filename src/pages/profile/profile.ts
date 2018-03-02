@@ -8,7 +8,6 @@ import { InjectableProvider } from '../../providers/injectable/injectable';
 import { MapPage }        from '../map/map';
 import { TimelinePage }   from '../timeline/timeline';
 import { CategoriesPage } from '../categories/categories';
-import { FormPage }       from '../form/form';
 import { HomePage }       from '../home/home';
 
 /**

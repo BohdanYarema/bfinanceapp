@@ -1,259 +1,130 @@
 page-edit {
     overflow: scroll; 
-    
-    .lang {
-      background-color: #FF3366;
-      width: 100%;
-      font-size: 1.375rem;
-      color: #ffffff;
-      margin-bottom: 0;
-      height: 6.25rem;
-      padding-top: 1.5rem
-    }
-    
-    .page{
+    background-color: #f6f9fc;
+
+    .settings{
       height: 100%;
-    }
-  
-    .page__image{
-      height: 22.5rem;
-      width: 100%;
-    }
-  
-    .page__bg{
-      position: relative;
-    }
-  
-    .page__icon{
-      height: 9.375rem;
-      width: 9.375rem;
-      position: absolute;
-      left: 50%;
-      margin-left: -4.6875rem;
-    }
-
-    .page__info{
-      width: 100%;
-      position: absolute;
-      top: 7.5rem;
-    }
-
-    .page__menu{
-      position: absolute;
-      top: 2.71875rem;
-      left: 1.171875rem;
-      border: 0;
-      background: transparent;
-      height: 2.34375rem;
-      width: 2.34375rem;
-      background-image: url(../assets/img/menu_img.png);
-      background-size: cover;
-    }
-
-    .page__name{
-        position: absolute;
-        top: 2.8125rem;
-        left: 5.5rem;
-        font-family: Avenir;
-        color: #ffffff;
-        font-size: 1.375rem;
-    }
-
-    .page__add{
-      position: absolute;
-      top: 14.8125rem;
-      right: 2rem;
-      height:5.625rem;
-      width: 5.625rem;
-      background: transparent;
-      padding: 0;
-      border-radius: 50px;
-      border: 1px solid #999999;
-    }
-
-    .page__add img{
-      border-radius: 50px;
-      height: inherit;
-      width : inherit;
-    }
-  
-    .page__list{
-      text-align: center;
-      width: 100%;
-    }
-
-    .page__info__text{
-        text-align: left;
-        position: absolute;
-        width: 100%;
-        padding-left: 2.34375rem;
-    }
-
-    .page__list__item{
-      
-    }
-
-    .page__list__item div{
-      display: inline-block;
-      vertical-align: top;
-    }
-
-    .page__list__info{
-      width: 20%;
-    }
-
-    .page__list__info p{
-      font-size: 2.4rem;
-      line-height: 1;
-    }
-
-    .page__list__info span{
-      font-size: 1.5rem;
-      opacity: 0.5;
-      line-height: 1;
-    }
-
-    .page__list__image{
-      position: relative;
-      height: 9.375rem;
-      width: 9.375rem;
-    }
-
-    .page__list__image img{
-      border-radius: 50%;
-    }
-
-    .page__list__image--notify{
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 2.8125rem;
-      width: 2.8125rem;
-      background-image: url(../assets/img/notify.png);
-      background-size: cover;
-    }
-
-    .page__list__image--notify p{
-      color: #ffffff;
-      font-size: 1.5 rem;
-      padding-top: 0.4rem;
-    }
-
-
-    .page__list__image--diagonal{
-      height: 6.625rem;
-      width: 100%;
-      background-image: url(../assets/img/line.png);
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .page__list__title{
-      margin-left: 1.875rem;
-    }
-
-    .page__list__title p{
-      font-size: 1.875rem;
-      line-height: 1;
-      padding-bottom: 5px;
-    }
-
-    .page__list__title span{
-      font-size: 1.5rem;
-      opacity: 0.5;
-      line-height: 1;
-    }
-
-    .page__info__text--title{
-      font-size: 4.375rem;
-      color: #ffffff;
-      line-height: 1;
-    }
-
-    .page__info__text--description{
-      font-size: 1.375rem;
-      color: #ffffff;
-      opacity: 0.5;
-      line-height: 1;
-      margin-top: 1.6875rem;
-      display: inline-block;
-      text-transform: uppercase;
-    }
-
-    .page__form{
-        margin-top: 2rem;
-        text-align: center;
-        width: 100%;
-        padding: 0;
-    }
-
-    .page__form__group{
-        border-bottom: rgba(29, 29, 38, 0.05) 1px solid;
-        border-top: rgba(29, 29, 38, 0.05) 1px solid;
-    }
-    
-    .page__form__elements{
-        text-align: center; 
-        outline: none;
-        border: none;
-        font-family: Avenir;
-        display: inline-block;
-        width: 100%;
-        font-size: 1.6875rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .page__form__group label{
-        font-size: 1.4375rem;
-        opacity: 0.5;
-        text-transform: capitalize;
-        margin: 1.5rem 1rem 0 1rem;
-        display: inline-block;
-        padding-bottom: 0.75rem;
-    }
-
-
-    .item-md {
-        padding: 0;
-        height: 6.25rem;
-        margin-bottom: 1.875rem;
-        border-bottom: rgba(29, 29, 38, 0.05) 2px solid;
-    }
-
-    .item-md.item-block .item-inner {
-        padding: 0;
-        border: 0;
-    }
-    
-      .page__form__elements--simple {
-        width: 49%;
-        margin: 1rem 0 0 0;
-        display: inline-block;
-        height: 1.25 rem !important;
-        border: none;
-        text-transform: uppercase;
+      margin: 65px 15px;
+      border-radius: 6px;
+      .settingsHeader{
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        .settingsHeader__text{
+          width: 50%;
+          float: left;
+          @include fonts(14px, #353a41, normal, 600);
+          text-align: center;
+          padding-top: 13px;
+        }
+        .settingsHeaderImg{
+          width: 50%;
+          float: left;
+          height: 50px;
+          text-align: center;
+          .settingsHeaderImgContainer{
+            .settingsHeaderImgContainer__image{
+              height: 50px;
+              width: 50px;
+              border-radius: 50px;
+              display: inline-block;
+              vertical-align: top;
+              margin-right: 15px;
+            }
+            .settingsHeaderImgContainer__icon{
+              display: inline-block;
+              vertical-align: top;
+              padding-top: 20px;
+            }
+          }
+        }
       }
 
-      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color: #1D1D26;
-        font-size: 1.75rem;
+      .settingsLanguage{
+        padding: 15px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        .settingsLanguage__btn{
+          width: 115px;
+          float: left;
+          text-align: center;
+          @include fonts(14px, #FFFFFF, normal, 600);
+          background-color: #2CC197;
+          border-radius: 6px;
+          -webkit-box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+          -moz-box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+          box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+        }
+        .settingsLanguage__btn--left{
+          margin-left: 15px;
+        }
+        .settingsLanguage__btn--right{
+          margin-right: 15px;
+        }
       }
 
-      #login-button1{
-        background-color: #FF3366;
-        width: 100%;
-        font-size: 1.375rem;
-        color: #ffffff;
-        margin-top:2rem !important; 
-        height: 6.25rem;
-      }
+      .settingsForm{
+        .settigsFormInput{
+          border-radius: 6px;
+          height: 45px;
+          margin: 15px auto;
+          @include fonts(12px, #343941, normal, 600);
+          .settigsFormInput__label{
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            padding-top: 13px;
+            padding-left: 15px;
+            padding-right: 15px;
+            float: left;
+          }
 
-      #login-button2{
-        background-color: #FF3366;
-        width: 100%;
-        font-size: 1.375rem;
-        color: #ffffff;
-        margin-bottom: 0;
-        height: 6.25rem;
+          .settigsFormInput__label--full{
+            height: 100%;
+            display: block;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: center;
+            padding-bottom: 15px;
+          }
+          .settigsFormInput__label--half{
+            width: 50%;
+            float: left;
+            text-align: center;
+            background-color: #FFFFFF;
+            border-radius: 6px;
+            padding-bottom: 15px;
+          }
+          .settigsFormInput__input{
+            width: 140px;
+            height: 100%;
+            display: inline-block;
+            vertical-align: top;
+            float: right;
+            border: none;
+            border-radius: 6px;
+            padding-left: 15px;
+          }
+        }
+        .settigsFormInput--height{
+          height: auto;
+        }
+        .settigsFormInput__btn{
+          width: 100%;
+          height: 45px;
+          display: block;
+          text-align: center;
+          @include fonts(14px, #FFFFFF, normal, 600);
+          background-color: #2CC197;
+          border-radius: 6px;
+          -webkit-box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+          -moz-box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+          box-shadow: 0px 0px 7px 0px rgba(44,193,151,1);
+          margin-top: 15px;
+        }
       }
+    }
 }

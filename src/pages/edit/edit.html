@@ -2,80 +2,76 @@
     <span class="Header__small Header__small--left" menuToggle>
         <ion-icon name="menu"></ion-icon>
     </span>
-    <span class="Header__small Header__small--middle">Salary account</span>
-    <span class="Header__small Header__small--right" (click)="logout()" >
-        <ion-icon name="log-out"></ion-icon>
-    </span>
+    <span class="Header__small Header__small--middle">BFinance</span>
     <div class="clearfix"></div>
 </div>
-<div class="page">
-    <div class="page__bg">
-        <img class="page__image" src="assets/img/settings_img.png">
-        <button class="page__menu" menuToggle left></button>
-        <p class="page__name">{{ 'LINK_SETTINGS' | translate }}</p>
-        <div class="page__info">
-            <div class="page__info__text">
-                <p class="page__info__text--title">{{this.profile_info.firstname}} {{this.profile_info.lastname}}</p>
-                <p class="page__info__text--description">{{this.profile_info.username}}</p>
+<div class="pageBody">
+    <div class="settings">
+        <div class="settingsHeader">
+            <p class="settingsHeader__text">{{ 'LINK_SETTINGS' | translate }}</p>
+            <div class="settingsHeaderImg">
+                <div class="settingsHeaderImgContainer">
+                    <img class="settingsHeaderImgContainer__image" src="{{this.profile_info.avatar}}" (click)="getImage()">
+                    <ion-icon class="settingsHeaderImgContainer__icon" name="cloud-upload" (click)="uploadFile()"></ion-icon>
+                </div>
             </div>
+            <div class="clearfix"></div>
         </div>
-        <button class="page__add" (click)="getImage()">
-            <img src="{{this.profile_info.avatar}}">
-        </button>
-    </div>
-    <div class="page__form">
-    
-        <form [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">
-            <div class="page__form__group">
-                <label>{{ 'FIRSTNAME' | translate }} ({{this.profile_info.firstname}})</label>
-                <input class="page__form__elements" formControlName="firstname" name="firstname" type="text" >
-            </div>
-            <div class="page__form__group">
-                <label>{{ 'LASTNAME' | translate }} ({{this.profile_info.lastname}})</label>
-                <input class="page__form__elements" formControlName="lastname" name="lastname" type="text">
-            </div>
-            <div class="page__form__group">
-                <label>{{ 'MIDDLENAME' | translate }} ({{this.profile_info.middlename}})</label>
-                <input class="page__form__elements" formControlName="middlename" name="middlename" type="text">
-            </div>
-            <div class="page__form__group">
-                <label>{{ 'GENDER' | translate }} ({{this.gender_[this.profile_info.gender]}})</label><br>
-                <label for="man">{{this.gender_[1]}}
-                    <input type="radio" id="man" formControlName="gender" name="gender" value="1"> 
-                </label>
-                <label for="woman">{{this.gender_[2]}}
-                    <input type="radio" id="woman" formControlName="gender" name="gender" value="2"> 
-                </label>
-            </div>
-            <br>
 
-            <p class="page__form__elements lang" (click)="changeLanguage('en')">
+        <div class="settingsLanguage">
+            <p class="settingsLanguage__btn settingsLanguage__btn--right" (click)="changeLanguage('en')">
                 {{ 'TO_ENGLISH' | translate }}
             </p>
-    
-            <p class="page__form__elements lang" (click)="changeLanguage('ua')">
+
+            <p class="settingsLanguage__btn settingsLanguage__btn--left" (click)="changeLanguage('ua')">
                 {{ 'TO_UKRAINE' | translate }}
             </p>
+            <div class="clearfix"></div>
+        </div>
     
-            <button class="page__form__elements" id="login-button1" type="submit" [disabled]="!editGroup.valid">{{ 'UPDATE_FORM' | translate }}</button>
+        <form class="settingsForm" [formGroup]="editGroup" (ngSubmit)="doEdit(editGroup.value)">
+            <div class="settigsFormInput">
+                <label class="settigsFormInput__label">{{ 'FIRSTNAME' | translate }} ({{this.profile_info.firstname}})</label>
+                <input class="settigsFormInput__input" formControlName="firstname" name="firstname" type="text" >
+                <div class="clearfix"></div>
+            </div>
+            <div class="settigsFormInput">
+                <label class="settigsFormInput__label">{{ 'LASTNAME' | translate }} ({{this.profile_info.lastname}})</label>
+                <input class="settigsFormInput__input" formControlName="lastname" name="lastname" type="text">
+                <div class="clearfix"></div>
+            </div>
+            <div class="settigsFormInput">
+                <label class="settigsFormInput__label">{{ 'MIDDLENAME' | translate }} ({{this.profile_info.middlename}})</label>
+                <input class="settigsFormInput__input" formControlName="middlename" name="middlename" type="text">
+                <div class="clearfix"></div>
+            </div>
+            <div class="settigsFormInput settigsFormInput--height">
+                <label class="settigsFormInput__label settigsFormInput__label--full">{{ 'GENDER' | translate }} ({{this.gender_[this.profile_info.gender]}})</label><br>
+                <label class="settigsFormInput__label settigsFormInput__label--half" for="man">{{this.gender_[1]}}
+                    <input type="radio" id="man" formControlName="gender" name="gender" value="1"> 
+                </label>
+                <label class="settigsFormInput__label settigsFormInput__label--half" for="woman">{{this.gender_[2]}}
+                    <input type="radio" id="woman" formControlName="gender" name="gender" value="2"> 
+                </label>
+                <div class="clearfix"></div>
+            </div>
+            <button class="settigsFormInput__btn" type="submit" [disabled]="!editGroup.valid">{{ 'UPDATE_FORM' | translate }}</button>
         </form>
-
-        <button class="page__form__elements" id="login-button2" type="submit" (click)="uploadFile()">{{ 'UPLOAD_IMAGE' | translate }}</button>
     </div>
 </div>
 
 <div class="footer">
     <p class="footer__link" (click)="gotoHome()">
-      <ion-icon name="home"></ion-icon>
+        <ion-icon name="home"></ion-icon>
     </p>
     <p class="footer__link" (click)="gotoCategories()">
-      <ion-icon name="list-box"></ion-icon>
+        <ion-icon name="list-box"></ion-icon>
     </p>
     <p class="footer__link" (click)="gotoTimeline()">
-      <ion-icon name="timer"></ion-icon>
+        <ion-icon name="timer"></ion-icon>
     </p>
     <p class="footer__link" (click)="gotoMap()">
-      <ion-icon name="locate"></ion-icon>
+        <ion-icon name="locate"></ion-icon>
     </p>
     <div class="clearfix"></div>
-  </div>
+</div>
