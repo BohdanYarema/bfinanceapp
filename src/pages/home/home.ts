@@ -4,9 +4,14 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController, App } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { AccountingPage } from '../accounting/accounting';
-import { ListPage } from '../list/list';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
+
+import { MapPage }        from '../map/map';
+import { TimelinePage }   from '../timeline/timeline';
+import { CategoriesPage } from '../categories/categories';
+import { FormPage }       from '../form/form';
+import { ListPage }       from '../list/list';
 
 @Component({
   selector: 'page-home',
@@ -86,5 +91,21 @@ export class HomePage {
     this.navCtrl.push(AccountingPage, {
       item : item
     });
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(category : object){
+    this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 }

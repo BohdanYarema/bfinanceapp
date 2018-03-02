@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
+import { MapPage }        from '../map/map';
+import { TimelinePage }   from '../timeline/timeline';
+import { CategoriesPage } from '../categories/categories';
+import { FormPage }       from '../form/form';
+import { HomePage }       from '../home/home';
 import {
   GoogleMap,
  } from '@ionic-native/google-maps';
@@ -90,5 +95,22 @@ export class AccountingPage {
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.open(this.map,marker);
     });
+  }
+
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(category : object){
+    this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 }

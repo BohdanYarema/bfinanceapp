@@ -1,6 +1,16 @@
 <!-- menuToggle -->
 <!-- {{ 'CATEGORIES_NAME' | translate }} -->
 <!-- <p>{{item.count}}</p> -->
+<div class="Header">
+  <span class="Header__small Header__small--left" menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </span>
+  <span class="Header__small Header__small--middle">Salary account</span>
+  <span class="Header__small Header__small--right" (click)="logout()" >
+    <ion-icon name="log-out"></ion-icon>
+  </span>
+  <div class="clearfix"></div>
+</div>
 
 <div class="pageBody"> 
   <div class="Category">
@@ -33,4 +43,20 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="footer">
+  <p class="footer__link" (click)="gotoHome()">
+    <ion-icon name="home"></ion-icon>
+  </p>
+  <p class="footer__link" (click)="gotoCategories()">
+    <ion-icon name="list-box"></ion-icon>
+  </p>
+  <p class="footer__link" (click)="gotoTimeline()">
+    <ion-icon name="timer"></ion-icon>
+  </p>
+  <p class="footer__link" (click)="gotoMap()">
+    <ion-icon name="locate"></ion-icon>
+  </p>
+  <div class="clearfix"></div>
 </div>

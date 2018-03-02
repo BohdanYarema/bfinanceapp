@@ -1,3 +1,13 @@
+<div class="Header">
+  <span class="Header__small Header__small--left" menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </span>
+  <span class="Header__small Header__small--middle">Salary account</span>
+  <span class="Header__small Header__small--right" (click)="logout()" >
+    <ion-icon name="log-out"></ion-icon>
+  </span>
+  <div class="clearfix"></div>
+</div>
 <div class="pageBody">
   <div class="item">
     <div class="itemMain">
@@ -23,17 +33,22 @@
       <p class="itemSecondaryBtn itemSecondaryBtn--red">Delete</p>
     </div>
   </div>
+</div>
 
-  <div class="footer">
-    <p class="footer__link footer__link--home" (click)="gotoHome()"></p>
-    <p class="footer__link footer__link--explore" (click)="gotoCategories()"></p>
-    <p class="footer__link footer__link--middle" (click)="gotoCategories()">
-      <img class="footer__link--image" src="assets/img/plus_inverse.png">
-    </p>
-    <p class="footer__link footer__link--notification" (click)="gotoTimeline()"></p>
-    <p class="footer__link footer__link--profile" (click)="gotoMap()"></p>
-    <div class="clearfix"></div>
-  </div>
+<div class="footer">
+  <p class="footer__link" (click)="gotoHome()">
+    <ion-icon name="home"></ion-icon>
+  </p>
+  <p class="footer__link" (click)="gotoCategories()">
+    <ion-icon name="list-box"></ion-icon>
+  </p>
+  <p class="footer__link" (click)="gotoTimeline()">
+    <ion-icon name="timer"></ion-icon>
+  </p>
+  <p class="footer__link" (click)="gotoMap()">
+    <ion-icon name="locate"></ion-icon>
+  </p>
+  <div class="clearfix"></div>
 </div>
 
 <!-- <div #map id="map">

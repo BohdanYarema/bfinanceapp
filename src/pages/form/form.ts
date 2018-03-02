@@ -7,6 +7,10 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { CustomValidators } from '../../validators/custom';
 import { ListPage } from '../../pages/list/list';
 import { InjectableProvider } from '../../providers/injectable/injectable';
+import { MapPage }        from '../map/map';
+import { TimelinePage }   from '../timeline/timeline';
+import { CategoriesPage } from '../categories/categories';
+import { HomePage }       from '../home/home';
 //import { Diagnostic } from '@ionic-native/diagnostic';
 
 
@@ -70,12 +74,12 @@ export class FormPage {
         //this.showLoader("Catching you gps coords");
         platform.ready().then(() => {
             geolocation.getCurrentPosition().then((location) => {
-                this.presentToast(this.injectableProvider.gps_enabled);
+                //this.presentToast(this.injectableProvider.gps_enabled);
                 this.gps_x = location.coords.latitude;
                 this.gps_y = location.coords.longitude;
 
             }).catch((error) => {
-                this.presentToast(this.injectableProvider.gps_disabled);
+                //this.presentToast(this.injectableProvider.gps_disabled);
                 this.gps_x = null;
                 this.gps_y = null;
             });
@@ -84,7 +88,7 @@ export class FormPage {
 
     // sending form data function
     doAddAcccounting(data) {
-        this.showLoader(this.injectableProvider.searching);
+        //this.showLoader(this.injectableProvider.searching);
 
         data.category_id    = this.category_id;
         data.gps_x          = this.gps_x;
@@ -123,5 +127,21 @@ export class FormPage {
         });
         toast.onDidDismiss(() => {});
         toast.present();
+    }
+
+    gotoHome(){
+    this.navCtrl.push(HomePage);
+    }
+
+    gotoCategories(category : object){
+    this.navCtrl.push(CategoriesPage);
+    }
+
+    gotoMap(){
+    this.navCtrl.push(MapPage);
+    }
+
+    gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
     }
 }

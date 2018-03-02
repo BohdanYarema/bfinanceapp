@@ -4,6 +4,10 @@ import { GoogleMap } from '@ionic-native/google-maps';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoadingController, ToastController } from 'ionic-angular';
 import { InjectableProvider } from '../../providers/injectable/injectable';
+import { TimelinePage }   from '../timeline/timeline';
+import { CategoriesPage } from '../categories/categories';
+import { FormPage }       from '../form/form';
+import { HomePage }       from '../home/home';
 
 declare var google :any;
 
@@ -104,5 +108,21 @@ export class MapPage {
     toast.onDidDismiss(() => {});
 
     toast.present();
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(category : object){
+    this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 }

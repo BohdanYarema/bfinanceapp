@@ -29,32 +29,7 @@
       </button>
   </div>
 </ion-menu>
-<div class="Header">
-  <span class="Header__small Header__small--left" menuToggle>
-    <ion-icon name="menu"></ion-icon>
-  </span>
-  <span class="Header__small Header__small--middle">Salary account</span>
-  <span class="Header__small Header__small--right" (click)="logout()" >
-    <ion-icon name="log-out"></ion-icon>
-  </span>
-  <div class="clearfix"></div>
-</div>
 <ion-nav id="nav" #content [root]="rootPage"></ion-nav>
-<div class="footer">
-  <p class="footer__link" (click)="gotoHome()">
-    <ion-icon name="home"></ion-icon>
-  </p>
-  <p class="footer__link" (click)="gotoCategories()">
-    <ion-icon name="list-box"></ion-icon>
-  </p>
-  <p class="footer__link" (click)="gotoTimeline()">
-    <ion-icon name="timer"></ion-icon>
-  </p>
-  <p class="footer__link" (click)="gotoMap()">
-    <ion-icon name="locate"></ion-icon>
-  </p>
-  <div class="clearfix"></div>
-</div>
 
 <!-- <button class="linksButton" menuToggle (click)="gotoProfile()"> <img src="assets/img/menu.png">  {{ 'LINK_PROFILE' | translate }}</button>
 <button class="linksButton" menuToggle (click)="gotoMap()"> <img src="assets/img/menu.png">  {{ 'LINK_MAP' | translate }}</button>

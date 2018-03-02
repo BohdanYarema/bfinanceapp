@@ -7,6 +7,11 @@ import { FormBuilder, FormGroup, AbstractControl, Validators } from '@angular/fo
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
+import { MapPage }        from '../map/map';
+import { TimelinePage }   from '../timeline/timeline';
+import { CategoriesPage } from '../categories/categories';
+import { FormPage }       from '../form/form';
+import { HomePage }       from '../home/home';
 
 /**
  * Generated class for the EditPage page.
@@ -151,7 +156,8 @@ export class EditPage {
 
   uploadFile() {
     let loader = this.loadingCtrl.create({
-      content: this.injectableProvider.uploading
+      //content: this.injectableProvider.uploading
+      content: 'uploading'
     });
     //loader.present();
     const fileTransfer: FileTransferObject = this.transfer.create();
@@ -177,13 +183,29 @@ export class EditPage {
         this.profile.avatar = this.response.image;
         localStorage.setItem('profile', JSON.stringify(this.profile));
         loader.dismiss();
-        this.presentToast(this.injectableProvider.image_upload_success);
+        //this.presentToast(this.injectableProvider.image_upload_success);
 
         this.navCtrl.push(ProfilePage);
     }, (err) => {
         loader.dismiss();
         this.presentToast(err);
     });
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(category : object){
+    this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 
 }

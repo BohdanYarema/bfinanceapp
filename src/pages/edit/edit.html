@@ -1,3 +1,13 @@
+<div class="Header">
+    <span class="Header__small Header__small--left" menuToggle>
+        <ion-icon name="menu"></ion-icon>
+    </span>
+    <span class="Header__small Header__small--middle">Salary account</span>
+    <span class="Header__small Header__small--right" (click)="logout()" >
+        <ion-icon name="log-out"></ion-icon>
+    </span>
+    <div class="clearfix"></div>
+</div>
 <div class="page">
     <div class="page__bg">
         <img class="page__image" src="assets/img/settings_img.png">
@@ -53,3 +63,19 @@
         <button class="page__form__elements" id="login-button2" type="submit" (click)="uploadFile()">{{ 'UPLOAD_IMAGE' | translate }}</button>
     </div>
 </div>
+
+<div class="footer">
+    <p class="footer__link" (click)="gotoHome()">
+      <ion-icon name="home"></ion-icon>
+    </p>
+    <p class="footer__link" (click)="gotoCategories()">
+      <ion-icon name="list-box"></ion-icon>
+    </p>
+    <p class="footer__link" (click)="gotoTimeline()">
+      <ion-icon name="timer"></ion-icon>
+    </p>
+    <p class="footer__link" (click)="gotoMap()">
+      <ion-icon name="locate"></ion-icon>
+    </p>
+    <div class="clearfix"></div>
+  </div>

@@ -5,6 +5,11 @@ import { EditPage } from '../edit/edit';
 import { AccountingPage } from '../accounting/accounting';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { InjectableProvider } from '../../providers/injectable/injectable';
+import { MapPage }        from '../map/map';
+import { TimelinePage }   from '../timeline/timeline';
+import { CategoriesPage } from '../categories/categories';
+import { FormPage }       from '../form/form';
+import { HomePage }       from '../home/home';
 
 /**
  * Generated class for the ProfilePage page.
@@ -114,5 +119,21 @@ export class ProfilePage {
       this.loading.dismiss();
       this.presentToast(err);
     });
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
+  }
+
+  gotoCategories(category : object){
+    this.navCtrl.push(CategoriesPage);
+  }
+
+  gotoMap(){
+    this.navCtrl.push(MapPage);
+  }
+
+  gotoTimeline(){
+    this.navCtrl.push(TimelinePage);
   }
 }
