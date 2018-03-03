@@ -11,7 +11,7 @@ import { MapPage }        from '../map/map';
 import { TimelinePage }   from '../timeline/timeline';
 import { CategoriesPage } from '../categories/categories';
 import { HomePage }       from '../home/home';
-//import { Diagnostic } from '@ionic-native/diagnostic';
+import { Diagnostic } from '@ionic-native/diagnostic';
 
 
 @Component({
@@ -24,7 +24,7 @@ export class FormPage {
   addGroup: FormGroup;
   name  : AbstractControl;
   price : AbstractControl;
-  dates : AbstractControl;
+  //dates : AbstractControl;
   loading: any;
   response: any;
   category;
@@ -42,12 +42,12 @@ export class FormPage {
         public authService: AuthServiceProvider, 
         public loadingCtrl: LoadingController, 
         private toastCtrl: ToastController,
-        public injectableProvider: InjectableProvider
-        //private diagnostic: Diagnostic
+        public injectableProvider: InjectableProvider,
+        private diagnostic: Diagnostic
     ) {
-        // let successCallback = (isAvailable) => { alert('Is available? ' + isAvailable); };
-        // let errorCallback = (e) => alert(e);
-        // this.diagnostic.isGpsLocationEnabled().then(successCallback, errorCallback);
+        let successCallback = (isAvailable) => { alert('Is available? ' + isAvailable); };
+        let errorCallback = (e) => alert(e);
+        this.diagnostic.isGpsLocationEnabled().then(successCallback, errorCallback);
 
 
         // data from category page
@@ -61,25 +61,21 @@ export class FormPage {
             price:['', Validators.compose([
                 Validators.required, 
                 CustomValidators.negativeNumber,
-            ])],
-            dates:['', Validators.required]
+            ])]
+            //dates:['', Validators.required]
         });
 
         this.name   = this.addGroup.controls['name'];
         this.price  = this.addGroup.controls['price'];
-        this.dates  = this.addGroup.controls['dates'];
+        //this.dates  = this.addGroup.controls['dates'];
 
-
-        // init getting gps coords from native plugin
         //this.showLoader("Catching you gps coords");
         platform.ready().then(() => {
             geolocation.getCurrentPosition().then((location) => {
-                //this.presentToast(this.injectableProvider.gps_enabled);
                 this.gps_x = location.coords.latitude;
                 this.gps_y = location.coords.longitude;
 
             }).catch((error) => {
-                //this.presentToast(this.injectableProvider.gps_disabled);
                 this.gps_x = null;
                 this.gps_y = null;
             });
@@ -88,17 +84,12 @@ export class FormPage {
 
     // sending form data function
     doAddAcccounting(data) {
-        //this.showLoader(this.injectableProvider.searching);
-
         data.category_id    = this.category_id;
         data.gps_x          = this.gps_x;
         data.gps_y          = this.gps_y;
     
-
         this.authService.addAccounting(data).then((result) => {
-            this.loading.dismiss();
             this.response = result;
-
             this.navCtrl.push(ListPage, {
                 item : this.category
             });

@@ -36,7 +36,6 @@ export class ListPage {
     this.showLoader();
     this.authService.accounting(this.item.id).then((result) => {
       this.data = result;
-      console.log(this.data);
       this.loading.dismiss();
     }, (err) => {
       this.loading.dismiss();
@@ -46,7 +45,6 @@ export class ListPage {
 
   showLoader(){
     this.loading = this.loadingCtrl.create({});
-
     this.loading.present();
   }
 
@@ -78,7 +76,6 @@ export class ListPage {
   itemDelete(item) {
     this.authService.deleteAccounting(item).then((result) => {
       this.data = result
-      this.loading.dismiss();
       this.navCtrl.push(ListPage, {
         item : this.item
       });

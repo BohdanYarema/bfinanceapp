@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
 import { MapPage }        from '../map/map';
 import { TimelinePage }   from '../timeline/timeline';
 import { CategoriesPage } from '../categories/categories';
 import { HomePage }       from '../home/home';
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import {
   GoogleMap,
  } from '@ionic-native/google-maps';
@@ -23,34 +24,40 @@ export class AccountingPage {
   ];
   //@ViewChild("map") mapElement: ElementRef;
 
+  loading : any;
+  data    : any;
   item    : any;
+  items   = [];
+
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
     public injectableProvider: InjectableProvider,
-    public translateService:TranslateService
+    public translateService:TranslateService,
+    public authService: AuthServiceProvider, 
+    public loadingCtrl: LoadingController, 
+    private toastCtrl: ToastController,
   ) {
     this.item = navParams.data.item;
 
     var date = new Date(parseInt(this.item.dates) * 1000);
     
-    var curr_date   = date.getDate();
+    //var curr_date   = date.getDate();
     var curr_month  = date.getMonth();
     var curr_year   = date.getFullYear();
     
     //var result = (curr_date + "-" + curr_month + "-" + curr_year);
 
-    this.item.dates   = curr_date;
+    this.item.dates   = this.item.dates;
     this.item.year    = curr_year;
     this.translateService.get(this.monthNames[curr_month].toUpperCase()).subscribe((res: string) => {
       this.item.mounth = res;
     });
+
+    console.log(this.item);
   }
 
-  segmentChanged(model){
-    console.log(model.value);
-  }
-
+  
   ionViewDidLoad() {
     if (this.item.gps_x !== null || this.item.gps_y !== null) {
       //this.loadmap(this.item.gps_x, this.item.gps_y, this.item.name); 
@@ -111,5 +118,28 @@ export class AccountingPage {
 
   gotoTimeline(){
     this.navCtrl.push(TimelinePage);
+  }
+
+  presentToast(msg) {
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 3000,
+      position: 'bottom',
+      dismissOnPageChange: true
+    });
+
+    toast.onDidDismiss(() => {});
+
+    toast.present();
+  }
+
+  itemDelete(item) {
+    this.authService.deleteAccounting(item).then((result) => {
+      this.data = result
+      this.navCtrl.push(CategoriesPage);
+    }, (err) => {
+      this.loading.dismiss();
+      this.presentToast(err);
+    });
   }
 }

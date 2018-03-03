@@ -9,7 +9,7 @@
   <div class="item">
     <div class="itemMain">
       <p class="itemMain__title">{{item.name}}</p>
-      <p class="itemMain__description">30000 {{ 'CURRENCY' | translate }}</p>
+      <p class="itemMain__description">{{item.price}} {{ 'CURRENCY' | translate }}</p>
       <div class="itemMainTabs">
           <p class="itemMainTabs__link">{{ 'INFO' | translate }}</p>
       </div>
@@ -17,13 +17,13 @@
     <div class="itemSecondary">
       <div class="itemSecondaryBody">
         <p class="itemSecondaryBody__title">{{ 'CATEGORY' | translate }}: </p>
-        <p class="itemSecondaryBody__description">Category name -> Test</p>
+        <p class="itemSecondaryBody__description">{{item.name}}</p>
         <p class="itemSecondaryBody__title">{{ 'ADDRESS' | translate }}: </p>
-        <p class="itemSecondaryBody__description">Address name -> Test</p>
+        <p class="itemSecondaryBody__description">{{item.gps_x}} {{item.gps_y}}</p>
         <p class="itemSecondaryBody__title">{{ 'DATE' | translate }}: </p>
-        <p class="itemSecondaryBody__description">Date name -> Test</p>
+        <p class="itemSecondaryBody__description">{{item.dates}}</p>
       </div>
-      <p class="itemSecondaryBtn itemSecondaryBtn--red" (click)="itemDelete(data)">{{ 'DELETE' | translate }}</p>
+      <p class="itemSecondaryBtn itemSecondaryBtn--red" (click)="itemDelete(item)">{{ 'DELETE' | translate }}</p>
     </div>
   </div>
 </div>

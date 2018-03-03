@@ -22,6 +22,7 @@ export class MyApp {
   loading:any;
   searching:any;
   language:any;
+  profile: any;
 
   constructor(
       platform  : Platform,
@@ -43,6 +44,8 @@ export class MyApp {
       localStorage.setItem('language', 'en');
       this.language = localStorage.getItem("language");
     }
+
+    this.profile = JSON.parse(localStorage.getItem('profile'));
 
     platform.ready().then(() => {
       this.translateService.setDefaultLang(this.language);

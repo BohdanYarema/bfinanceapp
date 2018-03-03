@@ -65,6 +65,8 @@ export class RegisterPage {
       this.loading.dismiss();
       this.response = result;
 
+      let summary = Math.round(this.response.summary.summary * 100) / 100;
+
       this.profile = {
         username    : this.response.username,
         email       : this.response.email,
@@ -73,7 +75,8 @@ export class RegisterPage {
         lastname    : this.response.lastname,
         middlename  : this.response.middlename,
         gender      : this.response.gender,
-        created_at  : this.response.created_at
+        created_at  : this.response.created_at,
+        summary     : summary
       };
 
       localStorage.setItem('token', this.response.access_token);

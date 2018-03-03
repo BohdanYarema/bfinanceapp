@@ -5,9 +5,7 @@
       "id": "cordova-plugin-geolocation@^2.4.3"
     },
     "is_top_level": true,
-    "variables": {
-      "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
-    }
+    "variables": {}
   },
   "cordova-plugin-compat": {
     "source": {

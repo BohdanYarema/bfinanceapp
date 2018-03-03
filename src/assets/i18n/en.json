@@ -67,5 +67,6 @@
   "INFO"                  : "Information",
   "LAST_TRANSACTION"      : "Last transaction",
   "DELETE"                : "Delete",
-  "CHOOSE_DATE"           : "Choose date"
+  "CHOOSE_DATE"           : "Choose date",
+  "WASTED"                : "Wasted"
 }

@@ -16,10 +16,16 @@
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 50px;
+
+        img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+        }
     }
     .profileText {
         display: inline-block;
-        width: 170px;
+        width: 210px;
         vertical-align: top;
         padding-left: 20px;
     }
