@@ -2,11 +2,11 @@
   "_args": [
     [
       {
-        "raw": "https://github.com/apache/cordova-plugin-whitelist.git",
+        "raw": "git+https://github.com/apache/cordova-plugin-whitelist.git",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "https://github.com/apache/cordova-plugin-whitelist.git",
+        "rawSpec": "git+https://github.com/apache/cordova-plugin-whitelist.git",
         "spec": "git+https://github.com/apache/cordova-plugin-whitelist.git",
         "type": "hosted",
         "hosted": {
@@ -19,7 +19,7 @@
           "directUrl": "https://raw.githubusercontent.com/apache/cordova-plugin-whitelist/master/package.json"
         }
       },
-      "/Users/bohdan/bfinanceapp"
+      "/Users/Bogdanek/Documents/bfinanceapp"
     ]
   ],
   "_from": "git+https://github.com/apache/cordova-plugin-whitelist.git",
@@ -28,11 +28,11 @@
   "_location": "/cordova-plugin-whitelist",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "https://github.com/apache/cordova-plugin-whitelist.git",
+    "raw": "git+https://github.com/apache/cordova-plugin-whitelist.git",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "https://github.com/apache/cordova-plugin-whitelist.git",
+    "rawSpec": "git+https://github.com/apache/cordova-plugin-whitelist.git",
     "spec": "git+https://github.com/apache/cordova-plugin-whitelist.git",
     "type": "hosted",
     "hosted": {
@@ -50,10 +50,10 @@
     "/"
   ],
   "_resolved": "git+https://github.com/apache/cordova-plugin-whitelist.git#aed9b33e69da6a444b3dbb82a61dd0a371c1699b",
-  "_shasum": "e8198025f54e2cd4643d652a878a129380676752",
+  "_shasum": "2e786781a6d30d21f7d9f93199aa7b0517dda044",
   "_shrinkwrap": null,
-  "_spec": "https://github.com/apache/cordova-plugin-whitelist.git",
-  "_where": "/Users/bohdan/bfinanceapp",
+  "_spec": "git+https://github.com/apache/cordova-plugin-whitelist.git",
+  "_where": "/Users/Bogdanek/Documents/bfinanceapp",
   "author": {
     "name": "Apache Software Foundation"
   },

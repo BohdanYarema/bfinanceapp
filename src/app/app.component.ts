@@ -45,8 +45,6 @@ export class MyApp {
       this.language = localStorage.getItem("language");
     }
 
-    this.profile = JSON.parse(localStorage.getItem('profile'));
-
     platform.ready().then(() => {
       this.translateService.setDefaultLang(this.language);
       this.translateService.use(this.language);

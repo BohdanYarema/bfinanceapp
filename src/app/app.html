@@ -1,11 +1,4 @@
 <ion-menu class="menu" [content]="content">
-  <div class="profile">
-    <div class="profile__img"><img src="{{this.profile.avatar}}"></div>
-    <div class="profileText">
-      <p class="profileText__name">{{this.profile.lastname}} {{this.profile.firstname}}</p>
-      <p class="profileText__info">{{ 'WASTED' | translate }} - {{this.profile.summary}} {{ 'CURRENCY' | translate }} </p>
-    </div>
-  </div>
   <div class="links">
       <button class="linksButton" menuToggle (click)="gotoHome()"> 
         <ion-icon name="home"></ion-icon>
