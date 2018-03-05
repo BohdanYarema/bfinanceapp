@@ -11,7 +11,6 @@ import { MapPage }        from '../map/map';
 import { TimelinePage }   from '../timeline/timeline';
 import { CategoriesPage } from '../categories/categories';
 import { HomePage }       from '../home/home';
-import { Diagnostic } from '@ionic-native/diagnostic';
 
 
 @Component({
@@ -42,13 +41,8 @@ export class FormPage {
         public authService: AuthServiceProvider, 
         public loadingCtrl: LoadingController, 
         private toastCtrl: ToastController,
-        public injectableProvider: InjectableProvider,
-        private diagnostic: Diagnostic
+        public injectableProvider: InjectableProvider
     ) {
-        let successCallback = (isAvailable) => { alert('Is available? ' + isAvailable); };
-        let errorCallback = (e) => alert(e);
-        this.diagnostic.isGpsLocationEnabled().then(successCallback, errorCallback);
-
 
         // data from category page
         this.navCtrl    = navCtrl;

@@ -3,7 +3,7 @@
     <name>BFinnanceapp</name>
     <description>BFinnanceapp for you live and finance</description>
     <author email="bohdanyarema1992@gmail.com" href="http://yaremabohdan.com.ua">PHP Developer</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.0.103:8100" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -99,10 +99,10 @@
     <plugin name="cordova-plugin-file" spec="^4.3.3" />
     <plugin name="cordova-plugin-filepath" spec="^1.2.0" />
     <allow-navigation href="http://10.0.0.14:8100" />
+    <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
+    <plugin name="cordova-plugin-whitelist" spec="git+https://github.com/apache/cordova-plugin-whitelist.git" />
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value="To locate you" />
     </plugin>
-    <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
-    <plugin name="cordova-plugin-whitelist" spec="git+https://github.com/apache/cordova-plugin-whitelist.git" />
     <engine name="browser" spec="^5.0.2" />
 </widget>
