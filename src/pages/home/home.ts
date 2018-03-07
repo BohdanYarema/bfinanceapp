@@ -92,16 +92,16 @@ export class HomePage {
     });
   }
 
-  gotoHome(){
-    this.navCtrl.push(HomePage);
-  }
-
   gotoCategories(category : object){
     this.navCtrl.push(CategoriesPage);
   }
 
   gotoMap(){
     this.navCtrl.push(MapPage);
+  }
+
+  gotoHome(){
+    this.navCtrl.push(HomePage);
   }
 
   gotoTimeline(){

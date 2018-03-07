@@ -1,3 +1,11 @@
 <div class="auth">
-  
+  <h1 class="authHeader">Hello!</h1>
+  <p class="authTitle">Nice to meet you in BFinanceApp!</p>
+
+  <button class="authBtn" (click)="gotoLogin()">
+    {{ 'LOG_IN' | translate }}
+  </button>
+  <button class="authBtn" (click)="gotoRegister()">
+    {{ 'SIGN_UP' | translate }}
+  </button>
 </div>
