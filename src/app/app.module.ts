@@ -14,6 +14,7 @@ import { HomePage } from '../pages/home/home';
 import { MapPage } from '../pages/map/map';
 import { EditPage } from '../pages/edit/edit';
 import { TimelinePage } from '../pages/timeline/timeline';
+import { WelcomePage } from '../pages/welcome/welcome';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -53,7 +54,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AccountingPage,
     MapPage,
     EditPage,
-    TimelinePage
+    TimelinePage,
+    WelcomePage
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AccountingPage,
     MapPage,
     EditPage,
-    TimelinePage
+    TimelinePage,
+    WelcomePage
   ],
   providers: [
     StatusBar,

@@ -5,6 +5,7 @@ import { Platform, Nav, LoadingController, App, ToastController } from 'ionic-an
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
+import { WelcomePage } from '../pages/welcome/welcome';
 import { ProfilePage } from '../pages/profile/profile';
 import { MapPage } from '../pages/map/map';
 import { EditPage } from '../pages/edit/edit';
@@ -33,7 +34,7 @@ export class MyApp {
     ) {
       
     if(!localStorage.getItem("token")) {
-      this.rootPage = LoginPage;
+      this.rootPage = WelcomePage;
     } else {
       this.rootPage = HomePage;
     }
