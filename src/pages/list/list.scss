@@ -12,12 +12,12 @@ page-list {
       display: inline-block;
     }
 
-    ion-icon{
-      border: 1px solid #353a41;
-      border-radius: 50px;
-      padding: 5px 8px;
-      margin-left: 10px;
-    }
+    // ion-icon{
+    //   border: 1px solid #353a41;
+    //   border-radius: 50px;
+    //   padding: 5px 8px;
+    //   margin-left: 10px;
+    // }
 
     .listWrapper{
       width: 100%;
@@ -36,7 +36,7 @@ page-list {
         }
         .listItemGroup{
           height: 100%;
-          width: 38%;
+          width: 44%;
           display: inline-block;
           padding-left: 10px;
           vertical-align: top;
@@ -53,10 +53,10 @@ page-list {
         .listItem__price{
           @include fonts(14px, #ee5a55, normal, 600);
           vertical-align: top;
-          padding: 15px 0;
+          padding: 8px 0;
           display: inline-block;
           text-align: right;
-          width: 30%;
+          width: 25%;
         }
         .listItem__arrow{
           @include fonts(14px, #ee5a55, normal, 600);

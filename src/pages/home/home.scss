@@ -30,7 +30,7 @@ page-home {
         }
         .homeBodyLastItemGroup{
           height: 100%;
-          width: 38.33%;
+          width: 44%;
           display: block;
           padding-left: 10px;
           vertical-align: top;
@@ -48,10 +48,10 @@ page-home {
         .homeBodyLastItem__price{
           @include fonts(14px, #ee5a55, normal, 600);
           vertical-align: top;
-          padding: 15px 0;
+          padding: 8px 0;
           display: block;
           text-align: right;
-          width: 35%;
+          width: 28%;
           float: left;
         }
         .homeBodyLastItem__arrow{

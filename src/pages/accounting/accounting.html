@@ -8,7 +8,7 @@
 <div class="pageBody">
   <div class="item">
     <div class="itemMain">
-      <p class="itemMain__title">{{item.name}}</p>
+      <p class="itemMain__title">{{item.name}} <ion-icon *ngIf="item.type" name="card"></ion-icon></p>
       <p class="itemMain__description">{{item.price}} {{ 'CURRENCY' | translate }}</p>
       <div class="itemMainTabs">
           <p class="itemMainTabs__link">{{ 'INFO' | translate }}</p>

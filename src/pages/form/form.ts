@@ -23,6 +23,7 @@ export class FormPage {
   addGroup: FormGroup;
   name  : AbstractControl;
   price : AbstractControl;
+  type  : AbstractControl;
   //dates : AbstractControl;
   loading: any;
   response: any;
@@ -52,6 +53,7 @@ export class FormPage {
         // formbuilder for form
         this.addGroup = formBuilder.group({
             name:['', Validators.required],
+            type:[],
             price:['', Validators.compose([
                 Validators.required, 
                 CustomValidators.negativeNumber,
@@ -61,6 +63,7 @@ export class FormPage {
 
         this.name   = this.addGroup.controls['name'];
         this.price  = this.addGroup.controls['price'];
+        this.type   = this.addGroup.controls['type'];
         //this.dates  = this.addGroup.controls['dates'];
 
         //this.showLoader("Catching you gps coords");

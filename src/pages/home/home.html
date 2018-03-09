@@ -31,7 +31,7 @@
               <img class="homeBodyLastItemImage__image" src="{{item.thumbnail}}">
           </div>    
           <div class="homeBodyLastItemGroup">
-            <p class="homeBodyLastItemGroup__name">{{ item.name }}</p>
+            <p class="homeBodyLastItemGroup__name">{{ item.name }} <ion-icon *ngIf="item.type" name="card"></ion-icon></p>
             <p class="homeBodyLastItemGroup__date">{{ item.dates }}</p>
           </div>
           <p class="homeBodyLastItem__price">{{ item.price }} {{ 'CURRENCY' | translate }}</p>

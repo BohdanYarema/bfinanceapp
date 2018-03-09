@@ -40,7 +40,7 @@ export class MyApp {
       if(!localStorage.getItem("intro")) {
         this.rootPage = IntroPage;
       } else {
-        this.rootPage = IntroPage;
+        this.rootPage = HomePage;
       }
     }
 

@@ -13,7 +13,7 @@
       <div *ngFor="let item of data" class="listItem" (click)="itemSelected(item)">
           <img class="listItem__image" src="{{item.thumbnail}}">
           <div class="listItemGroup">
-            <p class="listItemGroup__name">{{ item.name }}</p>
+            <p class="listItemGroup__name">{{ item.name }} <ion-icon *ngIf="item.type" name="card"></ion-icon></p>
             <p class="listItemGroup__date">{{ item.dates }}</p>
           </div>
           <p class="listItem__price">{{ item.price }} {{ 'CURRENCY' | translate }}</p>
