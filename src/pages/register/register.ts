@@ -4,6 +4,7 @@ import { NavController, NavParams, LoadingController, ToastController } from 'io
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { HomePage } from '../home/home';
 import { LoginPage } from '../login/login';
+import { WelcomePage } from '../welcome/welcome';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -108,6 +109,10 @@ export class RegisterPage {
     toast.onDidDismiss(() => {});
 
     toast.present();
+  }
+
+  gotoWelcome(){
+    this.navCtrl.push(WelcomePage);
   }
 
 }

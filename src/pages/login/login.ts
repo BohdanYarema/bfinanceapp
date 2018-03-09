@@ -6,6 +6,7 @@ import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { InjectableProvider } from '../../providers/injectable/injectable';
 import { TranslateService } from '@ngx-translate/core';
+import { WelcomePage } from '../welcome/welcome';
 
 
 @Component({
@@ -98,6 +99,10 @@ export class LoginPage {
     toast.onDidDismiss(() => {});
 
     toast.present();
+  }
+
+  gotoWelcome(){
+    this.navCtrl.push(WelcomePage);
   }
 
 }

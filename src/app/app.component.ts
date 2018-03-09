@@ -9,6 +9,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { ProfilePage } from '../pages/profile/profile';
 import { MapPage } from '../pages/map/map';
 import { EditPage } from '../pages/edit/edit';
+import { IntroPage } from '../pages/intro/intro';
 import { TimelinePage } from '../pages/timeline/timeline';
 import { TranslateService } from '@ngx-translate/core';
 import { CategoriesPage } from '../pages/categories/categories';
@@ -36,7 +37,11 @@ export class MyApp {
     if(!localStorage.getItem("token")) {
       this.rootPage = WelcomePage;
     } else {
-      this.rootPage = HomePage;
+      if(!localStorage.getItem("intro")) {
+        this.rootPage = IntroPage;
+      } else {
+        this.rootPage = IntroPage;
+      }
     }
 
     if(localStorage.getItem("language") !== null) {

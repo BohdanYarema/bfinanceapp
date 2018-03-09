@@ -1,5 +1,8 @@
 <div class="auth">
   <form class="authForm" [formGroup]="loginGroup" (ngSubmit)="doLogin(loginGroup.value)">
+    <div class="arrow" (click)="gotoWelcome()">
+        <ion-icon name="arrow-back"></ion-icon>
+    </div>
     <div class="authFormGroup">
       <p class="authFormGroup__title">{{ 'LOG_IN' | translate }}</p>
     </div>

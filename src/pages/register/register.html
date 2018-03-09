@@ -1,5 +1,8 @@
 <div class="auth">
     <form class="authForm" [formGroup]="singupGroup" (ngSubmit)="doSignup(singupGroup.value)">
+        <div class="arrow" (click)="gotoWelcome()">
+            <ion-icon name="arrow-back"></ion-icon>
+        </div>
         <div class="authFormGroup">
             <p class="authFormGroup__title">{{ 'SIGN_UP' | translate }}</p>
         </div>

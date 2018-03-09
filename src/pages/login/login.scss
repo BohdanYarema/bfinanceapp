@@ -12,6 +12,14 @@ page-login {
     text-align: center;
     border-radius: 6px;  
     box-sizing: border-box;  
+    position: relative; 
+    .arrow{
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      @include fonts(32px, #343941, normal, 600);
+      z-index: 2;
+    }
   }
 
   .authFormGroup{
